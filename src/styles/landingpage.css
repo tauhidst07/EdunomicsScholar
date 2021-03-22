@@ -1,0 +1,105 @@
+.bt1 {
+  padding: 8px 16px;
+  color: rgb(248, 245, 245);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 125%;
+  text-decoration: none;
+  margin-right: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.bt2 {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  line-height: 36px;
+  background: rgba(118, 120, 140, 0.3);
+  color: #fff !important;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  margin-top: 50px;
+}
+.btn {
+  display: flex;
+}
+.main {
+  background: radial-gradient(at center center, #2d7e9270, #1c40617c 100%),
+    url("../media/ban.jpeg");
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  z-index: 1;
+  flex-direction: column;
+  height: 60px;
+  /* position: relative; */
+}
+.hero {
+  max-width: 800px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.heading {
+  margin-bottom: 40px;
+  font-weight: 900;
+  font-size: 70px;
+  line-height: 125%;
+  color: #fff;
+  text-align: center;
+}
+.sub-head {
+  font-size: 24px;
+  line-height: 142%;
+  max-width: 520px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+.block-1 {
+  background: rgb(51, 49, 49);
+  border-radius: 20px;
+  padding: 40px;
+  width: 360px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.block-2 {
+  background: rgb(51, 49, 49);
+  border-radius: 20px;
+  padding: 40px;
+  width: 360px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.blocks {
+  max-width: 800px;
+  position: absolute;
+  display: flex;
+  top: 0;
+  justify-content: space-around;
+}
