@@ -1,34 +1,34 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useForm } from 'react-hook-form';
-import axios from 'axios';
+import { Link, useHistory } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import axios from "axios";
 import edu from "../media/edu.png";
 
 function SignUpApplicant() {
+  const history = useHistory();
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [dob, setDob] = useState(new Date().toISOString().split("T")[0]);
+  const [gender, setGender] = useState("");
+  const [bio, setBio] = useState("");
+  const [location, setLocation] = useState("");
+  const [address, setAddress] = useState("");
 
-  const [name, setName] = useState('');
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [dob, setDob] = useState(new Date().toISOString().split('T')[0]);
-  const [gender, setGender] = useState('');
-  const [bio, setBio] = useState('');
-  const [location, setLocation] = useState('');
-  const [address, setAddress] = useState('');
-
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-      //console.log(data);
-      axios.post('http://rishabhsingh.herokuapp.com/api/user/signup', data)
+    // console.log(data);
+    axios
+      .post("http://rishabhsingh.herokuapp.com/api/user/signup", data)
       .then(function (response) {
         console.log(response);
+        history.push("/loginApli");
       })
       .catch(function (error) {
         console.log(error);
       });
-    };
-
-
+  };
 
   return (
     <div className="signup-header">
@@ -73,8 +73,27 @@ function SignUpApplicant() {
 
       <div className="loginbox">
         <h1 className="welcome">Sign Up as an Applicant</h1>
-        <p>{[name,' ',username,' ',email,' ',password,' ',gender, ' ',bio,' ',location,' ',address, ' ',]}</p>
-        {dob}
+        {/* <p>
+          {[
+            name,
+            " ",
+            username,
+            " ",
+            email,
+            " ",
+            password,
+            " ",
+            gender,
+            " ",
+            bio,
+            " ",
+            location,
+            " ",
+            address,
+            " ",
+          ]}
+        </p>
+        {dob} */}
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="uname">Name</h2>
           <input
@@ -120,7 +139,7 @@ function SignUpApplicant() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-        <h2 className="uname">DOB</h2>
+          <h2 className="uname">DOB</h2>
           <input
             ref={register}
             name="dob"
@@ -182,7 +201,7 @@ function SignUpApplicant() {
             <Link to="/signup" className="opt1">
               Sign up as a Donor
             </Link>
-            <Link to="/signupApli" className="opt1">
+            <Link to="/loginApli" className="opt1">
               Sign up as an Applicant
             </Link>
           </div>

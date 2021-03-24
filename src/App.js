@@ -9,6 +9,7 @@ import { Route, Switch } from "react-router-dom";
 import AppliGrantPage from "./components/AppliGrantPage";
 import JoinDoner from "./components/JoinDoner";
 import JoinAppli from "./components/JoinAppli";
+import LoginApplicant from "./components/LoginApplicant";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route exact path="/login">
           <Login />
+        </Route>
+        <Route exact path="/loginApli">
+          <LoginApplicant />
         </Route>
         <Route exact path="/signup">
           <SignUp />
