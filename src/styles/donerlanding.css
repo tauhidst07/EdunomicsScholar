@@ -1,0 +1,86 @@
+.doner-landing {
+  display: flex;
+  max-width: 1100px;
+  /* margin-left: 10.7rem; */
+  margin-right: auto;
+  line-height: 1.15;
+  /* background-color: violet; */
+  /* margin-top: 2rem; */
+  margin-bottom: 2rem;
+}
+.don-1 {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 360px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.don-2 {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 360px;
+  box-sizing: border-box;
+  margin-left: 3rem;
+  text-decoration: none;
+}
+.heed > h2 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 60px;
+  color: #5d57fb;
+}
+.don-2 > h2 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 60px;
+  color: #1a0359;
+}
+.don-1 > p {
+  margin-top: 25px;
+  font-size: 16px;
+  line-height: 142%;
+  color: #76788c;
+  margin-bottom: 2rem;
+}
+.don-2 > p {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 142%;
+  color: #76788c;
+}
+.don-1 :hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+.don-2 :hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+.svgg {
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  min-height: 48px;
+  border-radius: 50%;
+  background-color: rgba(93, 87, 251, 0.1);
+}

@@ -1,17 +1,12 @@
 import React from "react";
-import "../styles/landingpage.css";
-import Footer from "./Footer";
-import DonerLanding from "./DonerLanding";
-import stu from "../media/home-student.jpg";
-import home from "../media/home-donor.jpg";
+import "../styles/header.css";
 import { Link } from "react-router-dom";
-// import Select from "react-select";
 
-function LandingPage() {
+function Header() {
   return (
-    <div>
-      <nav className="land-head">
-        <Link to="/" className="logo" style={{ cursor: "pointer" }}>
+    <div className="main-header">
+      <nav className="naav">
+        <Link to="/" className="logo-main" style={{ cursor: "pointer" }}>
           <svg width="133" height="29" viewBox="0 0 133 29" fill="none">
             <path
               fill-rule="evenodd"
@@ -117,83 +112,32 @@ function LandingPage() {
             ></path>
           </svg>
         </Link>
+        <div className="tog">
+          <button className="tg1">Donors</button>
+          <button className="tg1">Applicants</button>
+        </div>
         <div className="btn">
-          {/* <Select className="bt1" /> */}
-          <select className="bt1-drop" value="Company">
-            <option value="Orange">Company</option>
-            <option value="Radish">Contact Us</option>
-            <option value="Cherry">Careers</option>
+          <select className="bt11" value="How it Works">
+            <option value="Orange">How it Works</option>
+            <option value="Radish">Radish</option>
+            <option value="Cherry">Cherry</option>
           </select>
-          {/* <div className="container">
-            <button className="button">Company</button>
-            <div class="dropdown">
-              <ul>
-                <li>Option 1</li>
-                <li>Option 2</li>
-                <li>Option 3</li>
-              </ul>
-            </div>
-          </div> */}
-          <Link to="/login" className="bt2">
-            Login
+
+          <button className="bt11">View Scholarships</button>
+          <button className="bt11">Leaders</button>
+          <select className="bt11" value="Company">
+            <option value="Orange">Company</option>
+            <option value="Radish">Radish</option>
+            <option value="Cherry">Cherry</option>
+          </select>
+          <button className="bt22-1">Login</button>
+          <Link to="/signup" className="bt22-2">
+            Join Bold.org
           </Link>
         </div>
       </nav>
-      <div className="main">
-        <div className="hero">
-          <h1 className="heading">Fighting Student Debt</h1>
-          <p className="sub-head">
-            Create or apply to exclusive scholarships, fellowships, and grants,
-            in minutes.
-          </p>
-          <DonerLanding />
-        </div>
-      </div>
-      <div className="mid">
-        <div className="edu">
-          <h1 className="edu-head">Education Drives Opportunity</h1>
-          <p className="edu-p">
-            But access to quality, affordable education is not equal. The
-            average college graduate is $30,000+ in debt. They’re less likely to
-            start businesses, pursue dream careers, buy homes, and more.
-          </p>
-          <button className="bt0">Bold.org Donors</button>
-          <button className="bt0">Bold.org Donors</button>
-        </div>
-      </div>
-      <div className="lady-1">
-        <div className="b1">
-          <img className="im1" src={stu} alt="st" />
-          <div className="text1">
-            <h1 className="un-head">
-              Unlocking Impact Through Targeted Scholarships, Grants and
-              Fellowships
-            </h1>
-            <p className="un-p">
-              On Bold.org, anyone and any company can create targeted funds that
-              enable incredible people to reach their full potential.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="lady-1">
-        <div className="b1">
-          <div className="text1" style={{ marginRight: "2rem" }}>
-            <h1 className="un-head">
-              Unlocking Impact Through Targeted Scholarships, Grants and
-              Fellowships
-            </h1>
-            <p className="un-p">
-              On Bold.org, anyone and any company can create targeted funds that
-              enable incredible people to reach their full potential.
-            </p>
-          </div>
-          <img className="im1" src={home} alt="st" />
-        </div>
-      </div>
-      <Footer />
     </div>
   );
 }
 
-export default LandingPage;
+export default Header;

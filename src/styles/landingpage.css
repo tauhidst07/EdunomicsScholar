@@ -27,7 +27,7 @@
   cursor: pointer;
 }
 
-nav {
+.land-head {
   display: flex;
   justify-content: space-around;
   position: absolute;
@@ -45,7 +45,7 @@ nav {
   background-position: center;
 
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 130vh;
   background-size: cover;
   z-index: 1;
   flex-direction: column;
@@ -60,6 +60,7 @@ nav {
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
+  padding-top: 5rem;
 }
 .heading {
   margin-bottom: 40px;
@@ -100,6 +101,161 @@ nav {
   max-width: 800px;
   position: absolute;
   display: flex;
-  top: 0;
+
   justify-content: space-around;
 }
+.mid {
+  background: url("../media//home-secondary-bg.jpg");
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+  min-height: 130vh;
+  background-size: cover;
+  z-index: 1;
+  flex-direction: column;
+  height: 60px;
+  /* position: relative; */
+}
+.edu {
+  max-width: 600px;
+  z-index: 1;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 12rem;
+}
+.edu-head {
+  max-width: 600px;
+  z-index: 1;
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 125%;
+  text-align: center;
+  color: #fff;
+  /* margin-top: 220px; */
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+.edu-p {
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 8px;
+  padding-top: 5rem;
+}
+.bt0 {
+  background: #1b1430;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 4%), 0 1px 3px rgb(0 0 0 / 5%);
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  align-items: center;
+  /* height: 104px; */
+  box-sizing: border-box;
+  margin-left: 2rem;
+  border: transparent;
+  cursor: pointer;
+  margin-top: 4rem;
+}
+.b1 {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+.im1 {
+  /* position: absolute; */
+
+  width: 400px;
+  height: 100%;
+  /* object-fit: cover; */
+  object-position: center center;
+  opacity: 1;
+  transition: none 0s ease 0s;
+  border-style: none;
+}
+.un-head {
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 125%;
+  color: #100826;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.text1 {
+  margin-left: 4rem;
+  margin-top: 4rem;
+}
+.un-p {
+  font-size: 24px;
+  line-height: 150%;
+  color: #100826;
+  margin: 0;
+}
+.bt1-drop {
+  /* position: absolute; */
+  /* transform: translate(-50%, -50%); */
+  padding: 8px 16px;
+  color: rgb(248, 245, 245);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 125%;
+  text-decoration: none;
+  margin-right: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  /* opacity: 0.9; */
+}
+.bt1-drop select {
+  /* background: white; */
+  color: black;
+}
+option {
+  color: black;
+  padding: 2rem;
+  background-color: white;
+}
+
+/* .dropdown {
+  position: absolute;
+  /* top: 100%;
+  left: 0; */
+/* width: 200px;
+  z-index: 2;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
+} */
+
+/* ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  padding: 8px 12px;
+}
+
+li:hover {
+  background-color: rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+}
+button {
+  padding: 8px 16px;
+  color: rgb(248, 245, 245);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 125%;
+  text-decoration: none;
+  margin-right: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+  border: none;
+  background: none;
+} */

@@ -1,0 +1,92 @@
+.loginbox {
+  margin: auto;
+  background-color: #fff;
+  max-width: 432px;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 4%), 0 1px 3px rgb(0 0 0 / 5%);
+  border-radius: 4px;
+  padding-bottom: 28px !important;
+  z-index: 0;
+  display: block;
+  margin-top: 3rem;
+  text-align: center;
+}
+.welcome {
+  font-size: 28px;
+  line-height: 125%;
+  color: #100826;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+.uname {
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  display: block;
+  color: #100826;
+  margin-top: 1rem;
+  margin-right: 23.6rem;
+}
+.pass {
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 8px;
+  display: block;
+  color: #100826;
+  margin-top: 1rem;
+  margin-right: 23.6rem;
+}
+.u-input {
+  border-radius: 4px;
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  line-height: 60px;
+  width: 420px;
+  box-sizing: border-box;
+}
+.forgot {
+  font-size: 14px;
+  line-height: 17px;
+  color: #5d57fb;
+  float: right;
+  margin-top: 1.5rem;
+  display: block;
+  text-decoration: none;
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+.signin {
+  background: #5d57fb;
+  color: #fff;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0;
+  padding: 13px 20px;
+  text-align: center;
+  border: 0;
+  font-size: 14px;
+  line-height: 125%;
+}
+.dont {
+  margin-top: 28px;
+  margin-bottom: 20px;
+  padding: 0px;
+  color: rgb(16, 8, 38);
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+}
+.opt1 {
+  margin-left: 2rem;
+  color: #5d57fb;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: 600;
+}

@@ -1,0 +1,35 @@
+.already {
+  display: inline;
+  text-decoration: none;
+  font-weight: 600;
+  color: #5d57fb;
+  margin-right: 6rem;
+}
+.already:hover {
+  text-decoration: underline;
+}
+.ic1 {
+  margin-right: 8px;
+  min-width: 18px;
+  min-height: 18px;
+  width: 18px;
+  height: 18px;
+}
+.tog-1 {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  height: 26px;
+  color: #5d57fb;
+  text-decoration: none;
+}
+.naavv {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5rem;
+  margin-right: 2rem;
+
+  /* width: 100%; */
+  align-items: center;
+  margin-top: 30px;
+}
