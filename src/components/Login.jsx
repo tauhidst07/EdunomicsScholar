@@ -11,19 +11,9 @@ function Login() {
         <h1 className="welcome">Welcome Back</h1>
         <form>
           <h2 className="uname">Email</h2>
-          <input
-            className="u-input"
-            type="text"
-            data-test="username"
-            placeholder="Email"
-          />
+          <input className="u-input" type="text" placeholder="Email" />
           <h2 className="pass">Password</h2>
-          <input
-            className="u-input"
-            type="password"
-            data-test="password"
-            placeholder="Password"
-          />
+          <input className="u-input" type="password" placeholder="Password" />
           <p className="forgot">forgot password ?</p>
           <button className="signin">Sign In</button>
           <p className="dont">Don't have an account?</p>

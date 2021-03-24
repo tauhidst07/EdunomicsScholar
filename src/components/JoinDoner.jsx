@@ -37,8 +37,7 @@ function JoinDoner() {
               stroke-linejoin="round"
             ></path>
           </svg>
-          {/* <button className="tg1">Donors</button>
-          <button className="tg1">Applicants</button> */}
+
           <Link to="/login" className="already">
             Already have an account?
           </Link>

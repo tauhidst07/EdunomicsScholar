@@ -55,11 +55,11 @@ function LandingPage() {
             average college graduate is $30,000+ in debt. They’re less likely to
             start businesses, pursue dream careers, buy homes, and more.
           </p>
-          <Link to="/donergrant" className="bt0">
-            Bold.org Donors
+          <Link to="/donergrant">
+            <button className="bt0">Edunomics Donors</button>
           </Link>
-          <Link to="appligrant" className="bt0">
-            Bold.org Applicant
+          <Link to="appligrant">
+            <button className="bt0">Edunomics Applicant</button>
           </Link>
         </div>
       </div>

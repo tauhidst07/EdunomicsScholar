@@ -154,6 +154,7 @@
   color: #fff;
   text-decoration: none;
   font-weight: 700;
+  font-size: 1rem;
   align-items: center;
   /* height: 104px; */
   box-sizing: border-box;
@@ -222,7 +223,10 @@ option {
   padding: 2rem;
   background-color: white;
 }
-
+.bt0 :hover {
+  background-color: hotpink;
+  color: #c21e42;
+}
 /* .dropdown {
   position: absolute;
   /* top: 100%;

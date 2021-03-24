@@ -49,68 +49,23 @@ function SignUp() {
         <h1 className="welcome">Sign Up as a Donor</h1>
         <form>
           <h2 className="uname">Name</h2>
-          <input
-            className="u-input"
-            type="text"
-            data-test="username"
-            placeholder="Name"
-          />
+          <input className="u-input" type="text" placeholder="Name" />
           <h2 className="uname">Username</h2>
-          <input
-            className="u-input"
-            type="text"
-            data-test="username"
-            placeholder="username"
-          />
+          <input className="u-input" type="text" placeholder="username" />
           <h2 className="uname">Email</h2>
-          <input
-            className="u-input"
-            type="text"
-            data-test="username"
-            placeholder="Email"
-          />
+          <input className="u-input" type="text" placeholder="Email" />
           <h2 className="pass">Password</h2>
-          <input
-            className="u-input"
-            type="password"
-            data-test="password"
-            placeholder="Password"
-          />
+          <input className="u-input" type="password" placeholder="Password" />
           <h2 className="uname">DOB</h2>
-          <input
-            className="u-input"
-            type="text"
-            data-test="username"
-            placeholder="Date of birth"
-          />
+          <input className="u-input" type="text" placeholder="Date of birth" />
           <h2 className="uname">Gender</h2>
-          <input
-            className="u-input"
-            type="text"
-            data-test="username"
-            placeholder="Gender"
-          />
+          <input className="u-input" type="text" placeholder="Gender" />
           <h2 className="uname">Bio</h2>
-          <input
-            className="u-input"
-            type="text"
-            data-test="username"
-            placeholder="Bio"
-          />
+          <input className="u-input" type="text" placeholder="Bio" />
           <h2 className="uname">Location</h2>
-          <input
-            className="u-input"
-            type="text"
-            data-test="username"
-            placeholder="Location"
-          />
+          <input className="u-input" type="text" placeholder="Location" />
           <h2 className="uname">Address</h2>
-          <input
-            className="u-input"
-            type="text"
-            data-test="username"
-            placeholder="Address"
-          />
+          <input className="u-input" type="text" placeholder="Address" />
           {/* <p className="forgot">forgot password ?</p> */}
           <button className="signin">Sign Up</button>
           {/* <p className="dont">Don't have an account?</p> */}

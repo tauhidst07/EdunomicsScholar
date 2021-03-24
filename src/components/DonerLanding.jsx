@@ -6,7 +6,11 @@ function DonerLanding() {
   return (
     <div className="doner-landing">
       <div className="don-1">
-        <Link to="/donergrant" className="heed">
+        <Link
+          to="/donergrant"
+          className="heed"
+          style={{ textDecoration: "none" }}
+        >
           <h2>
             Continue as <br />a Donor
           </h2>
@@ -45,8 +49,8 @@ function DonerLanding() {
           </svg>
         </div>
         <p>
-          Create scholarships, fellowships, and grants for the people and causes
-          you care most about.
+          Explore exclusive scholarships, fellowships, and grants, matched to
+          you.
         </p>
       </div>
     </div>
