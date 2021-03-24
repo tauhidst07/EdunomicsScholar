@@ -1,15 +1,16 @@
 import React from "react";
 import "../styles/donerlanding.css";
+import { Link } from "react-router-dom";
 
 function DonerLanding() {
   return (
     <div className="doner-landing">
       <div className="don-1">
-        <div className="heed">
+        <Link to="/donergrant" className="heed">
           <h2>
             Continue as <br />a Donor
           </h2>
-        </div>
+        </Link>
 
         <div className="svgg">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
