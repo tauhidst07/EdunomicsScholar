@@ -1,0 +1,10 @@
+.sub-touch {
+  margin-bottom: 8px;
+  padding: 0px;
+  color: rgb(23, 17, 37);
+  font-size: 18px;
+  line-height: 130%;
+  max-width: 600px;
+  font-weight: 600;
+  margin-top: 1rem;
+}

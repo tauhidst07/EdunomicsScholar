@@ -1,9 +1,26 @@
 import React from "react";
 import "../styles/signup.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import edu from "../media/edu.png";
+import { useForm } from "react-hook-form";
+
+import axios from "axios";
 
 function SignUp() {
+  const history = useHistory();
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => {
+    axios
+      .post("http://rishabhsingh.herokuapp.com/api/user/signup-donar", data)
+      .then(function (response) {
+        console.log(response);
+        history.push("/login");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="signup-header">
       <nav className="naavv">
@@ -47,25 +64,78 @@ function SignUp() {
 
       <div className="loginbox">
         <h1 className="welcome">Sign Up as a Donor</h1>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="uname">Name</h2>
-          <input className="u-input" type="text" placeholder="Name" />
+          <input
+            className="u-input"
+            type="text"
+            name="name"
+            ref={register}
+            placeholder="Name"
+          />
           <h2 className="uname">Username</h2>
-          <input className="u-input" type="text" placeholder="username" />
+          <input
+            className="u-input"
+            ref={register}
+            type="text"
+            name="username"
+            placeholder="username"
+          />
           <h2 className="uname">Email</h2>
-          <input className="u-input" type="text" placeholder="Email" />
+          <input
+            className="u-input"
+            ref={register}
+            type="text"
+            name="email"
+            placeholder="Email"
+          />
           <h2 className="pass">Password</h2>
-          <input className="u-input" type="password" placeholder="Password" />
-          <h2 className="uname">DOB</h2>
-          <input className="u-input" type="text" placeholder="Date of birth" />
+          <input
+            className="u-input"
+            ref={register}
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+          {/* <h2 className="uname">DOB</h2>
+          <input
+            className="u-input"
+            ref={register}
+            type="text"
+            placeholder="Date of birth"
+          />
           <h2 className="uname">Gender</h2>
-          <input className="u-input" type="text" placeholder="Gender" />
+          <input
+            className="u-input"
+            ref={register}
+            type="text"
+            name="gender"
+            placeholder="Gender"
+          />
           <h2 className="uname">Bio</h2>
-          <input className="u-input" type="text" placeholder="Bio" />
+          <input
+            className="u-input"
+            ref={register}
+            type="text"
+            name="bio"
+            placeholder="Bio"
+          />
           <h2 className="uname">Location</h2>
-          <input className="u-input" type="text" placeholder="Location" />
+          <input
+            className="u-input"
+            ref={register}
+            type="text"
+            name="location"
+            placeholder="Location"
+          />
           <h2 className="uname">Address</h2>
-          <input className="u-input" type="text" placeholder="Address" />
+          <input
+            className="u-input"
+            ref={register}
+            type="text"
+            name="address"
+            placeholder="Address"
+          /> */}
           {/* <p className="forgot">forgot password ?</p> */}
           <button className="signin">Sign Up</button>
           {/* <p className="dont">Don't have an account?</p> */}

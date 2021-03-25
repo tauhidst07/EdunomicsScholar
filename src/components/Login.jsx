@@ -1,19 +1,55 @@
-import React from "react";
 import Header from "./Header";
 import "../styles/login.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import axios from "axios";
+
+import { useForm } from "react-hook-form";
 
 function Login() {
+  const history = useHistory();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => {
+    // console.log(data);
+    axios
+      .post("http://rishabhsingh.herokuapp.com/api/user/signin-donar", data)
+      .then(function (response) {
+        console.log(response);
+        history.push("/");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
   return (
     <div>
       <Header />
       <div className="loginbox">
         <h1 className="welcome">Welcome Back</h1>
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="uname">Email</h2>
-          <input className="u-input" type="text" placeholder="Email" />
+          <input
+            className="u-input"
+            type="text"
+            ref={register}
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            placeholder="Email"
+          />
           <h2 className="pass">Password</h2>
-          <input className="u-input" type="password" placeholder="Password" />
+          <input
+            className="u-input"
+            type="password"
+            ref={register}
+            name="password"
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+            placeholder="Password"
+          />
           <p className="forgot">forgot password ?</p>
           <button className="signin">Sign In</button>
           <p className="dont">Don't have an account?</p>

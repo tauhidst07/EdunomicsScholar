@@ -11,6 +11,9 @@ import JoinDoner from "./components/JoinDoner";
 import JoinAppli from "./components/JoinAppli";
 import LoginApplicant from "./components/LoginApplicant";
 import Dashboard from "./components/Dashboard";
+import About from "./components/About";
+import ContactUs from "./components/ContactUs";
+import Faq from "./components/Faq";
 
 function App() {
   return (
@@ -46,6 +49,15 @@ function App() {
         </Route>
         <Route exact path="/dashboard">
           <Dashboard />
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route exact path="/contactus">
+          <ContactUs />
+        </Route>
+        <Route exact path="/faq">
+          <Faq />
         </Route>
       </Switch>
     </div>
