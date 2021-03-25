@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
@@ -6,15 +6,6 @@ import edu from "../media/edu.png";
 
 function SignUpApplicant() {
   const history = useHistory();
-  const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [dob, setDob] = useState(new Date().toISOString().split("T")[0]);
-  const [gender, setGender] = useState("");
-  const [bio, setBio] = useState("");
-  const [location, setLocation] = useState("");
-  const [address, setAddress] = useState("");
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
@@ -73,27 +64,7 @@ function SignUpApplicant() {
 
       <div className="loginbox">
         <h1 className="welcome">Sign Up as an Applicant</h1>
-        {/* <p>
-          {[
-            name,
-            " ",
-            username,
-            " ",
-            email,
-            " ",
-            password,
-            " ",
-            gender,
-            " ",
-            bio,
-            " ",
-            location,
-            " ",
-            address,
-            " ",
-          ]}
-        </p>
-        {dob} */}
+
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="uname">Name</h2>
           <input
@@ -103,8 +74,6 @@ function SignUpApplicant() {
             type="text"
             data-test="username"
             placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
           />
           <h2 className="uname">Username</h2>
           <input
@@ -114,8 +83,6 @@ function SignUpApplicant() {
             type="text"
             data-test="username"
             placeholder="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
           />
           <h2 className="uname">Email</h2>
           <input
@@ -125,8 +92,6 @@ function SignUpApplicant() {
             type="text"
             data-test="username"
             placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
           />
           <h2 className="pass">Password</h2>
           <input
@@ -136,8 +101,7 @@ function SignUpApplicant() {
             type="password"
             data-test="password"
             placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+
           />
           <h2 className="uname">DOB</h2>
           <input
@@ -147,8 +111,7 @@ function SignUpApplicant() {
             type="date"
             data-test="username"
             placeholder="Date of birth"
-            value={dob}
-            onChange={(e) => setDob(e.target.value)}
+
           />
           <h2 className="uname">Gender</h2>
           <input
@@ -158,8 +121,7 @@ function SignUpApplicant() {
             type="text"
             data-test="username"
             placeholder="Gender"
-            value={gender}
-            onChange={(e) => setGender(e.target.value)}
+
           />
           <h2 className="uname">Bio</h2>
           <input
@@ -169,8 +131,7 @@ function SignUpApplicant() {
             type="text"
             data-test="username"
             placeholder="Bio"
-            value={bio}
-            onChange={(e) => setBio(e.target.value)}
+
           />
           <h2 className="uname">Location</h2>
           <input
@@ -180,8 +141,7 @@ function SignUpApplicant() {
             type="text"
             data-test="username"
             placeholder="Location"
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
+
           />
           <h2 className="uname">Address</h2>
           <input
@@ -191,8 +151,7 @@ function SignUpApplicant() {
             type="text"
             data-test="username"
             placeholder="Address"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
+
           />
           {/* <p className="forgot">forgot password ?</p> */}
           <button className="signin">Sign Up</button>
