@@ -1,20 +1,12 @@
-<<<<<<< HEAD
-import React from "react";
-import Footer from "./Footer";
-=======
 import React, {useState, useEffect} from "react";
 import DashboardHeader from "./DashboardHeader";
 import Points from './Points';
 import Footer from './Footer';
 import axios from "axios"
 import profile from "../media/profile.png";
->>>>>>> 8372e1e59bb174653432fe0d9e29f67c9b7ece66
 import "../styles/dashboard.css";
 
 function Dashboard() {
-<<<<<<< HEAD
-  return <div className="dashboard">{/*<Footer />*/}</div>;
-=======
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [data, setData] = useState({});
@@ -144,7 +136,6 @@ function Dashboard() {
       <Footer />
     </div>
   );
->>>>>>> 8372e1e59bb174653432fe0d9e29f67c9b7ece66
 }
 
 export default Dashboard;

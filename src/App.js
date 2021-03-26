@@ -11,6 +11,7 @@ import JoinDoner from "./components/JoinDoner";
 import JoinAppli from "./components/JoinAppli";
 import LoginApplicant from "./components/LoginApplicant";
 import Dashboard from "./components/Dashboard";
+import Profile from "./components/Profile";
 import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import Faq from "./components/Faq";
@@ -49,6 +50,9 @@ function App() {
         </Route>
         <Route exact path="/dashboard">
           <Dashboard />
+        </Route>
+        <Route exact path="/profile">
+          <Profile />
         </Route>
         <Route exact path="/about">
           <About />

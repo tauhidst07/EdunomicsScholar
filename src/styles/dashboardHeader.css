@@ -3,6 +3,10 @@ a{
   color: black;
 }
 
+.dashboardHeader{
+  background-color: white !important;
+}
+
 .dashboardHeader,
 .dashboardHeader__routes{
   display: flex;
