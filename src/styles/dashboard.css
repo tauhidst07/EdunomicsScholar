@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 <<<<<<< HEAD
 =======
@@ -5,32 +6,35 @@
 */
 
 .dashboard__body > .userInfo{
+=======
+.dashboard__body > .userInfo {
+>>>>>>> 9fb7f1d433e3812220caedd8e5f59ea5cccfc837
   margin: 60px auto 30px;
   max-width: 1100px;
   width: 100%;
   display: flex;
 }
 
-.dashboard__body > .userInfo > .left{
+.dashboard__body > .userInfo > .left {
   flex: 1 1;
   border-right: 1px solid lightgray;
   margin-right: 70px;
 }
 
-.dashboard__body > .userInfo > .left > div:first-child{
+.dashboard__body > .userInfo > .left > div:first-child {
   display: flex;
   align-items: center;
   margin-bottom: 28px;
 }
 
-.userInfo__points{
+.userInfo__points {
   font-weight: 600;
   font-size: 28px;
   color: #5d57fb;
   line-height: 125%;
 }
 
-.userInfo__name{
+.userInfo__name {
   font-weight: 600;
   font-size: 28px;
   line-height: 125%;
@@ -38,7 +42,7 @@
   margin: 0 12px 0 8px;
 }
 
-.profileImg{
+.profileImg {
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -48,22 +52,21 @@
   cursor: inherit;
 }
 
-.userEarningPoints{
+.userEarningPoints {
   display: flex;
   margin-bottom: 28px;
   align-items: center;
 }
 
-.userEarningPoints div:first-child{
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 125%;
-    color: #100826;
-    /*margin-bottom: 12px;*/
-
+.userEarningPoints div:first-child {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 125%;
+  color: #100826;
+  /*margin-bottom: 12px;*/
 }
 
-.userEarningPoints>a>img{
+.userEarningPoints > a > img {
   width: 160px;
   height: 120px;
   -o-object-fit: cover;
@@ -72,13 +75,10 @@
   margin-right: 32px;
 }
 
-
-
-
-.userPointsProgress__container{
+.userPointsProgress__container {
   display: flex;
   align-items: center;
-margin-top: 12px;
+  margin-top: 12px;
   margin-left: 0;
   /*background: #e9e9fb;*/
   border-radius: 40px;
@@ -86,7 +86,7 @@ margin-top: 12px;
   box-sizing: border-box;
 }
 
-.userPointsProgress__container>div:first-child{
+.userPointsProgress__container > div:first-child {
   /*border: 1px solid black;*/
   background: #f2f2ff;
   border-radius: 40px;
@@ -94,7 +94,7 @@ margin-top: 12px;
   width: 100%;
 }
 
-.userPointsProgress__container>div:last-child {
+.userPointsProgress__container > div:last-child {
   margin-left: 12px;
   font-size: 12px;
   line-height: 100%;
@@ -103,16 +103,15 @@ margin-top: 12px;
   align-items: center;
 }
 
-.userPointsProgress__container>div:last-child svg{
+.userPointsProgress__container > div:last-child svg {
   width: 10px;
-height: 10px;
-min-width: 10px;
-min-height: 10px;
-margin-right: 4px;
+  height: 10px;
+  min-width: 10px;
+  min-height: 10px;
+  margin-right: 4px;
 }
 
-
-.userPointsProgress__container>div:first-child>span{
+.userPointsProgress__container > div:first-child > span {
   width: 75%;
   display: inherit;
   height: 100%;
@@ -121,8 +120,7 @@ margin-right: 4px;
   border-radius: 40px;
 }
 
-
-.userEarningPoints__more{
+.userEarningPoints__more {
   margin-top: 10px;
   font-size: 12px;
   line-height: 20px;
@@ -131,23 +129,18 @@ margin-right: 4px;
   align-items: center;
 }
 
-
-
-
-
-.userEarningPoints__more img{
+.userEarningPoints__more img {
   width: 26.6px;
   height: 20px;
-  opacity: .5;
+  opacity: 0.5;
   margin: 0 4px;
 }
 
-.userEarningPoints__more img:first-child{
+.userEarningPoints__more img:first-child {
   margin-left: 0;
 }
 
-
-.userEarningPoints__more > span{
+.userEarningPoints__more > span {
   font-size: 12px;
   line-height: 20px;
   color: #acaebf;
@@ -155,59 +148,50 @@ margin-right: 4px;
   font-weight: normal;
 }
 
-
-
-
-.myApplications{
+.myApplications {
   min-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-
-.myApplications>ul:first-child{
-  display:flex;
+.myApplications > ul:first-child {
+  display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.myApplications>ul:first-child li div:first-child{
+.myApplications > ul:first-child li div:first-child {
   font-weight: bold;
-
 }
 
-
-
-.myApplications>ul:first-child li div:last-child{
+.myApplications > ul:first-child li div:last-child {
   font-size: small;
   color: gray;
 }
 
-.myApplications>ul:first-child li{
+.myApplications > ul:first-child li {
   border-radius: 6px;
   background-color: #f5f7fa;
   padding: 15px 12px 14px 16px;
 }
 
-.myApplications>ul:last-child{
+.myApplications > ul:last-child {
   padding: 15px 12px 14px 16px;
-
 }
 
-.myApplications>ul:last-child span{
+.myApplications > ul:last-child span {
   color: gray;
   font-size: 14px;
 }
 
-
-.myApplications>ul:last-child li{
+.myApplications > ul:last-child li {
   display: flex;
   justify-content: space-between;
   padding: 8px 0;
 }
 
-.earnablePoints{
+.earnablePoints {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -215,17 +199,20 @@ margin-right: 4px;
   padding: 30px 0;
 }
 
-.earnablePoints>h3{
+.earnablePoints > h3 {
   font-size: 12px;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-.earnablePoints>h1{
+.earnablePoints > h1 {
   font-size: 2em !important;
   font-weight: bold;
   margin-bottom: 1.5em;
 }
+<<<<<<< HEAD
 /*
 >>>>>>> 8372e1e59bb174653432fe0d9e29f67c9b7ece66
 */
+=======
+>>>>>>> 9fb7f1d433e3812220caedd8e5f59ea5cccfc837
