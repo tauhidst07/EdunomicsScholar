@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-import React, {useState, useEffect} from "react";
-=======
+
 import React, { useState, useEffect } from "react";
->>>>>>> 9fb7f1d433e3812220caedd8e5f59ea5cccfc837
 import DashboardHeader from "./DashboardHeader";
 import Points from "./Points";
 import Footer from "./Footer";
 import axios from "axios";
 import profile from "../media/profile.png";
-<<<<<<< HEAD
-=======
 
->>>>>>> 9fb7f1d433e3812220caedd8e5f59ea5cccfc837
 import "../styles/dashboard.css";
 
 function Dashboard() {

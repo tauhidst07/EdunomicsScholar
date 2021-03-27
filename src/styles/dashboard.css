@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-/*
-<<<<<<< HEAD
-=======
-}
-*/
 
-.dashboard__body > .userInfo{
-=======
+
 .dashboard__body > .userInfo {
->>>>>>> 9fb7f1d433e3812220caedd8e5f59ea5cccfc837
   margin: 60px auto 30px;
   max-width: 1100px;
   width: 100%;
@@ -210,9 +202,3 @@
   font-weight: bold;
   margin-bottom: 1.5em;
 }
-<<<<<<< HEAD
-/*
->>>>>>> 8372e1e59bb174653432fe0d9e29f67c9b7ece66
-*/
-=======
->>>>>>> 9fb7f1d433e3812220caedd8e5f59ea5cccfc837
