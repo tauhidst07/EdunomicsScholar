@@ -1,7 +1,10 @@
 import React from 'react'
 import DashboardHeader from './DashboardHeader';
 import FinanceField from './profileFields/FinanceField';
+import FutureIntrestsField from './profileFields/FutureIntrestsField';
 import PublicServicesField from './profileFields/PublicServicesField'
+import SportsField from './profileFields/SportsField'
+import CareerField from './profileFields/CareerField'
 import ArtsField from './profileFields/ArtsField'
 import ResearchField from './profileFields/ResearchField'
 import Footer from './Footer';
@@ -270,7 +273,7 @@ const Profile = () => {
               </div>
 
               <div className="profile__containerRight__profileStrength">
-                <div className="profile__containerRight__profileStrength__Header">
+                <div className="profile__containerRight__profileStrength__Header profileHeading">
                   <div>Your Profile Strength:</div>
                   <div>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 0L13.2543 0.0657377L14.4949 0.262229L15.7082 0.587322L16.8808 1.03745L18 1.6077L19.0534 2.2918L20.0296 3.08226L20.9177 3.97043L21.7082 4.94658L22.3923 6L22.9625 7.11916L23.4127 8.2918L23.7378 9.50506L23.9343 10.7457L24 12L23.9343 13.2543L23.7378 14.4949L23.4127 15.7082L22.9625 16.8808L22.3923 18L21.7082 19.0534L20.9177 20.0296L20.0296 20.9177L19.0534 21.7082L18 22.3923L16.8808 22.9625L15.7082 23.4127L14.4949 23.7378L13.2543 23.9343L12 24L10.7457 23.9343L9.50506 23.7378L8.2918 23.4127L7.11916 22.9625L6 22.3923L4.94658 21.7082L3.97043 20.9177L3.08226 20.0296L2.2918 19.0534L1.6077 18L1.03745 16.8808L0.587322 15.7082L0.262229 14.4949L0.0657377 13.2543L0 12L0.0657377 10.7457L0.262229 9.50506L0.587322 8.2918L1.03745 7.11916L1.6077 6L2.2918 4.94658L3.08226 3.97043L3.97043 3.08226L4.94658 2.2918L6 1.6077L7.11916 1.03745L8.2918 0.587322L9.50506 0.262229L10.7457 0.0657377L12 0Z" fill="#5093F8"></path><path d="M12 0L13.2543 0.0657377L14.4949 0.262229L15.7082 0.587322L16.8808 1.03745L18 1.6077L19.0534 2.2918L20.0296 3.08226L20.9177 3.97043L21.7082 4.94658L22.3923 6L22.9625 7.11916L23.4127 8.2918L23.7378 9.50506L23.9343 10.7457L24 12L23.9343 13.2543L23.7378 14.4949L23.4127 15.7082L22.9625 16.8808L22.3923 18L21.7082 19.0534L20.9177 20.0296L20.0296 20.9177L19.0534 21.7082L18 22.3923L16.8808 22.9625L15.7082 23.4127L14.4949 23.7378L13.2543 23.9343L12 24L10.7457 23.9343L9.50506 23.7378L8.2918 23.4127L7.11916 22.9625L6 22.3923L4.94658 21.7082L3.97043 20.9177L3.08226 20.0296L2.2918 19.0534L1.6077 18L1.03745 16.8808L0.587322 15.7082L0.262229 14.4949L0.0657377 13.2543L0 12L0.0657377 10.7457L0.262229 9.50506L0.587322 8.2918L1.03745 7.11916L1.6077 6L2.2918 4.94658L3.08226 3.97043L3.97043 3.08226L4.94658 2.2918L6 1.6077L7.11916 1.03745L8.2918 0.587322L9.50506 0.262229L10.7457 0.0657377L12 0Z" fill="#BBB2EE"></path><g filter="url(#filter0_d)"><circle cx="12.0061" cy="11.8508" r="6.11574" fill="black"></circle></g><circle cx="12" cy="12" r="9" fill="#6B5ADD"></circle><g filter="url(#filter1_i)"><path d="M12 6L13.854 9.6204L18 10.2045L15 13.021L15.708 17L12 15.1204L8.292 17L9 13.021L6 10.2045L10.146 9.6204L12 6Z" fill="#3929A2"></path></g><defs><filter id="filter0_d" x="4.41351" y="4.99667" width="15.1852" height="15.1852" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></feColorMatrix><feOffset dy="0.738434"></feOffset><feGaussianBlur stdDeviation="0.738434"></feGaussianBlur><feColorMatrix type="matrix" values="0 0 0 0 0.678308 0 0 0 0 0.681736 0 0 0 0 0.726302 0 0 0 1 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feBlend></filter><filter id="filter1_i" x="6" y="6" width="12" height="12" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="1"></feOffset><feGaussianBlur stdDeviation="0.5"></feGaussianBlur><feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"></feColorMatrix><feBlend mode="normal" in2="shape" result="effect1_innerShadow"></feBlend></filter></defs></svg>
@@ -365,7 +368,7 @@ const Profile = () => {
                 <div className="profile__containerRight__profileStrength__infoBottom">
 
                   <div className="profileInfo__nav">
-                    <div disabled="">
+                    <div>
                       <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                         <path d="M11.25 13.5L6.75 9L11.25 4.5" stroke="#6D7B8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
@@ -433,59 +436,11 @@ const Profile = () => {
                 </div>
               </div>
 
-              <div className="profileEducation">
-                <h1 className="profileHeading">Career</h1>
-                <div className="profile__emptySection">
-                  Do you currently play organized sports or have you in the past?
-              </div>
+              <CareerField />
 
-                <div className="profile__addSection">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" >
-                    <path d="M14.0001 9.00005H3.99995" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M9 4V14.0001" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-                  <span>Add Sport</span>
-                </div>
-              </div>
+              <FinanceField />
 
-              <div className="profileEducation">
-                <h1 className="profileHeading">Finance</h1>
-                <div className="profile__emptySection">
-                  How are your finances?
-              </div>
-
-                <div className="profile__addSection">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" >
-                    <path d="M14.0001 9.00005H3.99995" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M9 4V14.0001" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-                  <span>Add loan information</span>
-                </div>
-
-                <div className="profile__addSection">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" >
-                    <path d="M14.0001 9.00005H3.99995" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M9 4V14.0001" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-                  <span>Add tuition snapshot</span>
-                </div>
-              </div>
-
-              <div className="profileEducation">
-                <h1 className="profileHeading">Sports</h1>
-                <div className="profile__emptySection">
-                  Do you currently play organized sports or have you in the past?
-            </div>
-
-                <div className="profile__addSection">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" >
-                    <path d="M14.0001 9.00005H3.99995" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M9 4V14.0001" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-                  <span>Add Sport</span>
-                </div>
-
-              </div>
+              <SportsField />
 
               <ResearchField />
 
@@ -494,7 +449,7 @@ const Profile = () => {
               <PublicServicesField />
 
               {/*   ************FUTURE INTRESTS***********  */}
-              <FinanceField />
+              <FutureIntrestsField />
 
             </div>
 
