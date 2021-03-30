@@ -114,9 +114,7 @@
 
   background-repeat: no-repeat;
   min-height: 130vh;
-  background-size: cover;
-  z-index: 1;
-  flex-direction: column;
+  margin-top: 2rem;
   height: 60px;
   /* position: relative; */
 }
