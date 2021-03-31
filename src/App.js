@@ -15,6 +15,7 @@ import Profile from "./components/Profile";
 import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import Faq from "./components/Faq";
+import HowItWorks from "./components/HowItWorks";
 
 function App() {
   return (
@@ -62,6 +63,9 @@ function App() {
         </Route>
         <Route exact path="/faq">
           <Faq />
+        </Route>
+        <Route exact path="/how-it-works">
+          <HowItWorks />
         </Route>
       </Switch>
     </div>

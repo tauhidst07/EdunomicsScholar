@@ -40,16 +40,17 @@
 }
 .main {
   background: radial-gradient(at center center, #2d7e9270, #1c40617c 100%),
-    url("../media/ban.jpeg");
+    url("../media/deg.jpg");
 
   background-position: center;
   width: 100%;
   background-repeat: no-repeat;
   min-height: 130vh;
   background-size: cover;
+  object-fit: contain;
   z-index: 1;
-  flex-direction: column;
-  height: 60px;
+  /* flex-direction: column; */
+  height: 100%;
   /* position: relative; */
 }
 .hero {
@@ -60,7 +61,7 @@
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
-  padding-top: 5rem;
+  padding-top: 8rem;
 }
 .heading {
   margin-bottom: 40px;
@@ -70,6 +71,8 @@
   color: #fff;
   text-align: center;
   text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 .sub-head {
   font-size: 24px;
@@ -79,9 +82,10 @@
   margin-left: auto;
   text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
   margin-right: auto;
-  color: #fff;
+
   font-weight: 700;
   text-align: center;
+  color: rgb(68, 66, 66);
 }
 .block-1 {
   background: rgb(51, 49, 49);
@@ -90,6 +94,7 @@
   width: 360px;
   box-sizing: border-box;
   text-decoration: none;
+  box-shadow: 0 8px 6px -6px black;
 }
 .block-2 {
   background: rgb(51, 49, 49);
@@ -98,6 +103,7 @@
   width: 360px;
   box-sizing: border-box;
   text-decoration: none;
+  box-shadow: 0 8px 6px -6px black;
 }
 .blocks {
   max-width: 800px;
@@ -114,9 +120,7 @@
 
   background-repeat: no-repeat;
   min-height: 130vh;
-  background-size: cover;
-  z-index: 1;
-  flex-direction: column;
+  /* margin-top: 2rem; */
   height: 60px;
   /* position: relative; */
 }
@@ -228,6 +232,8 @@ option {
 }
 .bt0 :hover {
   background-color: hotpink;
+  transition: background-color 2s ease-out;
+
   color: #c21e42;
 }
 /* .dropdown {
