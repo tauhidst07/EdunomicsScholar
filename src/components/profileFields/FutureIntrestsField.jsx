@@ -1,27 +1,7 @@
 import React, {useState} from 'react'
 import Modal from 'react-modal';
-import Select from 'react-select';
-import MenuItem from '@material-ui/core/MenuItem';
-import TextField from '@material-ui/core/TextField'
-import MSelect from '@material-ui/core/Select';
 
-
-const SportsField = () => {
-
-  const values = [
-    {
-      key: "1",
-      name: "rishabh",
-      value: "78"
-
-    }
-]
-
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
-];
+const FutureIntrestsField = () => {
 
   const customStyles = {
     content: {
@@ -42,7 +22,6 @@ const options = [
     }
   };
 
-  //var subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {
     setIsOpen(true);
@@ -60,19 +39,20 @@ const options = [
   return (
     <>
     <div className="profileEducation">
-      <h1 className="profileHeading">Sports</h1>
+      <h1 className="profileHeading">Future Intrests</h1>
 
       <div className="profile__emptySection">
-        Do you have public service, volunteering or advocacy experience?
-      </div>
+        What are your future interests?
+    </div>
 
       <div className="profile__addSection">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" >
           <path d="M14.0001 9.00005H3.99995" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           <path d="M9 4V14.0001" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
-        <span onClick={openModal}>Add Sports</span>
+        <span onClick={openModal}>Add Intrests</span>
       </div>
+
 
       <Modal
         isOpen={modalIsOpen}
@@ -86,7 +66,7 @@ const options = [
           <div>
             <div className="profile__modelContainer__header">
               <h3 color="text" font-size="large" font-weight="600" class="Title__StyledHeading-sc-14ii9t5-0 jdLSGv">
-                Add sports information
+                Edit interest information
               </h3>
               <svg onClick={closeModal} width="11" height="10" viewBox="0 0 11 10" fill="none">
                 <path d="M1.00136 2.15221C0.60043 1.77238 0.600429 1.15655 1.00136 0.776722L1.04224 0.737998C1.44317 0.358167 2.09321 0.358167 2.49414 0.737997L9.99892 7.84779C10.3999 8.22762 10.3999 8.84345 9.99892 9.22328L9.95805 9.262C9.55712 9.64183 8.90707 9.64183 8.50614 9.262L1.00136 2.15221Z" fill="#6D7B8C">
@@ -98,87 +78,91 @@ const options = [
 
             <div >
               <div className="profile__modelContainer__form" >
-
-
-
                 <div className="profile__modelContainer__formField">
-                  <span>
-                    What type of experience was it?
-                  </span>
+                  <span class="FormField-module--label--10Nfx">Long-term, do your goals include politics?</span>
                   <div className="profile__modelContainer__formField__RadioButtonGroup">
-                    <Select
-                      value=''
-                      onChange=''
-                      options={options}
-                    />
+                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
+                      <input type="radio" />
+                      <label for="Yes">Yes</label>
+                    </div>
+                    <div >
+                      <input type="radio" checked="" />
+                      <label for="No">No</label>
+                    </div>
                   </div>
                 </div>
-
                 <div className="profile__modelContainer__formField">
-                  <span>
-                    With which organization was it
+                  <span class="FormField-module--label--10Nfx">
+                    Long-term, do your goals include advocacy?
                   </span>
                   <div className="profile__modelContainer__formField__RadioButtonGroup">
-                    <TextField id="outlined-basic" variant="outlined" />
+                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
+                      <input type="radio" />
+                      <label for="Yes">Yes</label>
+                    </div>
+                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
+                      <input type="radio" checked="" />
+                      <label for="No">No</label>
+                    </div>
                   </div>
                 </div>
-
-
                 <div className="profile__modelContainer__formField">
-                  <span>
-                    What was your mission?
-                  </span>
+                  <span class="FormField-module--label--10Nfx">
+                    Long-term, do your goals include volunteering?
+                    </span>
                   <div className="profile__modelContainer__formField__RadioButtonGroup">
-                    <TextField id="outlined-basic" variant="outlined" />
+                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
+                      <input type="radio" />
+                      <label for="Yes">
+                        Yes
+                          </label>
+                    </div>
+                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
+                      <input type="radio" checked="" />
+                      <label for="No">
+                        No
+                            </label>
+                    </div>
                   </div>
                 </div>
-
                 <div className="profile__modelContainer__formField">
-                  <span>
-                    What was your role?
-                  </span>
+                  <span class="FormField-module--label--10Nfx">
+                    Long-term, do your goals include philanthropy?
+                        </span>
                   <div className="profile__modelContainer__formField__RadioButtonGroup">
-                    <TextField id="outlined-basic" variant="outlined" />
+                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
+                      <input type="radio" />
+                      <label for="Yes">
+                        Yes
+                              </label>
+                    </div>
+                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
+                      <input type="radio" checked={true} />
+                      <label for="No">
+                        No
+                              </label>
+                    </div>
                   </div>
                 </div>
-
                 <div className="profile__modelContainer__formField">
-                  <span>
-                    When did you start and finish this experience?
-                  </span>
+                  <span class="FormField-module--label--10Nfx">
+                    Long-term, do your goals include entrepreneurship?
+                          </span>
                   <div className="profile__modelContainer__formField__RadioButtonGroup">
-                    <MSelect
-                      labelId="demo-simple-select-label"
-                      id="demo-simple-select"
-                      value='{age}'
-                      onChange=''
-                      variant="outlined"
-                    >
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                    </MSelect>
-
-
-                    <MSelect
-                      labelId="demo-simple-select-label"
-                      id="demo-simple-select"
-                      value='{age}'
-                      onChange=''
-                      variant="outlined"
-                    >
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                    </MSelect>
+                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
+                      <input type="radio" />
+                      <label for="Yes">
+                        Yes
+                              </label>
+                    </div>
+                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
+                      <input type="radio" />
+                      <label for="No">
+                        No
+                              </label>
+                    </div>
                   </div>
                 </div>
-
-
-
-
-
-
               </div>
             </div>
 
@@ -186,12 +170,14 @@ const options = [
             <div className="profile__saveChangesContainer">
               <button>
                 Save changes
-              </button>
+                      </button>
             </div>
           </div>
         </div>
 
       </Modal>
+    </div>
+    <div>
 
 
     </div>
@@ -201,4 +187,4 @@ const options = [
   )
 }
 
-export default SportsField;
+export default FutureIntrestsField;

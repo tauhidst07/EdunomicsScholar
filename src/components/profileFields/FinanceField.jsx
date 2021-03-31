@@ -1,7 +1,22 @@
 import React, {useState} from 'react'
 import Modal from 'react-modal';
+import TextField from '@material-ui/core/TextField'
+import Select from 'react-select';
+import MSelect from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+
+
 
 const FinanceField = () => {
+
+
+  const options = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' },
+  ];
+
+
 
   const customStyles = {
     content: {
@@ -24,6 +39,12 @@ const FinanceField = () => {
 
   var subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalIsOpen2, setIsOpen2] = useState(false);
+
+  function openModal2() {
+    setIsOpen2(true);
+  }
+
   function openModal() {
     setIsOpen(true);
   }
@@ -37,13 +58,17 @@ const FinanceField = () => {
     setIsOpen(false);
   }
 
+  function closeModal2() {
+    setIsOpen2(false);
+  }
+
   return (
     <>
     <div className="profileEducation">
-      <h1 className="profileHeading">Future Intrests</h1>
+      <h1 className="profileHeading">Finances</h1>
 
       <div className="profile__emptySection">
-        What are your future interests?
+        How are your finances?
     </div>
 
       <div className="profile__addSection">
@@ -51,8 +76,120 @@ const FinanceField = () => {
           <path d="M14.0001 9.00005H3.99995" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           <path d="M9 4V14.0001" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
-        <span onClick={openModal}>Add Intrests</span>
+        <span onClick={openModal}>Add loan information</span>
       </div>
+
+      <div className="profile__addSection">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" >
+          <path d="M14.0001 9.00005H3.99995" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M9 4V14.0001" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span onClick={openModal2}>Add tuition snapshot</span>
+      </div>
+
+
+      <Modal
+        isOpen={modalIsOpen2}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal2}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+
+        <div className="profile__modelContainer" tabindex="-1" role="dialog" aria-label="Edit interest information" aria-modal="true">
+          <div>
+            <div className="profile__modelContainer__header">
+              <h3 color="text" font-size="large" font-weight="600" class="Title__StyledHeading-sc-14ii9t5-0 jdLSGv">
+                Edit finances information
+              </h3>
+              <svg onClick={closeModal} width="11" height="10" viewBox="0 0 11 10" fill="none">
+                <path d="M1.00136 2.15221C0.60043 1.77238 0.600429 1.15655 1.00136 0.776722L1.04224 0.737998C1.44317 0.358167 2.09321 0.358167 2.49414 0.737997L9.99892 7.84779C10.3999 8.22762 10.3999 8.84345 9.99892 9.22328L9.95805 9.262C9.55712 9.64183 8.90707 9.64183 8.50614 9.262L1.00136 2.15221Z" fill="#6D7B8C">
+                </path>
+                <path d="M8.50614 0.737998C8.90707 0.358167 9.55712 0.358166 9.95805 0.737997L9.99892 0.776721C10.3999 1.15655 10.3999 1.77238 9.99892 2.15221L2.49414 9.262C2.09321 9.64183 1.44317 9.64183 1.04224 9.262L1.00136 9.22328C0.60043 8.84345 0.600429 8.22762 1.00136 7.84779L8.50614 0.737998Z" fill="#6D7B8C">
+                </path>
+              </svg>
+            </div>
+
+            <div >
+              <div className="profile__modelContainer__form" >
+
+
+
+                <div className="profile__modelContainer__formField">
+                  <span class="FormField-module--label--10Nfx">
+                    How much is annual tuition at your current school?
+                  </span>
+                  <div className="profile__modelContainer__formField__RadioButtonGroup">
+                    <TextField id="outlined-basic" variant="outlined" />
+                  </div>
+                </div>
+
+                <div className="profile__modelContainer__formField">
+                  <span class="FormField-module--label--10Nfx">
+                    How much aid do you receive annually?
+                  </span>
+                  <div className="profile__modelContainer__formField__RadioButtonGroup">
+                    <TextField id="outlined-basic" variant="outlined" />
+                  </div>
+                </div>
+
+
+
+              <div className="profile__modelContainer__formField">
+                <span class="FormField-module--label--10Nfx">
+                  How much of your tuition do you pay yourself?
+                </span>
+                <div className="profile__modelContainer__formField__RadioButtonGroup">
+                  <TextField id="outlined-basic" variant="outlined" />
+                </div>
+              </div>
+
+
+
+
+
+
+              <div className="profile__modelContainer__formField">
+                <span class="FormField-module--label--10Nfx">
+                  How much of your tuition is covered by student loans?
+                </span>
+                <div className="profile__modelContainer__formField__RadioButtonGroup">
+                  <TextField id="outlined-basic" variant="outlined" />
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+              <div className="profile__modelContainer__formField">
+                <span class="FormField-module--label--10Nfx">
+                  How much of your tuition is covered by friends/family?
+                </span>
+                <div className="profile__modelContainer__formField__RadioButtonGroup">
+                  <TextField id="outlined-basic" variant="outlined" />
+                </div>
+              </div>
+
+              </div>
+            </div>
+
+
+            <div className="profile__saveChangesContainer">
+              <button>
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </Modal>
+
+
 
 
       <Modal
@@ -67,7 +204,7 @@ const FinanceField = () => {
           <div>
             <div className="profile__modelContainer__header">
               <h3 color="text" font-size="large" font-weight="600" class="Title__StyledHeading-sc-14ii9t5-0 jdLSGv">
-                Edit interest information
+                Add loan information
               </h3>
               <svg onClick={closeModal} width="11" height="10" viewBox="0 0 11 10" fill="none">
                 <path d="M1.00136 2.15221C0.60043 1.77238 0.600429 1.15655 1.00136 0.776722L1.04224 0.737998C1.44317 0.358167 2.09321 0.358167 2.49414 0.737997L9.99892 7.84779C10.3999 8.22762 10.3999 8.84345 9.99892 9.22328L9.95805 9.262C9.55712 9.64183 8.90707 9.64183 8.50614 9.262L1.00136 2.15221Z" fill="#6D7B8C">
@@ -80,90 +217,137 @@ const FinanceField = () => {
             <div >
               <div className="profile__modelContainer__form" >
                 <div className="profile__modelContainer__formField">
-                  <span class="FormField-module--label--10Nfx">Long-term, do your goals include politics?</span>
-                  <div className="profile__modelContainer__formField__RadioButtonGroup">
-                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
-                      <input type="radio" />
-                      <label for="Yes">Yes</label>
+                  <span>Which institution issued your student loan?</span>
+                    <div className="profile__modelContainer__formField__RadioButtonGroup">
+                      <Select
+                        value=''
+                        onChange=''
+                        options={options}
+                      />
                     </div>
-                    <div >
-                      <input type="radio" checked="" />
-                      <label for="No">No</label>
-                    </div>
-                  </div>
                 </div>
+
                 <div className="profile__modelContainer__formField">
                   <span class="FormField-module--label--10Nfx">
                     Long-term, do your goals include advocacy?
-                  </span>
-                  <div className="profile__modelContainer__formField__RadioButtonGroup">
-                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
-                      <input type="radio" />
-                      <label for="Yes">Yes</label>
-                    </div>
-                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
-                      <input type="radio" checked="" />
-                      <label for="No">No</label>
-                    </div>
-                  </div>
-                </div>
-                <div className="profile__modelContainer__formField">
-                  <span class="FormField-module--label--10Nfx">
-                    Long-term, do your goals include volunteering?
                     </span>
                   <div className="profile__modelContainer__formField__RadioButtonGroup">
                     <div class="RadioButtonGroup-module--radio-button--3Fn7H">
                       <input type="radio" />
-                      <label for="Yes">
-                        Yes
-                          </label>
+                      <label for="My Own Loan">
+                        My Own Loan
+                      </label>
                     </div>
                     <div class="RadioButtonGroup-module--radio-button--3Fn7H">
                       <input type="radio" checked="" />
-                      <label for="No">
-                        No
-                            </label>
+                      <label for="Parent PLUS Loan">
+                        Parent PLUS Loan
+                      </label>
                     </div>
                   </div>
                 </div>
                 <div className="profile__modelContainer__formField">
                   <span class="FormField-module--label--10Nfx">
-                    Long-term, do your goals include philanthropy?
-                        </span>
+                    What was the initial loan amount?
+                  </span>
                   <div className="profile__modelContainer__formField__RadioButtonGroup">
-                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
-                      <input type="radio" />
-                      <label for="Yes">
-                        Yes
-                              </label>
-                    </div>
-                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
-                      <input type="radio" checked={true} />
-                      <label for="No">
-                        No
-                              </label>
-                    </div>
+                    <TextField id="outlined-basic" variant="outlined" />
                   </div>
                 </div>
+
                 <div className="profile__modelContainer__formField">
                   <span class="FormField-module--label--10Nfx">
-                    Long-term, do your goals include entrepreneurship?
-                          </span>
+                    What is the current loan amount?
+                  </span>
                   <div className="profile__modelContainer__formField__RadioButtonGroup">
-                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
-                      <input type="radio" />
-                      <label for="Yes">
-                        Yes
-                              </label>
-                    </div>
-                    <div class="RadioButtonGroup-module--radio-button--3Fn7H">
-                      <input type="radio" />
-                      <label for="No">
-                        No
-                              </label>
-                    </div>
+                    <TextField id="outlined-basic" variant="outlined" />
                   </div>
                 </div>
+
+                <div className="profile__modelContainer__formField">
+                  <span>
+                    When was the loan issued?
+                  </span>
+                <div className="profile__modelContainer__formField__RadioButtonGroup">
+                  <MSelect
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value='{age}'
+                    onChange=''
+                    variant="outlined"
+                  >
+                  <MenuItem value={10}>Ten</MenuItem>
+                  <MenuItem value={20}>Twenty</MenuItem>
+                  <MenuItem value={30}>Thirty</MenuItem>
+                  </MSelect>
+
+
+                  <MSelect
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value='{age}'
+                    onChange=''
+                    variant="outlined"
+                  >
+                  <MenuItem value={10}>Ten</MenuItem>
+                  <MenuItem value={20}>Twenty</MenuItem>
+                  <MenuItem value={30}>Thirty</MenuItem>
+                  </MSelect>
+
+                  <MSelect
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value='{age}'
+                    onChange=''
+                    variant="outlined"
+                  >
+                  <MenuItem value={10}>Ten</MenuItem>
+                  <MenuItem value={20}>Twenty</MenuItem>
+                  <MenuItem value={30}>Thirty</MenuItem>
+                  </MSelect>
+                </div>
+              </div>
+
+              <div className="profile__modelContainer__formField">
+                <span class="FormField-module--label--10Nfx">
+                  What is the loan interest?
+                </span>
+                <div className="profile__modelContainer__formField__RadioButtonGroup">
+                  <TextField id="outlined-basic" variant="outlined" />
+                </div>
+              </div>
+
+
+
+
+
+
+              <div className="profile__modelContainer__formField">
+                <span class="FormField-module--label--10Nfx">
+                  How many months late on your payments for this loan are you?
+                </span>
+                <div className="profile__modelContainer__formField__RadioButtonGroup">
+                  <TextField id="outlined-basic" variant="outlined" />
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+              <div className="profile__modelContainer__formField">
+                <span class="FormField-module--label--10Nfx">
+                  What is the name of the debt collection agency?
+                </span>
+                <div className="profile__modelContainer__formField__RadioButtonGroup">
+                  <TextField id="outlined-basic" variant="outlined" />
+                </div>
+              </div>
+
               </div>
             </div>
 

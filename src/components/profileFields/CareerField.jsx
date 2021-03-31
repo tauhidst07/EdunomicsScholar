@@ -6,7 +6,7 @@ import TextField from '@material-ui/core/TextField'
 import MSelect from '@material-ui/core/Select';
 
 
-const SportsField = () => {
+const CareerField = () => {
 
   const values = [
     {
@@ -60,18 +60,26 @@ const options = [
   return (
     <>
     <div className="profileEducation">
-      <h1 className="profileHeading">Sports</h1>
+      <h1 className="profileHeading">Career</h1>
 
-      <div className="profile__emptySection">
-        Do you have public service, volunteering or advocacy experience?
+      <div className="profile__emptySection" style={{"color": "rgb(93, 87, 251)"}}>
+        GOALS
       </div>
 
+      <ul className="profile__addSection profileGoals">
+        <li>
+          <div>Dream career field:</div>
+          <div>Civil Engineering</div>
+        </li>
+      </ul>
+
+
       <div className="profile__addSection">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" >
-          <path d="M14.0001 9.00005H3.99995" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          <path d="M9 4V14.0001" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        <span onClick={openModal}>Add Sports</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" >
+            <path d="M14.0001 9.00005H3.99995" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M9 4V14.0001" stroke="#314BBE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          <span onClick={openModal}>Add Experience</span>
       </div>
 
       <Modal
@@ -201,4 +209,4 @@ const options = [
   )
 }
 
-export default SportsField;
+export default CareerField;
