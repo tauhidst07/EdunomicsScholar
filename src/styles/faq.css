@@ -11,15 +11,15 @@
   color: rgb(15, 14, 14);
   font-size: 28px;
   font-weight: 700;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-align: center;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   font-weight: 800;
   font-size: 54px;
   line-height: 125%;
   color: #100826;
-  margin-top: 31px;
-  margin-bottom: 0;
+  /* margin-top: 31px; */
+  /* margin-bottom: 0; */
 }
 
 .faq-header > p {

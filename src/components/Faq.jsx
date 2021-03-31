@@ -44,17 +44,20 @@ function Faq() {
   };
   function Header1() {
     return (
-      <header className="faq-header">
+      <div>
         <Header />
-        <HowItWorksHeader />
-        <h1 className="faq-header">Doner FAQs</h1>
-        <p>
-          Here are the questions most frequently asked by Bold.org donors.{" "}
-          <br /> If you don’t see the answer to your question, let us know at{" "}
-          <a href="mailto:donors@bold.org">donors@bold.org</a>.
-        </p>
-        <p style={{ fontSize: "2rem", fontWeight: 600 }}>Donation Details</p>
-      </header>
+
+        <header className="faq-header">
+          <HowItWorksHeader />
+          <h1 className="faq-header">Doner FAQs</h1>
+          <p>
+            Here are the questions most frequently asked by Bold.org donors.{" "}
+            <br /> If you don’t see the answer to your question, let us know at{" "}
+            <a href="mailto:donors@bold.org">donors@bold.org</a>.
+          </p>
+          <p style={{ fontSize: "2rem", fontWeight: 600 }}>Donation Details</p>
+        </header>
+      </div>
     );
   }
 

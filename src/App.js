@@ -17,6 +17,7 @@ import ContactUs from "./components/ContactUs";
 import Faq from "./components/Faq";
 import HowItWorks from "./components/HowItWorks";
 import Pricing from "./components/Pricing";
+import Award from "./components/AwardFeatures";
 
 function App() {
   return (
@@ -70,6 +71,9 @@ function App() {
         </Route>
         <Route exact path="/pricing">
           <Pricing />
+        </Route>
+        <Route exact path="/award">
+          <Award />
         </Route>
       </Switch>
     </div>
