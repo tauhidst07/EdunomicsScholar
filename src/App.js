@@ -16,6 +16,7 @@ import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import Faq from "./components/Faq";
 import HowItWorks from "./components/HowItWorks";
+import Pricing from "./components/Pricing";
 
 function App() {
   return (
@@ -66,6 +67,9 @@ function App() {
         </Route>
         <Route exact path="/how-it-works">
           <HowItWorks />
+        </Route>
+        <Route exact path="/pricing">
+          <Pricing />
         </Route>
       </Switch>
     </div>

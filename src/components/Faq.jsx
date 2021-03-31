@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../styles/faq.css";
 import Header from "./Header";
 import Footer from "./Footer";
+import HowItWorksHeader from "./HowItWorksHeader";
+
 // import { AiOutlinePlus } from "react-icons/ai";
 // import { AiOutlineMinusCircle } from "react-icons/ai";
 import FAQs from "./FAQs";
@@ -44,6 +46,7 @@ function Faq() {
     return (
       <header className="faq-header">
         <Header />
+        <HowItWorksHeader />
         <h1 className="faq-header">Doner FAQs</h1>
         <p>
           Here are the questions most frequently asked by Bold.org donors.{" "}
