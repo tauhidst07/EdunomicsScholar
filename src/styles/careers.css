@@ -1,0 +1,49 @@
+.ben > h1 {
+  /* margin: 120px 0 55px; */
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  text-align: center;
+  color: rgb(24, 22, 22);
+  padding-top: 100px;
+}
+.ben-1 {
+  flex: 1 1;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 30px;
+  box-sizing: border-box;
+  /* margin-bottom: 20px; */
+  margin-right: 20px;
+  color: #fff;
+  padding-top: 100px;
+  box-shadow: 0 8px 6px -6px black;
+}
+.ben-big {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #fff;
+  padding-top: 30px;
+}
+.ben-1 > h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 125%;
+  text-align: center;
+  color: #fff;
+  margin: 70px 0 18px;
+}
+.ben-1 > p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+  opacity: 0.5;
+  margin: 0;
+}
