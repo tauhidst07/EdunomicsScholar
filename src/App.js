@@ -19,6 +19,7 @@ import HowItWorks from "./components/HowItWorks";
 import Pricing from "./components/Pricing";
 import Award from "./components/AwardFeatures";
 import DonerCredits from "./components/DonerCredits";
+import Careers from "./components/Careers";
 
 function App() {
   return (
@@ -78,6 +79,9 @@ function App() {
         </Route>
         <Route exact path="/doner-credits">
           <DonerCredits />
+        </Route>
+        <Route exact path="/careers">
+          <Careers />
         </Route>
       </Switch>
     </div>
