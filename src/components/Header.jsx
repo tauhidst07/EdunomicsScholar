@@ -1,9 +1,15 @@
 import React from "react";
 import "../styles/header.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import edu from "../media/edu.png";
 
 function Header() {
+  const history = useHistory();
+
+  const pushToRoute = (route) => {
+    history.push(route);
+  };
+
   return (
     <div className="main-header">
       <nav className="naav">
@@ -20,7 +26,12 @@ function Header() {
         </div>
         <div className="btn">
           <select className="bt11" value="How it Works">
-            <option value="Orange">How it Works</option>
+            <option
+              value="How it Works"
+              onClick={() => pushToRoute("/how-it-works")}
+            >
+              How it Works
+            </option>
             <option value="Radish">Radish</option>
             <option value="Cherry">Cherry</option>
           </select>
