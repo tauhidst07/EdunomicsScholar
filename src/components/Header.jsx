@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/header.css";
 import { Link, useHistory } from "react-router-dom";
 import edu from "../media/edu.png";
-import { Menu, MenuItem } from "@material-ui/core";
+import { Menu, MenuItem, Button } from "@material-ui/core";
 
 function Header() {
   const history = useHistory();
+  const [anchorEl, setAnchorEl] = useState(null);
 
-  // const pushToRoute = (route) => {
-  //   history.push(route);
-  // };
-
+  const handleClick = (e) => {
+    setAnchorEl(e.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <div className="main-header">
       <nav className="naav">
@@ -26,25 +29,134 @@ function Header() {
           </Link>
         </div>
         <div className="btn">
-          <Menu className="bt11">
-            <MenuItem onClick={() => alert("/how-it-works")}>
-              How it Works
+          <Button
+            style={{
+              fontSize: "14px",
+              color: "#0b233f",
+              fontWeight: 900,
+              textTransform: "none",
+            }}
+            aria-controls="simple-menu"
+            aria-haspopup="true"
+            onClick={handleClick}
+          >
+            How It Works
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path
+                d="M5.28769 7.71231C5.58058 7.41942 6.05546 7.41942 6.34835 7.71231L9.53033 10.8943C9.82322 11.1872 9.82322 11.6621 9.53033 11.955C9.23744 12.2478 8.76256 12.2478 8.46967 11.955L5.28769 8.77297C4.9948 8.48008 4.9948 8.0052 5.28769 7.71231Z"
+                fill="#5D57FB"
+              ></path>
+              <path
+                d="M12.7123 7.71231C13.0052 8.0052 13.0052 8.48008 12.7123 8.77297L9.53033 11.955C9.23744 12.2478 8.76256 12.2478 8.46967 11.955C8.17678 11.6621 8.17678 11.1872 8.46967 10.8943L11.6517 7.71231C11.9445 7.41942 12.4194 7.41942 12.7123 7.71231Z"
+                fill="#5D57FB"
+              ></path>
+            </svg>
+          </Button>
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                history.push("/how-it-works");
+              }}
+            >
+              How It Works
             </MenuItem>
-            <option onClick={() => history.push("/pricing")}>Pricing</option>
-            <option onClick={() => history.push("/faq")}>Doner Credits</option>
-            <option onClick={() => history.push("/award")}>
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                history.push("/doner-credits");
+              }}
+            >
+              Doner credits
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                history.push("/award");
+              }}
+            >
               Award Features
-            </option>
-            <option onClick={() => history.push("/faq")}>FAQ</option>
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                history.push("/pricing");
+              }}
+            >
+              Pricing
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                history.push("/faq");
+              }}
+            >
+              FAQ
+            </MenuItem>
           </Menu>
-
           <button className="bt11">View Scholarships</button>
           <button className="bt11">Leaders</button>
-          <select className="bt11" value="Company">
-            <option value="Orange">Company</option>
-            <option value="Radish">Radish</option>
-            <option value="Cherry">Cherry</option>
-          </select>
+          <Button
+            style={{
+              fontSize: "14px",
+              color: "#0b233f",
+              fontWeight: 900,
+              textTransform: "none",
+            }}
+            aria-controls="simple-menu"
+            aria-haspopup="true"
+            onClick={handleClick}
+          >
+            Company
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path
+                d="M5.28769 7.71231C5.58058 7.41942 6.05546 7.41942 6.34835 7.71231L9.53033 10.8943C9.82322 11.1872 9.82322 11.6621 9.53033 11.955C9.23744 12.2478 8.76256 12.2478 8.46967 11.955L5.28769 8.77297C4.9948 8.48008 4.9948 8.0052 5.28769 7.71231Z"
+                fill="#5D57FB"
+              ></path>
+              <path
+                d="M12.7123 7.71231C13.0052 8.0052 13.0052 8.48008 12.7123 8.77297L9.53033 11.955C9.23744 12.2478 8.76256 12.2478 8.46967 11.955C8.17678 11.6621 8.17678 11.1872 8.46967 10.8943L11.6517 7.71231C11.9445 7.41942 12.4194 7.41942 12.7123 7.71231Z"
+                fill="#5D57FB"
+              ></path>
+            </svg>
+          </Button>
+          <Menu
+            id="simple-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                history.push("/about");
+              }}
+            >
+              About Us
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                history.push("/contactus");
+              }}
+            >
+              Contact Us
+            </MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleClose();
+                history.push("/award");
+              }}
+            >
+              Careers
+            </MenuItem>
+          </Menu>
           <button className="bt22-1">Login</button>
           <Link to="/signup" className="bt22-2">
             Join Bold.org
