@@ -54,10 +54,15 @@ function Footer() {
         </div>
         <div className="down3">
           <h1 className="doner">company</h1>
-          <p>About Us</p>
-          <p>Contact Us </p>
-          <p>Careers</p>
-
+          <Link to="about">
+            <p>About Us</p>
+          </Link>
+          <Link to="/contactus">
+            <p>Contact Us </p>
+          </Link>
+          <Link to="/careers">
+            <p>Careers</p>
+          </Link>
           <p>Terms of Use</p>
           <p>Privacy Policy</p>
           <p>Press Center</p>
