@@ -2,13 +2,14 @@ import React from "react";
 import "../styles/header.css";
 import { Link, useHistory } from "react-router-dom";
 import edu from "../media/edu.png";
+import { Menu, MenuItem } from "@material-ui/core";
 
 function Header() {
   const history = useHistory();
 
-  const pushToRoute = (route) => {
-    history.push(route);
-  };
+  // const pushToRoute = (route) => {
+  //   history.push(route);
+  // };
 
   return (
     <div className="main-header">
@@ -25,16 +26,17 @@ function Header() {
           </Link>
         </div>
         <div className="btn">
-          <select className="bt11" value="How it Works">
-            <option
-              value="How it Works"
-              onClick={() => pushToRoute("/how-it-works")}
-            >
+          <Menu className="bt11">
+            <MenuItem onClick={() => alert("/how-it-works")}>
               How it Works
+            </MenuItem>
+            <option onClick={() => history.push("/pricing")}>Pricing</option>
+            <option onClick={() => history.push("/faq")}>Doner Credits</option>
+            <option onClick={() => history.push("/award")}>
+              Award Features
             </option>
-            <option value="Radish">Radish</option>
-            <option value="Cherry">Cherry</option>
-          </select>
+            <option onClick={() => history.push("/faq")}>FAQ</option>
+          </Menu>
 
           <button className="bt11">View Scholarships</button>
           <button className="bt11">Leaders</button>
