@@ -161,7 +161,7 @@ function Header() {
             <MenuItem
               onClick={() => {
                 handleCloseCompany();
-                history.push("/award");
+                history.push("/careers");
               }}
             >
               Careers

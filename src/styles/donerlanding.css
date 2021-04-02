@@ -71,11 +71,13 @@
   color: #222224;
 }
 .don-1 :hover {
-  background-color: transparent;
+  background-color: rgb(238, 245, 245);
+  transition: background-color 2s ease-out;
   cursor: pointer;
 }
 .don-2 :hover {
-  background-color: transparent;
+  background-color: cadetblue;
+  transition: background-color 2s ease-out;
   cursor: pointer;
 }
 .svgg {
