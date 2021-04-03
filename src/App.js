@@ -26,6 +26,7 @@ import Press from "./components/Press";
 import Enroll from "./components/EnrollmentS";
 import ResearchReport from "./components/ReseacrhReport";
 import ScholorshipRules from "./components/ScholarRules";
+import EasyScholar from "./components/EasyScholar";
 
 function App() {
   return (
@@ -106,6 +107,9 @@ function App() {
         </Route>
         <Route exact path="/scholar-rules">
           <ScholorshipRules />
+        </Route>
+        <Route exact path="/easy-scholar">
+          <EasyScholar />
         </Route>
       </Switch>
     </div>
