@@ -21,6 +21,9 @@ import Award from "./components/AwardFeatures";
 import DonerCredits from "./components/DonerCredits";
 import Careers from "./components/Careers";
 import Privacy from "./components/Privacy";
+import Terms from "./components/TermsOfUse";
+import Press from "./components/Press";
+import Enroll from "./components/EnrollmentS";
 
 function App() {
   return (
@@ -86,6 +89,15 @@ function App() {
         </Route>
         <Route exact path="/privacy">
           <Privacy />
+        </Route>
+        <Route exact path="/terms">
+          <Terms />
+        </Route>
+        <Route exact path="/press">
+          <Press />
+        </Route>
+        <Route exact path="/enroll">
+          <Enroll />
         </Route>
       </Switch>
     </div>
