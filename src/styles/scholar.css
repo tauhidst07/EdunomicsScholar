@@ -1,0 +1,27 @@
+.sch-top {
+  max-width: 640px;
+  margin: auto;
+}
+.sch-top > h1 {
+  margin-bottom: 32px;
+  margin-top: 32px;
+  color: rgb(16, 8, 38);
+  font-size: 54px;
+  line-height: 100%;
+  font-weight: 800;
+  display: block;
+}
+.sch-top > p {
+  margin-bottom: 15px;
+  padding: 0px;
+  color: rgb(16, 8, 38);
+  font-size: 16px;
+  line-height: 150%;
+}
+.sch-top > h2 {
+  text-transform: uppercase;
+  color: rgb(16, 8, 38);
+  line-height: 125%;
+  font-size: 22px;
+  font-weight: 600;
+}

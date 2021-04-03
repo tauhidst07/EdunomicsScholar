@@ -35,6 +35,9 @@
   width: 100%;
   align-items: center;
   margin-top: 50px;
+  overflow: hidden;
+  /* position: fixed; */
+  box-sizing: border-box;
 }
 .btn {
   display: flex;

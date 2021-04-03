@@ -43,8 +43,12 @@ function Footer() {
         </div>
         <div className="down2">
           <h1 className="doner">applicants</h1>
-          <p>Research Reports</p>
-          <p>Scholarship Rules </p>
+          <Link to="/r-report">
+            <p>Research Reports</p>
+          </Link>
+          <Link to="/scholar-rules">
+            <p>Scholarship Rules </p>
+          </Link>
           <p>Easy Scholarships</p>
 
           <p>Scholarships for Women</p>

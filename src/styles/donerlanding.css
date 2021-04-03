@@ -63,7 +63,7 @@
   margin-bottom: 2rem;
 }
 .don-2 > p {
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 16px;
   font-weight: 700;
 
@@ -73,12 +73,14 @@
 .don-1 :hover {
   background-color: rgb(238, 245, 245);
   transition: background-color 2s ease-out;
+  border-radius: 9px;
   cursor: pointer;
 }
 .don-2 :hover {
   background-color: cadetblue;
   transition: background-color 2s ease-out;
   cursor: pointer;
+  border-radius: 9px;
 }
 .svgg {
   margin-left: 12px;

@@ -24,6 +24,8 @@ import Privacy from "./components/Privacy";
 import Terms from "./components/TermsOfUse";
 import Press from "./components/Press";
 import Enroll from "./components/EnrollmentS";
+import ResearchReport from "./components/ReseacrhReport";
+import ScholorshipRules from "./components/ScholarRules";
 
 function App() {
   return (
@@ -98,6 +100,12 @@ function App() {
         </Route>
         <Route exact path="/enroll">
           <Enroll />
+        </Route>
+        <Route exact path="/r-report">
+          <ResearchReport />
+        </Route>
+        <Route exact path="/scholar-rules">
+          <ScholorshipRules />
         </Route>
       </Switch>
     </div>
