@@ -63,11 +63,18 @@ function Footer() {
           <Link to="/careers">
             <p>Careers</p>
           </Link>
-          <p>Terms of Use</p>
-          <p>Privacy Policy</p>
-          <p>Press Center</p>
-
-          <p>Enrollment Solutions</p>
+          <Link to="/privacy">
+            <p>Privacy Policy</p>
+          </Link>
+          <Link to="/terms">
+            <p>Terms of Use</p>
+          </Link>
+          <Link to="/press">
+            <p>Press Center</p>
+          </Link>
+          <Link to="enroll">
+            <p>Enrollment Solutions</p>
+          </Link>
         </div>
       </div>
     </div>
