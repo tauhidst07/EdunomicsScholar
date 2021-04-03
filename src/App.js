@@ -20,6 +20,7 @@ import Pricing from "./components/Pricing";
 import Award from "./components/AwardFeatures";
 import DonerCredits from "./components/DonerCredits";
 import Careers from "./components/Careers";
+import Privacy from "./components/Privacy";
 
 function App() {
   return (
@@ -82,6 +83,9 @@ function App() {
         </Route>
         <Route exact path="/careers">
           <Careers />
+        </Route>
+        <Route exact path="/privacy">
+          <Privacy />
         </Route>
       </Switch>
     </div>
