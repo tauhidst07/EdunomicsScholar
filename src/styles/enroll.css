@@ -1,0 +1,49 @@
+.en-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+.en-head > h2 {
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 125%;
+  color: #100826;
+  margin: 36px 0 26px;
+  max-width: 710px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.en-head > p {
+  font-size: 22px;
+  line-height: 142%;
+  color: #333335;
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 3rem;
+}
+.en-head > button {
+  font-size: 16px;
+  line-height: 48px;
+  padding: 0 20px;
+  color: #fff;
+  background: #5d57fb;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-left: 37rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.profile__saveChangesContainer > button {
+  margin-left: 12rem;
+}
