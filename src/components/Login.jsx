@@ -18,7 +18,9 @@ function Login() {
       .post("https://bckendapi.herokuapp.com/api/user/signin-donar", data)
       .then(function (response) {
         console.log(response);
-        history.push("/");
+        localStorage.setItem("auth-token", response.data);
+        localStorage.setItem("jwt", JSON.stringify(data));
+        history.push("/dashboard");
       })
       .catch(function (error) {
         console.log(error);

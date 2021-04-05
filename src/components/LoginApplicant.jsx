@@ -19,7 +19,9 @@ function LoginApplicant() {
       .post("https://bckendapi.herokuapp.com/api/user/signin", data)
       .then(function (response) {
         console.log(response);
-        history.push("/");
+        history.push("/profile");
+        localStorage.setItem("auth-token", response.data.token);
+        localStorage.setItem("jwt", JSON.stringify(data));
       })
       .catch(function (error) {
         console.log(error);

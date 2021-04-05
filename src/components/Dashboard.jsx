@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import DashboardHeader from "./DashboardHeader";
 import Points from "./Points";
@@ -16,7 +15,7 @@ function Dashboard() {
   useEffect(() => {
     axios
       .get(
-        "https://rishabhsingh.herokuapp.com/api/user/profile/605c63ee7e97f30017ca6456"
+        "https://bckendapi.herokuapp.com/api/user/profile/605c63ee7e97f30017ca6456"
       )
       .then((res) => {
         setLoading(false);

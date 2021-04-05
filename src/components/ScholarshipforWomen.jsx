@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import SchlorBox from "./SchlorBox";
+import boy from "../media/boy.jpeg";
 
 function ScholarshipforWomen() {
   return (
@@ -11,11 +12,9 @@ function ScholarshipforWomen() {
         <div className="b1">
           <img className="im1" src={boy} alt="st" />
           <div className="text1">
-            <h1 className="un-head">
-              22 Easy Scholarships with Upcoming Deadlines
-            </h1>
+            <h1 className="un-head">6 Scholarships Just for Women</h1>
             <p className="un-p">
-              The Top Easy, No-Essay Scholarships With Upcoming Deadlines
+              The Top Scholarships for Women with Deadlines Through 2021
             </p>
           </div>
         </div>
