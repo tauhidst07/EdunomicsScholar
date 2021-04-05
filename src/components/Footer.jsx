@@ -49,7 +49,9 @@ function Footer() {
           <Link to="/scholar-rules">
             <p>Scholarship Rules </p>
           </Link>
-          <p>Easy Scholarships</p>
+          <Link to="/easy-scholar">
+            <p>Easy Scholarships</p>
+          </Link>
 
           <p>Scholarships for Women</p>
           <p>Scholarships for Nursing Students</p>

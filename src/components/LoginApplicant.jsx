@@ -16,7 +16,7 @@ function LoginApplicant() {
   const onSubmit = (data) => {
     // console.log(data);
     axios
-      .post("http://rishabhsingh.herokuapp.com/api/user/signin", data)
+      .post("https://bckendapi.herokuapp.com/api/user/signin", data)
       .then(function (response) {
         console.log(response);
         history.push("/");

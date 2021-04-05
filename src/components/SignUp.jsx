@@ -11,7 +11,7 @@ function SignUp() {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("http://rishabhsingh.herokuapp.com/api/user/signup-donar", data)
+      .post("https://bckendapi.herokuapp.com/api/user/signup-donar", data)
       .then(function (response) {
         console.log(response);
         history.push("/login");

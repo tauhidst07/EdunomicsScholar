@@ -1,0 +1,108 @@
+.sc-box {
+  width: 90%;
+  box-sizing: border-box;
+  padding: 30px;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 4%), 0 1px 3px rgb(0 0 0 / 5%);
+  border-radius: 4px;
+  background-color: rgb(247, 239, 239);
+  box-sizing: border-box;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  /* justify-content: space-between; */
+  transition: box-shadow 0.3s;
+  margin-left: 3rem;
+  margin-right: 2rem;
+}
+.sc-box > img {
+  border-radius: 9px;
+  width: 60px;
+  height: 60px;
+  min-width: 160px;
+  min-height: 120px;
+  margin: 0px 32px 0px 0px;
+  object-fit: cover;
+}
+.sc-head > h3 {
+  max-width: 100%;
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  padding-right: 40px;
+}
+.sc-head > span {
+  opacity: 0.5;
+  color: rgb(16, 8, 38);
+  font-size: 14px;
+  line-height: 100%;
+}
+.sc-head > p {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0.5;
+}
+.apply {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: inset 1px 0 0 rgb(0 0 0 / 7%);
+  margin-top: 28px;
+  margin-bottom: 28px;
+  padding: 0 20px !important;
+  box-shadow: 0 1px 5px rgb(0 0 0 / 4%), 0 1px 3px rgb(0 0 0 / 5%);
+  border-radius: 4px;
+  /* background-color: #fff; */
+  box-sizing: border-box;
+  display: block;
+  color: inherit;
+  margin-left: 3rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  transition: box-shadow 0.3s;
+}
+.apply-bt1 {
+  text-decoration: none;
+  background: #5d57fb;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 20px;
+  width: 190px;
+  height: 44px;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+}
+.apply-bt2 {
+  margin-top: 1rem;
+  border: 1px solid rgba(93, 87, 251, 0.3);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  /* background-color: blanchedalmond; */
+  justify-content: center;
+  color: #5d57fb;
+  /* background: none; */
+  padding: 12px 0;
+  cursor: pointer;
+  width: 190px;
+  height: 44px;
+  text-decoration: none;
+}

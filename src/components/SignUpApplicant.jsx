@@ -11,7 +11,7 @@ function SignUpApplicant() {
   const onSubmit = (data) => {
     // console.log(data);
     axios
-      .post("http://rishabhsingh.herokuapp.com/api/user/signup", data)
+      .post("https://bckendapi.herokuapp.com/api/user/signup", data)
       .then(function (response) {
         console.log(response);
         history.push("/loginApli");
@@ -101,7 +101,6 @@ function SignUpApplicant() {
             type="password"
             data-test="password"
             placeholder="Password"
-
           />
           <h2 className="uname">DOB</h2>
           <input
@@ -111,7 +110,6 @@ function SignUpApplicant() {
             type="date"
             data-test="username"
             placeholder="Date of birth"
-
           />
           <h2 className="uname">Gender</h2>
           <input
@@ -121,7 +119,6 @@ function SignUpApplicant() {
             type="text"
             data-test="username"
             placeholder="Gender"
-
           />
           <h2 className="uname">Bio</h2>
           <input
@@ -131,7 +128,6 @@ function SignUpApplicant() {
             type="text"
             data-test="username"
             placeholder="Bio"
-
           />
           <h2 className="uname">Location</h2>
           <input
@@ -141,7 +137,6 @@ function SignUpApplicant() {
             type="text"
             data-test="username"
             placeholder="Location"
-
           />
           <h2 className="uname">Address</h2>
           <input
@@ -151,7 +146,6 @@ function SignUpApplicant() {
             type="text"
             data-test="username"
             placeholder="Address"
-
           />
           {/* <p className="forgot">forgot password ?</p> */}
           <button className="signin">Sign Up</button>
