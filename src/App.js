@@ -31,6 +31,7 @@ import ScholarshipforWomen from "./components/ScholarshipforWomen";
 import Leaders from "./components/Leaders";
 import DonarDashboard from "./components/DonarDashboard";
 import DonerProfile from "./components/DonerProfile";
+import CreateScholarship from "./components/CreateScholarship";
 
 function App() {
   return (
@@ -126,6 +127,9 @@ function App() {
         </Route>
         <Route exact path="/donar-profile">
           <DonerProfile />
+        </Route>
+        <Route exact path="/create-scholar">
+          <CreateScholarship />
         </Route>
       </Switch>
     </div>

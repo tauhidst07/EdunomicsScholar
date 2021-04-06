@@ -1,0 +1,63 @@
+.pro-doner {
+  box-sizing: border-box;
+  min-width: 0px;
+  margin-top: 2rem;
+  margin-left: 28rem;
+}
+.pro-doner > h1 {
+  margin-bottom: 12px;
+  margin-top: 0px;
+  color: rgb(16, 8, 38);
+  line-height: 125%;
+  font-size: 22px;
+  font-weight: 600;
+}
+.pro-doner > p {
+  color: rgb(118, 120, 140);
+  font-size: 16px;
+  line-height: 100%;
+}
+.pro-imgd {
+  width: 300px;
+  height: 300px;
+  margin-top: 3rem;
+  /* display: block; */
+  border-radius: 4px;
+  margin-left: 28rem;
+}
+.img-boxx > h1 {
+  margin-top: 20px;
+  margin-bottom: 4px;
+  color: rgb(16, 8, 38);
+  line-height: 125%;
+  font-size: 32px;
+  font-weight: 600;
+  margin-left: 28rem;
+}
+.img-boxx > p {
+  color: rgb(93, 87, 251);
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+}
+.mission {
+  margin-left: 28rem;
+}
+.mission > h1 {
+  margin-bottom: 12px;
+  color: rgb(16, 8, 38);
+  line-height: 125%;
+  font-size: 22px;
+  font-weight: 600;
+}
+.mission > p {
+  margin-bottom: 40px;
+  padding: 0px;
+  color: rgb(16, 8, 38);
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 100%;
+}
+.mission > button > svg {
+  cursor: pointer;
+}
