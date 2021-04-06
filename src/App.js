@@ -32,6 +32,7 @@ import Leaders from "./components/Leaders";
 import DonarDashboard from "./components/DonarDashboard";
 import DonerProfile from "./components/DonerProfile";
 import CreateScholarship from "./components/CreateScholarship";
+import AllScholarship from "./components/AllScholarship";
 
 function App() {
   return (
@@ -130,6 +131,9 @@ function App() {
         </Route>
         <Route exact path="/create-scholar">
           <CreateScholarship />
+        </Route>
+        <Route exact path="/all-scholar">
+          <AllScholarship />
         </Route>
       </Switch>
     </div>

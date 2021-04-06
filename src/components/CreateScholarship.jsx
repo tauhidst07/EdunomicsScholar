@@ -102,6 +102,7 @@ function CreateScholarship() {
           </h6>
         </div>
       </div>
+      <hr />
       <div className="brief-des">
         <div className="des-head">
           <h1>Briefly describe your ideal applicant</h1>
