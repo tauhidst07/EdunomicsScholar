@@ -15,9 +15,11 @@ function Dashboard() {
   useEffect(() => {
     axios
       .get(
-        "https://bckendapi.herokuapp.com/api/user/profile/605c63ee7e97f30017ca6456"
+        "https://bckendapi.herokuapp.com/api/user/profile/606ab372eb6c840015392ee4"
       )
       .then((res) => {
+        console.log(res);
+
         setLoading(false);
         setData(res.data);
         setError("");
