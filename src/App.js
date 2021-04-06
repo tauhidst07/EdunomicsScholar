@@ -30,6 +30,7 @@ import EasyScholar from "./components/EasyScholar";
 import ScholarshipforWomen from "./components/ScholarshipforWomen";
 import Leaders from "./components/Leaders";
 import DonarDashboard from "./components/DonarDashboard";
+import DonerProfile from "./components/DonerProfile";
 
 function App() {
   return (
@@ -122,6 +123,9 @@ function App() {
         </Route>
         <Route exact path="/donar-dash">
           <DonarDashboard />
+        </Route>
+        <Route exact path="/donar-profile">
+          <DonerProfile />
         </Route>
       </Switch>
     </div>
