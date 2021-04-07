@@ -27,7 +27,7 @@ function AllScholarship() {
   };
 
   useEffect(() => {
-    axios
+     axios
       .get("https://bckendapi.herokuapp.com/api/applicant/allScholarships")
       .then((res) => {
         //console.log(res.data);
@@ -178,7 +178,7 @@ function AllScholarship() {
           </div>
 
       {
-        console.log(data)
+        data[0] === undefined ? console.log('can not fetched'): console.log(data[0].scholarships)
 
 
       }
