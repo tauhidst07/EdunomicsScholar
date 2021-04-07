@@ -24,7 +24,7 @@ function AllScholarship() {
 
   useEffect(() => {
     axios
-      .get("https://bckendapi.herokuapp.com/api/donar/allScholarships")
+      .get("https://bckendapi.herokuapp.com/api/applicant/allScholarships")
       .then((res) => {
         console.log(res.data);
         setLoading(false);
