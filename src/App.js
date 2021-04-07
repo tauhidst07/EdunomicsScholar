@@ -34,6 +34,7 @@ import DonerProfile from "./components/DonerProfile";
 import CreateScholarship from "./components/CreateScholarship";
 import AllScholarship from "./components/AllScholarship";
 import AllContact from "./components/AllContactUs";
+import WomenScholarship from "./components/WomenScholarship";
 
 function App() {
   return (
@@ -138,6 +139,9 @@ function App() {
         </Route>
         <Route exact path="/all-contact">
           <AllContact />
+        </Route>
+        <Route exact path="/women-scholarship">
+          <WomenScholarship />
         </Route>
       </Switch>
     </div>
