@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Footer from "./Footer";
 import boy from "../media/boy.jpeg";
-
+import "../styles/allscholar.css";
 import logo from "../media/edu.png";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
+import LocalConvenienceStoreIcon from "@material-ui/icons/LocalConvenienceStore";
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import CardGiftcardIcon from "@material-ui/icons/CardGiftcard";
+import CakeIcon from "@material-ui/icons/Cake";
 
 function AllScholarship() {
   const [loading, setLoading] = useState(true);
@@ -122,8 +126,10 @@ function AllScholarship() {
           </div>
         </div>
       </div>
-      <h1 style={{ marginTop: "2rem", textAlign: "center" }}>scholarships</h1>
-      <div className="sc-box " style={{ boxShadow: "0 8px 6px -6px black" }}>
+      <h1 style={{ marginTop: "2rem", textAlign: "center" }}>
+        scholarships {data.count}
+      </h1>
+      <div className="sc-box ">
         <img src={boy} alt="st" />
         <div className="sc-head">
           <h3>Smart Borrower No-Essay Scholarship & Loan Forgiveness Grant</h3>
@@ -139,6 +145,40 @@ function AllScholarship() {
           <button className="apply-bt2">Contribute</button>
         </div>
       </div>
+      {data.map((item) => {
+        return (
+          <div className="elgi-field sc-box">
+            <div className="field-el">
+              <h2>
+                <LocalConvenienceStoreIcon />
+                Education level
+              </h2>
+              <p>Any</p>
+            </div>
+            <div className="field-el">
+              <h2>
+                <AttachMoneyIcon />
+                Amount
+              </h2>
+              <p>$500</p>
+            </div>
+            <div className="field-el">
+              <h2>
+                <CardGiftcardIcon /> Scholarships awarded
+              </h2>
+              <p>1 WINNER</p>
+            </div>
+            <div className="field-el">
+              <h2>
+                <CakeIcon />
+                Deadline
+              </h2>
+              <p>July 5 2021</p>
+            </div>
+          </div>
+        );
+      })}
+
       <Footer />
     </div>
   );
