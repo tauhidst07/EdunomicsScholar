@@ -144,7 +144,7 @@ function App() {
         <Route exact path="/applied-Scholarship">
           <AppliedScholarship />
         </Route>
-        <Route exact path="/serttings-donar">
+        <Route exact path="/settings-donar">
           <SettingsDoner />
         </Route>
       </Switch>

@@ -1,0 +1,67 @@
+.set-head > h1 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 125%;
+  color: #100826;
+
+  margin-bottom: 21px;
+  margin-left: 9rem;
+  margin-top: 3rem;
+}
+.set-left {
+  margin-left: 3rem;
+  margin-right: 5rem;
+  border-right: 1px solid #dcdde5;
+}
+.set-ac {
+  display: flex;
+  justify-content: center;
+}
+.set-bt1 {
+  margin-left: 1rem;
+  /* background-color: rgba(93, 87, 251, 0.1); */
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  cursor: pointer;
+
+  /* border-right: 1px solid #dcdde5; */
+  margin-bottom: 1rem;
+  width: 190px;
+  /* box-sizing: border-box; */
+}
+.set-bt2 {
+  margin-left: 1rem;
+  /* background-color: rgba(93, 87, 251, 0.1); */
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  cursor: pointer;
+
+  /* border-right: 1px solid #dcdde5; */
+  margin-bottom: 1rem;
+  width: 190px;
+  /* box-sizing: border-box; */
+}
+.set-right > h1 {
+  font-size: 18px;
+  line-height: 125%;
+  color: #100826;
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+.set-right > button {
+  background: #fff;
+  font-size: 14px;
+  line-height: 125%;
+  color: #100826;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0;
+  padding: 13px 20px;
+  text-align: center;
+  border: 1px solid #dcdde6;
+  box-sizing: border-box;
+}

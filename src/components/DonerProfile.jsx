@@ -107,7 +107,7 @@ function DonerProfile() {
               <MenuItem
                 onClick={() => {
                   handleClose();
-                  history.push("/contactus");
+                  history.push("/settings-donar");
                 }}
               >
                 Setting
