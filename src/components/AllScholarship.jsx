@@ -13,8 +13,8 @@ import CardGiftcardIcon from "@material-ui/icons/CardGiftcard";
 import CakeIcon from "@material-ui/icons/Cake";
 
 function AllScholarship() {
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  //const [loading, setLoading] = useState(true);
+  //const [error, setError] = useState("");
   const [data, setData] = useState({});
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
@@ -30,16 +30,17 @@ function AllScholarship() {
     axios
       .get("https://bckendapi.herokuapp.com/api/applicant/allScholarships")
       .then((res) => {
-        console.log(res.data);
-        setLoading(false);
-        setData(res.data);
-        setError("");
+        //console.log(res.data);
+        //setLoading(false);
+        setData([res.data]);
+        //console.log(data);
+        //setError("");
       })
       .catch((err) => {
-        setLoading(false);
+        //setLoading(false);
         setData({});
-        setError("error is there");
-        console.log(error);
+        //setError("error is there");
+        //console.log(error);
       });
   }, []);
   return (
@@ -145,8 +146,7 @@ function AllScholarship() {
           <button className="apply-bt2">Contribute</button>
         </div>
       </div>
-      {data.map((item) => {
-        return (
+
           <div className="elgi-field sc-box">
             <div className="field-el">
               <h2>
@@ -176,8 +176,12 @@ function AllScholarship() {
               <p>July 5 2021</p>
             </div>
           </div>
-        );
-      })}
+
+      {
+        console.log(data)
+
+
+      }
 
       <Footer />
     </div>

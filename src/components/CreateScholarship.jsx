@@ -10,6 +10,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
+import axios from "axios";
 
 import { useForm } from "react-hook-form";
 
@@ -80,17 +81,16 @@ function CreateScholarship() {
     data.essayNeeded = false;
     data.createdBy = '606ab28beb6c840015392ee2'
     console.log(data);
-
+/*
     axios
       .post("https://bckendapi.herokuapp.com/api/user/signup-donar", data)
       .then(function (response) {
         console.log(response);
-        history.push("/login");
       })
       .catch(function (error) {
         console.log(error);
       });
-
+*/
 };
 
   return (
