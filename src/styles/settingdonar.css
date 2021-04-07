@@ -24,7 +24,10 @@
   display: flex;
   align-items: center;
   height: 44px;
+  box-shadow: 0 8px 6px -6px black;
+
   cursor: pointer;
+  color: #666efb;
 
   /* border-right: 1px solid #dcdde5; */
   margin-bottom: 1rem;
@@ -37,6 +40,8 @@
   border-radius: 4px;
   display: flex;
   align-items: center;
+  box-shadow: 0 8px 6px -6px black;
+
   height: 44px;
   cursor: pointer;
 
@@ -64,4 +69,5 @@
   text-align: center;
   border: 1px solid #dcdde6;
   box-sizing: border-box;
+  box-shadow: 0 8px 6px -6px black;
 }
