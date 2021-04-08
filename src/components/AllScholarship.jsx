@@ -193,7 +193,16 @@ function AllScholarship() {
                       <CakeIcon />
                       Deadline
                     </h2>
-                    <p>{e.awardDate}</p>
+                    <p>{
+                        new Date((e.awardDate).toString()).toString().split(' ')[1]
+                      }
+                      {
+                        new Date((e.awardDate).toString()).toString().split(' ')[2]
+                      } 
+                      {
+                        new Date((e.awardDate).toString()).toString().split(' ')[3]
+                      }
+                    </p>
                   </div>
                 </div>
 
