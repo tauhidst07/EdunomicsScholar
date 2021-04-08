@@ -9,10 +9,12 @@ import { Menu, MenuItem, Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
 import "../styles/settingdonar.css";
+import ContactInfoUpdate from "./ContactInfoUpdate";
 
 function SettingsDoner() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [hide, setHide] = useState(true);
 
   const history = useHistory();
   const handleClick = (e) => {
@@ -51,6 +53,9 @@ function SettingsDoner() {
   function closeModal() {
     setIsOpen(false);
   }
+  // const handleChange = () => {
+  //   setHide(true);
+  // };
   return (
     <div>
       <div className="dashboardHeader">
@@ -124,7 +129,9 @@ function SettingsDoner() {
               <MenuItem
                 onClick={() => {
                   handleClose();
-                  history.push("/careers");
+                  localStorage.clear();
+
+                  history.push("/login");
                 }}
               >
                 Sign out
@@ -133,21 +140,23 @@ function SettingsDoner() {
           </div>
         </div>
       </div>
-      <div className="set-head">
-        <h1>Settings</h1>
-      </div>
-      <div className="set-ac">
-        <div className="set-left">
-          <button className="set-bt1">
-            <PersonIcon /> Account
-          </button>
-          <button className="set-bt2">
-            <RoomIcon /> Contact Info
-          </button>
+      <div>
+        <div className="set-head">
+          <h1>Settings</h1>
         </div>
-        <div className="set-right">
-          <h1>Password</h1>
-          <button onClick={openModal}>Change Password</button>
+        <div className="set-ac">
+          <div className="set-left">
+            <button className="set-bt1">
+              <PersonIcon /> Account
+            </button>
+            <button className="set-bt2" onClick={() => setHide(!hide)}>
+              <RoomIcon /> Contact Info
+            </button>
+          </div>
+          <div className="set-right">
+            <h1>Password</h1>
+            <button onClick={openModal}>Change Password</button>
+          </div>
         </div>
       </div>
       <Modal
@@ -225,29 +234,8 @@ function SettingsDoner() {
           </div>
         </div>
       </Modal>
-      <div className="contact-info">
-        <h1>Contact information</h1>
-        <p>
-          Keep your info up-to-date to unlock scholarships and other rewards.
-        </p>
-        <div className="con-1st">
-          <p>Street Address</p>
-          <input placeholder="Example: 855 Border Lane" />
-        </div>
-        <div className="con-1st">
-          <p>City & State</p>
-          <input placeholder="Enter address" />
-        </div>
-        <div className="con-1st">
-          <p>ZIP Code</p>
-          <input placeholder="Example: 37011" />
-        </div>
-        <div className="con-1st">
-          <p>Phone number</p>
-          <input />
-        </div>
-        <button>Save changes</button>
-      </div>
+      {/* <ContactInfoUpdate /> */}
+      {hide ? <ContactInfoUpdate /> : null}
     </div>
   );
 }

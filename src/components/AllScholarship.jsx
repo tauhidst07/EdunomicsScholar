@@ -47,13 +47,14 @@ function AllScholarship() {
         //console.log(error);
       });
 */
-      async function fetchMyApi(){
-        let response = await fetch('https://bckendapi.herokuapp.com/api/applicant/allScholarships');
-        response = await response.json()
-        setData([response])
-      }
-      fetchMyApi()
-
+    async function fetchMyApi() {
+      let response = await fetch(
+        "https://bckendapi.herokuapp.com/api/applicant/allScholarships"
+      );
+      response = await response.json();
+      setData([response]);
+    }
+    fetchMyApi();
   }, []);
   return (
     <div>
@@ -143,77 +144,82 @@ function AllScholarship() {
         scholarships {data == 0 ? 0 : data[0].count}
       </h1>
 
-      {data == 0 ?
-        console.log('not fetched') :
-        data[0].scholarships.map((e) => (
-
-          <div key={e._id}>
-            <div className="sc-box ">
-              <img src={boy} alt="st" />
-              <div className="sc-head">
-                <h3>
-                  {e.name}
-                </h3>
-                <span>Funded by</span>
-                <p>
-                  Become eligible for this scholarship by showcasing that you know
-                  how to navigate your student loan options.
-                </p>
-              </div>
-
-              <div className="apply">
-                <button className="apply-bt1">View scholarship</button>
-                <button className="apply-bt2">Contribute</button>
-              </div>
-            </div>
-
-                <div className="elgi-field sc-box">
-                  <div className="field-el">
-                    <h2>
-                      <LocalConvenienceStoreIcon />
-                      Education level
-                    </h2>
-                    <p>Any</p>
-                  </div>
-                  <div className="field-el">
-                    <h2>
-                      <AttachMoneyIcon />
-                      Amount
-                    </h2>
-                    <p>{e.awardAmount}</p>
-                  </div>
-                  <div className="field-el">
-                    <h2>
-                      <CardGiftcardIcon /> Scholarships awarded
-                    </h2>
-                    <p>{e.winnersLimit}</p>
-                  </div>
-                  <div className="field-el">
-                    <h2>
-                      <CakeIcon />
-                      Deadline
-                    </h2>
-                    <p>{
-                        new Date((e.awardDate).toString()).toString().split(' ')[1]
-                      }
-                      {
-                        new Date((e.awardDate).toString()).toString().split(' ')[2]
-                      }
-                      {
-                        new Date((e.awardDate).toString()).toString().split(' ')[3]
-                      }
-                    </p>
-                  </div>
+      {data == 0
+        ? console.log("not fetched")
+        : data[0].scholarships.map((e) => (
+            <div key={e._id} className="main-boxshadow ">
+              <div className="sc-box ">
+                <img src={boy} alt="st" />
+                <div className="sc-head">
+                  <h3>{e.name}</h3>
+                  <span>Funded by</span>
+                  <p>
+                    Become eligible for this scholarship by showcasing that you
+                    know how to navigate your student loan options.
+                  </p>
                 </div>
 
-          </div>
+                <div className="apply">
+                  <button className="apply-bt1">View scholarship</button>
+                  <button className="apply-bt2">Contribute</button>
+                </div>
+              </div>
 
-
-
-
-        ))
-
-      }
+              <div className="elgi-field sc-box">
+                <div className="field-el">
+                  <h2>
+                    <LocalConvenienceStoreIcon />
+                    Education level
+                  </h2>
+                  <p>Any</p>
+                </div>
+                <div className="field-el">
+                  <h2>
+                    <AttachMoneyIcon />
+                    Amount
+                  </h2>
+                  <p>{e.awardAmount}</p>
+                </div>
+                <div className="field-el">
+                  <h2>
+                    <CardGiftcardIcon /> Scholarships awarded
+                  </h2>
+                  <p>{e.winnersLimit}</p>
+                </div>
+                <div className="field-el">
+                  <h2>
+                    <CakeIcon />
+                    Deadline
+                  </h2>
+                  <p>
+                    <span>
+                      {
+                        new Date(e.awardDate.toString())
+                          .toString()
+                          .split(" ")[1]
+                      }
+                      -
+                    </span>
+                    <span style={{ marginLeft: ".1rem" }}>
+                      {
+                        new Date(e.awardDate.toString())
+                          .toString()
+                          .split(" ")[2]
+                      }
+                    </span>
+                    -
+                    <span style={{ marginLeft: ".1rem" }}>
+                      {
+                        new Date(e.awardDate.toString())
+                          .toString()
+                          .split(" ")[3]
+                      }
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
 
       <Footer />
     </div>
