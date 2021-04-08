@@ -81,7 +81,7 @@ function CreateScholarship() {
     data.essayNeeded = false;
     data.createdBy = '606ab28beb6c840015392ee2'
     console.log(data);
-/*
+
     axios
       .post("https://bckendapi.herokuapp.com/api/user/signup-donar", data)
       .then(function (response) {
@@ -90,7 +90,7 @@ function CreateScholarship() {
       .catch(function (error) {
         console.log(error);
       });
-*/
+
 };
 
   return (
