@@ -235,17 +235,18 @@ function SettingsDoner() {
           <input placeholder="Example: 855 Border Lane" />
         </div>
         <div className="con-1st">
-          <p>Street Address</p>
+          <p>City & State</p>
           <input placeholder="Enter address" />
         </div>
         <div className="con-1st">
-          <p>Street Address</p>
+          <p>ZIP Code</p>
           <input placeholder="Example: 37011" />
         </div>
         <div className="con-1st">
-          <p>Street Address</p>
+          <p>Phone number</p>
           <input />
         </div>
+        <button>Save changes</button>
       </div>
     </div>
   );

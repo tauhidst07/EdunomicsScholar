@@ -73,6 +73,7 @@
 }
 .contact-info {
   text-align: center;
+  margin-top: 2rem;
 }
 .contact-info > h1 {
   font-weight: 600;
@@ -116,4 +117,17 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+.contact-info > button {
+  background: #5d57fb;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 13px 20px;
+  margin: 28px 0 0;
+  text-align: center;
+  border: 0;
+  font-size: 14px;
+  line-height: 125%;
+  margin-bottom: 3rem;
 }
