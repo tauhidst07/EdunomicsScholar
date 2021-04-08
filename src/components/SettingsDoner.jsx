@@ -14,7 +14,7 @@ import ContactInfoUpdate from "./ContactInfoUpdate";
 function SettingsDoner() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [hide, setHide] = useState(true);
+  const [hide, setHide] = useState(false);
 
   const history = useHistory();
   const handleClick = (e) => {
