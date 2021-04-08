@@ -196,58 +196,7 @@ function AllScholarship() {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-
-                <div className="elgi-field sc-box">
-                  <div className="field-el">
-                    <h2>
-                      <LocalConvenienceStoreIcon />
-                      Education level
-                    </h2>
-                    <p>Any</p>
-                  </div>
-                  <div className="field-el">
-                    <h2>
-                      <AttachMoneyIcon />
-                      Amount
-                    </h2>
-                    <p>{e.awardAmount}</p>
-                  </div>
-                  <div className="field-el">
-                    <h2>
-                      <CardGiftcardIcon /> Scholarships awarded
-                    </h2>
-                    <p>{e.winnersLimit}</p>
-                  </div>
-                  <div className="field-el">
-                    <h2>
-                      <CakeIcon />
-                      Deadline
-                    </h2>
-                    <p>{
-                        new Date((e.awardDate).toString()).toString().split(' ')[1]
-                      }
-                      {
-                        new Date((e.awardDate).toString()).toString().split(' ')[2]
-                      } 
-                      {
-                        new Date((e.awardDate).toString()).toString().split(' ')[3]
-                      }
-                    </p>
-                  </div>
-                </div>
-
-          </div>
-
-
-
-
-        ))
-
-      }
-=======
           ))}
->>>>>>> e1790de3efa431bfdd1bb53cabf35ad43a3fb18b
 
       <Footer />
     </div>
