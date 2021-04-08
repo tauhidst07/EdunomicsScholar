@@ -192,9 +192,29 @@ function AllScholarship() {
                     Deadline
                   </h2>
                   <p>
-                    {new Date(e.awardDate.toString()).toString().split(" ")[1]}
-                    {new Date(e.awardDate.toString()).toString().split(" ")[2]}
-                    {new Date(e.awardDate.toString()).toString().split(" ")[3]}
+                    <span>
+                      {
+                        new Date(e.awardDate.toString())
+                          .toString()
+                          .split(" ")[1]
+                      }
+                      -
+                    </span>
+                    <span style={{ marginLeft: ".1rem" }}>
+                      {
+                        new Date(e.awardDate.toString())
+                          .toString()
+                          .split(" ")[2]
+                      }
+                    </span>
+                    -
+                    <span style={{ marginLeft: ".1rem" }}>
+                      {
+                        new Date(e.awardDate.toString())
+                          .toString()
+                          .split(" ")[3]
+                      }
+                    </span>
                   </p>
                 </div>
               </div>
