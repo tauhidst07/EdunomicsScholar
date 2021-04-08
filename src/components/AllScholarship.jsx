@@ -141,10 +141,10 @@ function AllScholarship() {
         </div>
       </div>
       <h1 style={{ marginTop: "2rem", textAlign: "center" }}>
-        scholarships {data == 0 ? 0 : data[0].count}
+        scholarships {data === 0 ? 0 : data[0].count}
       </h1>
 
-      {data == 0
+      {data === 0
         ? console.log("not fetched")
         : data[0].scholarships.map((e) => (
             <div key={e._id} className="main-boxshadow ">
@@ -160,7 +160,14 @@ function AllScholarship() {
                 </div>
 
                 <div className="apply">
-                  <button className="apply-bt1">View scholarship</button>
+                  <button
+                    className="apply-bt1"
+                    onClick={() => {
+                      history.push("/view-scholarship");
+                    }}
+                  >
+                    View scholarship
+                  </button>
                   <button className="apply-bt2">Contribute</button>
                 </div>
               </div>
