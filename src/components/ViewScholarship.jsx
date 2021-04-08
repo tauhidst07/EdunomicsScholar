@@ -22,7 +22,7 @@ function ViewScholarship() {
   useEffect(() => {
     async function fetchMyApi() {
       let response = await fetch(
-        "https://bckendapi.herokuapp.com/api/donar/oneScholarship/6059b84b0eb2af09682831e6"
+        "https://bckendapi.herokuapp.com/api/donar/oneScholarship/606d46deb66b0512f914ac39"
       );
       response = await response.json();
       setData([response]);
