@@ -225,6 +225,28 @@ function SettingsDoner() {
           </div>
         </div>
       </Modal>
+      <div className="contact-info">
+        <h1>Contact information</h1>
+        <p>
+          Keep your info up-to-date to unlock scholarships and other rewards.
+        </p>
+        <div className="con-1st">
+          <p>Street Address</p>
+          <input placeholder="Example: 855 Border Lane" />
+        </div>
+        <div className="con-1st">
+          <p>Street Address</p>
+          <input placeholder="Enter address" />
+        </div>
+        <div className="con-1st">
+          <p>Street Address</p>
+          <input placeholder="Example: 37011" />
+        </div>
+        <div className="con-1st">
+          <p>Street Address</p>
+          <input />
+        </div>
+      </div>
     </div>
   );
 }
