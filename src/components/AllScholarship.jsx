@@ -15,7 +15,7 @@ import CakeIcon from "@material-ui/icons/Cake";
 function AllScholarship() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
 
@@ -37,7 +37,7 @@ function AllScholarship() {
       })
       .catch((err) => {
         setLoading(false);
-        setData({});
+        setData([]);
         setError("error is there");
         console.log(error);
       });
@@ -129,55 +129,56 @@ function AllScholarship() {
       <h1 style={{ marginTop: "2rem", textAlign: "center" }}>
         scholarships {data.count}
       </h1>
-      <div className="sc-box ">
-        <img src={boy} alt="st" />
-        <div className="sc-head">
-          <h3>Smart Borrower No-Essay Scholarship & Loan Forgiveness Grant</h3>
-          <span>Funded by</span>
-          <p>
-            Become eligible for this scholarship by showcasing that you know how
-            to navigate your student loan options.
-          </p>
+      <div>
+        <div className="sc-box ">
+          <img src={boy} alt="st" />
+          <div className="sc-head">
+            <h3>
+              Smart Borrower No-Essay Scholarship & Loan Forgiveness Grant
+            </h3>
+            <span>Funded by</span>
+            <p>
+              Become eligible for this scholarship by showcasing that you know
+              how to navigate your student loan options.
+            </p>
+          </div>
+
+          <div className="apply">
+            <button className="apply-bt1">View scholarship</button>
+            <button className="apply-bt2">Contribute</button>
+          </div>
         </div>
 
-        <div className="apply">
-          <button className="apply-bt1">View scholarship</button>
-          <button className="apply-bt2">Contribute</button>
+        <div className="elgi-field sc-box">
+          <div className="field-el">
+            <h2>
+              <LocalConvenienceStoreIcon />
+              Education level
+            </h2>
+            <p>Any</p>
+          </div>
+          <div className="field-el">
+            <h2>
+              <AttachMoneyIcon />
+              Amount
+            </h2>
+            <p>h</p>
+          </div>
+          <div className="field-el">
+            <h2>
+              <CardGiftcardIcon /> Scholarships awarded
+            </h2>
+            <p>1 WINNER</p>
+          </div>
+          <div className="field-el">
+            <h2>
+              <CakeIcon />
+              Deadline
+            </h2>
+            <p>July 5 2021</p>
+          </div>
         </div>
       </div>
-      {data.map((item) => {
-        return (
-          <div className="elgi-field sc-box">
-            <div className="field-el">
-              <h2>
-                <LocalConvenienceStoreIcon />
-                Education level
-              </h2>
-              <p>Any</p>
-            </div>
-            <div className="field-el">
-              <h2>
-                <AttachMoneyIcon />
-                Amount
-              </h2>
-              <p>$500</p>
-            </div>
-            <div className="field-el">
-              <h2>
-                <CardGiftcardIcon /> Scholarships awarded
-              </h2>
-              <p>1 WINNER</p>
-            </div>
-            <div className="field-el">
-              <h2>
-                <CakeIcon />
-                Deadline
-              </h2>
-              <p>July 5 2021</p>
-            </div>
-          </div>
-        );
-      })}
 
       <Footer />
     </div>
