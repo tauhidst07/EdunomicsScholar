@@ -5,7 +5,7 @@ import boy from "../media/boy.jpeg";
 import "../styles/allscholar.css";
 import logo from "../media/edu.png";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
 import LocalConvenienceStoreIcon from "@material-ui/icons/LocalConvenienceStore";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
@@ -15,7 +15,7 @@ import CakeIcon from "@material-ui/icons/Cake";
 function AllScholarship() {
   //const [loading, setLoading] = useState(true);
   //const [error, setError] = useState("");
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
 
@@ -149,36 +149,40 @@ function AllScholarship() {
             <button className="apply-bt2">Contribute</button>
           </div>
         </div>
-
-        <div className="elgi-field sc-box">
-          <div className="field-el">
-            <h2>
-              <LocalConvenienceStoreIcon />
-              Education level
-            </h2>
-            <p>Any</p>
-          </div>
-          <div className="field-el">
-            <h2>
-              <AttachMoneyIcon />
-              Amount
-            </h2>
-            <p>h</p>
-          </div>
-          <div className="field-el">
-            <h2>
-              <CardGiftcardIcon /> Scholarships awarded
-            </h2>
-            <p>1 WINNER</p>
-          </div>
-          <div className="field-el">
-            <h2>
-              <CakeIcon />
-              Deadline
-            </h2>
-            <p>July 5 2021</p>
-          </div>
-        </div>
+        {data.map((item) => {
+          console.log(item.scholarships);
+          return (
+            <div className="elgi-field sc-box">
+              <div className="field-el">
+                <h2>
+                  <LocalConvenienceStoreIcon />
+                  Education level
+                </h2>
+                <p>Any</p>
+              </div>
+              <div className="field-el">
+                <h2>
+                  <AttachMoneyIcon />
+                  Amount
+                </h2>
+                <p>{item.scholarships.awardAmount}</p>
+              </div>
+              <div className="field-el">
+                <h2>
+                  <CardGiftcardIcon /> Scholarships awarded
+                </h2>
+                <p>1 WINNER</p>
+              </div>
+              <div className="field-el">
+                <h2>
+                  <CakeIcon />
+                  Deadline
+                </h2>
+                <p>July 5 2021</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       <div className="elgi-field sc-box">
