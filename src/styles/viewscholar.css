@@ -78,9 +78,10 @@
   padding: 40px;
   box-sizing: border-box;
   background: #fff;
-  box-shadow: 0 6px 16px rgb(0 0 0 / 12%);
+  /* box-shadow: 0 6px 16px rgb(0 0 0 / 12%); */
   border-radius: 8px;
   margin-right: 3rem;
+  box-shadow: 3px 9px 9px -6px black;
 }
 .right-sing > button {
   border: 1px solid rgba(93, 87, 251, 0.3);
