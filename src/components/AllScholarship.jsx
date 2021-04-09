@@ -5,7 +5,7 @@ import boy from "../media/boy.jpeg";
 import "../styles/allscholar.css";
 import logo from "../media/edu.png";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
 import LocalConvenienceStoreIcon from "@material-ui/icons/LocalConvenienceStore";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
@@ -60,16 +60,20 @@ function AllScholarship() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-          <img src={logo} alt="edu logo" />
+          <Link to="/" className="logo-main" style={{ cursor: "pointer" }}>
+            <img src={logo} alt="edu logo" />
+
+            {/* <img className="log-pic" src={edu} alt="logo" /> */}
+          </Link>
         </div>
         <ul className="dashboardHeader__routes">
           <li className="dashboard">
-            <a href="/">Dashboard</a>
+            <a href="/donar-dash">Dashboard</a>
           </li>
 
           <li className="scholerships">
-            <a href="/" className="activeRoute">
-              All Scholerships
+            <a href="/all-scholar" className="activeRoute">
+              All Scholarships
             </a>
           </li>
 

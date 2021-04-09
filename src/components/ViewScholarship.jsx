@@ -71,11 +71,11 @@ function ViewScholarship() {
         </div>
         <ul className="dashboardHeader__routes">
           <li className="dashboard">
-            <a href="/">Dashboard</a>
+            <a href="/donar-dash">Dashboard</a>
           </li>
 
           <li className="scholerships">
-            <a href="/" className="activeRoute">
+            <a href="/all-scholar" className="activeRoute">
               All Scholarships
             </a>
           </li>

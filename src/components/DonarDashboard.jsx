@@ -49,13 +49,13 @@ function DonarDashboard() {
         </div>
         <ul className="dashboardHeader__routes">
           <li className="dashboard">
-            <a href="/" className="activeRoute">
+            <a href="/donar-dash" className="activeRoute">
               Dashboard
             </a>
           </li>
 
           <li className="scholerships">
-            <a href="/"> All Scholerships</a>
+            <a href="/all-scholar"> All Scholarships</a>
           </li>
 
           <li className="inviteFrineds">
