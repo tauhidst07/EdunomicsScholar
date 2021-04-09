@@ -17,6 +17,7 @@ import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 
 function ViewScholarship() {
   const [data, setData] = useState(0);
+  const [funder, setFunder] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
 
@@ -34,9 +35,21 @@ function ViewScholarship() {
       );
       response = await response.json();
       setData([response]);
-      console.log(response);
+      console.log(data);
+
+      // funder data
+      let funderRes = await fetch(
+        "https://bckendapi.herokuapp.com/api/donar/donarprofile/606ab28beb6c840015392ee2"
+      );
+      funderRes = await funderRes.json();
+      setFunder([funderRes]);
+      //console.log(funder);
     }
     fetchMyApi();
+
+
+
+
   }, []);
   const useStyles = makeStyles((theme) => ({
     button: {
@@ -153,12 +166,12 @@ function ViewScholarship() {
       </div>
       <div className="single-sch">
         <div className="left-sing">
-          <h2>Susy Ruiz Superhero Scholarship</h2>
+          <h2>{ data  === 0 ? "" : data[0].scholarships.name}</h2>
           <div className="img-sc">
             <img src={gir} alt="" />
             <div className="two-head" style={{ marginLeft: "1rem" }}>
               <h4>Funded by </h4>
-              <p>Susy</p>
+              <p>{ funder  === 0 ? "" : funder[0].name}</p>
             </div>
             <Link to="/more-about-donar">
               <h4
@@ -176,33 +189,61 @@ function ViewScholarship() {
           </div>
           <img className="big-img" src={boy} />
           <p className="des-pp">
-            Educators are vital to the success of upcoming generations and the
-            progression of our society. In all sectors, educators are needed to
-            foster an inclusive environment for students that also manifests a
-            deep love for lifelong learning. Unfortunately, educators’ efforts
-            to encourage their students are not appreciated enough by students
-            or the general public today.
+            { data  === 0 ? "" : data[0].scholarships.description}
           </p>
         </div>
         <div className="right-sing">
           <div className="right-doll">
             <h1>
-              $400 <span>OPEN</span>
+              { data  === 0 ? "" : data[0].scholarships.awardAmount}
+               <span>OPEN</span>
             </h1>
-            <p>1 winner</p>
+            <p>{ data  === 0 ? "" : data[0].scholarships.winnersLimit} winner</p>
           </div>
           <button>Contribute</button>
           <div className="con-1">
             <h5>Application Deadline</h5>
-            <p>Jul 5, 2021</p>
+            <p>
+
+              <span style={{ marginLeft: ".1rem" }}>
+                {
+                  new Date(data  === 0 ? "" : data[0].scholarships.awardDate)
+                    .toString()
+                    .split(" ")[1]
+                }
+              </span>
+
+              -
+              <span style={{ marginLeft: ".1rem" }}>
+                {
+                  new Date(data  === 0 ? "" : data[0].scholarships.awardDate)
+                    .toString()
+                    .split(" ")[2]
+                }
+              </span>
+
+              -
+              <span style={{ marginLeft: ".1rem" }}>
+                {
+                  new Date(data  === 0 ? "" : data[0].scholarships.awardDate)
+                    .toString()
+                    .split(" ")[3]
+                }
+              </span>
+
+
+
+              </p>
           </div>
           <div className="con-1">
             <h5>Winners Announced</h5>
-            <p>Aug 5, 2021</p>
+            <p>
+              N/A
+            </p>
           </div>
           <div className="con-1">
             <h5>Education Level</h5>
-            <p>Any</p>
+            <p>{ data  === 0 ? "" : data[0].scholarships.eligible.map((e,i) => (<span key={i}>{e}, </span>))}</p>
           </div>
           <div className="social">
             <h1>SHARE</h1>
