@@ -8,11 +8,15 @@ import PersonIcon from "@material-ui/icons/Person";
 import Footer from "./Footer";
 import scholar from "../media/schola.jpeg";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
+import {useParams} from 'react-router-dom';
 
-function MoreAboutDoner() {
+function MoreAboutDoner({match}) {
   const [data, setData] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
+  //const { handle } = props.match.params;
+  let {donarId} = useParams();
+  //console.log(donarId)
 
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -24,14 +28,21 @@ function MoreAboutDoner() {
   useEffect(() => {
     async function fetchMyApi() {
       let response = await fetch(
-        "https://bckendapi.herokuapp.com/api/donar/oneScholarship/606d46deb66b0512f914ac39"
+        `https://bckendapi.herokuapp.com/api/donar/donarprofile/${donarId}`
       );
       response = await response.json();
       setData([response]);
-      console.log(response);
+      //console.log(data);
+
     }
     fetchMyApi();
+
+
+
+
   }, []);
+
+
   const useStyles = makeStyles((theme) => ({
     button: {
       margin: theme.spacing(1),
@@ -122,23 +133,23 @@ function MoreAboutDoner() {
         </div>
       </div>
       <div className="more-donar">
-        <h1>Donor Profile: WC & EJ Thornton Foundation</h1>
+        <h1>Donor Profile: { data  === 0 ? "" : data[0].name}</h1>
+        {console.log(data)}
         <p>
-          Scholarships, grants, and award winners for WC & EJ Thornton
-          Foundation
+          Scholarships, grants, and award winners for { data  === 0 ? "" : data[0].name}
         </p>
       </div>
       <div className="don-details">
         <div className="doner-det">
           <img src={scholar} alt="" />
           <h1>
-            WC & EJ Thornton <br /> Foundation
+            { data  === 0 ? "" : data[0].name}
           </h1>
           <h4 style={{ display: "flex", alignItems: "center" }}>
             <LocationOnIcon />
-            Denver
+            N/A
           </h4>
-          <p>Donor since Mar, 2021</p>
+          <p>Date- { data  === 0 ? "" : data[0].createdOn === undefined ? 'N/A' : data[0].createdOn}</p>
         </div>
         <div className="doner-right">
           <div className="doner-three">
@@ -151,18 +162,14 @@ function MoreAboutDoner() {
               <p>Total Awards</p>
             </div>
             <div className="part1">
-              <h1>Mar, 2021</h1>
+              <h1>{ data  === 0 ? "" : data[0].createdOn === undefined ? 'N/A' : data[0].createdOn}</h1>
               <p>Joined Edunomics.in</p>
             </div>
           </div>
           <div className="bot-doner">
             <h1>Mission</h1>
             <p>
-              ﻿The mission of the WC & EJ Thornton Foundation is threefold: to
-              advance the arts and education, provide support to youth in
-              underrepresented populations who demonstrate the ability but lack
-              the resources to excel, and provide grants to other charitable
-              organizations designated by the foundation.
+              { data  === 0 ? "" : data[0].mission === undefined ? 'N/A' : data[0].mission}
             </p>
           </div>
         </div>
