@@ -58,9 +58,7 @@
   margin-left: 1rem;
 }
 .doner-right {
-  /* display: flex; */
   width: 70%;
-  /* justify-content: space-around; */
   background-color: white;
   box-shadow: 0 8px 6px -6px rgb(199, 196, 196);
 
