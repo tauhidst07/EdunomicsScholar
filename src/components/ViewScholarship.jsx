@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
 import logo from "../media/edu.png";
+import gir from "../media/gir.jpeg";
+import boy from "../media/boy.jpeg";
+import FacebookIcon from "@material-ui/icons/Facebook";
 import { Menu, MenuItem, Button } from "@material-ui/core";
+import TwitterIcon from "@material-ui/icons/Twitter";
 import { useHistory } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
 import Footer from "./Footer";
 import { makeStyles } from "@material-ui/core/styles";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import "../styles/viewscholar.css";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import FileCopyIcon from "@material-ui/icons/FileCopy";
 
 function ViewScholarship() {
   const [data, setData] = useState(0);
@@ -145,16 +152,63 @@ function ViewScholarship() {
       </div>
       <div className="single-sch">
         <div className="left-sing">
-          <h1>Susy Ruiz Superhero Scholarship</h1>
-          <div>
-            <img />
-            <div>
-              <h4></h4>
-              <p></p>
+          <h2>Susy Ruiz Superhero Scholarship</h2>
+          <div className="img-sc">
+            <img src={gir} alt="" />
+            <div className="two-head" style={{ marginLeft: "1rem" }}>
+              <h4>Funded by </h4>
+              <p>Susy</p>
             </div>
+            <h4>Learn more about the Donor </h4>
+          </div>
+          <img className="big-img" src={boy} />
+          <p className="des-pp">
+            Educators are vital to the success of upcoming generations and the
+            progression of our society. In all sectors, educators are needed to
+            foster an inclusive environment for students that also manifests a
+            deep love for lifelong learning. Unfortunately, educators’ efforts
+            to encourage their students are not appreciated enough by students
+            or the general public today.
+          </p>
+        </div>
+        <div className="right-sing">
+          <div className="right-doll">
+            <h1>
+              $400 <span>OPEN</span>
+            </h1>
+            <p>1 winner</p>
+          </div>
+          <button>Contribute</button>
+          <div className="con-1">
+            <h5>Application Deadline</h5>
+            <p>Jul 5, 2021</p>
+          </div>
+          <div className="con-1">
+            <h5>Winners Announced</h5>
+            <p>Aug 5, 2021</p>
+          </div>
+          <div className="con-1">
+            <h5>Education Level</h5>
+            <p>Any</p>
+          </div>
+          <div className="social">
+            <h1>SHARE</h1>
+            <FacebookIcon />
+            <TwitterIcon />
+            <LinkedInIcon />
+            <FileCopyIcon />
           </div>
         </div>
-        <div className="left-sing"></div>
+      </div>
+      <div className="app-down">
+        <h1>Scholarship application</h1>
+        <p>ESSAY TOPIC</p>
+        <h2>
+          Tell us about one teacher, counselor, or social worker who helped you
+          pursue higher education. How did this person impact your higher
+          education journey?{" "}
+        </h2>
+        <h3>400–600 words</h3>
       </div>
       <Footer />
     </div>
