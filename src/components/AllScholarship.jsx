@@ -78,7 +78,7 @@ function AllScholarship() {
           </li>
 
           <li className="inviteFrineds">
-            <a href="/">Invite Applicants</a>
+            <a href="/invite-applicant">Invite Applicants</a>
           </li>
           <li className="leaders">
             <a href="/leaders">Leaders</a>

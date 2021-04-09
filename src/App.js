@@ -150,7 +150,7 @@ function App() {
         <Route exact path="/settings-donar">
           <SettingsDoner />
         </Route>
-        MyApplication
+
         <Route exact path="/view-scholarship">
           <ViewScholarship />
         </Route>

@@ -49,15 +49,15 @@ function DonerProfile() {
         </div>
         <ul className="dashboardHeader__routes">
           <li className="dashboard">
-            <a href="/">Dashboard</a>
+            <a href="/donar-dash">Dashboard</a>
           </li>
 
           <li className="scholerships">
-            <a href="/"> All Scholerships</a>
+            <a href="/all-scholar"> All Scholerships</a>
           </li>
 
           <li className="inviteFrineds">
-            <a href="/">Invite Applicants</a>
+            <a href="/invite-applicant">Invite Applicants</a>
           </li>
           <li className="leaders">
             <a href="/leaders">Leaders</a>

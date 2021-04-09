@@ -1,15 +1,11 @@
-import React from "react";
 import Footer from "./Footer";
 import React, { useState, useEffect } from "react";
 import logo from "../media/edu.png";
 import { makeStyles } from "@material-ui/core/styles";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
-import "../styles/moreaboutdoner.css";
+import "../styles/invite.css";
 import PersonIcon from "@material-ui/icons/Person";
-import Footer from "./Footer";
-import scholar from "../media/schola.jpeg";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 function InviteApplicants() {
   const [data, setData] = useState(0);
@@ -51,13 +47,13 @@ function InviteApplicants() {
           </li>
 
           <li className="scholerships">
-            <a href="/all-scholar" className="activeRoute">
-              All Scholarships
-            </a>
+            <a href="/all-scholar">All Scholarships</a>
           </li>
 
           <li className="inviteFrineds">
-            <a href="/">Invite Applicants</a>
+            <a href="/invite-applicant" className="activeRoute">
+              Invite Applicants
+            </a>
           </li>
           <li className="leaders">
             <a href="/leaders">Leaders</a>
@@ -122,6 +118,23 @@ function InviteApplicants() {
             </Menu>
           </div>
         </div>
+      </div>
+      <div className="invite-box">
+        <h1>Invite students to your scholarships</h1>
+        <input placeholder="Search by name or interests" />
+        <div className="invite-options">
+          <p>Try:</p>
+          <p>Sandra Doe</p>
+          <p>Chess</p>
+          <p>Public Speaking</p>
+          <p>Volunteering</p>
+          <p>Cooking</p>
+        </div>
+        <h2>Filter by :</h2>
+      </div>
+      <div className="invite-main">
+        <div className="invite-left"></div>
+        <div className="invite-right"></div>
       </div>
       <Footer />
     </div>
