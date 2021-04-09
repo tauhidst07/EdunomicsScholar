@@ -83,7 +83,7 @@ function CreateScholarship() {
     console.log(data);
 
     axios
-      .post("https://bckendapi.herokuapp.com/api/user/signup-donar", data)
+      .post("https://bckendapi.herokuapp.com/api/donar/scholarship", data)
       .then(function (response) {
         console.log(response);
       })

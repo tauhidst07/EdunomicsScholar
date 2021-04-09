@@ -37,6 +37,7 @@ import AllContact from "./components/AllContactUs";
 import AppliedScholarship from "./components/AppliedScholarship";
 import SettingsDoner from "./components/SettingsDoner";
 import ViewScholarship from "./components/ViewScholarship";
+import MyApplications from "./components/applicant/MyApplications"
 
 function App() {
   return (
@@ -147,9 +148,12 @@ function App() {
         </Route>
         <Route exact path="/settings-donar">
           <SettingsDoner />
-        </Route>
+        </Route>MyApplication
         <Route exact path="/view-scholarship">
           <ViewScholarship />
+        </Route>
+        <Route exact path="/myapplications">
+          <MyApplications />
         </Route>
       </Switch>
     </div>
