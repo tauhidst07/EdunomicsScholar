@@ -18,7 +18,7 @@
   display: flex;
   cursor: inherit;
 }
-.img-sc > h4 {
+.img-sc > Link > h4 {
   font-size: 14px;
   line-height: 18px;
   color: #76788c;

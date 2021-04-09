@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from "react";
 import logo from "../media/edu.png";
-import gir from "../media/gir.jpeg";
-import boy from "../media/boy.jpeg";
-import FacebookIcon from "@material-ui/icons/Facebook";
+import { makeStyles } from "@material-ui/core/styles";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import "../styles/moreaboutdoner.css";
 import PersonIcon from "@material-ui/icons/Person";
 import Footer from "./Footer";
-import { makeStyles } from "@material-ui/core/styles";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import "../styles/viewscholar.css";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import FileCopyIcon from "@material-ui/icons/FileCopy";
-import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
+import scholar from "../media/schola.jpeg";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
 
-function ViewScholarship() {
+function MoreAboutDoner() {
   const [data, setData] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
@@ -43,27 +37,6 @@ function ViewScholarship() {
       margin: theme.spacing(1),
     },
   }));
-
-  function IconLabelButtons() {
-    const classes = useStyles();
-
-    return (
-      <div style={{ marginLeft: "5rem", marginTop: "2rem" }}>
-        <Button
-          variant="contained"
-          color="default"
-          size="small"
-          onClick={() => {
-            history.push("/all-scholar");
-          }}
-          className={classes.button}
-          startIcon={<ArrowBackIcon />}
-        >
-          Back
-        </Button>
-      </div>
-    );
-  }
   return (
     <div>
       <div className="dashboardHeader">
@@ -148,84 +121,56 @@ function ViewScholarship() {
           </div>
         </div>
       </div>
-      <div>
-        <IconLabelButtons />
+      <div className="more-donar">
+        <h1>Donor Profile: WC & EJ Thornton Foundation</h1>
+        <p>
+          Scholarships, grants, and award winners for WC & EJ Thornton
+          Foundation
+        </p>
       </div>
-      <div className="single-sch">
-        <div className="left-sing">
-          <h2>Susy Ruiz Superhero Scholarship</h2>
-          <div className="img-sc">
-            <img src={gir} alt="" />
-            <div className="two-head" style={{ marginLeft: "1rem" }}>
-              <h4>Funded by </h4>
-              <p>Susy</p>
+      <div className="don-details">
+        <div className="doner-det">
+          <img src={scholar} alt="" />
+          <h1>
+            WC & EJ Thornton <br /> Foundation
+          </h1>
+          <h4 style={{ display: "flex", alignItems: "center" }}>
+            <LocationOnIcon />
+            Denver
+          </h4>
+          <p>Donor since Mar, 2021</p>
+        </div>
+        <div className="doner-right">
+          <div className="doner-three">
+            <div className="part1">
+              <h1>1</h1>
+              <p>Scholarship</p>
             </div>
-            <Link to="/more-about-donar">
-              <h4
-                style={{
-                  marginLeft: "26rem",
-                  color: "#76788c",
-                  marginRight: ".5rem",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                Learn more about the Donor <DoubleArrowIcon />
-              </h4>
-            </Link>
+            <div className="part1">
+              <h1> $5,000</h1>
+              <p>Total Awards</p>
+            </div>
+            <div className="part1">
+              <h1>Mar, 2021</h1>
+              <p>Joined Edunomics.in</p>
+            </div>
           </div>
-          <img className="big-img" src={boy} />
-          <p className="des-pp">
-            Educators are vital to the success of upcoming generations and the
-            progression of our society. In all sectors, educators are needed to
-            foster an inclusive environment for students that also manifests a
-            deep love for lifelong learning. Unfortunately, educators’ efforts
-            to encourage their students are not appreciated enough by students
-            or the general public today.
-          </p>
-        </div>
-        <div className="right-sing">
-          <div className="right-doll">
-            <h1>
-              $400 <span>OPEN</span>
-            </h1>
-            <p>1 winner</p>
-          </div>
-          <button>Contribute</button>
-          <div className="con-1">
-            <h5>Application Deadline</h5>
-            <p>Jul 5, 2021</p>
-          </div>
-          <div className="con-1">
-            <h5>Winners Announced</h5>
-            <p>Aug 5, 2021</p>
-          </div>
-          <div className="con-1">
-            <h5>Education Level</h5>
-            <p>Any</p>
-          </div>
-          <div className="social">
-            <h1>SHARE</h1>
-            <FacebookIcon />
-            <TwitterIcon />
-            <LinkedInIcon />
-            <FileCopyIcon />
+          <div className="bot-doner">
+            <h1>Mission</h1>
+            <p>
+              ﻿The mission of the WC & EJ Thornton Foundation is threefold: to
+              advance the arts and education, provide support to youth in
+              underrepresented populations who demonstrate the ability but lack
+              the resources to excel, and provide grants to other charitable
+              organizations designated by the foundation.
+            </p>
           </div>
         </div>
       </div>
-      <div className="app-down">
-        <h1>Scholarship application</h1>
-        <p>ESSAY TOPIC</p>
-        <h2>
-          Tell us about one teacher, counselor, or social worker who helped you
-          pursue higher education. How did this person impact your higher
-          education journey?{" "}
-        </h2>
-        <h3>400–600 words</h3>
-      </div>
+
       <Footer />
     </div>
   );
 }
 
-export default ViewScholarship;
+export default MoreAboutDoner;
