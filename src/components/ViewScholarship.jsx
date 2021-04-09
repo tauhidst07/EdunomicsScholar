@@ -5,7 +5,7 @@ import boy from "../media/boy.jpeg";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
 import Footer from "./Footer";
 import { makeStyles } from "@material-ui/core/styles";
@@ -13,6 +13,7 @@ import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import "../styles/viewscholar.css";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
+import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 
 function ViewScholarship() {
   const [data, setData] = useState(0);
@@ -172,7 +173,19 @@ function ViewScholarship() {
               <h4>Funded by </h4>
               <p>{ funder  === 0 ? "" : funder[0].name}</p>
             </div>
-            <h4>Learn more about the Donor </h4>
+            <Link to="/more-about-donar">
+              <h4
+                style={{
+                  marginLeft: "26rem",
+                  color: "#76788c",
+                  marginRight: ".5rem",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                Learn more about the Donor <DoubleArrowIcon />
+              </h4>
+            </Link>
           </div>
           <img className="big-img" src={boy} />
           <p className="des-pp">

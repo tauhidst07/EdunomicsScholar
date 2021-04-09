@@ -37,7 +37,8 @@ import AllContact from "./components/AllContactUs";
 import AppliedScholarship from "./components/AppliedScholarship";
 import SettingsDoner from "./components/SettingsDoner";
 import ViewScholarship from "./components/ViewScholarship";
-import MyApplications from "./components/applicant/MyApplications"
+import MyApplications from "./components/applicant/MyApplications";
+import MoreAboutDoner from "./components/MoreAboutDoner";
 
 function App() {
   return (
@@ -61,7 +62,6 @@ function App() {
         <Route exact path="/donergrant">
           <DonerGrantPage />
         </Route>
-
         <Route exact path="/appligrant">
           <AppliGrantPage />
         </Route>
@@ -148,12 +148,16 @@ function App() {
         </Route>
         <Route exact path="/settings-donar">
           <SettingsDoner />
-        </Route>MyApplication
+        </Route>
+        MyApplication
         <Route exact path="/view-scholarship">
           <ViewScholarship />
         </Route>
         <Route exact path="/myapplications">
           <MyApplications />
+        </Route>
+        <Route exact path="/more-about-donar">
+          <MoreAboutDoner />
         </Route>
       </Switch>
     </div>

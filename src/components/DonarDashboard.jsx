@@ -7,6 +7,7 @@ import logo from "../media/edu.png";
 import "../styles/donardash.css";
 import boy from "../media/boy.jpeg";
 import PersonIcon from "@material-ui/icons/Person";
+import AddIcon from "@material-ui/icons/Add";
 
 function DonarDashboard() {
   const [loading, setLoading] = useState(true);
@@ -178,7 +179,9 @@ function DonarDashboard() {
         <h1>
           Your Scholarships<span> 0</span>
         </h1>
-        <button>Create new scholarship</button>
+        <button>
+          <AddIcon /> Create new scholarship
+        </button>
       </div>
       <div className="sc-box">
         <img src={boy} style={{ marginLeft: "2rem" }} alt="st" />

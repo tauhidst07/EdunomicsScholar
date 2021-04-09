@@ -1,0 +1,105 @@
+.more-donar > h1 {
+  margin-bottom: 12px;
+  margin-top: 0px;
+  color: rgb(16, 8, 38);
+  line-height: 125%;
+  font-size: 22px;
+  font-weight: 600;
+}
+.more-donar > p {
+  color: rgb(118, 120, 140);
+  font-size: 16px;
+  line-height: 100%;
+}
+.more-donar {
+  padding: 3rem;
+  margin-left: 2rem;
+}
+.don-details {
+  box-sizing: border-box;
+  min-width: 0px;
+  margin: 40px 20px;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5rem;
+}
+.doner-det {
+  box-shadow: 0 4px 6px -3px rgb(80, 79, 79);
+}
+.doner-det > img {
+  height: 300px;
+  /* min-width: 100px; */
+  display: block;
+  width: 300px;
+  border-radius: 4px;
+}
+.doner-det > h1 {
+  margin-top: 20px;
+  margin-bottom: 4px;
+  color: rgb(16, 8, 38);
+  line-height: 125%;
+  font-size: 32px;
+  font-weight: 600;
+}
+.doner-det > h4 {
+  margin-left: 10px;
+  color: rgb(118, 120, 140);
+  font-size: 14px;
+  line-height: 100%;
+}
+.doner-det > p {
+  margin-top: 12px;
+  color: rgb(118, 120, 140);
+  font-size: 14px;
+  line-height: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+.doner-right {
+  width: 70%;
+  background-color: white;
+  box-shadow: 0 8px 6px -6px rgb(199, 196, 196);
+
+  margin-left: 3rem;
+}
+.doner-three {
+  display: flex;
+  justify-content: space-around;
+
+  box-shadow: 0 8px 6px -6px rgb(199, 196, 196);
+}
+.part1 > h1 {
+  margin: 0px 0px 4px;
+  font-size: 28px;
+  line-height: 125%;
+  font-weight: 600;
+  color: rgb(93, 87, 251);
+  margin-top: 1rem;
+  margin-bottom: 0.7rem;
+}
+.part1 > p {
+  color: rgb(104, 103, 107);
+  font-size: 16px;
+  line-height: 100%;
+  margin-bottom: 0.7rem;
+}
+.bot-doner {
+  margin-top: 6rem;
+}
+.bot-doner > h1 {
+  margin-bottom: 12px;
+  color: rgb(16, 8, 38);
+  line-height: 125%;
+  font-size: 22px;
+  font-weight: 600;
+}
+.bot-doner > p {
+  margin-bottom: 40px;
+  padding: 0px;
+  color: rgb(43, 43, 44);
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 100%;
+}
