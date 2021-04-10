@@ -5,7 +5,7 @@ import boy from "../media/boy.jpeg";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import { useHistory, Link, BrowserRouter as Router, Route } from "react-router-dom";
+import { useHistory, Link, BrowserRouter as Router, Route, useParams } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
 import Footer from "./Footer";
 import { makeStyles } from "@material-ui/core/styles";
@@ -16,7 +16,13 @@ import FileCopyIcon from "@material-ui/icons/FileCopy";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import MoreAboutDoner from './MoreAboutDoner';
 
+
 function ViewScholarship() {
+
+  let {scholarParams} = useParams();
+
+  console.log(scholarParams.split('&'))
+
   const [data, setData] = useState(0);
   const [funder, setFunder] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -33,7 +39,7 @@ function ViewScholarship() {
   useEffect(() => {
     async function fetchMyApi() {
       let response = await fetch(
-        "https://bckendapi.herokuapp.com/api/donar/oneScholarship/606d46deb66b0512f914ac39"
+        `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${scholarParams.split('&')[0]}`
       );
       response = await response.json();
       setData([response]);
@@ -42,7 +48,7 @@ function ViewScholarship() {
 
       // funder data
       let funderRes = await fetch(
-        "https://bckendapi.herokuapp.com/api/donar/donarprofile/606ab28beb6c840015392ee2"
+        `https://bckendapi.herokuapp.com/api/donar/donarprofile/${scholarParams.split('&')[1]}`
       );
       funderRes = await funderRes.json();
       setFunder([funderRes]);
@@ -176,7 +182,7 @@ function ViewScholarship() {
               <h4>Funded by </h4>
               <p>{ funder  === 0 ? "" : funder[0].name}</p>
             </div>
-            <Link to={"/more-about-donar/606ab28beb6c840015392ee2"}>
+            <Link to={`/more-about-donar/${scholarParams.split('&')[1]}`}>
               <h4
                 style={{
                   marginLeft: "26rem",

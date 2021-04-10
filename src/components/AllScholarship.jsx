@@ -53,7 +53,10 @@ function AllScholarship() {
       );
       response = await response.json();
       setData([response]);
+      console.log(data)
     }
+
+
     fetchMyApi();
   }, []);
   return (
@@ -164,14 +167,13 @@ function AllScholarship() {
                 </div>
 
                 <div className="apply">
-                  <button
+                  <Link
                     className="apply-bt1"
-                    onClick={() => {
-                      history.push("/view-scholarship");
-                    }}
+                    to={`/view-scholarship/${e._id}&${e.createdBy}`}
+
                   >
                     View scholarship
-                  </button>
+                  </Link>
                   <button className="apply-bt2">Contribute</button>
                 </div>
               </div>
