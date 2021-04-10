@@ -23,7 +23,7 @@ function ScholarRules() {
           reserves the right to amend or discontinue scholarships and these
           Official Scholarship Rules at any time in its sole discretion. Please
           note, if you are under 18, your parent or guardian must read and
-          consent to these Official Scholarship Rules on your behalf.
+          consent tobr these Official Scholarship Rules on your behalf.
         </p>
         <h2>1. GENERAL CONDITIONS</h2>
         <p style={{ marginTop: "1rem" }}>
