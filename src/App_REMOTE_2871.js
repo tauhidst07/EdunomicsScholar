@@ -150,17 +150,14 @@ function App() {
         <Route exact path="/settings-donar">
           <SettingsDoner />
         </Route>
-<<<<<<< HEAD
-=======
 
->>>>>>> 7bc2b48784845d537647416c4824bbb8dba1d562
         <Route exact path="/view-scholarship">
           <ViewScholarship />
         </Route>
         <Route exact path="/myapplications">
           <MyApplications />
         </Route>
-        <Route exact path="/more-about-donar/:donarId">
+        <Route exact path="/more-about-donar">
           <MoreAboutDoner />
         </Route>
         <Route exact path="/invite-applicant">

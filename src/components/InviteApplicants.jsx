@@ -1,18 +1,14 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import logo from "../media/edu.png";
 import Footer from "./Footer";
-import profileImage from "../media/profile.png";
+import React, { useState, useEffect } from "react";
+import logo from "../media/edu.png";
+import { makeStyles } from "@material-ui/core/styles";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import "../styles/invite.css";
 import PersonIcon from "@material-ui/icons/Person";
 
-import "../styles/donerprofile.css";
-
-function DonerProfile() {
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-  const [data, setData] = useState({});
+function InviteApplicants() {
+  const [data, setData] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
 
@@ -24,23 +20,21 @@ function DonerProfile() {
   };
 
   useEffect(() => {
-    axios
-      .get(
-        "https://bckendapi.herokuapp.com/api/donar/donarprofile/606ac845c5d23600159eaf4a"
-      )
-      .then((res) => {
-        console.log(res.data);
-        setLoading(false);
-        setData(res.data);
-        setError("");
-      })
-      .catch((err) => {
-        setLoading(false);
-        setData({});
-        setError("error is there");
-        console.log(error);
-      });
+    async function fetchMyApi() {
+      let response = await fetch(
+        "https://bckendapi.herokuapp.com/api/donar/oneScholarship/606d46deb66b0512f914ac39"
+      );
+      response = await response.json();
+      setData([response]);
+      console.log(response);
+    }
+    fetchMyApi();
   }, []);
+  const useStyles = makeStyles((theme) => ({
+    button: {
+      margin: theme.spacing(1),
+    },
+  }));
   return (
     <div>
       <div className="dashboardHeader">
@@ -53,11 +47,13 @@ function DonerProfile() {
           </li>
 
           <li className="scholerships">
-            <a href="/all-scholar"> All Scholerships</a>
+            <a href="/all-scholar">All Scholarships</a>
           </li>
 
           <li className="inviteFrineds">
-            <a href="/invite-applicant">Invite Applicants</a>
+            <a href="/invite-applicant" className="activeRoute">
+              Invite Applicants
+            </a>
           </li>
           <li className="leaders">
             <a href="/leaders">Leaders</a>
@@ -65,7 +61,6 @@ function DonerProfile() {
         </ul>
         <div className="dashboardHeader__menu">
           <div className="btn">
-            {/* <Select className="bt1" /> */}
             <Button
               style={{
                 fontSize: "14px",
@@ -115,9 +110,7 @@ function DonerProfile() {
               <MenuItem
                 onClick={() => {
                   handleClose();
-                  localStorage.clear();
-
-                  history.push("/login");
+                  history.push("/careers");
                 }}
               >
                 Sign out
@@ -126,34 +119,26 @@ function DonerProfile() {
           </div>
         </div>
       </div>
-      <div className="pro-doner">
-        <h1>Donor Profile: {data.name}</h1>
-        <p>Scholarships, grants, and award winners for {data.name}</p>
+      <div className="invite-box">
+        <h1>Invite students to your scholarships</h1>
+        <input placeholder="Search by name or interests" />
+        <div className="invite-options">
+          <p>Try:</p>
+          <p>Sandra Doe</p>
+          <p>Chess</p>
+          <p>Public Speaking</p>
+          <p>Volunteering</p>
+          <p>Cooking</p>
+        </div>
+        <h2>Filter by :</h2>
       </div>
-
-      <div className="img-boxx" style={{ marginBottom: "4rem" }}>
-        <img className="pro-imgd" src={profileImage} alt="profile" />
-        <h1>{data.name}</h1>
-        <p>Edit</p>
-      </div>
-      <div className="mission">
-        <h1>Mission</h1>
-        <button>
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <path
-              d="M10.625 4.37499L2.625 12.375L1.5 16.5L5.625 15.375L13.5 7.5M10.625 4.37499L12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3164 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3164 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L13.5 7.5M10.625 4.37499L13.5 7.5"
-              stroke="#CCD1D9"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-        </button>
-        <p>hhf</p>
+      <div className="invite-main">
+        <div className="invite-left"></div>
+        <div className="invite-right"></div>
       </div>
       <Footer />
     </div>
   );
 }
 
-export default DonerProfile;
+export default InviteApplicants;

@@ -39,7 +39,6 @@ import SettingsDoner from "./components/SettingsDoner";
 import ViewScholarship from "./components/ViewScholarship";
 import MyApplications from "./components/applicant/MyApplications";
 import MoreAboutDoner from "./components/MoreAboutDoner";
-import InviteApplicants from "./components/InviteApplicants";
 
 function App() {
   return (
@@ -150,10 +149,6 @@ function App() {
         <Route exact path="/settings-donar">
           <SettingsDoner />
         </Route>
-<<<<<<< HEAD
-=======
-
->>>>>>> 7bc2b48784845d537647416c4824bbb8dba1d562
         <Route exact path="/view-scholarship">
           <ViewScholarship />
         </Route>
@@ -162,9 +157,6 @@ function App() {
         </Route>
         <Route exact path="/more-about-donar/:donarId">
           <MoreAboutDoner />
-        </Route>
-        <Route exact path="/invite-applicant">
-          <InviteApplicants />
         </Route>
       </Switch>
     </div>
