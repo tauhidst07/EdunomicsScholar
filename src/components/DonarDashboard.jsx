@@ -8,6 +8,8 @@ import "../styles/donardash.css";
 import boy from "../media/boy.jpeg";
 import PersonIcon from "@material-ui/icons/Person";
 import AddIcon from "@material-ui/icons/Add";
+import jwt from 'jsonwebtoken';
+
 
 function DonarDashboard() {
   const [loading, setLoading] = useState(true);
@@ -24,9 +26,15 @@ function DonarDashboard() {
   };
 
   useEffect(() => {
+
+    let encodedToken = localStorage.getItem("auth-token");
+
+    let myId = jwt.decode(encodedToken)
+    //console.log(myId);
+    //606ac845c5d23600159eaf4a
     axios
       .get(
-        "https://bckendapi.herokuapp.com/api/donar/donarDashboard/606ac845c5d23600159eaf4a"
+        `https://bckendapi.herokuapp.com/api/donar/donarDashboard/${myId._id}`
       )
       .then((res) => {
         console.log(res.data);
@@ -179,9 +187,13 @@ function DonarDashboard() {
         <h1>
           Your Scholarships<span> 0</span>
         </h1>
-        <button>
+
+        <Link to={"/create-scholar"} className="create-schoolarship">
+
           <AddIcon /> Create new scholarship
-        </button>
+        </Link>
+
+
       </div>
       <div className="sc-box">
         <img src={boy} style={{ marginLeft: "2rem" }} alt="st" />

@@ -2,7 +2,8 @@ import React from "react";
 import "../styles/dashboardHeader.css";
 import logo from '../media/edu.png';
 
-function DashboardHeader() {
+function DashboardHeader({myapplication}) {
+  console.log(myapplication)
   return (
     <div className="dashboardHeader">
       <div className="dashboardHeader__logo"><img src={logo} alt="edu logo" /></div>
@@ -11,7 +12,7 @@ function DashboardHeader() {
           <li className="loanHelp"><a href="/">Loan Help</a></li>
           <li className="resources"><a href="/">Resources</a></li>
           <li className="scholerships"><a href="/">Scholerships</a></li>
-          <li className="myapplicants"><a href="/">My Applicants</a></li>
+          <li className="myapplicants"><a href={myapplication}>My Applicants</a></li>
           <li className="inviteFrineds"><a href="/">Invite Friends</a></li>
           <li className="leaders"><a href="/">Leaders</a></li>
           <li className="search">

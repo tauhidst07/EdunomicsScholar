@@ -1,6 +1,6 @@
 import React from "react";
 import edu from "../media/edu.png";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "../styles/createschlor.css";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
@@ -11,11 +11,15 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
 import axios from "axios";
+import jwt from 'jsonwebtoken';
 
 import { useForm } from "react-hook-form";
 
 
 function CreateScholarship() {
+
+  const history = useHistory();
+
   const useStyles = makeStyles((theme) => ({
     button: {
       display: "block",
@@ -77,15 +81,21 @@ function CreateScholarship() {
 // FORM HANDLING -R
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
+    let encodedToken = localStorage.getItem("auth-token");
+    let myId = jwt.decode(encodedToken)
     data.donationAllow = false;
     data.essayNeeded = false;
-    data.createdBy = '606ab28beb6c840015392ee2'
+    data.createdBy = myId._id
+    //'606ab28beb6c840015392ee2'
     console.log(data);
 
     axios
       .post("https://bckendapi.herokuapp.com/api/donar/scholarship", data)
       .then(function (response) {
         console.log(response);
+        if(response.status === 201){
+          history.push('/all-scholar');
+        }
       })
       .catch(function (error) {
         console.log(error);

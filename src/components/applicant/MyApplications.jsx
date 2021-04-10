@@ -10,7 +10,9 @@ const MyApplications = () => {
 
   return (
     <div className="myApplication">
-      <DashboardHeader />
+      <DashboardHeader
+        myapplication="myapplications"
+      />
       <div className="myApplication__main">
         <h1>My Applications</h1>
 
@@ -18,30 +20,30 @@ const MyApplications = () => {
           <li
             className={selected==='all' ? "myApplication__main__activeLi" : "" }
             onClick={(e) => { setSelected( 'all')}}
-          >All Applications</li>
+          >All Applications <span></span></li>
           <li onClick={() => { setSelected( 'drafts')}}
             className={selected==='drafts' ? "myApplication__main__activeLi" : "" }
-          >Drafts <span>1</span></li>
+          >Drafts <span></span></li>
           <li
             onClick={() => { setSelected( 'submitted')}}
             className={selected==='submitted' ? "myApplication__main__activeLi" : "" }
-            >Submitted </li>
+            >Submitted <span></span></li>
           <li
             onClick={() => { setSelected( 'inreview')}}
             className={selected==='inreview' ? "myApplication__main__activeLi" : "" }
-            >In Review <span>1</span></li>
+            >In Review <span></span></li>
           <li
             onClick={() => { setSelected( 'finalist')}}
             className={selected==='finalist' ? "myApplication__main__activeLi" : "" }
-            >Finalist </li>
+            >Finalist <span></span></li>
           <li
             className={selected==='winner' ? "myApplication__main__activeLi" : "" }
             onClick={() => { setSelected( 'winner')}}
-            >Winner </li>
+            >Winner <span></span></li>
           <li
             className={selected==='archive' ? "myApplication__main__activeLi" : "" }
             onClick={() => { setSelected( 'archive')}}
-            >Archive </li>
+            >Archive <span></span></li>
         </ul>
 
         <div className="myApplication__main__scholarships">
