@@ -38,7 +38,9 @@ import AppliedScholarship from "./components/AppliedScholarship";
 import SettingsDoner from "./components/SettingsDoner";
 import ViewScholarship from "./components/ViewScholarship";
 import MyApplications from "./components/applicant/MyApplications";
+import AppliedApplicants from "./components/donar/AppliedApplicants";
 import MoreAboutDoner from "./components/MoreAboutDoner";
+import MoreAboutApplicant from "./components/donar/MoreAboutApplicant";
 import InviteApplicants from "./components/InviteApplicants";
 
 import {MyIdProvider} from "./components/context/MyId";
@@ -162,8 +164,14 @@ function App() {
         <Route exact path="/more-about-donar/:donarId">
           <MoreAboutDoner />
         </Route>
+        <Route exact path="/more-about-applicant">
+          <MoreAboutApplicant />
+        </Route>
         <Route exact path="/invite-applicant">
           <InviteApplicants />
+        </Route>
+        <Route exact path="/appliedapplicants">
+          <AppliedApplicants />
         </Route>
       </Switch>
       </MyIdProvider>

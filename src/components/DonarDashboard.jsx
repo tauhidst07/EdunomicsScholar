@@ -206,7 +206,7 @@ function DonarDashboard() {
       </div>
 
       <div className="approved_scholarships">
-        <div className="myApplication__main__scholarships_Container">
+        <div className="myApplication__main__scholarships_Container sc-box">
 
           <a href="/">
             <img width="120px" height="80px" src={img}  />
