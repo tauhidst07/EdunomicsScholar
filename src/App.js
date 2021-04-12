@@ -40,7 +40,7 @@ import ViewScholarship from "./components/ViewScholarship";
 import MyApplications from "./components/applicant/MyApplications";
 import MoreAboutDoner from "./components/MoreAboutDoner";
 import InviteApplicants from "./components/InviteApplicants";
-
+import DonerLeaders from "./components/DonerLeaders"
 import {MyIdProvider} from "./components/context/MyId";
 
 function App() {
@@ -164,6 +164,9 @@ function App() {
         </Route>
         <Route exact path="/invite-applicant">
           <InviteApplicants />
+        </Route>
+        <Route exact path="/doner-eaders">
+          <DonerLeaders />
         </Route>
       </Switch>
       </MyIdProvider>
