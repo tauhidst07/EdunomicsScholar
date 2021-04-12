@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../media/edu.png";
 import { makeStyles } from "@material-ui/core/styles";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
+import { useHistory ,Link} from "react-router-dom";
 import "../styles/moreaboutdoner.css";
 import PersonIcon from "@material-ui/icons/Person";
 import Footer from "./Footer";
@@ -52,7 +52,11 @@ function MoreAboutDoner({match}) {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-          <img src={logo} alt="edu logo" />
+        <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
+            <img src={logo} alt="edu logo" />
+
+          
+          </Link>
         </div>
         <ul className="dashboardHeader__routes">
           <li className="dashboard">
