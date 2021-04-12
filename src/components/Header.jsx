@@ -28,10 +28,10 @@ function Header() {
           <img className="log-pic" src={edu} alt="logo" />
         </Link>
         <div className="tog">
-          <Link to="donergrant" className="tg1">
+          <Link to="/donergrant" className="activeRoute tg1">
             Donors
           </Link>
-          <Link to="appligrant" className="tg1">
+          <Link to="/appligrant" className="tg1">
             Applicants
           </Link>
         </div>
