@@ -94,7 +94,7 @@ function CreateScholarship() {
       .then(function (response) {
         console.log(response);
         if(response.status === 201){
-          history.push('/all-scholar');
+          history.push('/all-scholar')
         }
       })
       .catch(function (error) {
