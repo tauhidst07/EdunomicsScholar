@@ -8,6 +8,10 @@ function Header() {
   const history = useHistory();
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorE2, setAnchorE2] = useState(null);
+  const [toggle,setToggle] = useState(false)
+  const handleToggle =()=>{
+    setToggle(true)
+  }
 
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -28,7 +32,7 @@ function Header() {
           <img className="log-pic" src={edu} alt="logo" />
         </Link>
         <div className="tog">
-          <Link to="/donergrant" className="activeRoute tg1">
+          <Link to="/donergrant" className={`tg1 ${toggle ? "activeRoute":""}`} onClick={handleToggle}>
             Donors
           </Link>
           <Link to="/appligrant" className="tg1">
