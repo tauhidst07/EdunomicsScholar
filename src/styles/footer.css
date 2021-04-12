@@ -64,9 +64,10 @@
 .doner {
   font-size: 14px;
   line-height: 142%;
-  color: #76788c;
+  color: #0c0c0c;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+  font-weight: 800;
 }
 .down1 > p {
   font-weight: 800;
