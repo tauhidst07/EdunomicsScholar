@@ -1,14 +1,27 @@
+.footer{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: lightgray;
+}
+
+
 .foot-1 {
   flex-flow: wrap;
   margin-left: 20px;
   margin-right: 20px;
-  width: calc(100% - 40px);
   display: flex;
+  gap: 20px;
   font-size: 16px;
   line-height: 29px;
   justify-content: space-between;
   margin-top: 2rem;
 }
+
+.foot-1 > div > h2{
+  padding-top: 20px;
+}
+
 .rights {
   color: #6d7b8c;
   white-space: nowrap;
@@ -52,7 +65,6 @@
 }
 .down-footer {
   display: flex;
-  width: 1280px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -94,4 +106,9 @@
   text-decoration: none;
   margin-bottom: 16px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+
+
 }

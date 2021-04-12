@@ -5,6 +5,9 @@ a{
 
 .dashboardHeader{
   background-color: white !important;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .dashboardHeader,
@@ -58,4 +61,40 @@ a{
   color: #5d57fb!important;
   background: #f5f6fc;
   border-radius: 20px;
+}
+
+.collaps-btn{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  body{
+
+  }
+
+  .dashboardHeader__routes{
+    position: absolute;
+    top: 9vh;
+    left: 0;
+    padding: 20px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: white;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .hide{
+    display: none;
+  }
+  .collaps-btn{
+    display: block;
+  }
+
+
+
+
+
+
 }

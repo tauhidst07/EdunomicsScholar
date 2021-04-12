@@ -43,7 +43,7 @@ import MoreAboutDoner from "./components/MoreAboutDoner";
 import MoreAboutApplicant from "./components/donar/MoreAboutApplicant";
 import InviteApplicants from "./components/InviteApplicants";
 
-import DashboardHeader from './components/DashboardHeader';
+import Footer from './components/Footer';
 
 
 import {MyIdProvider} from "./components/context/MyId";
@@ -177,7 +177,7 @@ function App() {
           <AppliedApplicants />
         </Route>
         <Route exact path="/testing">
-          <DashboardHeader />
+          <Footer />
         </Route>
       </Switch>
       </MyIdProvider>

@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/dashboardHeader.css";
 import logo from '../media/edu.png';
 
 function DashboardHeader({myapplication}) {
   console.log(myapplication)
+  const [collapse, setCollapse] = useState(false);
   return (
     <div className="dashboardHeader">
       <div className="dashboardHeader__logo"><img src={logo} alt="edu logo" /></div>
-        <ul className="dashboardHeader__routes">
+        <ul className={collapse ? " dashboardHeader__routes hide" : "dashboardHeader__routes"}>
           <li className="dashboard"><a href="/" className="activeRoute">Dashboard</a></li>
           <li className="loanHelp"><a href="/">Loan Help</a></li>
           <li className="resources"><a href="/">Resources</a></li>
@@ -19,7 +20,7 @@ function DashboardHeader({myapplication}) {
             <input type="text" placeholder="Search students" />
           </li>
         </ul>
-      <div className="dashboardHeader__menu"></div>
+      <div className="dashboardHeader__menu"><button className="collaps-btn" onClick={() => setCollapse(!collapse)}>collapse</button></div>
     </div>
   );
 }
