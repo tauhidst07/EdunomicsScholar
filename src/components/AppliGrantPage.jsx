@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function AppliGrantPage() {
   return (
     <div>
-      <Header />
+      <Header isApplicant={true}/>
       <div className="doner-grant">
         <div className="left-sec">
           <h1 className="left-h1">

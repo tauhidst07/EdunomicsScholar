@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function DonerGrantPage() {
   return (
     <div>
-      <Header />
+      <Header isDoner={true} />
       <div className="doner-grant">
         <div className="left-sec">
           <h1 className="left-h1">
