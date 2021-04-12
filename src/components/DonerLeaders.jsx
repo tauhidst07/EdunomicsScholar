@@ -169,7 +169,9 @@ function DonerLeaders() {
               <MenuItem
                 onClick={() => {
                   handleClose();
-                  history.push("/careers");
+                  localStorage.clear();
+
+                  history.push("/login");
                 }}
               >
                 Sign out

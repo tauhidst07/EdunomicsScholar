@@ -130,7 +130,9 @@ function DonarDashboard() {
               <MenuItem
                 onClick={() => {
                   handleClose();
-                  history.push("/");
+                  localStorage.clear();
+
+                  history.push("/login");
                 }}
               >
                 Sign out

@@ -57,7 +57,7 @@ function DonerProfile() {
           </li>
 
           <li className="scholerships">
-            <a href="/all-scholar"> All Scholerships</a>
+            <a href="/all-scholar"> All Scholarships</a>
           </li>
 
           <li className="inviteFrineds">
