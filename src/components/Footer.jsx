@@ -11,7 +11,7 @@ function Footer() {
           <Link to="/" className="logo-main" style={{ cursor: "pointer" }}>
             <img className="log-pic" src={edu} alt="logo" />
           </Link>
-          <h2 className="rights"> All Rights Reserved. Edunomics</h2>
+          <h2 className="rights"> All Rights Reserved pride.edunomics.in</h2>
         </div>
         <div className="footer-btns">
           <Link to="/joindoner">
