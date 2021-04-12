@@ -94,7 +94,7 @@ function CreateScholarship() {
       .then(function (response) {
         console.log(response);
         if(response.status === 201){
-          history.push('/all-scholar');
+          history.push('/all-scholar')
         }
       })
       .catch(function (error) {
@@ -258,7 +258,7 @@ function CreateScholarship() {
             placeholder="Enter amount per winner"
           />
         </div>
-        <button className="signin">Sign Up</button>
+        <button className="signin" style={{width:"300px",marginLeft:"30rem", marginTop:"2rem"}}>Submit</button>
       </form>
     </div>
   );

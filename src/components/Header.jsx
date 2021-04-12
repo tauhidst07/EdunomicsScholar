@@ -4,10 +4,12 @@ import { Link, useHistory } from "react-router-dom";
 import edu from "../media/edu.png";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 
-function Header() {
+function Header({isDoner,isApplicant}) {
   const history = useHistory();
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorE2, setAnchorE2] = useState(null);
+  
+ 
 
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -28,10 +30,10 @@ function Header() {
           <img className="log-pic" src={edu} alt="logo" />
         </Link>
         <div className="tog">
-          <Link to="donergrant" className="tg1">
+          <Link to="/donergrant" className={`tg1 ${isDoner ? "activeRoute":""}`} >
             Donors
           </Link>
-          <Link to="appligrant" className="tg1">
+          <Link to="/appligrant"className={`tg1 ${isApplicant? "activeRoute":""}`}>
             Applicants
           </Link>
         </div>

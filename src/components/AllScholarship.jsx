@@ -63,10 +63,10 @@ function AllScholarship() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-          <Link to="/" className="logo-main" style={{ cursor: "pointer" }}>
+          <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
             <img src={logo} alt="edu logo" />
 
-            {/* <img className="log-pic" src={edu} alt="logo" /> */}
+          
           </Link>
         </div>
         <ul className="dashboardHeader__routes">
@@ -84,7 +84,7 @@ function AllScholarship() {
             <a href="/invite-applicant">Invite Applicants</a>
           </li>
           <li className="leaders">
-            <a href="/leaders">Leaders</a>
+            <a href="/doner-leaders">Leaders</a>
           </li>
         </ul>
         <div className="dashboardHeader__menu">
@@ -138,7 +138,9 @@ function AllScholarship() {
               <MenuItem
                 onClick={() => {
                   handleClose();
-                  history.push("/careers");
+                  localStorage.clear();
+
+                  history.push("/login");
                 }}
               >
                 Sign out

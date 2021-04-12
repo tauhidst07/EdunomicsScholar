@@ -60,22 +60,26 @@ function SettingsDoner() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-          <img src={logo} alt="edu logo" />
+        <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
+            <img src={logo} alt="edu logo" />
+
+          
+          </Link>
         </div>
         <ul className="dashboardHeader__routes">
           <li className="dashboard">
-            <a href="/">Dashboard</a>
+            <a href="/donar-dash">Dashboard</a>
           </li>
 
           <li className="scholerships">
-            <a href="/">All Scholerships</a>
+            <a href="/all-scholar">All Scholerships</a>
           </li>
 
           <li className="inviteFrineds">
-            <a href="/">Invite Applicants</a>
+            <a href="/invite-applicant">Invite Applicants</a>
           </li>
           <li className="leaders">
-            <a href="/leaders">Leaders</a>
+            <a href="/doner-leaders">Leaders</a>
           </li>
         </ul>
         <div className="dashboardHeader__menu">

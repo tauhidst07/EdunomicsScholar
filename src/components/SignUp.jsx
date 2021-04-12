@@ -54,8 +54,7 @@ function SignUp() {
               stroke-linejoin="round"
             ></path>
           </svg>
-          {/* <button className="tg1">Donors</button>
-          <button className="tg1">Applicants</button> */}
+        
           <Link to="/login" className="already">
             Already have an account?
           </Link>
@@ -97,55 +96,15 @@ function SignUp() {
             name="password"
             placeholder="Password"
           />
-          {/* <h2 className="uname">DOB</h2>
-          <input
-            className="u-input"
-            ref={register}
-            type="text"
-            placeholder="Date of birth"
-          />
-          <h2 className="uname">Gender</h2>
-          <input
-            className="u-input"
-            ref={register}
-            type="text"
-            name="gender"
-            placeholder="Gender"
-          />
-          <h2 className="uname">Bio</h2>
-          <input
-            className="u-input"
-            ref={register}
-            type="text"
-            name="bio"
-            placeholder="Bio"
-          />
-          <h2 className="uname">Location</h2>
-          <input
-            className="u-input"
-            ref={register}
-            type="text"
-            name="location"
-            placeholder="Location"
-          />
-          <h2 className="uname">Address</h2>
-          <input
-            className="u-input"
-            ref={register}
-            type="text"
-            name="address"
-            placeholder="Address"
-          /> */}
-          {/* <p className="forgot">forgot password ?</p> */}
-          <button className="signin">Sign Up</button>
-          {/* <p className="dont">Don't have an account?</p> */}
+      
+       
           <div className="option-signup" style={{ marginTop: "2rem" }}>
             <Link to="/signup" className="opt1">
               Sign up as a Donor
             </Link>
-            <Link to="/signupApli" className="opt1">
+            {/* <Link to="/signupApli" className="opt1">
               Sign up as an Applicant
-            </Link>
+            </Link> */}
           </div>
         </form>
       </div>

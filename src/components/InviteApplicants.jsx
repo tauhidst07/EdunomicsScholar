@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../media/edu.png";
 import { makeStyles } from "@material-ui/core/styles";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
+import { useHistory,Link } from "react-router-dom";
 import "../styles/invite.css";
 import PersonIcon from "@material-ui/icons/Person";
 
@@ -19,17 +19,17 @@ function InviteApplicants() {
     setAnchorEl(null);
   };
 
-  useEffect(() => {
-    async function fetchMyApi() {
-      let response = await fetch(
-        "https://bckendapi.herokuapp.com/api/donar/oneScholarship/606d46deb66b0512f914ac39"
-      );
-      response = await response.json();
-      setData([response]);
-      console.log(response);
-    }
-    fetchMyApi();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchMyApi() {
+  //     let response = await fetch(
+  //       "https://bckendapi.herokuapp.com/api/donar/oneScholarship/606d46deb66b0512f914ac39"
+  //     );
+  //     response = await response.json();
+  //     setData([response]);
+  //     console.log(response);
+  //   }
+  //   fetchMyApi();
+  // }, []);
   const useStyles = makeStyles((theme) => ({
     button: {
       margin: theme.spacing(1),
@@ -39,7 +39,11 @@ function InviteApplicants() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-          <img src={logo} alt="edu logo" />
+        <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
+            <img src={logo} alt="edu logo" />
+
+          
+          </Link>
         </div>
         <ul className="dashboardHeader__routes">
           <li className="dashboard">
@@ -56,7 +60,7 @@ function InviteApplicants() {
             </a>
           </li>
           <li className="leaders">
-            <a href="/leaders">Leaders</a>
+            <a href="/doner-leaders">Leaders</a>
           </li>
         </ul>
         <div className="dashboardHeader__menu">
@@ -110,7 +114,9 @@ function InviteApplicants() {
               <MenuItem
                 onClick={() => {
                   handleClose();
-                  history.push("/careers");
+                  localStorage.clear();
+
+                  history.push("/login");
                 }}
               >
                 Sign out
@@ -133,8 +139,10 @@ function InviteApplicants() {
         <h2>Filter by :</h2>
       </div>
       <div className="invite-main">
-        <div className="invite-left"></div>
-        <div className="invite-right"></div>
+       <h1 style={{textAlign:"center",marginBottom:"5rem"}}>
+       COMING SOON......</h1> 
+        {/* <div className="invite-left"></div>
+        <div className="invite-right"></div> */}
       </div>
       <Footer />
     </div>

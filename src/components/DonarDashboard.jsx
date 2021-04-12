@@ -55,7 +55,11 @@ function DonarDashboard() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-          <img src={logo} alt="edu logo" />
+        <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
+            <img src={logo} alt="edu logo" />
+
+          
+          </Link>
         </div>
         <ul className="dashboardHeader__routes">
           <li className="dashboard">
@@ -72,7 +76,7 @@ function DonarDashboard() {
             <a href="/invite-applicant">Invite Applicants</a>
           </li>
           <li className="leaders">
-            <a href="/leaders">Leaders</a>
+            <a href="/doner-leaders">Leaders</a>
           </li>
         </ul>
         <div className="dashboardHeader__menu">
@@ -119,7 +123,7 @@ function DonarDashboard() {
               <MenuItem
                 onClick={() => {
                   handleClose();
-                  history.push("/contactus");
+                  history.push("/settings-donar");
                 }}
               >
                 Setting
@@ -127,7 +131,9 @@ function DonarDashboard() {
               <MenuItem
                 onClick={() => {
                   handleClose();
-                  history.push("/careers");
+                  localStorage.clear();
+
+                  history.push("/login");
                 }}
               >
                 Sign out
@@ -137,7 +143,7 @@ function DonarDashboard() {
         </div>
       </div>
       <div className="donar-dashhead">
-        <h1> Welcome Back, {data.name}</h1>
+        <h1> Welcome Back, {data.name}!</h1>
         <div className="donar-sidehead">
           <p>
             Total Donations
@@ -159,7 +165,7 @@ function DonarDashboard() {
             <h1>Donor Credits can increase the value of your awards</h1>
             <p>
               We share your scholarships with schools across the country. You
-              get Donor Credits whenever students join Bold.org for your awards.
+              get Donor Credits whenever students join Edunomics for your awards.
               Use them to create new awards or increase the value of your
               current awards, on us.
             </p>
@@ -201,7 +207,7 @@ function DonarDashboard() {
         <div className="sc-head" style={{ marginLeft: "10rem" }}>
           <h3>We're reviewing your recent submission</h3>
           <span>We'll have a proposal ready for you shortly!</span>
-          <p>To request any edits, email</p>
+          <p>To request any edits, email Edunomics.in</p>
         </div>
       </div>
 

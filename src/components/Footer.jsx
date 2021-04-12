@@ -11,7 +11,7 @@ function Footer() {
           <Link to="/" className="logo-main" style={{ cursor: "pointer" }}>
             <img className="log-pic" src={edu} alt="logo" />
           </Link>
-          <h2 className="rights"> All Rights Reserved. Bold.org, Inc</h2>
+          <h2 className="rights"> All Rights Reserved <span style={{fontWeight:700}}>pride.edunomics.in</span></h2>
         </div>
         <div className="footer-btns">
           <Link to="/joindoner">
@@ -55,7 +55,7 @@ function Footer() {
           <Link to="/scholar-women">
             <p>Scholarships for Women</p>
           </Link>
-          <p>Scholarships for Nursing Students</p>
+          {/* <p>Scholarships for Nursing Students</p> */}
           <p>Scholarships for High School Seniors</p>
           <p>Ambassadors</p>
         </div>
