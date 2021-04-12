@@ -84,7 +84,7 @@ function AllScholarship() {
             <a href="/invite-applicant">Invite Applicants</a>
           </li>
           <li className="leaders">
-            <a href="/leaders">Leaders</a>
+            <a href="/doner-leaders">Leaders</a>
           </li>
         </ul>
         <div className="dashboardHeader__menu">

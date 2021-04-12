@@ -165,7 +165,7 @@ function App() {
         <Route exact path="/invite-applicant">
           <InviteApplicants />
         </Route>
-        <Route exact path="/doner-eaders">
+        <Route exact path="/doner-leaders">
           <DonerLeaders />
         </Route>
       </Switch>
