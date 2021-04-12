@@ -42,16 +42,11 @@ import AppliedApplicants from "./components/donar/AppliedApplicants";
 import MoreAboutDoner from "./components/MoreAboutDoner";
 import MoreAboutApplicant from "./components/donar/MoreAboutApplicant";
 import InviteApplicants from "./components/InviteApplicants";
-<<<<<<< HEAD
 
 import Footer from './components/Footer';
 
 
-||||||| 9794e9b
-
-=======
 import DonerLeaders from "./components/DonerLeaders"
->>>>>>> ac978ada71f0902f8e8459f7015245315efb1baf
 import {MyIdProvider} from "./components/context/MyId";
 
 function App() {
@@ -179,19 +174,15 @@ function App() {
         <Route exact path="/invite-applicant">
           <InviteApplicants />
         </Route>
-<<<<<<< HEAD
         <Route exact path="/appliedapplicants">
           <AppliedApplicants />
         </Route>
         <Route exact path="/testing">
           <Footer />
         </Route>
-||||||| 9794e9b
-=======
         <Route exact path="/doner-leaders">
           <DonerLeaders />
         </Route>
->>>>>>> ac978ada71f0902f8e8459f7015245315efb1baf
       </Switch>
       </MyIdProvider>
     </div>
