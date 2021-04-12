@@ -139,8 +139,10 @@ function InviteApplicants() {
         <h2>Filter by :</h2>
       </div>
       <div className="invite-main">
-        <div className="invite-left"></div>
-        <div className="invite-right"></div>
+       <h1 style={{textAlign:"center",marginBottom:"5rem"}}>
+       COMING SOON......</h1> 
+        {/* <div className="invite-left"></div>
+        <div className="invite-right"></div> */}
       </div>
       <Footer />
     </div>
