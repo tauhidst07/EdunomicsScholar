@@ -102,9 +102,9 @@ function SignUp() {
             <Link to="/signup" className="opt1">
               Sign up as a Donor
             </Link>
-            <Link to="/signupApli" className="opt1">
+            {/* <Link to="/signupApli" className="opt1">
               Sign up as an Applicant
-            </Link>
+            </Link> */}
           </div>
         </form>
       </div>

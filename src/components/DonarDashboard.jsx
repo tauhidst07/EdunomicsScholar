@@ -136,7 +136,7 @@ function DonarDashboard() {
         </div>
       </div>
       <div className="donar-dashhead">
-        <h1> Welcome Back, {data.name}</h1>
+        <h1> Welcome Back, {data.name}!</h1>
         <div className="donar-sidehead">
           <p>
             Total Donations
@@ -158,7 +158,7 @@ function DonarDashboard() {
             <h1>Donor Credits can increase the value of your awards</h1>
             <p>
               We share your scholarships with schools across the country. You
-              get Donor Credits whenever students join Bold.org for your awards.
+              get Donor Credits whenever students join Edunomics for your awards.
               Use them to create new awards or increase the value of your
               current awards, on us.
             </p>
@@ -200,7 +200,7 @@ function DonarDashboard() {
         <div className="sc-head" style={{ marginLeft: "10rem" }}>
           <h3>We're reviewing your recent submission</h3>
           <span>We'll have a proposal ready for you shortly!</span>
-          <p>To request any edits, email</p>
+          <p>To request any edits, email Edunomics.in</p>
         </div>
       </div>
       <Footer />

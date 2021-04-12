@@ -19,17 +19,17 @@ function InviteApplicants() {
     setAnchorEl(null);
   };
 
-  useEffect(() => {
-    async function fetchMyApi() {
-      let response = await fetch(
-        "https://bckendapi.herokuapp.com/api/donar/oneScholarship/606d46deb66b0512f914ac39"
-      );
-      response = await response.json();
-      setData([response]);
-      console.log(response);
-    }
-    fetchMyApi();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchMyApi() {
+  //     let response = await fetch(
+  //       "https://bckendapi.herokuapp.com/api/donar/oneScholarship/606d46deb66b0512f914ac39"
+  //     );
+  //     response = await response.json();
+  //     setData([response]);
+  //     console.log(response);
+  //   }
+  //   fetchMyApi();
+  // }, []);
   const useStyles = makeStyles((theme) => ({
     button: {
       margin: theme.spacing(1),
