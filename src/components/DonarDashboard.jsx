@@ -54,7 +54,11 @@ function DonarDashboard() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-          <img src={logo} alt="edu logo" />
+        <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
+            <img src={logo} alt="edu logo" />
+
+          
+          </Link>
         </div>
         <ul className="dashboardHeader__routes">
           <li className="dashboard">
@@ -118,7 +122,7 @@ function DonarDashboard() {
               <MenuItem
                 onClick={() => {
                   handleClose();
-                  history.push("/contactus");
+                  history.push("/settings-donar");
                 }}
               >
                 Setting
@@ -126,7 +130,7 @@ function DonarDashboard() {
               <MenuItem
                 onClick={() => {
                   handleClose();
-                  history.push("/careers");
+                  history.push("/");
                 }}
               >
                 Sign out

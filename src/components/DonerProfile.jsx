@@ -45,7 +45,11 @@ function DonerProfile() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-          <img src={logo} alt="edu logo" />
+        <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
+            <img src={logo} alt="edu logo" />
+
+          
+          </Link>
         </div>
         <ul className="dashboardHeader__routes">
           <li className="dashboard">
@@ -60,7 +64,7 @@ function DonerProfile() {
             <a href="/invite-applicant">Invite Applicants</a>
           </li>
           <li className="leaders">
-            <a href="/leaders">Leaders</a>
+            <a href="/doner-leaders">Leaders</a>
           </li>
         </ul>
         <div className="dashboardHeader__menu">

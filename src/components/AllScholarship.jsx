@@ -63,10 +63,10 @@ function AllScholarship() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-          <Link to="/" className="logo-main" style={{ cursor: "pointer" }}>
+          <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
             <img src={logo} alt="edu logo" />
 
-            {/* <img className="log-pic" src={edu} alt="logo" /> */}
+          
           </Link>
         </div>
         <ul className="dashboardHeader__routes">
