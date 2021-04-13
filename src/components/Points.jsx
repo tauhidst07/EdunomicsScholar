@@ -7,8 +7,8 @@ const Points = () => {
         <div>
           <img alt="points img" src="https://bold-app-prod.s3.us-east-2.amazonaws.com/cashback.svg" />
           <div>
-            <h3 className="post__heading">Take the pride.edunomics.in Cash Back Hacks Quiz</h3>
-            <h4>
+            <h3 className="post__heading"style={{marginBottom:".9rem"}}>Take the pride.edunomics.in Cash Back Hacks Quiz</h3>
+            <h4 className="un-h4">
               Unlock little-known tactics for savings and cash back with personalized recommendations from this 1-minute quiz.
             </h4>
           </div>

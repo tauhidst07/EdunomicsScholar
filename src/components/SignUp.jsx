@@ -10,6 +10,7 @@ function SignUp() {
   const history = useHistory();
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
+    console.log(data)
     axios
       .post("https://bckendapi.herokuapp.com/api/user/signup-donar", data)
       .then(function (response) {
@@ -66,10 +67,14 @@ function SignUp() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="uname">Name</h2>
           <input
+          
+          ref={register}
+
             className="u-input"
             type="text"
             name="name"
-            ref={register}
+            data-test="name"
+
             placeholder="Name"
           />
           <h2 className="uname">Username</h2>
@@ -77,6 +82,8 @@ function SignUp() {
             className="u-input"
             ref={register}
             type="text"
+            data-test="username"
+
             name="username"
             placeholder="username"
           />
@@ -86,6 +93,8 @@ function SignUp() {
             ref={register}
             type="text"
             name="email"
+            data-test="email"
+
             placeholder="Email"
           />
           <h2 className="pass">Password</h2>
@@ -93,18 +102,18 @@ function SignUp() {
             className="u-input"
             ref={register}
             type="password"
+            data-test="password"
+
             name="password"
             placeholder="Password"
           />
       
        
           <div className="option-signup" style={{ marginTop: "2rem" }}>
-            <Link to="/signup" className="opt1">
+            <Link to="/login" className="opt1">
               Sign up as a Donor
             </Link>
-            {/* <Link to="/signupApli" className="opt1">
-              Sign up as an Applicant
-            </Link> */}
+           
           </div>
         </form>
       </div>

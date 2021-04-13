@@ -169,8 +169,10 @@ function Header({isDoner,isApplicant}) {
               Careers
             </MenuItem>
           </Menu>
-
-          <button className="bt22-1">Login</button>
+          <Link to="/login" className="bt22-1">
+          Login
+          </Link>
+          {/* <button className="bt22-1">Login</button> */}
           <Link to="/signup" className="bt22-2">
             Join pride.edunomics.in
           </Link>

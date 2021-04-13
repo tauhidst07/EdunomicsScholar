@@ -27,3 +27,11 @@
   align-items: center;
   gap: 10px;
 }
+.un-h4{
+  font-weight: 400;
+    font-size: 14px;
+    line-height: 142%;
+    color: #242425;
+    margin: 0;
+    text-align: left;
+}

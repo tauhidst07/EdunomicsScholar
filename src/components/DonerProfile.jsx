@@ -6,6 +6,8 @@ import profileImage from "../media/profile.png";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
+import jwt from 'jsonwebtoken';
+
 
 import "../styles/donerprofile.css";
 
@@ -24,12 +26,17 @@ function DonerProfile() {
   };
 
   useEffect(() => {
+    let encodedToken = localStorage.getItem("auth-token");
+
+    let myId = jwt.decode(encodedToken)
+    console.log(myId)
     axios
       .get(
-        "https://bckendapi.herokuapp.com/api/donar/donarprofile/606ac845c5d23600159eaf4a"
+        `https://bckendapi.herokuapp.com/api/donar/donarprofile/${myId._id}`
       )
       .then((res) => {
-        console.log(res.data);
+        console.log(res);
+
         setLoading(false);
         setData(res.data);
         setError("");

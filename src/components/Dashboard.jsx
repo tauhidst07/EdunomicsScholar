@@ -169,19 +169,19 @@ function Dashboard() {
             <div className="myApplications">
               <ul>
                 <li>
-                  <div>My Applications</div>
+                  <div style={{marginBottom:".6rem"}}>My Applications</div>
                   <div>All your applications in one place</div>
                 </li>
                 <li>
-                  <div>Invite a friend 100</div>
+                  <div style={{marginBottom:".6rem"}}>Invite a friend 100</div>
                   <div>You've invited 0 friends so far</div>
                 </li>
               </ul>
 
               <ul>
-                <span>MY STATS</span>
+                <span >MY STATS</span>
                 <li>
-                  <div>Nomination given</div>
+                  <div style={{marginTop:".6rem"}}>Nomination given</div>
                   <div>0</div>
                 </li>
                 <li>
