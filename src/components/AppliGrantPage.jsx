@@ -38,7 +38,7 @@ function AppliGrantPage() {
       <div className="create1" style={{ marginTop: "2rem" }}>
         <h1>Featured Grants and Scholarships</h1>
         <p>
-          Exclusive opportunities, fully managed on Bold.org. Find opportunities
+          Exclusive opportunities, fully managed on Edunomics Find opportunities
           for current students and recent graduates at all education levels.
         </p>
         {/* <button>Create a Scholarship</button> */}
