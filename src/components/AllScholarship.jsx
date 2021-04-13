@@ -11,9 +11,13 @@ import LocalConvenienceStoreIcon from "@material-ui/icons/LocalConvenienceStore"
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import CardGiftcardIcon from "@material-ui/icons/CardGiftcard";
 import CakeIcon from "@material-ui/icons/Cake";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function AllScholarship() {
-  //const [loading, setLoading] = useState(true);
+ 
+
+  const [loading, setLoading] = useState(true);
   //const [error, setError] = useState("");
   const [data, setData] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -53,6 +57,7 @@ function AllScholarship() {
       );
       response = await response.json();
       setData([response]);
+      setLoading(false)
       console.log(data)
     }
 
@@ -149,11 +154,13 @@ function AllScholarship() {
           </div>
         </div>
       </div>
-      <h1 style={{ marginTop: "2rem", textAlign: "center" }}>
-        scholarships {data === 0 ? 0 : data[0].count}
-      </h1>
-
-      {data === 0
+      {loading ? <Loader type="ThreeDots"marginLeft="5rem"
+        color="grey"
+        height={100}
+        width={100}/> : <div style={{position:"relative"}}>
+          <div><h1 style={{ marginTop: "2rem", textAlign: "center" }}>
+        scholarships {data === 0 ? 0 : data[0].count}</h1>
+         {data === 0
         ? console.log("not fetched")
         : data[0].scholarships.map((e) => (
             <div key={e._id} className="main-boxshadow ">
@@ -235,6 +242,16 @@ function AllScholarship() {
               </div>
             </div>
           ))}
+      </div>
+      
+        
+     
+     
+      </div>}
+      
+      
+
+    
 
       <Footer />
     </div>

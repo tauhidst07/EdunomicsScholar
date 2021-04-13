@@ -5,7 +5,8 @@ import "../styles/leaders.css";
 import Footer from "./Footer";
 import logo from "../media/edu.png";
 import { Link, useHistory } from "react-router-dom";
-
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -16,7 +17,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 
 function Leaders() {
-  //   const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [data, setData] = useState([]);
 
@@ -25,7 +26,7 @@ function Leaders() {
       .get("https://bckendapi.herokuapp.com/api/user/leaders")
       .then((res) => {
         console.log(res.data.data);
-        // setLoading(false);
+        setLoading(false);
         setData(res.data.data);
         setError("");
       })
@@ -44,6 +45,8 @@ function Leaders() {
 
   function BasicTable() {
     const classes = useStyles();
+    setLoading(false);
+
 
     return (
       <TableContainer component={Paper}>
@@ -132,8 +135,11 @@ function Leaders() {
           </p>
         </div>
       </div>
-
-      <BasicTable />
+     
+{loading ? <Loader type="ThreeDots"marginLeft="5rem"
+        color="grey"
+        height={100}
+        width={100}/> :  <BasicTable /> }
       <Footer />
     </div>
   );

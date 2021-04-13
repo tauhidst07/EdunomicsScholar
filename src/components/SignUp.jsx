@@ -108,8 +108,10 @@ function SignUp() {
             placeholder="Password"
           />
       
+      <button className="signin" style={{ marginTop: "1rem" }}>Sign Up</button>
        
           <div className="option-signup" style={{ marginTop: "2rem" }}>
+
             <Link to="/login" className="opt1">
               Sign up as a Donor
             </Link>

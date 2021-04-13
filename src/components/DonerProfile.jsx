@@ -7,6 +7,9 @@ import { Menu, MenuItem, Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
 import jwt from 'jsonwebtoken';
+// import Loader from "./Loader"
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
 import "../styles/donerprofile.css";
@@ -137,6 +140,10 @@ function DonerProfile() {
           </div>
         </div>
       </div>
+      {loading ? <Loader type="ThreeDots"marginLeft="5rem"
+        color="grey"
+        height={100}
+        width={100}/> : <div>
       <div className="pro-doner">
         <h1>Donor Profile: {data.name}</h1>
         <p>Scholarships, grants, and award winners for {data.name}</p>
@@ -162,6 +169,9 @@ function DonerProfile() {
         </button>
         <p>hhf</p>
       </div>
+      </div> }
+      
+     
       <Footer />
     </div>
   );

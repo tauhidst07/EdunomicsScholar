@@ -10,6 +10,8 @@ import PersonIcon from "@material-ui/icons/Person";
 import AddIcon from "@material-ui/icons/Add";
 import jwt from 'jsonwebtoken';
 import img from  '../media/scholar-img.jpeg';
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
 function DonarDashboard() {
@@ -142,6 +144,10 @@ function DonarDashboard() {
           </div>
         </div>
       </div>
+      {loading ? <Loader type="ThreeDots"marginLeft="5rem"
+        color="grey"
+        height={100}
+        width={100}/> : <div>
       <div className="donar-dashhead">
         <h1> Welcome Back, {data.name}!</h1>
         <div className="donar-sidehead">
@@ -272,6 +278,8 @@ function DonarDashboard() {
 
         </div>
       </div>
+      </div> }
+      
 
       <Footer />
     </div>
