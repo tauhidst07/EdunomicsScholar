@@ -44,11 +44,7 @@ function JoinDoner() {
         </div>
       </nav>
       <div className="join-d">
-<<<<<<< HEAD
-        <h1>Join the Edunomics Donors Network</h1>
-=======
         <h1>Join the pride.edunomics.in Donors Network</h1>
->>>>>>> 4cf36a5bb4c51cd38e70ac0790b60d01da8b52e0
         <p>
           Share a bit about yourself and your philanthropy goals to inspire
           applicants and guide our Donor Team.

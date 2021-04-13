@@ -51,15 +51,9 @@ function Faq() {
           <HowItWorksHeader />
           <h1 className="faq-header">Doner FAQs</h1>
           <p>
-<<<<<<< HEAD
-            Here are the questions most frequently asked by Edunomics donors.{" "}
-            <br /> If you don’t see the answer to your question, let us know at{" "}
-            <a href="mailto:donors@bold.org">Edunomics.in</a>.
-=======
             Here are the questions most frequently asked by pride.edunomics.in donors.{" "}
             <br /> If you don’t see the answer to your question, let us know at{" "}
             <a href="mailto:donors@pride.edunomics.in">donors@pride.edunomics.in</a>.
->>>>>>> 4cf36a5bb4c51cd38e70ac0790b60d01da8b52e0
           </p>
           <p style={{ fontSize: "2rem", fontWeight: 600 }}>Donation Details</p>
         </header>
