@@ -15,7 +15,7 @@ function HowItWorks() {
           <h2 className="h2-how">Use Donor Credits to expand your impact.</h2>
           <p className="p2-how">
             Increase the value of your existing awards or create new ones with
-            Donor Credits, funded by Bold.org.
+            Donor Credits, funded by pride.edunomics.in.
           </p>
           <button className="learn-more">Learn More</button>
         </div>

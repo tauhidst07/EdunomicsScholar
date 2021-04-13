@@ -8,8 +8,8 @@ function Header({isDoner,isApplicant}) {
   const history = useHistory();
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorE2, setAnchorE2] = useState(null);
-  
- 
+
+
 
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -172,7 +172,7 @@ function Header({isDoner,isApplicant}) {
 
           <button className="bt22-1">Login</button>
           <Link to="/signup" className="bt22-2">
-            Join Bold.org
+            Join pride.edunomics.in
           </Link>
         </div>
       </nav>
