@@ -48,6 +48,7 @@ import SettingAppli from "./components/SettingAppli"
 import ApliLeaders from "./components/ApliLeaders"
 import DonerLeaders from "./components/DonerLeaders"
 import {MyIdProvider} from "./components/context/MyId";
+import InviteFriendApli from "./components/InviteFriendApli"
 
 function App() {
   return (
@@ -191,6 +192,9 @@ function App() {
         </Route>
         <Route exact path="/settings-appli">
           <SettingAppli />
+        </Route>
+        <Route exact path="/invite-apli">
+          <InviteFriendApli />
         </Route>
       </Switch>
       </MyIdProvider>
