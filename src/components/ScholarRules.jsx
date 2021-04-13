@@ -17,7 +17,7 @@ function ScholarRules() {
           you may not apply for, nor accept, a scholarship
         </p>
         <p>
-          The Bold.org Terms of Use, Privacy Policy and any additional terms and
+          The edunomics Terms of Use, Privacy Policy and any additional terms and
           conditions listed as applicable to a particular scholarship shall be
           deemed an integral part of these Official Scholarship Rules. Bold.org
           reserves the right to amend or discontinue scholarships and these
@@ -58,29 +58,29 @@ function ScholarRules() {
           Bold.org or the scholarship provider to determine the winner of each
           scholarship. All decisions regarding the scholarship, including
           without limitation the selection of the winner, shall be final and
-          binding in all respects. Bold.org reserves the right not to award a
+          binding in all respects. edunomics reserves the right not to award a
           scholarship if, in its sole discretion, it does not receive any
           qualified applications.
         </p>
         <p>
           <bold style={{ fontWeight: "bold" }}>Notification.</bold> Scholarship
           recipients will be notified via the contact information provided to
-          Bold.org during the application process. Scholarship recipients may be
+          edunomics.in during the application process. Scholarship recipients may be
           subject to verification of eligibility and must be, at all times, in
           compliance with these Official Scholarship Rules. Although information
-          that you provide may be verified, Bold.org is not under any obligation
+          that you provide may be verified, edunomics.in is not under any obligation
           to verify any of the information that you provide, and you hereby
           warrant that all information that you provide in your application and
           otherwise in connection with the scholarship is complete and accurate.
           If an award notification is returned as undeliverable or a potential
           winner does not supply the required verification within the time
           specified, the award will be forfeited and may be awarded to an
-          alternate recipient at Bold.org’s sole discretion.
+          alternate recipient at edunomics.in’s sole discretion.
         </p>
         <p>
           <bold style={{ fontWeight: "bold" }}> Awarding.</bold>
           After successful notification of a scholarship award and verification,
-          Bold.org will provide payment of the award to the scholarship winner’s
+          edunomics.in will provide payment of the award to the scholarship winner’s
           accredited academic institution to be applied towards tuition after
           receiving proof of enrollment. Unless otherwise stated, no scholarship
           monies will be paid directly to the winner.
@@ -88,10 +88,10 @@ function ScholarRules() {
         <p style={{ marginBottom: "6rem" }}>
           <bold style={{ fontWeight: "bold" }}> General Terms.</bold>
           Scholarship recipients, by acceptance of their award, agree to release
-          Bold.org, its employees, representatives, agents, contractors,
+          edunomics.in, its employees, representatives, agents, contractors,
           assigns, advertisers, officers, directors, and shareholders from any
           and all liability, loss, damage, cost, claim arising out of their
-          participation in the scholarship. Bold.org reserves the right to
+          participation in the scholarship. edunomics.in reserves the right to
           modify or terminate scholarships at any time for any reason in its
           sole discretion, with or without notice. The scholarship winner is
           solely responsible for any state or federal tax liability in

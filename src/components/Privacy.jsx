@@ -80,7 +80,7 @@ function Privacy() {
           analytics about how our customers browse and interact with the Site.
           <br />
           <br />
-          Additionally, Bold participates in affiliate advertising programs
+          Additionally, Edunomics participates in affiliate advertising programs
           designed to provide a means for Bold to generate revenue by
           advertising and linking to those affiliates’ products or services.
           When such affiliate relationships exist and there is an opportunity
@@ -90,7 +90,7 @@ function Privacy() {
         <h2>How we share your information</h2>
         <p>
           We will share your information with scholarship providers, applicable
-          academic institutions, and as otherwise necessary to provide the Bold
+          academic institutions, and as otherwise necessary to provide the 
           service to you. By using the Bold service, you acknowledge, confirm,
           and consent to: (i) Bold’s generation of revenue from its partnerships
           with scholarship providers, applicable academic institutions, and
@@ -117,10 +117,10 @@ function Privacy() {
           only shared in an aggregated and anonymized manner. <br />
           <br /> Additionally, if you indicate you are interested in particular
           educational institutions in your profile or via other means when using
-          Bold’s platform, Bold may share your data with those educational
+          edunomics platform, Bold may share your data with those educational
           institutions from time to time. If you do not want Bold to share your
           data with those educational institutions at all, please let us know by
-          contacting privacy@bold.org. <br />
+          contacting privacy@edunomics.in <br />
           <br />
           Finally, we may also share your information to comply with applicable
           laws and regulations, to respond to a subpoena, search warrant or
@@ -141,7 +141,7 @@ function Privacy() {
         <h2>For our international users</h2>
         <p>
           The Site and the Services we offer through it are U.S. based and are
-          controlled, operated and administered by Bold and its Sub-processors
+          controlled, operated and administered by  and its Sub-processors
           from offices and servers within the United States. The Site and this
           Privacy Policy is strictly intended for audiences located in the
           United States and are provided in accordance with and subject to
@@ -156,12 +156,12 @@ function Privacy() {
         <p>
           For more information about our privacy practices, if you have
           questions, or if you would like to make a complaint, please contact us
-          by e-mail at privacy@bold.org or by mail using the details provided
+          by e-mail at privacy@edunomics.in or by mail using the details provided
           below: <br />
           <br />
           Effective Date: January 18, 2021.
           <br />
-          <br /> Bold.org, Inc., 133 Kearny #400, San Francisco CA 94108 United
+          <br /> Edunomics.in, Inc., 133 Kearny #400, San Francisco CA 94108 United
           States
         </p>
       </div>

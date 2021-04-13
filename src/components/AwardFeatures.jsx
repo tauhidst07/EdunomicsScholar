@@ -24,7 +24,7 @@ function AwardFeatures() {
             lineHeight: 1.15,
           }}
         >
-          Setting up scholarships, grants, and more on Bold.org is effortless.
+          Setting up scholarships, grants, and more on Edunomics is effortless.
           Create a new award in minutes – we do the heavy lifting for you.
         </p>
       </div>

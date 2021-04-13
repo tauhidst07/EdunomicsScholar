@@ -9,7 +9,7 @@ function TermsOfUse() {
       <div className="pri-main">
         <h1>Terms of Use</h1>
         <p>
-          This website is operated by Bold.org, Inc (“Bold”). Throughout this
+          This website is operated by Bold.org, Inc (“Edunomics”). Throughout this
           website (the “site”), the terms “we”, “us” and “our” refer to Bold.
           Bold offers this site, including all information, tools and services
           available from this site to you (the “Service”), conditioned upon your
@@ -42,7 +42,7 @@ function TermsOfUse() {
           2. ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION
         </h2>
         <p>
-          Although Bold attempts to provide accurate product descriptions and
+          Although edunomics attempts to provide accurate product descriptions and
           other information, we are not responsible if information made
           available on the site is not accurate, complete or current. The
           material on the site is provided for general information only and
@@ -91,22 +91,22 @@ function TermsOfUse() {
           analytics about how our customers browse and interact with the Site.
           <br />
           <br />
-          Additionally, Bold participates in affiliate advertising programs
-          designed to provide a means for Bold to generate revenue by
+          Additionally, edunomics participates in affiliate advertising programs
+          designed to provide a means for edunomics to generate revenue by
           advertising and linking to those affiliates’ products or services.
           When such affiliate relationships exist and there is an opportunity
-          for Bold to be compensated for referring you to the affiliate, Bold
+          for edunomics to be compensated for referring you to the affiliate, edunomics
           will clearly and conspicuously disclose that to you.
         </p>
         <h2>6. DISCLAIMER OF WARRANTIES; LIMITATION OF LIABILITY</h2>
         <p>
           We will share your information with scholarship providers, applicable
-          academic institutions, and as otherwise necessary to provide the Bold
-          service to you. By using the Bold service, you acknowledge, confirm,
-          and consent to: (i) Bold’s generation of revenue from its partnerships
+          academic institutions, and as otherwise necessary to provide the edunomics
+          service to you. By using the edunomics service, you acknowledge, confirm,
+          and consent to: (i) edunomics’s generation of revenue from its partnerships
           with scholarship providers, applicable academic institutions, and
-          other third parties who are necessary for Bold to provide its services
-          to you, and (ii) Bold’s use of your information and data on Bold’s
+          other third parties who are necessary for edunomics to provide its services
+          to you, and (ii) edunomics’s use of your information and data on edunomics’s
           platform in order to do so. This includes third party processors
           (“Sub-processors”) which generally refers to technology vendors that
           need access to and use of your personal information to give us
@@ -128,10 +128,10 @@ function TermsOfUse() {
           only shared in an aggregated and anonymized manner. <br />
           <br /> Additionally, if you indicate you are interested in particular
           educational institutions in your profile or via other means when using
-          Bold’s platform, Bold may share your data with those educational
-          institutions from time to time. If you do not want Bold to share your
+          edunomics’s platform, edunomics may share your data with those educational
+          institutions from time to time. If you do not want edunomics to share your
           data with those educational institutions at all, please let us know by
-          contacting privacy@bold.org. <br />
+          contacting privacy@edunomics.org. <br />
           <br />
           Finally, we may also share your information to comply with applicable
           laws and regulations, to respond to a subpoena, search warrant or
@@ -152,7 +152,7 @@ function TermsOfUse() {
         <h2>11. GOVERNING LAW</h2>
         <p>
           The Site and the Services we offer through it are U.S. based and are
-          controlled, operated and administered by Bold and its Sub-processors
+          controlled, operated and administered by edunomics and its Sub-processors
           from offices and servers within the United States. The Site and this
           Privacy Policy is strictly intended for audiences located in the
           United States and are provided in accordance with and subject to
@@ -167,12 +167,12 @@ function TermsOfUse() {
         <p>
           For more information about our privacy practices, if you have
           questions, or if you would like to make a complaint, please contact us
-          by e-mail at privacy@bold.org or by mail using the details provided
+          by e-mail at privacy@edunomics or by mail using the details provided
           below: <br />
           <br />
           Effective Date: January 18, 2021.
           <br />
-          <br /> Bold.org, Inc., 133 Kearny #400, San Francisco CA 94108 United
+          <br /> edunomics  Inc., 133 Kearny #400, San Francisco CA 94108 United
           States
         </p>
       </div>

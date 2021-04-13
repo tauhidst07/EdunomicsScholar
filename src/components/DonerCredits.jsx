@@ -41,7 +41,7 @@ function DonerCredits() {
               Fellowships
             </h1>
             <p className="un-p">
-              On Bold.org, anyone and any company can create targeted funds that
+              On Edunomics, anyone and any company can create targeted funds that
               enable incredible people to reach their full potential.
             </p>
             <button

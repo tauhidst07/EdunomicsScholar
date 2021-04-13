@@ -44,7 +44,7 @@ function JoinDoner() {
         </div>
       </nav>
       <div className="join-d">
-        <h1>Join the Bold.org Donors Network</h1>
+        <h1>Join the Edunomics Donors Network</h1>
         <p>
           Share a bit about yourself and your philanthropy goals to inspire
           applicants and guide our Donor Team.
