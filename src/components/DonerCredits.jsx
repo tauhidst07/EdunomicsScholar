@@ -21,7 +21,7 @@ function DonerCredits() {
           <div className="text1">
             <h1 className="un-head">Expand your impaact with Donor Credits.</h1>
             <p className="un-p">
-              When someone joins Bold.org to apply to your awards, we give you
+              When someone joins pride.edunomics.in to apply to your awards, we give you
               Donor Credits to apply towards current or future awards.
             </p>
             <button
@@ -41,7 +41,7 @@ function DonerCredits() {
               Fellowships
             </h1>
             <p className="un-p">
-              On Edunomics, anyone and any company can create targeted funds that
+              On pride.edunomics.in, anyone and any company can create targeted funds that
               enable incredible people to reach their full potential.
             </p>
             <button

@@ -21,7 +21,7 @@ function ReseacrhReport() {
           the country.
           <br />
           <br /> To help understand the problem in more detail, we’re sharing
-          the results of our proprietary research with Bold.org members, based
+          the results of our proprietary research with pride.edunomics.in members, based
           on over 122387 loans reported.
           <br />
           <br /> Do women or men have more student debt? Which states have the
@@ -37,7 +37,7 @@ function ReseacrhReport() {
           their decision-making processes for borrowing, their plans for
           repayment, and their top questions about their loans.
           <br />
-          <br /> We then reviewed survey data collected from 122387 Bold.org
+          <br /> We then reviewed survey data collected from 122387 pride.edunomics.in
           members to surface patterns in student loans. Our survey data
           included:
         </p>
