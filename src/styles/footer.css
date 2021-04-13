@@ -1,27 +1,33 @@
+.footer{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: lightgray;
+}
+
+
 .foot-1 {
   flex-flow: wrap;
-  margin-left: 20px;
-  margin-right: 20px;
-  width: calc(100% - 40px);
   display: flex;
+  gap: 20px;
   font-size: 16px;
   line-height: 29px;
   justify-content: space-between;
-  margin-top: 2rem;
+  padding: 20px;
 }
+
+
+
 .rights {
   color: #6d7b8c;
   white-space: nowrap;
   display: block;
 }
 .f-btn1 {
-  width: auto;
   display: inline-block;
   font-size: 14px;
   height: 44px;
   line-height: 44px;
-  padding-left: 20px;
-  padding-right: 20px;
   background: #5d57fb;
   color: #fff;
   border-radius: 4px;
@@ -33,13 +39,11 @@
   cursor: pointer;
 }
 .f-btn2 {
-  width: auto;
+  margin-left: 10px;
   display: inline-block;
   font-size: 14px;
   height: 44px;
   line-height: 44px;
-  padding-left: 20px;
-  padding-right: 20px;
   background: #fff;
   color: #100826;
   border: 1px solid #e8e9ed;
@@ -51,22 +55,18 @@
   cursor: pointer;
 }
 .down-footer {
+  padding: 20px;
   display: flex;
-  width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
+  gap: 30px;
   font-size: 16px;
   line-height: 29px;
   justify-content: space-between;
-  margin-top: 2rem;
 }
 .doner {
   font-size: 14px;
   line-height: 142%;
   color: #0c0c0c;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
   font-weight: 800;
 }
 .down1 > p {
@@ -75,7 +75,6 @@
   line-height: 150%;
   color: #100826;
   text-decoration: none;
-  margin-bottom: 16px;
   cursor: pointer;
 }
 .down2 > p {
@@ -84,7 +83,6 @@
   line-height: 150%;
   color: #100826;
   text-decoration: none;
-  margin-bottom: 16px;
   cursor: pointer;
 }
 .down3 > p {
@@ -93,6 +91,13 @@
   line-height: 150%;
   color: #100826;
   text-decoration: none;
-  margin-bottom: 16px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+
+  .down-footer{
+    flex-direction: column;
+  }
+
 }

@@ -103,3 +103,9 @@
   line-height: 150%;
   max-width: 100%;
 }
+
+.changeStatus {
+  float: right;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
