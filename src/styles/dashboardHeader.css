@@ -67,6 +67,12 @@ a{
   display: none;
 }
 
+.right-icons{
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 @media screen and (max-width: 768px) {
  
 

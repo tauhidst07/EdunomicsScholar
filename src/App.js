@@ -44,8 +44,8 @@ import MoreAboutApplicant from "./components/donar/MoreAboutApplicant";
 import InviteApplicants from "./components/InviteApplicants";
  import AllApliScholarship from "./components/AllApliScholarship"
 import Footer from './components/Footer';
-
-
+import SettingAppli from "./components/SettingAppli"
+import ApliLeaders from "./components/ApliLeaders"
 import DonerLeaders from "./components/DonerLeaders"
 import {MyIdProvider} from "./components/context/MyId";
 
@@ -185,6 +185,12 @@ function App() {
         </Route>
         <Route exact path="/all-apli-scholarships">
           <AllApliScholarship />
+        </Route>
+        <Route exact path="/apli-leaders">
+          <ApliLeaders />
+        </Route>
+        <Route exact path="/settings-appli">
+          <SettingAppli />
         </Route>
       </Switch>
       </MyIdProvider>
