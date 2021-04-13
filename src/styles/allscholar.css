@@ -16,8 +16,9 @@
   color: #100826;
 }
 .main-boxshadow {
-  box-shadow: 0 8px 6px -6px black;
-  margin-bottom: 3rem;
+  box-shadow: 0 8px 6px -6px rgb(128, 126, 126);
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  */
+   margin-bottom: 3rem;
   width: 90%;
   align-items: center;
   margin-left: 4rem;
