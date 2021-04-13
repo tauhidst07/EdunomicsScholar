@@ -4,6 +4,7 @@ import Points from "./Points";
 import Footer from "./Footer";
 import axios from "axios";
 import profile from "../media/profile.png";
+import jwt from 'jsonwebtoken';
 
 import "../styles/dashboard.css";
 
@@ -11,11 +12,17 @@ function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [data, setData] = useState({});
+  
+
 
   useEffect(() => {
+    let encodedToken = localStorage.getItem("auth-token");
+
+    let myId = jwt.decode(encodedToken)
+    // console.log(myId)
     axios
       .get(
-        "https://bckendapi.herokuapp.com/api/user/profile/606ab372eb6c840015392ee4"
+        `https://bckendapi.herokuapp.com/api/user/dashboard/${myId._id}`
       )
       .then((res) => {
         console.log(res);

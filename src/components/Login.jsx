@@ -35,7 +35,7 @@ function Login() {
         let encodedToken = localStorage.getItem("auth-token");
         console.log(encodedToken)
         console.log(jwt.decode(encodedToken))
-        history.push("/dashboard");
+        history.push("/donar-dash");
       })
       .catch(function (error) {
         console.log(error);

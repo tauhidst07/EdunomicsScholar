@@ -4,6 +4,7 @@ import "../styles/leaders.css";
 // import DashboardHeader from "./DashboardHeader";
 import Footer from "./Footer";
 import logo from "../media/edu.png";
+import { Link, useHistory } from "react-router-dom";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
@@ -77,20 +78,19 @@ function Leaders() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-          <img src={logo} alt="edu logo" />
+        <Link to="/dashboard" className="logo-main" style={{ cursor: "pointer" }}>
+            <img src={logo} alt="edu logo" />
+
+          
+          </Link>
         </div>
         <ul className="dashboardHeader__routes">
           <li className="dashboard">
-            <a href="/">Dashboard</a>
+            <a href="/dashboard">Dashboard</a>
           </li>
-          <li className="loanHelp">
-            <a href="/">Loan Help</a>
-          </li>
-          <li className="resources">
-            <a href="/">Resources</a>
-          </li>
+      
           <li className="scholerships">
-            <a href="/">Scholerships</a>
+            <a href="/">Scholarships</a>
           </li>
           <li className="myapplicants">
             <a href="/">My Applicants</a>
@@ -99,7 +99,7 @@ function Leaders() {
             <a href="/">Invite Friends</a>
           </li>
           <li className="leaders">
-            <a href="/" className="activeRoute">
+            <a href="/leaders" className="activeRoute">
               Leaders
             </a>
           </li>

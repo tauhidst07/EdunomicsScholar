@@ -56,7 +56,7 @@ function SignUpApplicant() {
           </svg>
           {/* <button className="tg1">Donors</button>
       <button className="tg1">Applicants</button> */}
-          <Link to="/login" className="already">
+          <Link to="/loginApli" className="already">
             Already have an account?
           </Link>
         </div>
