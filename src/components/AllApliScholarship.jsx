@@ -28,7 +28,7 @@ function AllApliScholarship() {
       );
       response = await response.json();
       setData([response]);
-      console.log(data)
+      // console.log(data)
     }
 
 

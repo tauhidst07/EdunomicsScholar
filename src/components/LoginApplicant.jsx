@@ -1,5 +1,6 @@
 import Header from "./Header";
 import React, { useState } from "react";
+import jwt from 'jsonwebtoken';
 
 import "../styles/login.css";
 
@@ -9,6 +10,12 @@ import axios from "axios";
 
 function LoginApplicant() {
   const history = useHistory();
+
+  let checkToken = localStorage.getItem("auth-token");
+  if(checkToken != null){
+    history.push("/dashboard");
+  }
+ 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -19,9 +26,13 @@ function LoginApplicant() {
       .post("https://bckendapi.herokuapp.com/api/user/signin", data)
       .then(function (response) {
         console.log(response);
-        history.push("/dashboard");
         localStorage.setItem("auth-token", response.data.token);
-        localStorage.setItem("jwt", JSON.stringify(data));
+        let encodedToken = localStorage.getItem("auth-token");
+        // console.log(encodedToken)
+        // console.log(jwt.decode(encodedToken))
+        // localStorage.setItem("jwt", JSON.stringify(data));
+        history.push("/dashboard");
+
       })
       .catch(function (error) {
         console.log(error);

@@ -49,7 +49,7 @@ function AppliGrantPage() {
           Change lives with scholarships and grants that go the directly to the
           recipients you choose.
         </h1>
-        <Link to="/joinappli" className="create-button">
+        <Link to="/joinappli" className="create-button"style={{marginBottom:"1rem"}}>
           Apply to Scholarship
         </Link>
       </div>

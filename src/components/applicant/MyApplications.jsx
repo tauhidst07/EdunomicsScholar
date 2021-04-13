@@ -10,7 +10,7 @@ const MyApplications = () => {
 
   return (
     <div className="myApplication">
-      <DashboardHeader
+      <DashboardHeader activeapp={true}
         myapplication="myapplications"
       />
       <div className="myApplication__main">

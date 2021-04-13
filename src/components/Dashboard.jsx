@@ -19,7 +19,7 @@ function Dashboard() {
     let encodedToken = localStorage.getItem("auth-token");
 
     let myId = jwt.decode(encodedToken)
-    // console.log(myId)
+    console.log(myId)
     axios
       .get(
         `https://bckendapi.herokuapp.com/api/user/dashboard/${myId._id}`

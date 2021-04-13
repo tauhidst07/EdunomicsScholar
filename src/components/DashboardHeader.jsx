@@ -9,13 +9,13 @@ import { Menu, MenuItem, Button } from "@material-ui/core";
 
 
 
-function DashboardHeader({myapplication, isActive,islead,inviteactive}) {
+function DashboardHeader({myapplication, isActive,islead,inviteactive,activeapp}) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [data, setData] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
-  console.log(myapplication)
+  // console.log(myapplication)
   const [collapse, setCollapse] = useState(false);
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -32,10 +32,10 @@ function DashboardHeader({myapplication, isActive,islead,inviteactive}) {
           
           </Link></div>
         <ul className={collapse ? " dashboardHeader__routes hide" : "dashboardHeader__routes"}>
-          <li className="dashboard"><a href="/dashboard" className={`dashboard ${!isActive &&!islead &&!inviteactive? "activeRoute":""}`}>Dashboard</a></li>
+          <li className="dashboard"><a href="/dashboard" className={`dashboard ${!isActive &&!islead &&!inviteactive && !activeapp? "activeRoute":""}`}>Dashboard</a></li>
          
           <li    ><a href="/all-apli-scholarships" className={`scholerships ${isActive ? "activeRoute":""}`}>Scholarships</a></li>
-          <li className="myapplicants"><a href={myapplication}>My Applicants</a></li>
+          <li className="myapplicants"><a href="/myapplications" className={`scholerships ${activeapp ? "activeRoute":""}`}>My Applicants</a></li>
           <li className="inviteFrineds"><a href="/invite-apli"className={`inviteFrineds ${inviteactive ? "activeRoute":""}`}>Invite Friends</a></li>
           <li className="leaders"><a href="/apli-leaders" className={`leaders ${islead ? "activeRoute":""}`}>Leaders</a></li>
           <li className="search">
