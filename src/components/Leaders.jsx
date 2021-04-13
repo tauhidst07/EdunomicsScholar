@@ -90,7 +90,7 @@ function Leaders() {
           </li>
       
           <li className="scholerships">
-            <a href="/">Scholarships</a>
+            <a href="/all-apli-scholarships">Scholarships</a>
           </li>
           <li className="myapplicants">
             <a href="/">My Applicants</a>

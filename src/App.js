@@ -34,7 +34,7 @@ import DonerProfile from "./components/DonerProfile";
 import CreateScholarship from "./components/CreateScholarship";
 import AllScholarship from "./components/AllScholarship";
 import AllContact from "./components/AllContactUs";
-import AppliedScholarship from "./components/AppliedScholarship";
+import AppliedScholarship from "./components/AllApliScholarship";
 import SettingsDoner from "./components/SettingsDoner";
 import ViewScholarship from "./components/ViewScholarship";
 import MyApplications from "./components/applicant/MyApplications";
@@ -42,7 +42,7 @@ import AppliedApplicants from "./components/donar/AppliedApplicants";
 import MoreAboutDoner from "./components/MoreAboutDoner";
 import MoreAboutApplicant from "./components/donar/MoreAboutApplicant";
 import InviteApplicants from "./components/InviteApplicants";
-
+ import AllApliScholarship from "./components/AllApliScholarship"
 import Footer from './components/Footer';
 
 
@@ -182,6 +182,9 @@ function App() {
         </Route>
         <Route exact path="/doner-leaders">
           <DonerLeaders />
+        </Route>
+        <Route exact path="/all-apli-scholarships">
+          <AllApliScholarship />
         </Route>
       </Switch>
       </MyIdProvider>
