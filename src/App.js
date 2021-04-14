@@ -197,7 +197,7 @@ function App() {
         <Route exact path="/invite-apli">
           <InviteFriendApli />
         </Route>
-        <Route to="/not-found">
+        <Route >
           <NotFound />
         </Route>
       </Switch>
