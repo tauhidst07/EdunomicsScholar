@@ -9,6 +9,8 @@ import Footer from "./Footer";
 import scholar from "../media/schola.jpeg";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import {useParams} from 'react-router-dom';
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+
 
 function MoreAboutDoner({match}) {
   const [data, setData] = useState(0);
@@ -24,6 +26,26 @@ function MoreAboutDoner({match}) {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  function IconLabelButtons() {
+    const classes = useStyles();
+
+    return (
+      <div style={{ marginLeft: "5rem", marginTop: "2rem" }}>
+        <Button
+          variant="contained"
+          color="default"
+          size="small"
+          onClick={() => {
+            history.push("/all-scholar");
+          }}
+          className={classes.button}
+          startIcon={<ArrowBackIcon />}
+        >
+          Back
+        </Button>
+      </div>
+    );
+  }
 
   useEffect(() => {
     async function fetchMyApi() {
@@ -136,6 +158,8 @@ function MoreAboutDoner({match}) {
           </div>
         </div>
       </div>
+
+     < IconLabelButtons/>
       <div className="more-donar">
         <h1>Donor Profile: { data  === 0 ? "" : data[0].name}</h1>
         {console.log(data)}
