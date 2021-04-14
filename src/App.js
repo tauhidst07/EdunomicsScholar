@@ -5,7 +5,7 @@ import SignUp from "./components/SignUp";
 import SignUpApplicant from "./components/SignUpApplicant";
 import DonerGrantPage from "./components/DonerGrantPage";
 import Login from "./components/Login";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import AppliGrantPage from "./components/AppliGrantPage";
 import JoinDoner from "./components/JoinDoner";
 import JoinAppli from "./components/JoinAppli";
@@ -197,7 +197,7 @@ function App() {
         <Route exact path="/invite-apli">
           <InviteFriendApli />
         </Route>
-        <Route exact path="/not-found">
+        <Route to="/not-found">
           <NotFound />
         </Route>
       </Switch>
