@@ -45,36 +45,41 @@ function Leaders() {
 
   function BasicTable() {
     const classes = useStyles();
-    setLoading(false);
+    
 
 
-    return (
+    return (<>
+      {loading ? <Loader type="ThreeDots"marginLeft="5rem"
+        color="grey"
+        height={100}
+        width={100}/> :
       <TableContainer component={Paper}>
-        <Table className={classes.table} aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell># STUDENT</TableCell>
-              <TableCell align="right">CITY</TableCell>
-              <TableCell align="right">SCHOOL</TableCell>
+      <Table className={classes.table} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell># STUDENT</TableCell>
+            <TableCell align="right">CITY</TableCell>
+            <TableCell align="right">SCHOOL</TableCell>
 
-              <TableCell align="right">BOLD POINTS</TableCell>
+            <TableCell align="right">BOLD POINTS</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {data.map((row) => (
+            <TableRow key={row.name}>
+              <TableCell component="th" scope="row">
+                {row.name}
+              </TableCell>
+              <TableCell align="right">{row.education.degrees}</TableCell>
+              <TableCell align="right">{row._id}</TableCell>
+
+              <TableCell align="right">{row.points}</TableCell>
             </TableRow>
-          </TableHead>
-          <TableBody>
-            {data.map((row) => (
-              <TableRow key={row.name}>
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.education.degrees}</TableCell>
-                <TableCell align="right">{row._id}</TableCell>
-
-                <TableCell align="right">{row.points}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>}
+      </>
     );
   }
   return (
@@ -113,6 +118,7 @@ function Leaders() {
         <div className="dashboardHeader__menu"></div>
       </div>
       <div className="leader_main">
+        
         <h1>Leaderboards</h1>
         <div className="lead-p">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -136,10 +142,7 @@ function Leaders() {
         </div>
       </div>
      
-{loading ? <Loader type="ThreeDots"marginLeft="5rem"
-        color="grey"
-        height={100}
-        width={100}/> :  <BasicTable /> }
+ <BasicTable /> 
       <Footer />
     </div>
   );

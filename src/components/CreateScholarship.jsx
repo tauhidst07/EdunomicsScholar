@@ -105,7 +105,7 @@ function CreateScholarship() {
 
   return (
     <div>
-      <Link to="/" className="logo-main-head" style={{ cursor: "pointer" }}>
+      <Link to="/donar-dash" className="logo-main-head" style={{ cursor: "pointer" }}>
         <img className="log-pic cr-head" src={edu} alt="logo" />
       </Link>
 

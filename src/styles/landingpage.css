@@ -38,6 +38,7 @@
   overflow: hidden;
   /* position: fixed; */
   box-sizing: border-box;
+  /* position: fixed; */
 }
 .btn {
   display: flex;
