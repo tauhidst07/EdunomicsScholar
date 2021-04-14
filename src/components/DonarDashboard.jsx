@@ -250,7 +250,7 @@ axios.get(
             </svg>
           </div>
           <div>
-            <div>Type</div>
+            <div style={{marginBottom:".5rem"}}>Type</div>
             <div>Eassy required</div>
           </div>
         </li>
@@ -262,7 +262,7 @@ axios.get(
             </svg>
           </div>
           <div>
-            <div>Deadline</div>
+            <div style={{marginBottom:".5rem"}}>Deadline</div>
             <div>Jun 1, 2022</div>
           </div>
         </li>
@@ -273,7 +273,7 @@ axios.get(
             </svg>
           </div>
           <div>
-            <div>Amount</div>
+            <div style={{marginBottom:".5rem"}}>Amount</div>
             <div>15000</div>
           </div>
         </li>

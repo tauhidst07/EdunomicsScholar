@@ -31,26 +31,7 @@ function AllScholarship() {
   };
 
   useEffect(() => {
-    /*axios
-      .get("https://bckendapi.herokuapp.com/api/applicant/allScholarships")
-      .then((res) => {
-        //console.log(res.data);
-        //setLoading(false);
-        let dataset = res.data
-        if(dataset != undefined){
-          setData([res.data]);
-        }
-
-        //console.log(data);
-        //setError("");
-      })
-      .catch((err) => {
-        //setLoading(false);
-        setData({});
-        //setError("error is there");
-        //console.log(error);
-      });
-*/
+   
     async function fetchMyApi() {
       let response = await fetch(
         "https://bckendapi.herokuapp.com/api/applicant/allScholarships"
