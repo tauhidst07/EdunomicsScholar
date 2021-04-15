@@ -89,6 +89,8 @@ function ApliViewScholarship() {
               console.log(prevApplicants)
               let url = `https://bckendapi.herokuapp.com/api/donar/editScholarship/${data[0].scholarships._id}`
               const res = await axios.patch(url, { "applicants": prevApplicants });
+              history.push("/myapplications")
+
               console.log(res);
               console.log('clicked')
 
@@ -172,11 +174,11 @@ function ApliViewScholarship() {
             </h1>
             <p>{ data  === 0 ? "" : data[0].scholarships.winnersLimit} winner</p>
           </div>
-          <div onClick={applySchoarship}>{/*to="/myapplications"*/}
-          <Link to="/myapplications">
+          <div onClick={applySchoarship}>
+      
           <button className="apply-sc" disabled={applied}>{ applied ? 'Applied' : 'Apply to Scholarship' }</button>
           
-          </Link>
+          
 
 
           </div>
