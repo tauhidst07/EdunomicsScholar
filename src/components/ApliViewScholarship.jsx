@@ -17,25 +17,33 @@ import FileCopyIcon from "@material-ui/icons/FileCopy";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import MoreAboutDoner from './MoreAboutDoner';
 import DashboardHeader from "./DashboardHeader"
+import jwt from 'jsonwebtoken';
+import axios from "axios";
 
 function ApliViewScholarship() {
     let {scholarParams} = useParams();
 
+    let encodedToken = localStorage.getItem("auth-token");
+
+    let appliId = jwt.decode(encodedToken)._id
     // console.log(scholarParams.split('&'))
-  
+
     const [data, setData] = useState(0);
     const [funder, setFunder] = useState(0);
     const [anchorEl, setAnchorEl] = useState(null);
     const history = useHistory();
     const [donarId, setDonarId] = useState('');
-  
+    const [applied, setApplied] = useState(false);
+
     const handleClick = (e) => {
       setAnchorEl(e.currentTarget);
     };
     const handleClose = () => {
       setAnchorEl(null);
     };
-  
+
+
+
     useEffect(() => {
       async function fetchMyApi() {
         let response = await fetch(
@@ -43,9 +51,18 @@ function ApliViewScholarship() {
         );
         response = await response.json();
         setData([response]);
+        console.log(data)
+
         setDonarId(response.scholarships.createdBy);
-        console.log(data);
-  
+        if((response.scholarships.applicants.indexOf(appliId)) > -1){
+          setApplied(true);
+          console.log(response.scholarships.applicants.indexOf(appliId), applied);
+          console.log(appliId);
+        }else{
+          setApplied(false);
+          console.log(appliId, false)
+        }
+
         // funder data
         let funderRes = await fetch(
           `https://bckendapi.herokuapp.com/api/donar/donarprofile/${scholarParams.split('&')[1]}`
@@ -55,11 +72,39 @@ function ApliViewScholarship() {
         //console.log(funder);
       }
       fetchMyApi();
-  
-  
-  
-  
+
+
+
+
     }, []);
+
+
+      const applySchoarship = async() => {
+
+        //console.log(appliId)
+          if(data != 0 && appliId){
+              let prevApplicants = data[0].scholarships.applicants;
+              prevApplicants.push({"applicant": appliId, "status": "submitted"});
+
+              console.log(prevApplicants)
+              let url = `https://bckendapi.herokuapp.com/api/donar/editScholarship/${data[0].scholarships._id}`
+              const res = await axios.patch(url, { "applicants": prevApplicants });
+              console.log(res);
+              console.log('clicked')
+
+          }else{
+            console.log('err')
+          }
+
+    // function call on div click to apply scholarship
+
+
+
+
+
+
+    }
+
     const useStyles = makeStyles((theme) => ({
       button: {
         margin: theme.spacing(1),
@@ -67,7 +112,7 @@ function ApliViewScholarship() {
     }));
     function IconLabelButtons() {
         const classes = useStyles();
-    
+
         return (
           <div style={{ marginLeft: "5rem", marginTop: "2rem" }}>
             <Button
@@ -89,7 +134,7 @@ function ApliViewScholarship() {
         <div>
             <DashboardHeader isActive={true}/>
             <IconLabelButtons />
-     
+
       <div className="single-sch">
         <div className="left-sing">
           <h2>{ data  === 0 ? "" : data[0].scholarships.name}</h2>
@@ -127,11 +172,11 @@ function ApliViewScholarship() {
             </h1>
             <p>{ data  === 0 ? "" : data[0].scholarships.winnersLimit} winner</p>
           </div>
-          <Link to="/myapplications">
-          <button className="apply-sc">Apply to Scholarship</button>
+          <div onClick={applySchoarship}>{/*to="/myapplications"*/}
+          <button className="apply-sc" disabled={applied}>{ applied ? 'Applied' : 'Apply to Scholarship' }</button>
 
-                 
-                  </Link>
+
+          </div>
           <button>Nominate a Friend</button>
           <div className="con-1">
             <h5>Application Deadline</h5>
