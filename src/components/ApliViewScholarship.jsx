@@ -173,7 +173,10 @@ function ApliViewScholarship() {
             <p>{ data  === 0 ? "" : data[0].scholarships.winnersLimit} winner</p>
           </div>
           <div onClick={applySchoarship}>{/*to="/myapplications"*/}
+          <Link to="/myapplications">
           <button className="apply-sc" disabled={applied}>{ applied ? 'Applied' : 'Apply to Scholarship' }</button>
+          
+          </Link>
 
 
           </div>
