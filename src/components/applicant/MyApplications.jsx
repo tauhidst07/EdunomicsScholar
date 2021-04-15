@@ -1,9 +1,51 @@
 import React, {useState, useEffect} from 'react'
 import DashboardHeader from '../DashboardHeader';
 import '../../styles/MyApplication.css';
+import jwt from 'jsonwebtoken';
+import axios from "axios";
+
+import { Link, useHistory } from "react-router-dom";
+
+
 import img from  '../../media/scholar-img.jpeg';
 
 const MyApplications = () => {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [data, setData] = useState([]);
+  const [data2, setData2] = useState([]);
+  // const [count,setCount] = useState()
+
+  
+  const history = useHistory();
+
+  
+
+  useEffect(() => {
+
+    let encodedToken = localStorage.getItem("auth-token");
+
+    let myId = jwt.decode(encodedToken)
+   
+
+axios.get(
+  `https://bckendapi.herokuapp.com/api/applicant/myScholarships/${myId._id}`
+).then((res)=>{
+  console.log(res.data);
+  setData2(res.data)
+  // setCount(res.data.count)
+
+})
+
+
+
+      .catch((err) => {
+        setLoading(false);
+        setData({});
+        setError("error is there");
+        console.log(error);
+      });
+  }, []);
 
   const [selected, setSelected] = useState('all');
 
