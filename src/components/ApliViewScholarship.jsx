@@ -192,7 +192,7 @@ function ApliViewScholarship() {
         <h2>
           Tell us about one teacher, counselor, or social worker who helped you
           pursue higher education. How did this person impact your higher
-          education journey?{" "}
+          education journey?
         </h2>
         <h3>400–600 words</h3>
       </div>
