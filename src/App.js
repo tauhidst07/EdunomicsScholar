@@ -50,6 +50,8 @@ import DonerLeaders from "./components/DonerLeaders"
 import {MyIdProvider} from "./components/context/MyId";
 import InviteFriendApli from "./components/InviteFriendApli"
 import NotFound from "./components/NotFound"
+import ApliViewScholarship from "./components/ApliViewScholarship"
+import ApliMoreAboutDoner from "./components/ApliMoreAboutDoner"
 
 function App() {
   return (
@@ -196,6 +198,12 @@ function App() {
         </Route>
         <Route exact path="/invite-apli">
           <InviteFriendApli />
+        </Route>
+        <Route exact path="/apli-view-scholar">
+          <ApliViewScholarship />
+        </Route>
+        <Route exact path="/apli-more-aboutdoner">
+          <ApliMoreAboutDoner />
         </Route>
         <Route >
           <NotFound />

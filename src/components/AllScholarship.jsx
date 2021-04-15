@@ -135,10 +135,10 @@ function AllScholarship() {
           </div>
         </div>
       </div>
-      {loading ? <Loader type="ThreeDots"marginLeft="5rem"
+      {loading ? <div style={{textAlign:"center",alignItems:"center"}}><Loader type="ThreeDots" 
         color="grey"
         height={100}
-        width={100}/> : <div style={{position:"relative"}}>
+        width={100}/></div> : <div style={{position:"relative"}}>
           <div><h1 style={{ marginTop: "2rem", textAlign: "center" }}>
         scholarships {data === 0 ? 0 : data[0].count}</h1>
          {data === 0
