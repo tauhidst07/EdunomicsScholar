@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import logo from "../media/edu.png";
+// import logo from "../media/edu.png";
 import { makeStyles } from "@material-ui/core/styles";
-import { Menu, MenuItem, Button } from "@material-ui/core";
-import { useHistory ,Link} from "react-router-dom";
+import {  Button } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 import "../styles/moreaboutdoner.css";
-import PersonIcon from "@material-ui/icons/Person";
+// import PersonIcon from "@material-ui/icons/Person";
 
 import scholar from "../media/schola.jpeg";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
@@ -17,18 +17,13 @@ import Footer from "./Footer";
 
 function ApliMoreAboutDoner() {
     const [data, setData] = useState(0);
-    const [anchorEl, setAnchorEl] = useState(null);
+    // const [anchorEl, setAnchorEl] = useState(null);
     const history = useHistory();
     //const { handle } = props.match.params;
     let {donarId} = useParams();
     //console.log(donarId)
   
-    const handleClick = (e) => {
-      setAnchorEl(e.currentTarget);
-    };
-    const handleClose = () => {
-      setAnchorEl(null);
-    };
+  
     function IconLabelButtons() {
       const classes = useStyles();
   
@@ -75,7 +70,7 @@ function ApliMoreAboutDoner() {
     }));
     return (
         <div>
-          <DashboardHeader/> 
+          <DashboardHeader isActive={true}/> 
           < IconLabelButtons/>
       <div className="more-donar">
         <h1>Donor Profile: { data  === 0 ? "" : data[0].name}</h1>

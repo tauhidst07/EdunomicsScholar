@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 import Footer from "./Footer";
 import boy from "../media/boy.jpeg";
 import "../styles/allscholar.css";
 import logo from "../media/edu.png";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { useHistory, Link } from "react-router-dom";
+import { Link,useHistory } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
 import LocalConvenienceStoreIcon from "@material-ui/icons/LocalConvenienceStore";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
@@ -44,7 +44,7 @@ function AllScholarship() {
 
 
     fetchMyApi();
-  }, []);
+  }, [data]);
   return (
     <div>
       <div className="dashboardHeader">

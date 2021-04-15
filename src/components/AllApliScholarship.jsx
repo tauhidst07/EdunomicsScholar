@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import boy from "../media/boy.jpeg";
 import LocalConvenienceStoreIcon from "@material-ui/icons/LocalConvenienceStore";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
@@ -11,15 +11,10 @@ import Footer from "./Footer"
 
 function AllApliScholarship() {
   const [data, setData] = useState(0);
-  const [anchorEl, setAnchorEl] = useState(null);
-  const history = useHistory();
 
-  const handleClick = (e) => {
-    setAnchorEl(e.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  
+
+  
   useEffect(() => {
  
     async function fetchMyApi() {
@@ -57,7 +52,7 @@ function AllApliScholarship() {
                 <div className="apply">
                   <Link
                     className="apply-bt1"
-                    // to="/apli-view-scholar"
+                  
 
                     to={`/apli-view-scholar/${e._id}&${e.createdBy}`}
 

@@ -127,7 +127,12 @@ function ApliViewScholarship() {
             </h1>
             <p>{ data  === 0 ? "" : data[0].scholarships.winnersLimit} winner</p>
           </div>
-          <button>Contribute</button>
+          <Link to="/myapplications">
+          <button className="apply-sc">Apply to Scholarship</button>
+
+                 
+                  </Link>
+          <button>Nominate a Friend</button>
           <div className="con-1">
             <h5>Application Deadline</h5>
             <p>
