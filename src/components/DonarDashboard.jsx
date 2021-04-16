@@ -291,7 +291,7 @@ axios.get(
  
  
      <div className="finishApplicationBtn">
-       <a href={`/myapplications/${}`}>
+       <a href={`/myapplications`}>
        <button style={{cursor:"pointer"}}><span>5 Applicants</span>
          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
            <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#ACB4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
