@@ -39,7 +39,7 @@ const AppliedApplicants = () => {
     //606ac845c5d23600159eaf4a
     axios
       .get(
-        `https://bckendapi.herokuapp.com/api/donar/donarDashboard/${myId._id}`
+        `https://bckendapi.herokuapp.com/api/donar/oneScholarship/`
       )
       .then((res) => {
         console.log(res.data);

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useParams } from "react";
 import axios from "axios";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import Footer from "./Footer";
 import logo from "../media/edu.png";
 import "../styles/donardash.css";
@@ -14,12 +14,16 @@ import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
+
 function DonarDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [data, setData] = useState([]);
   const [data2, setData2] = useState([]);
   const [count,setCount] = useState()
+  const {scholarid} = useParams()
+  console.log(scholarid.split('&'))
+
 
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
@@ -30,12 +34,13 @@ function DonarDashboard() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  let encodedToken = localStorage.getItem("auth-token");
+
+  let myId = jwt.decode(encodedToken)
 
   useEffect(() => {
 
-    let encodedToken = localStorage.getItem("auth-token");
-
-    let myId = jwt.decode(encodedToken)
+   
     //console.log(myId);
     //606ac845c5d23600159eaf4a
     axios
@@ -240,7 +245,7 @@ axios.get(
  <div className="approved_scholarships" style={{marginTop:"2rem"}}>
  <div className="myApplication__main__scholarships_Container sc-box">
  
-   <a href="/">
+   <a href={`/view-scholarship/${item._id}&${myId._id}`}>
      <img width="120px" height="80px" src={img}  />
  
      <div className="myApplication__main__scholarships_ContainerContent">
@@ -286,7 +291,7 @@ axios.get(
  
  
      <div className="finishApplicationBtn">
-       <a href="/appliedapplicants">
+       <a href={`/myapplications/${}`}>
        <button style={{cursor:"pointer"}}><span>5 Applicants</span>
          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
            <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#ACB4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>

@@ -166,7 +166,7 @@ function App() {
         <Route exact path="/view-scholarship/:scholarParams">
           <ViewScholarship />
         </Route>
-        <Route exact path="/myapplications">
+        <Route exact path="/myapplications/:scholarid">
           <MyApplications />
         </Route>
         <Route exact path="/more-about-donar/:donarId">
