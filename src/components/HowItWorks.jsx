@@ -75,11 +75,6 @@ function HowItWorks() {
 
 </h1>
 <p>Once you select your winners,<span style={{font:'bold',fontWeight:'700'}}>100% of your tax-deductible gift</span>  will go directly to the recipients.
-
-
-
-
-
 </p>
 
         </div>
