@@ -120,18 +120,19 @@
   background: #f5f7fa;
   border-radius: 10px;
   margin-bottom: 10px;
+  display: inline-block;width: 50%;
 }
 .po1 {
-  display: flex;
-  justify-content: center;
+ 
+  /* justify-content: center; */
   margin-bottom: 2rem;
   display: flex;
-  align-items: center;
+  
+
   padding-bottom: 20px;
   padding-top: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
-  border-bottom: 1px solid #e8e9ed;
+  margin-left: 29rem;
+ 
 }
 .po1 > p {
   font-weight: 600;
@@ -139,6 +140,10 @@
   line-height: 125%;
   color: #100826;
   margin-left: 1rem;
+  /* border-bottom: 1px solid #e8e9ed; */
+
+  
+  
 }
 .cr-button {
   font-size: 16px;
@@ -154,4 +159,5 @@
   display: inline-block;
   text-decoration: none;
   margin-bottom: 3rem;
+  cursor: pointer;
 }

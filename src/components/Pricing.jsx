@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Anyque from "./Anyque";
 import HowItWorksHeader from "./HowItWorksHeader";
 import "../styles/howitworks.css";
+import { Link } from "react-router-dom";
 
 function Pricing() {
   return (
@@ -15,7 +16,7 @@ function Pricing() {
         style={{ textAlign: "center", marginTop: "4rem", marginBottom: "3rem" }}
       >
         <h1 style={{ fontWeight: 800, fontSize: "54px", marginBottom: "2rem" }}>
-          Maximize your impact
+          <span style={{color:'blue'}}>Maximize</span> your impact
         </h1>
         <p
           style={{
@@ -70,7 +71,7 @@ function Pricing() {
           </svg>
           <p>1-on-1 support from our team at every step</p>
         </div>
-        <div className="po1">
+        <div className="po1" >
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <rect
               x="1"
@@ -150,7 +151,9 @@ function Pricing() {
           </svg>
           <p>Easy way to accept any and all 3rd party donations</p>
         </div>
+        <Link to='/login'>
         <button className="cr-button">Create a scholarship now</button>
+        </Link>
       </div>
       <Anyque />
       <Footer />

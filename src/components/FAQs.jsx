@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   Typography:{
     color:'grey',
-    fontWeight: 500,
+    fontWeight: 600,
     
 
   }
