@@ -15,6 +15,7 @@
   border-radius: 6px;
   box-shadow: 0 8px 6px -6px black;
   width: 200px;
+  margin-bottom: 2rem;
 }
 .any-main:hover {
   background-color: cadetblue;

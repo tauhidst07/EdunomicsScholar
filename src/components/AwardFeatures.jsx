@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Anyque from "./Anyque";
 import HowItWorksHeader from "./HowItWorksHeader";
 import "../styles/howitworks.css";
+import { Link } from "react-router-dom";
 
 function AwardFeatures() {
   return (
@@ -15,13 +16,14 @@ function AwardFeatures() {
         style={{ textAlign: "center", marginTop: "4rem", marginBottom: "3rem" }}
       >
         <h1 style={{ fontWeight: 800, fontSize: "54px", marginBottom: "2rem" }}>
-          Fully customized giving with Edunomics
+          Fully customized giving with <span style={{color:'blue'}}>Edunomics</span>
         </h1>
         <p
           style={{
             fontSize: "24px",
-            fontWeight: 500,
+            fontWeight: 600,
             lineHeight: 1.15,
+            color:'grey'
           }}
         >
           Setting up scholarships, grants, and more on pride.edunomics.in is effortless.
@@ -30,9 +32,11 @@ function AwardFeatures() {
       </div>
       <div className="mid-award"></div>
       <div className="free-app">
-        <h1>Free for applicants, free for you</h1>
+        <h1 style={{marginRight:'2rem'}}>Free for applicants, free for you</h1>
+<Link to='/login'>
+<button className="cr-button">Become a Donar</button>
 
-        <button className="cr-button">Become a Doner</button>
+</Link>
       </div>
       <Anyque />
       <Footer />
