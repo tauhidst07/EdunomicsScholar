@@ -4,8 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import HowItWorksHeader from "./HowItWorksHeader";
 
-// import { AiOutlinePlus } from "react-icons/ai";
-// import { AiOutlineMinusCircle } from "react-icons/ai";
+
 import FAQs from "./FAQs";
 
 function Faq() {
@@ -21,6 +20,12 @@ function Faq() {
       answer:
         "Donations made by credit card process right away. Donations made by ACH can take 3-5 business to process..",
       open: false,
+    },
+    {
+      question: "Why do you require awards to be funded upfront?",
+      answer:
+        "Since awards require a time commitment from applicants, we verify that the award is ready by accepting the donation upfront before asking applicants to spend the time to apply. If you have a special request for a different process, please contact edunomics.in to discuss!",
+ open: false,
     },
     {
       question: "How do I know how my donation will be used?",
