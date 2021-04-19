@@ -42,7 +42,7 @@ function Footer() {
           </Link>
         </div>
         <div className="down2">
-          <h1 className="doner">applicants</h1>
+          <h1 className="doner">Applicants</h1>
           <Link to="/r-report">
             <p>Research Reports</p>
           </Link>
@@ -58,7 +58,7 @@ function Footer() {
          
         </div>
         <div className="down3">
-          <h1 className="doner">company</h1>
+          <h1 className="doner">Company</h1>
           <Link to="about">
             <p>About Us</p>
           </Link>
