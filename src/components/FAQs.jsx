@@ -2,7 +2,7 @@ import React from "react";
 
 function FAQ({ faq, index, toggleFAQ }) {
   return (
-    <div
+    <div 
       className={"faq " + (faq.open ? "open" : "")}
       key={index}
       onClick={() => toggleFAQ(index)}

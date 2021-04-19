@@ -51,10 +51,11 @@ function Faq() {
     return (
       <div>
         <Header />
+        <HowItWorksHeader />
 
-        <header className="faq-header">
-          <HowItWorksHeader />
-          <h1 className="faq-header">Doner FAQs</h1>
+<div style={{marginLeft:"5.3rem"}} >
+        <header className="faq-header" >
+          <h1 className="faq-header"><h1><span>Doner</span> FAQs</h1>
           <p>
             Here are the questions most frequently asked by pride.edunomics.in donors.{" "}
             <br /> If you don’t see the answer to your question, let us know at{" "}
@@ -62,6 +63,7 @@ function Faq() {
           </p>
           <p style={{ fontSize: "2rem", fontWeight: 600 }}>Donation Details</p>
         </header>
+        </div>
       </div>
     );
   }
