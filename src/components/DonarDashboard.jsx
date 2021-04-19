@@ -1,7 +1,7 @@
 import React, { useState, useEffect,useParams } from "react";
 import axios from "axios";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { Link, useHistory, useParams } from "react-router-dom";
+import { Link, useHistory} from "react-router-dom";
 import Footer from "./Footer";
 import logo from "../media/edu.png";
 import "../styles/donardash.css";
