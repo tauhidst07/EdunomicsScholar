@@ -30,6 +30,13 @@
   /* transition: none 0s ease 0s; */
   padding-top: 3rem;
 }
+.howit-header h2{
+  font-weight: 600;
+  color:grey;
+  font-size: 1rem;
+
+
+}
 .h2-how {
   font-weight: 600;
   font-size: 40px;
