@@ -12,12 +12,9 @@
   font-weight: 500;
 }
 .how-it-works :hover {
-  /* box-shadow: 0 2px 0 0; */
+
   color: #5d57fb;
-  /* border-bottom: 1px solid rgba(16, 8, 38, 0.08); */
-  /* padding-bottom: 1rem; */
-  /* width: 100%; */
-  /* margin-bottom: 4rem; */
+  
 }
 .hero-imgsec {
   background: url("../media//sch.jpg");
@@ -93,7 +90,7 @@
   color: #1a0359;
   margin: 0 0 30px;
 }
-.get-start > button {
+.get-start button {
   font-size: 16px;
   line-height: 48px;
   padding: 0 20px;
@@ -107,6 +104,7 @@
   display: inline-block;
   text-decoration: none;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 .free-app {
   text-align: center;
@@ -160,4 +158,83 @@
   text-decoration: none;
   margin-bottom: 3rem;
   cursor: pointer;
+}
+.donor-help h1{
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 125%;
+  text-align: center;
+  color: #100826;
+  margin-bottom: 20px;
+  margin-top: 32px;
+}
+.donor-help p{
+  margin-top: 0;
+  margin-bottom: 78px;
+  font-size: 22px;
+  line-height: 142%;
+  text-align: center;
+  color: #100826;
+}
+.main-tog{
+  background-color: #1a0359;
+
+  /* position: absolute;
+    top: -28px;
+    left: 0;
+    right: 0;
+    display: block; */
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    max-width: 27%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 5%), 0 1px 5px rgb(0 0 0 / 4%);
+}
+.mid-tog{
+  width: 376px;
+  height: 56px;
+  padding-left: 14px;
+  padding-right: 14px;
+  align-items: center;
+  /* padding-left: 2rem; */
+}
+.aw-bt{
+  background-color: #5d57fb;
+  height: 38px;
+  width: 50%;
+    line-height: 38px;
+    color: #fff;
+    border-radius: 100px;
+    flex: 1 1;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: .5rem;
+    /* margin-right: .3rem; */
+    /* margin-left: 1px; */
+    align-items: flex-start;
+    cursor: default;
+    padding-left: 9px;
+    cursor: pointer;
+}
+.aw-bt2{
+  background-color: #5d57fb;
+  height: 38px;
+  width: 50%;
+    line-height: 38px;
+    color: #fff;
+    border-radius: 100px;
+    flex: 1 1;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: .5rem;
+    /* margin-right: .2rem;
+    margin-left: 9px; */
+    align-items: flex-start;
+    cursor: default;
+    padding-left: 9px;
+    cursor: pointer;
 }

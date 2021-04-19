@@ -2,11 +2,11 @@ import React from "react";
 import "../styles/howitworks.css";
 import { Link } from "react-router-dom";
 
-function HowItWorksHeader() {
+function HowItWorksHeader({isActive}) {
   return (
     <div className="top-how-container">
       <div className="howit-header">
-        <Link to="/how-it-works" className="how-it-works">
+        <Link to="/how-it-works" className={`how-it-works ${isActive? "activeRoute":""}`}>
           <h2>How it Works</h2>
         </Link>
         <Link to="/doner-credits" className="how-it-works">
