@@ -1,7 +1,7 @@
 import React, { useState, useEffect,useParams } from "react";
 import axios from "axios";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { Link, useHistory} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Footer from "./Footer";
 import logo from "../media/edu.png";
 import "../styles/donardash.css";
@@ -21,8 +21,8 @@ function DonarDashboard() {
   const [data, setData] = useState([]);
   const [data2, setData2] = useState([]);
   const [count,setCount] = useState()
-  const {scholarid} = useParams()
-  console.log(scholarid.split('&'))
+  // const {scholarid} = useParams()
+  // console.log(scholarid.split('&'))
 
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -291,7 +291,7 @@ axios.get(
  
  
      <div className="finishApplicationBtn">
-       <a href={`/myapplications`}>
+       <a href={`/appliedapplicants`}>
        <button style={{cursor:"pointer"}}><span>5 Applicants</span>
          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
            <path d="M6.75 13.5L11.25 9L6.75 4.5" stroke="#ACB4BF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
