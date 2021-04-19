@@ -218,11 +218,16 @@
     cursor: default;
     padding-left: 9px;
     cursor: pointer;
+    border: none;
 }
 .aw-bt2{
-  background-color: #5d57fb;
+  /* background-color: #5d57fb; */
+  background-color: #1a0359;
+
   height: 38px;
   width: 50%;
+  border: none;
+
     line-height: 38px;
     color: #fff;
     border-radius: 100px;
@@ -237,4 +242,45 @@
     cursor: default;
     padding-left: 9px;
     cursor: pointer;
+}
+.aw-bt2:hover{
+  background-color: #5d57fb;
+  /* background-color: #1a0359; */
+ 
+
+}
+.define-block{
+  display: flex;
+  max-width: 800px;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+.define-block img{
+  /* position: absolute;
+    top: 0px;
+    left: 0px; */
+    width: 40%;
+    height: 40%;
+    border-style: none;
+    object-fit: contain;
+    object-position: center center;
+    opacity: 1;
+    transition: none 0s ease 0s;
+}
+.define-head{
+  max-width: 420px;
+}
+.define-head h1{
+  font-weight: 900;
+    font-size: 22px;
+    line-height: 125%;
+    color: #100826;
+    margin-bottom: 20px
+}
+.define-head p{
+  font-size: 18px;
+    line-height: 150%;
+    color: #100826;
 }
