@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import HowItWorksHeader from "./HowItWorksHeader";
 import "../styles/howitworks.css";
+import "../styles/dashboardHeader.css";
+
 import Header from "./Header";
 import Footer from "./Footer";
 import Anyque from "./Anyque";
@@ -16,7 +18,7 @@ function HowItWorks() {
   return (
     <div>
       <Header />
-      <HowItWorksHeader />
+      <HowItWorksHeader isactive={true} />
       <div className="donor-help">
         <h1>You’re ready to give back.</h1>
         <h1>We’re here to help.</h1>

@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import "../styles/dashboardHeader.css";
-import logo from '../media/edu.png';
+import logo from "../media/edu.png";
 import { Link, useHistory } from "react-router-dom";
-import BookmarkIcon from '@material-ui/icons/Bookmark';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+import BookmarkIcon from "@material-ui/icons/Bookmark";
+import NotificationsIcon from "@material-ui/icons/Notifications";
 import PersonIcon from "@material-ui/icons/Person";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 
-
-
-function DashboardHeader({myapplication, isActive,islead,inviteactive,activeapp}) {
+function DashboardHeader({
+  myapplication,
+  isActive,
+  islead,
+  inviteactive,
+  activeapp,
+}) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [data, setData] = useState([]);
@@ -23,32 +27,85 @@ function DashboardHeader({myapplication, isActive,islead,inviteactive,activeapp}
   const handleClose = () => {
     setAnchorEl(null);
   };
-  
+
   return (
     <div className="dashboardHeader">
-      <div className="dashboardHeader__logo"> <Link to="/dashboard" className="logo-main" style={{ cursor: "pointer" }}>
-            <img src={logo} alt="edu logo" />
+      <div className="dashboardHeader__logo">
+        {" "}
+        <Link
+          to="/dashboard"
+          className="logo-main"
+          style={{ cursor: "pointer" }}
+        >
+          <img src={logo} alt="edu logo" />
+        </Link>
+      </div>
+      <ul
+        className={
+          collapse ? " dashboardHeader__routes hide" : "dashboardHeader__routes"
+        }
+      >
+        <li className="dashboard">
+          <a
+            href="/dashboard"
+            className={`dashboard ${
+              !isActive && !islead && !inviteactive && !activeapp
+                ? "activeRoute"
+                : ""
+            }`}
+          >
+            Dashboard
+          </a>
+        </li>
 
-          
-          </Link></div>
-        <ul className={collapse ? " dashboardHeader__routes hide" : "dashboardHeader__routes"}>
-          <li className="dashboard"><a href="/dashboard" className={`dashboard ${!isActive &&!islead &&!inviteactive && !activeapp? "activeRoute":""}`}>Dashboard</a></li>
-         
-          <li    ><a href="/all-apli-scholarships" className={`scholerships ${isActive ? "activeRoute":""}`}>Scholarships</a></li>
-          <li className="myapplicants"><a href="/myapplications" className={`scholerships ${activeapp ? "activeRoute":""}`}>My Applicants</a></li>
-          <li className="inviteFrineds"><a href="/invite-apli"className={`inviteFrineds ${inviteactive ? "activeRoute":""}`}>Invite Friends</a></li>
-          <li className="leaders"><a href="/apli-leaders" className={`leaders ${islead ? "activeRoute":""}`}>Leaders</a></li>
-          <li className="search">
-            <input type="text" placeholder="Search students" />
-          </li>
-          <div className="right-icons">
-          < BookmarkIcon />
-          <div style={{display:"flex", alignItems:"center" ,marginLeft:"1.5rem"}}>
-          <NotificationsIcon/>
-
+        <li>
+          <a
+            href="/all-apli-scholarships"
+            className={`scholerships ${isActive ? "activeRoute" : ""}`}
+          >
+            Scholarships
+          </a>
+        </li>
+        <li className="myapplicants">
+          <a
+            href="/myapplications"
+            className={`scholerships ${activeapp ? "activeRoute" : ""}`}
+          >
+            My Applicants
+          </a>
+        </li>
+        <li className="inviteFrineds">
+          <a
+            href="/invite-apli"
+            className={`inviteFrineds ${inviteactive ? "activeRoute" : ""}`}
+          >
+            Invite Friends
+          </a>
+        </li>
+        <li className="leaders">
+          <a
+            href="/apli-leaders"
+            className={`leaders ${islead ? "activeRoute" : ""}`}
+          >
+            Leaders
+          </a>
+        </li>
+        <li className="search">
+          <input type="text" placeholder="Search students" />
+        </li>
+        <div className="right-icons">
+          <BookmarkIcon />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginLeft: "1.5rem",
+            }}
+          >
+            <NotificationsIcon />
           </div>
-          </div>
-          <div className="dashboardHeader__menu" style={{marginLeft:"1.5rem"}}>
+        </div>
+        <div className="dashboardHeader__menu" style={{ marginLeft: "1.5rem" }}>
           <div className="btn">
             {/* <Select className="bt1" /> */}
             <Button
@@ -110,9 +167,12 @@ function DashboardHeader({myapplication, isActive,islead,inviteactive,activeapp}
             </Menu>
           </div>
         </div>
-          
-        </ul>
-      <div className="dashboardHeader__menu"><button className="collaps-btn" onClick={() => setCollapse(!collapse)}>collapse</button></div>
+      </ul>
+      <div className="dashboardHeader__menu">
+        <button className="collaps-btn" onClick={() => setCollapse(!collapse)}>
+          collapse
+        </button>
+      </div>
     </div>
   );
 }

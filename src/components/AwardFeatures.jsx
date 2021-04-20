@@ -10,33 +10,36 @@ function AwardFeatures() {
   return (
     <div>
       <Header />
-      <HowItWorksHeader />
+      <HowItWorksHeader isaward={true} />
       <div
         className="max"
         style={{ textAlign: "center", marginTop: "4rem", marginBottom: "3rem" }}
       >
         <h1 style={{ fontWeight: 800, fontSize: "54px", marginBottom: "2rem" }}>
-          Fully customized giving with <span style={{color:'blue'}}>Edunomics</span>
+          Fully customized giving with{" "}
+          <span style={{ color: "blue" }}>Edunomics</span>
         </h1>
         <p
           style={{
             fontSize: "24px",
             fontWeight: 600,
             lineHeight: 1.15,
-            color:'grey'
+            color: "grey",
           }}
         >
-          Setting up scholarships, grants, and more on pride.edunomics.in is effortless.
-          Create a new award in minutes – we do the heavy lifting for you.
+          Setting up scholarships, grants, and more on pride.edunomics.in is
+          effortless. Create a new award in minutes – we do the heavy lifting
+          for you.
         </p>
       </div>
       <div className="mid-award"></div>
       <div className="free-app">
-        <h1 style={{marginRight:'2rem'}}>Free for applicants, free for you</h1>
-<Link to='/login'>
-<button className="cr-button">Become a Donar</button>
-
-</Link>
+        <h1 style={{ marginRight: "2rem" }}>
+          Free for applicants, free for you
+        </h1>
+        <Link to="/login">
+          <button className="cr-button">Become a Donar</button>
+        </Link>
       </div>
       <Anyque />
       <Footer />

@@ -14,7 +14,7 @@ function DonerCredits() {
   return (
     <div>
       <Header />
-      <HowItWorksHeader />
+      <HowItWorksHeader isdoner={true} />
 
       <div className="lady-1">
         <div className="b1">
