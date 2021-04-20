@@ -13,7 +13,8 @@ function About() {
         <div className="hero-about">
           <h1>OUR MISSION</h1>
           <h2 className="fight">
-            Fighting <br /> Student Debt
+            Fighting <br />
+            Student <span style={{ color: "blue" }}> Debt</span>
           </h2>
           <p>
             The average student today will graduate more than $30,000 in debt

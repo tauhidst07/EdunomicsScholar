@@ -4,12 +4,10 @@ import { Link, useHistory } from "react-router-dom";
 import edu from "../media/edu.png";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 
-function Header({isDoner,isApplicant}) {
+function Header({ isDoner, isApplicant }) {
   const history = useHistory();
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorE2, setAnchorE2] = useState(null);
-
-
 
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -30,10 +28,16 @@ function Header({isDoner,isApplicant}) {
           <img className="log-pic" src={edu} alt="logo" />
         </Link>
         <div className="tog">
-          <Link to="/donergrant" className={`tg1 ${isDoner ? "activeRoute":""}`} >
+          <Link
+            to="/donergrant"
+            className={`tg1 ${isDoner ? "activeRoute" : ""}`}
+          >
             Donors
           </Link>
-          <Link to="/appligrant"className={`tg1 ${isApplicant? "activeRoute":""}`}>
+          <Link
+            to="/appligrant"
+            className={`tg1 ${isApplicant ? "activeRoute" : ""}`}
+          >
             Applicants
           </Link>
         </div>
@@ -109,8 +113,11 @@ function Header({isDoner,isApplicant}) {
               FAQ
             </MenuItem>
           </Menu>
+
           <button className="bt11">View Scholarships</button>
-          <button className="bt11">Leaders</button>
+          <Link>
+            <button className="bt11">Leaders</button>
+          </Link>
           <div className="btn">
             <Button
               style={{
@@ -170,7 +177,7 @@ function Header({isDoner,isApplicant}) {
             </MenuItem>
           </Menu>
           <Link to="/login" className="bt22-1">
-          Login
+            Login
           </Link>
           {/* <button className="bt22-1">Login</button> */}
           <Link to="/signup" className="bt22-2">

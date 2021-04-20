@@ -15,11 +15,14 @@ function Careers() {
       <Header />
       <div
         className="lady-1"
-        style={{ backgroundColor: "grey", marginTop: "1rem" }}
+        style={{ backgroundColor: "white", marginTop: "1rem" }}
       >
         <div className="b1">
           <div className="text1" style={{ marginRight: "2rem" }}>
-            <h1 className="un-head">Join the Fight Against Student Debt</h1>
+            <h1 className="un-head">
+              Join the Fight Against
+              <span style={{ color: "blue" }}> Student Debt</span>{" "}
+            </h1>
             <p className="un-p">
               The average college graduate has $30k+ in debt and is far less
               likely to start a business, pursue a dream career, buy a home, and
