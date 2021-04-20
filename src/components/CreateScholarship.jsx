@@ -11,13 +11,11 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
 import axios from "axios";
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
 
 import { useForm } from "react-hook-form";
 
-
 function CreateScholarship() {
-
   const history = useHistory();
 
   const useStyles = makeStyles((theme) => ({
@@ -37,7 +35,7 @@ function CreateScholarship() {
 
     const handleChange = (event) => {
       setAge(event.target.value);
-      console.log(event.target.value)
+      console.log(event.target.value);
     };
 
     const handleClose = () => {
@@ -69,23 +67,23 @@ function CreateScholarship() {
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            <MenuItem value={'High School'}>High School</MenuItem>
-            <MenuItem value={'Undergraduate'}>Undergraduate</MenuItem>
-            <MenuItem value={'Graduate'}>Graduate</MenuItem>
+            <MenuItem value={"High School"}>High School</MenuItem>
+            <MenuItem value={"Undergraduate"}>Undergraduate</MenuItem>
+            <MenuItem value={"Graduate"}>Graduate</MenuItem>
           </Select>
         </FormControl>
       </div>
     );
   }
 
-// FORM HANDLING -R
+  // FORM HANDLING -R
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     let encodedToken = localStorage.getItem("auth-token");
-    let myId = jwt.decode(encodedToken)
+    let myId = jwt.decode(encodedToken);
     data.donationAllow = false;
     data.essayNeeded = false;
-    data.createdBy = myId._id
+    data.createdBy = myId._id;
     //'606ab28beb6c840015392ee2'
     console.log(data);
 
@@ -93,24 +91,26 @@ function CreateScholarship() {
       .post("https://bckendapi.herokuapp.com/api/donar/scholarship", data)
       .then(function (response) {
         console.log(response);
-        if(response.status === 201){
-          history.push('/all-scholar')
+        if (response.status === 201) {
+          history.push("/all-scholar");
         }
       })
       .catch(function (error) {
         console.log(error);
       });
-
-};
+  };
 
   return (
     <div>
-      <Link to="/donar-dash" className="logo-main-head" style={{ cursor: "pointer" }}>
+      <Link
+        to="/donar-dash"
+        className="logo-main-head"
+        style={{ cursor: "pointer" }}
+      >
         <img className="log-pic cr-head" src={edu} alt="logo" />
       </Link>
 
       <form onSubmit={handleSubmit(onSubmit)}>
-
         <div className="brief-des">
           <div className="des-head">
             <h1>Briefly describe your scholarship</h1>
@@ -131,12 +131,12 @@ function CreateScholarship() {
               <span>Sample Description</span>
             </p>
             <h6>
-              I believe conserving the environment is the most important thing for
-              the world right now, and is my philanthropic focus. I’d like to
-              support students who plan to spend their careers addressing climate
-              change. This mission is personally important to me because I always
-              wanted to be an environmental engineer, but took a different path
-              for my career.
+              I believe conserving the environment is the most important thing
+              for the world right now, and is my philanthropic focus. I’d like
+              to support students who plan to spend their careers addressing
+              climate change. This mission is personally important to me because
+              I always wanted to be an environmental engineer, but took a
+              different path for my career.
               <br />
               <br />I want to create a scholarship to give $1000 to one student
               each year who is interested in pursuing environmental studies and
@@ -216,8 +216,8 @@ function CreateScholarship() {
               shaped your goals?
             </li>
             <li>
-              How has your experience with mental health influenced your beliefs,
-              relationships, and career aspirations?
+              How has your experience with mental health influenced your
+              beliefs, relationships, and career aspirations?
             </li>
 
             <li>Why are you passionate about philosophy?</li>
@@ -258,7 +258,12 @@ function CreateScholarship() {
             placeholder="Enter amount per winner"
           />
         </div>
-        <button className="signin" style={{width:"300px",marginLeft:"30rem", marginTop:"2rem"}}>Submit</button>
+        <button
+          className="signin"
+          style={{ width: "300px", marginLeft: "30rem", marginTop: "2rem" }}
+        >
+          Submit
+        </button>
       </form>
     </div>
   );

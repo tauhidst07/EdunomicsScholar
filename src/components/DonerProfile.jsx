@@ -6,11 +6,10 @@ import profileImage from "../media/profile.png";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
 // import Loader from "./Loader"
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-
 
 import "../styles/donerprofile.css";
 
@@ -31,12 +30,10 @@ function DonerProfile() {
   useEffect(() => {
     let encodedToken = localStorage.getItem("auth-token");
 
-    let myId = jwt.decode(encodedToken)
-    console.log(myId)
+    let myId = jwt.decode(encodedToken);
+    console.log(myId);
     axios
-      .get(
-        `https://bckendapi.herokuapp.com/api/donar/donarprofile/${myId._id}`
-      )
+      .get(`https://bckendapi.herokuapp.com/api/donar/donarprofile/${myId._id}`)
       .then((res) => {
         console.log(res);
 
@@ -55,10 +52,12 @@ function DonerProfile() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-        <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
+          <Link
+            to="/donar-dash"
+            className="logo-main"
+            style={{ cursor: "pointer" }}
+          >
             <img src={logo} alt="edu logo" />
-
-          
           </Link>
         </div>
         <ul className="dashboardHeader__routes">
@@ -140,38 +139,44 @@ function DonerProfile() {
           </div>
         </div>
       </div>
-      {loading ? <Loader type="ThreeDots"marginLeft="5rem"
-        color="grey"
-        height={100}
-        width={100}/> : <div>
-      <div className="pro-doner">
-        <h1>Donor Profile: {data.name}</h1>
-        <p>Scholarships, grants, and award winners for {data.name}</p>
-      </div>
+      {loading ? (
+        <Loader
+          type="ThreeDots"
+          marginLeft="5rem"
+          color="grey"
+          height={100}
+          width={100}
+        />
+      ) : (
+        <div>
+          <div className="pro-doner">
+            <h1>Donor Profile: {data.name}</h1>
+            <p>Scholarships, grants, and award winners for {data.name}</p>
+          </div>
 
-      <div className="img-boxx" style={{ marginBottom: "4rem" }}>
-        <img className="pro-imgd" src={profileImage} alt="profile" />
-        <h1>{data.name}</h1>
-        <p>Edit</p>
-      </div>
-      <div className="mission">
-        <h1>Mission</h1>
-        <button>
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <path
-              d="M10.625 4.37499L2.625 12.375L1.5 16.5L5.625 15.375L13.5 7.5M10.625 4.37499L12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3164 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3164 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L13.5 7.5M10.625 4.37499L13.5 7.5"
-              stroke="#CCD1D9"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-        </button>
-        <p>hhf</p>
-      </div>
-      </div> }
-      
-     
+          <div className="img-boxx" style={{ marginBottom: "4rem" }}>
+            <img className="pro-imgd" src={profileImage} alt="profile" />
+            <h1>{data.name}</h1>
+            <p>Edit</p>
+          </div>
+          <div className="mission">
+            <h1>Mission</h1>
+            <button>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path
+                  d="M10.625 4.37499L2.625 12.375L1.5 16.5L5.625 15.375L13.5 7.5M10.625 4.37499L12.75 2.24998C12.947 2.053 13.1808 1.89674 13.4382 1.79014C13.6956 1.68353 13.9714 1.62866 14.25 1.62866C14.5286 1.62866 14.8044 1.68353 15.0618 1.79014C15.3192 1.89674 15.553 2.053 15.75 2.24998C15.947 2.44697 16.1032 2.68082 16.2098 2.93819C16.3164 3.19556 16.3713 3.47141 16.3713 3.74998C16.3713 4.02856 16.3164 4.30441 16.2098 4.56178C16.1032 4.81915 15.947 5.053 15.75 5.24998L13.5 7.5M10.625 4.37499L13.5 7.5"
+                  stroke="#CCD1D9"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </button>
+            <p>hhf</p>
+          </div>
+        </div>
+      )}
+
       <Footer />
     </div>
   );
