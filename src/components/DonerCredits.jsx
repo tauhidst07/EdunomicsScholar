@@ -3,11 +3,12 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Anyque from "./Anyque";
 import "../styles/landingpage.css";
-import girl from "../media/girl.jpg";
+import girl from "../media/stud.jpg";
 
 import HowItWorksHeader from "./HowItWorksHeader";
 import "../styles/howitworks.css";
 import boy from "../media/boy.jpeg";
+import { Link } from "react-router-dom";
 
 function DonerCredits() {
   return (
@@ -21,15 +22,17 @@ function DonerCredits() {
           <div className="text1">
             <h1 className="un-head">Expand your impaact with Donor Credits.</h1>
             <p className="un-p">
-              When someone joins pride.edunomics.in to apply to your awards, we give you
-              Donor Credits to apply towards current or future awards.
+              When someone joins pride.edunomics.in to apply to your awards, we
+              give you Donor Credits to apply towards current or future awards.
             </p>
-            <button
-              className="cr-button"
-              style={{ textAlign: "center", marginTop: "2rem" }}
-            >
-              Become a Donor
-            </button>
+            <Link to="/login">
+              <button
+                className="cr-button"
+                style={{ textAlign: "center", marginTop: "2rem" }}
+              >
+                Become a Donor
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -41,17 +44,24 @@ function DonerCredits() {
               Fellowships
             </h1>
             <p className="un-p">
-              On pride.edunomics.in, anyone and any company can create targeted funds that
-              enable incredible people to reach their full potential.
+              On pride.edunomics.in, anyone and any company can create targeted
+              funds that enable incredible people to reach their full potential.
             </p>
-            <button
-              className="cr-button"
-              style={{ textAlign: "center", marginTop: "2rem" }}
-            >
-              Become a Donor
-            </button>
+            <Link to="/login">
+              <button
+                className="cr-button"
+                style={{ textAlign: "center", marginTop: "2rem" }}
+              >
+                Become a Donor
+              </button>
+            </Link>
           </div>
-          <img className="im1" src={girl} alt="st" />
+          <img
+            className="im1"
+            src={girl}
+            style={{ marginTop: "3rem" }}
+            alt="st"
+          />
         </div>
       </div>
 

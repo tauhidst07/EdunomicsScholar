@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function AppliGrantPage() {
   return (
     <div>
-      <Header isApplicant={true}/>
+      <Header isApplicant={true} />
       <div className="doner-grant">
         <div className="left-sec">
           <h1 className="left-h1">
@@ -17,7 +17,7 @@ function AppliGrantPage() {
           <Link to="/joinappli" className="grant-btn">
             Apply to Scholarship
           </Link>
-          {/* <button className="grant-btn2">How it Works</button> */}
+
           <div
             className="span-d"
             style={{ display: "flex", marginTop: "2rem" }}
@@ -25,9 +25,6 @@ function AppliGrantPage() {
             <p className="per-p1">
               <span> No Spam </span> 100% Free!
             </p>
-            {/* <p className="per-p2">
-              <span>100%</span> Tax Deductible
-            </p> */}
           </div>
           <h1 className="feature">Grants Featured By:</h1>
         </div>
@@ -38,9 +35,10 @@ function AppliGrantPage() {
       <div className="create1" style={{ marginTop: "2rem" }}>
         <h1>Featured Grants and Scholarships</h1>
         <p>
-          Exclusive opportunities, fully managed on pride.edunomics.in. Find opportunities
-          Exclusive opportunities, fully managed on Edunomics Find opportunities
-          for current students and recent graduates at all education levels.
+          Exclusive opportunities, fully managed on pride.edunomics.in. Find
+          opportunities Exclusive opportunities, fully managed on Edunomics Find
+          opportunities for current students and recent graduates at all
+          education levels.
         </p>
         {/* <button>Create a Scholarship</button> */}
       </div>
@@ -49,7 +47,11 @@ function AppliGrantPage() {
           Change lives with scholarships and grants that go the directly to the
           recipients you choose.
         </h1>
-        <Link to="/joinappli" className="create-button"style={{marginBottom:"1rem"}}>
+        <Link
+          to="/joinappli"
+          className="create-button"
+          style={{ marginBottom: "1rem" }}
+        >
           Apply to Scholarship
         </Link>
       </div>

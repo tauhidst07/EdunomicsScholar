@@ -186,7 +186,8 @@
   /* padding-left: 2rem; */
 }
 .aw-bt {
-  background-color: #5d57fb;
+  background-color: #1a0359;
+
   height: 38px;
   width: 50%;
   line-height: 38px;
@@ -194,6 +195,7 @@
   border-radius: 100px;
   flex: 1 1;
   border: none;
+  outline-width: 0;
   font-weight: 500;
   font-size: 14px;
   margin-top: 0.5rem;
@@ -205,9 +207,14 @@
   cursor: pointer;
   border: none;
 }
+
+.activebutton {
+  background-color: #5d57fb !important;
+}
 .aw-bt2 {
   /* background-color: #5d57fb; */
   background-color: #1a0359;
+  outline-width: 0;
 
   height: 38px;
   width: 50%;
@@ -229,6 +236,10 @@
   cursor: pointer;
 }
 .aw-bt2:hover {
+  background-color: #5d57fb;
+  /* background-color: #1a0359; */
+}
+.aw-bt:hover {
   background-color: #5d57fb;
   /* background-color: #1a0359; */
 }
