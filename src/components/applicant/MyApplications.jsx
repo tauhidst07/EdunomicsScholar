@@ -255,18 +255,20 @@ const MyApplications = () => {
               </a>
 
               <div className="finishApplicationBtn">
-                <button>
-                  Finish application
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <path
-                      d="M6.75 13.5L11.25 9L6.75 4.5"
-                      stroke="#ACB4BF"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </button>
+                <Link to="/all-apli-scholarships">
+                  <button style={{ cursor: "pointer" }}>
+                    Finish application
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path
+                        d="M6.75 13.5L11.25 9L6.75 4.5"
+                        stroke="#ACB4BF"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

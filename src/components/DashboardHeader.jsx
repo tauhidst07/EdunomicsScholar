@@ -68,7 +68,7 @@ function DashboardHeader({
         </li>
         <li className="myapplicants">
           <a
-            href="/myapplications"
+            href="/myapplications/:scholarid"
             className={`scholerships ${activeapp ? "activeRoute" : ""}`}
           >
             My Applicants
