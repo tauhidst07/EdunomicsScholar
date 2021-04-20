@@ -72,12 +72,10 @@ function HowItWorks() {
         <img src={pic3}/>
         <div className='define-head'>
         <h1>3. Hand-select your finalists and winners.
-
 </h1>
 <p>Once you select your winners,<span style={{font:'bold',fontWeight:'700'}}>100% of your tax-deductible gift</span>  will go directly to the recipients.
 </p>
-
-        </div>
+ </div>
       </div>
       <div className="hero-how">
         <div className="hero-imgsec">
