@@ -1,22 +1,17 @@
 import React, { useState, useEffect } from "react";
-import {  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import boy from "../media/boy.jpeg";
 import LocalConvenienceStoreIcon from "@material-ui/icons/LocalConvenienceStore";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import CardGiftcardIcon from "@material-ui/icons/CardGiftcard";
 import CakeIcon from "@material-ui/icons/Cake";
-import DashboardHeader from './DashboardHeader'
-import Footer from "./Footer"
-
+import DashboardHeader from "./DashboardHeader";
+import Footer from "./Footer";
 
 function AllApliScholarship() {
   const [data, setData] = useState(0);
 
-  
-
-  
   useEffect(() => {
- 
     async function fetchMyApi() {
       let response = await fetch(
         "https://bckendapi.herokuapp.com/api/applicant/allScholarships"
@@ -26,15 +21,15 @@ function AllApliScholarship() {
       // console.log(data)
     }
 
-
     fetchMyApi();
   }, []);
-  return <div>
-    <DashboardHeader isActive={true}/>
-    <h1 style={{ marginTop: "2rem", textAlign: "center" }}>
+  return (
+    <div>
+      <DashboardHeader isActive={true} />
+      <h1 style={{ marginTop: "2rem", textAlign: "center" }}>
         scholarships {data === 0 ? 0 : data[0].count}
       </h1>
-    {data === 0
+      {data === 0
         ? console.log("not fetched")
         : data[0].scholarships.map((e) => (
             <div key={e._id} className="main-boxshadow ">
@@ -52,10 +47,7 @@ function AllApliScholarship() {
                 <div className="apply">
                   <Link
                     className="apply-bt1"
-                  
-
                     to={`/apli-view-scholar/${e._id}&${e.createdBy}`}
-
                   >
                     Apply to scholarship
                   </Link>
@@ -119,8 +111,9 @@ function AllApliScholarship() {
             </div>
           ))}
 
-    <Footer/>
-  </div>;
+      <Footer />
+    </div>
+  );
 }
 
 export default AllApliScholarship;

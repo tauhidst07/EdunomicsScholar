@@ -16,7 +16,7 @@ function HowItWorks() {
   return (
     <div>
       <Header />
-      <HowItWorksHeader isActive={true} />
+      <HowItWorksHeader />
       <div className="donor-help">
         <h1>You’re ready to give back.</h1>
         <h1>We’re here to help.</h1>
