@@ -57,7 +57,11 @@ function DonerGrantPage() {
           Change lives with scholarships and grants that go directly to the
           recipients you choose.
         </h1>
-        <Link to="/joindoner" className="create-button" style={{marginBottom:"1rem"}}>
+        <Link
+          to="/joindoner"
+          className="create-button"
+          style={{ marginBottom: "1rem" }}
+        >
           Create a Scholarship
         </Link>
       </div>

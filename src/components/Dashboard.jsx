@@ -4,7 +4,7 @@ import Points from "./Points";
 import Footer from "./Footer";
 import axios from "axios";
 import profile from "../media/profile.png";
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
 
 import "../styles/dashboard.css";
 
@@ -12,18 +12,14 @@ function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [data, setData] = useState({});
-  
-
 
   useEffect(() => {
     let encodedToken = localStorage.getItem("auth-token");
 
-    let myId = jwt.decode(encodedToken)
-    console.log(myId)
+    let myId = jwt.decode(encodedToken);
+    console.log(myId);
     axios
-      .get(
-        `https://bckendapi.herokuapp.com/api/user/dashboard/${myId._id}`
-      )
+      .get(`https://bckendapi.herokuapp.com/api/user/dashboard/${myId._id}`)
       .then((res) => {
         console.log(res);
 
@@ -169,19 +165,21 @@ function Dashboard() {
             <div className="myApplications">
               <ul>
                 <li>
-                  <div style={{marginBottom:".6rem"}}>My Applications</div>
+                  <div style={{ marginBottom: ".6rem" }}>My Applications</div>
                   <div>All your applications in one place</div>
                 </li>
                 <li>
-                  <div style={{marginBottom:".6rem"}}>Invite a friend 100</div>
+                  <div style={{ marginBottom: ".6rem" }}>
+                    Invite a friend 100
+                  </div>
                   <div>You've invited 0 friends so far</div>
                 </li>
               </ul>
 
               <ul>
-                <span >MY STATS</span>
+                <span>MY STATS</span>
                 <li>
-                  <div style={{marginTop:".6rem"}}>Nomination given</div>
+                  <div style={{ marginTop: ".6rem" }}>Nomination given</div>
                   <div>0</div>
                 </li>
                 <li>
