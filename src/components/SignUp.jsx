@@ -10,7 +10,7 @@ function SignUp() {
   const history = useHistory();
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    console.log(data)
+    console.log(data);
     axios
       .post("https://bckendapi.herokuapp.com/api/user/signup-donar", data)
       .then(function (response) {
@@ -55,7 +55,7 @@ function SignUp() {
               stroke-linejoin="round"
             ></path>
           </svg>
-        
+
           <Link to="/login" className="already">
             Already have an account?
           </Link>
@@ -67,14 +67,11 @@ function SignUp() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="uname">Name</h2>
           <input
-          
-          ref={register}
-
+            ref={register}
             className="u-input"
             type="text"
             name="name"
             data-test="name"
-
             placeholder="Name"
           />
           <h2 className="uname">Username</h2>
@@ -83,7 +80,6 @@ function SignUp() {
             ref={register}
             type="text"
             data-test="username"
-
             name="username"
             placeholder="username"
           />
@@ -94,7 +90,6 @@ function SignUp() {
             type="text"
             name="email"
             data-test="email"
-
             placeholder="Email"
           />
           <h2 className="pass">Password</h2>
@@ -103,19 +98,18 @@ function SignUp() {
             ref={register}
             type="password"
             data-test="password"
-
             name="password"
             placeholder="Password"
           />
-      
-      <button className="signin" style={{ marginTop: "1rem" }}>Sign Up</button>
-       
-          <div className="option-signup" style={{ marginTop: "2rem" }}>
 
+          <button className="signin" style={{ marginTop: "1rem" }}>
+            Sign Up
+          </button>
+
+          <div className="option-signup" style={{ marginTop: "2rem" }}>
             <Link to="/login" className="opt1">
-              Sign up as a Donor
+              Login as a Donor
             </Link>
-           
           </div>
         </form>
       </div>
