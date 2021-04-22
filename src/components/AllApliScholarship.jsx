@@ -67,29 +67,57 @@ function AllApliScholarship() {
 
                   <div className="elgi-field sc-box">
                     <div className="field-el">
-                      <h2>
+                      <h2
+                        style={{
+                          display: "flex",
+                          marginRight: ".5rem",
+                          paddingRight: ".5rem",
+                          alignItems: "center",
+                        }}
+                      >
                         <LocalConvenienceStoreIcon />
-                        Education level
+                        .Education level
                       </h2>
                       <p>Any</p>
                     </div>
                     <div className="field-el">
-                      <h2>
+                      <h2
+                        style={{
+                          display: "flex",
+                          marginRight: ".5rem",
+                          paddingRight: ".5rem",
+                          alignItems: "center",
+                        }}
+                      >
                         <AttachMoneyIcon />
                         Amount
                       </h2>
                       <p>{e.awardAmount}</p>
                     </div>
                     <div className="field-el">
-                      <h2>
-                        <CardGiftcardIcon /> Scholarships awarded
+                      <h2
+                        style={{
+                          display: "flex",
+                          marginRight: ".5rem",
+                          paddingRight: ".5rem",
+                          alignItems: "center",
+                        }}
+                      >
+                        <CardGiftcardIcon /> .Scholarships awarded
                       </h2>
                       <p>{e.winnersLimit}</p>
                     </div>
                     <div className="field-el">
-                      <h2>
+                      <h2
+                        style={{
+                          display: "flex",
+                          marginRight: ".5rem",
+                          paddingRight: ".5rem",
+                          alignItems: "center",
+                        }}
+                      >
                         <CakeIcon />
-                        Deadline
+                        .Deadline
                       </h2>
                       <p>
                         <span>
