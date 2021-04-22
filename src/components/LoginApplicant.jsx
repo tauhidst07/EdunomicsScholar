@@ -1,6 +1,6 @@
 import Header from "./Header";
 import React, { useState } from "react";
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
 
 import "../styles/login.css";
 
@@ -12,10 +12,10 @@ function LoginApplicant() {
   const history = useHistory();
 
   let checkToken = localStorage.getItem("auth-token");
-  if(checkToken != null){
+  if (checkToken != null) {
     history.push("/dashboard");
   }
- 
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -32,7 +32,6 @@ function LoginApplicant() {
         // console.log(jwt.decode(encodedToken))
         // localStorage.setItem("jwt", JSON.stringify(data));
         history.push("/dashboard");
-
       })
       .catch(function (error) {
         console.log(error);
@@ -41,7 +40,7 @@ function LoginApplicant() {
   return (
     <div>
       <div>
-        <Header />
+        <Header isappliactive={true} />
         <div className="loginbox">
           <h1 className="welcome">Welcome Back</h1>
           <form onSubmit={handleSubmit(onSubmit)}>

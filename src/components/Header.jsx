@@ -4,7 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import edu from "../media/edu.png";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 
-function Header({ isDoner, isApplicant, isActive }) {
+function Header({ isDoner, isApplicant, isActive, isappliactive }) {
   const history = useHistory();
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorE2, setAnchorE2] = useState(null);
@@ -36,7 +36,9 @@ function Header({ isDoner, isApplicant, isActive }) {
           </Link>
           <Link
             to="/appligrant"
-            className={`tg1 ${isApplicant ? "activeRoute" : ""}`}
+            className={`tg1 ${
+              isApplicant || isappliactive ? "activeRoute" : ""
+            }`}
           >
             Applicants
           </Link>
