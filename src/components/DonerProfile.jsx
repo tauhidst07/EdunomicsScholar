@@ -7,10 +7,8 @@ import { Menu, MenuItem, Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
 import jwt from "jsonwebtoken";
-// import Loader from "./Loader"
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-
 import "../styles/donerprofile.css";
 
 function DonerProfile() {
