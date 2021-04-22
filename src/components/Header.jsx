@@ -30,7 +30,7 @@ function Header({ isDoner, isApplicant, isActive }) {
         <div className="tog">
           <Link
             to="/donergrant"
-            className={`tg1 ${isDoner ? "activeRoute" : ""}`}
+            className={`tg1 ${isDoner || isActive ? "activeRoute" : ""}`}
           >
             Donors
           </Link>
