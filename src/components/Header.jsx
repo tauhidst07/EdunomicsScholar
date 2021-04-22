@@ -4,7 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import edu from "../media/edu.png";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 
-function Header({ isDoner, isApplicant }) {
+function Header({ isDoner, isApplicant, isActive }) {
   const history = useHistory();
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorE2, setAnchorE2] = useState(null);

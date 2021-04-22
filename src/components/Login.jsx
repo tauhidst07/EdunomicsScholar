@@ -3,22 +3,18 @@ import "../styles/login.css";
 import { Link, useHistory } from "react-router-dom";
 import React, { useState, useContext } from "react";
 import axios from "axios";
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
 
 import { useForm } from "react-hook-form";
-import {MyId} from "./context/MyId";
+import { MyId } from "./context/MyId";
 
 function Login() {
-
-
   const history = useHistory();
 
   let checkToken = localStorage.getItem("auth-token");
-  if(checkToken != null){
+  if (checkToken != null) {
     history.push("/donar-dash");
   }
-
-
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -33,8 +29,8 @@ function Login() {
         localStorage.setItem("auth-token", response.data.token);
         //localStorage.setItem("jwt", JSON.stringify(data));
         let encodedToken = localStorage.getItem("auth-token");
-        console.log(encodedToken)
-        console.log(jwt.decode(encodedToken))
+        console.log(encodedToken);
+        console.log(jwt.decode(encodedToken));
         history.push("/donar-dash");
       })
       .catch(function (error) {
@@ -43,7 +39,7 @@ function Login() {
   };
   return (
     <div>
-      <Header />
+      <Header isActive={true} />
       <div className="loginbox">
         <h1 className="welcome">Welcome Back</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
