@@ -140,13 +140,9 @@ function DonerProfile() {
         </div>
       </div>
       {loading ? (
-        <Loader
-          type="ThreeDots"
-          marginLeft="5rem"
-          color="grey"
-          height={100}
-          width={100}
-        />
+        <div style={{ textAlign: "center", alignItems: "center" }}>
+          <Loader type="ThreeDots" color="grey" height={100} width={100} />
+        </div>
       ) : (
         <div>
           <div className="pro-doner">
