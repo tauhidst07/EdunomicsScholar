@@ -31,7 +31,6 @@ function DashboardHeader({
   return (
     <div className="dashboardHeader">
       <div className="dashboardHeader__logo">
-        {" "}
         <Link
           to="/dashboard"
           className="logo-main"
