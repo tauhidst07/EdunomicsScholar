@@ -52,6 +52,7 @@ import InviteFriendApli from "./components/InviteFriendApli";
 import NotFound from "./components/NotFound";
 import ApliViewScholarship from "./components/ApliViewScholarship";
 import ApliMoreAboutDoner from "./components/ApliMoreAboutDoner";
+import SuperAdminDashboard from "./components/SuperAdminDashboard";
 
 function App() {
   return (
@@ -204,6 +205,9 @@ function App() {
           </Route>
           <Route exact path="/apli-more-aboutdoner/:donarId">
             <ApliMoreAboutDoner />
+          </Route>
+          <Route exact path="/superAdminDashboard">
+            <SuperAdminDashboard />
           </Route>
           <Route>
             <NotFound />
