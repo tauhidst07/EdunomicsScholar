@@ -115,9 +115,9 @@ function SuperAdminDashboard() {
               <div className="card">
                 <div className="card-header">
                   <h1>Scholarships</h1>
-                  <button>
+                  {/* <button>
                     see all<span className="las la-arrrow-right"></span>
-                  </button>
+                  </button> */}
                 </div>
                 <div className="card-body">
                   <table width="100%">
@@ -162,7 +162,7 @@ function SuperAdminDashboard() {
                 </div>
               </div>
             </div>
-            <div className="customer">
+            {/* <div className="customer">
               <div className="card">
                 <div className="card-header">
                   <h1>new customer</h1>
@@ -197,7 +197,7 @@ function SuperAdminDashboard() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </main>
       </div>

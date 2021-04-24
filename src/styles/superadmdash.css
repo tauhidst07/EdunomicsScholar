@@ -147,7 +147,7 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid blueviolet;
+  border-bottom: 1px solid rgb(241, 239, 243);
 }
 .card-header button {
   background: cornflowerblue;
@@ -178,4 +178,5 @@ td .status {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2rem;
 }
