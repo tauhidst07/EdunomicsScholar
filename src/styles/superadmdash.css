@@ -1,0 +1,129 @@
+.super-all {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+.sidebar {
+  width: 320px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: rgb(156, 154, 158);
+  z-index: 100;
+}
+.sidebar-brand {
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+.main-content {
+  margin-left: 320px;
+}
+.sidebar-menu {
+  margin-top: 1rem;
+}
+.sidebar-menu li {
+  width: 100%;
+  margin-bottom: 1.3rem;
+  padding-left: 2rem;
+}
+.sidebar-menu a {
+  display: block;
+  color: white;
+  font-size: 1.1rem;
+}
+.sidebar-menu a.active {
+  background: seashell;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: rgb(24, 22, 22);
+  border-radius: 30px 0px 0px 30px;
+}
+.sidebar-menu a span:first-child {
+  margin-right: 0.5rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: calc(100% - 345px);
+  top: 0;
+  z-index: 100;
+}
+.search-wrapper {
+  border: 1px solid rgb(228, 75, 75);
+  border-radius: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+.search-wrapper input {
+  height: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+}
+.search-wrapper span {
+  display: inline-block;
+  padding: 0rem 0.4rem;
+  font-size: 1.3rem;
+  align-items: center;
+}
+.user-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+.user-wrapper img {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.user-wrapper h1 {
+  margin: 0rem !important;
+}
+.user-wrapper small {
+  display: inline-block;
+  color: grey;
+  font-size: 0.8rem;
+}
+main {
+  margin-top: 75px;
+  padding: 2rem 1.5rem;
+  background: rgb(244, 247, 244);
+  /* min-height: calc(100vh - 90px); */
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+.cards-single {
+  margin-right: 0.4rem;
+  background-color: rgb(248, 236, 198);
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  box-shadow: 0 8px 6px -6px rgb(107, 105, 105);
+}
+.in-card {
+  margin-top: 3.3rem;
+}
+.in-card h1 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.in-card span {
+  font-size: 0.8rem;
+  color: rgb(114, 117, 114);
+}
+.in-ic span {
+  margin-top: 3rem;
+  font-size: 3rem;
+  color: rgb(48, 212, 26);
+}
