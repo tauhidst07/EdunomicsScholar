@@ -94,6 +94,10 @@ function ApliViewScholarship() {
 
       console.log(res);
       console.log("clicked");
+      // editing applicant
+      // let url= `https://bckendapi.herokuapp.com/api/user/editProfile/${appliId}`
+      // let appli=
+      // const res = await axios.patch(url, { applicants: prevApplicants });
     } else {
       console.log("err");
     }

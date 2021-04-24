@@ -110,6 +110,13 @@ function SuperAdminDashboard() {
               </div>
             </div>
           </div>
+          <div className="recent-grid">
+            <div className="projects">
+              <div className="card">
+                <div className="card-header"></div>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
     </div>
@@ -117,3 +124,4 @@ function SuperAdminDashboard() {
 }
 
 export default SuperAdminDashboard;
+// /api/donar/allAppliedApplicants/applicantID
