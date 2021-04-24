@@ -113,7 +113,89 @@ function SuperAdminDashboard() {
           <div className="recent-grid">
             <div className="projects">
               <div className="card">
-                <div className="card-header"></div>
+                <div className="card-header">
+                  <h1>Scholarships</h1>
+                  <button>
+                    see all<span className="las la-arrrow-right"></span>
+                  </button>
+                </div>
+                <div className="card-body">
+                  <table width="100%">
+                    <thead>
+                      <tr>
+                        <td>Scholarship Name</td>
+                        <td>Award</td>
+                        <td>Status</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Edunomics</td>
+                        <td>$500</td>
+                        <td>
+                          <span className="status"></span>pending
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Tophire</td>
+                        <td>$100</td>
+                        <td>
+                          <span className="status"></span>done
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Howard</td>
+                        <td>$100</td>
+                        <td>
+                          <span className="status"></span>pending
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Nit</td>
+                        <td>$40</td>
+                        <td>
+                          <span className="status"></span>begin
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div className="customer">
+              <div className="card">
+                <div className="card-header">
+                  <h1>new customer</h1>
+                  <button>
+                    see all<span className="las la-arrrow-right"></span>
+                  </button>
+                </div>
+                <div className="card-body">
+                  <div className="customer">
+                    <div>
+                      <img src={gir} width="40px" height="30px" alt="" />
+                      <div>
+                        <h4>hello its me</h4>
+                        <small>jjjgjg</small>
+                      </div>
+                    </div>
+                    <span className="las la-user-circle"></span>
+                    <span className="las la-comment"></span>
+                    <span className="las la-phone"></span>
+                  </div>
+                  <div className="customer">
+                    <div>
+                      <img src={gir} width="40px" height="30px" alt="" />
+                      <div>
+                        <h4>hello its me</h4>
+                        <small>jjjgjg</small>
+                      </div>
+                    </div>
+                    <span className="las la-user-circle"></span>
+                    <span className="las la-comment"></span>
+                    <span className="las la-phone"></span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
