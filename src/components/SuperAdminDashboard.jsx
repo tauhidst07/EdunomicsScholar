@@ -49,14 +49,8 @@ function SuperAdminDashboard() {
       </div>
       <div className="main-content">
         <header>
-          <h1>
-            <label for="">
-              <span
-                className="las la-bars"
-                style={{ marginRight: ".4rem" }}
-              ></span>
-            </label>
-            Dashboard
+          <h1 style={{ marginTop: ".4rem", fontWeight: 700, color: "grey" }}>
+            Super Admin Dashboard
           </h1>
           <div className="search-wrapper">
             <span className="las la-search"></span>
