@@ -1,6 +1,8 @@
 import Header from "./Header";
 import React, { useState } from "react";
 import jwt from "jsonwebtoken";
+import VisibilityIcon from "@material-ui/icons/Visibility";
+import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 
 import "../styles/login.css";
 
@@ -18,6 +20,7 @@ function LoginApplicant() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [typePass, setTypePass] = useState(false);
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
@@ -55,15 +58,21 @@ function LoginApplicant() {
               placeholder="Email"
             />
             <h2 className="pass">Password</h2>
-            <input
-              className="u-input"
-              name="password"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-              type="password"
-              ref={register}
-              placeholder="Password"
-            />
+            <div className="showhide">
+              <input
+                className="u-input"
+                name="password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                type={typePass ? "text" : "password"}
+                ref={register}
+                placeholder="Password"
+              />
+              <small onClick={() => setTypePass(!typePass)}>
+                {typePass ? <VisibilityOffIcon /> : <VisibilityIcon />}
+              </small>
+            </div>
+
             <p className="forgot">forgot password ?</p>
             <button className="signin">Sign In</button>
             <p className="dont">Don't have an account?</p>
