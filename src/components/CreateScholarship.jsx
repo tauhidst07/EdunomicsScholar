@@ -187,6 +187,14 @@ function CreateScholarship() {
             type="date"
             data-test="username"
           />
+          <h2 className="uname">Deadline</h2>
+          <input
+            name="deadline"
+            ref={register}
+            className="u-input"
+            type="date"
+            data-test="username"
+          />
         </div>
         <div className="eligible">
           <h1>Who should be eligible for your scholarship?</h1>

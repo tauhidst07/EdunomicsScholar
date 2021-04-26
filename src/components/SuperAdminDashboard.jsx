@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
 import "../styles/superadmdash.css";
 import gir from "../media/gir.jpeg";
 
 import logo from "../media/edu.png";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function SuperAdminDashboard() {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [data, setData] = useState({});
+  useEffect(() => {
+    axios
+      .get(`https://bckendapi.herokuapp.com/api/admin`)
+      .then((res) => {
+        console.log(res);
+
+        setLoading(false);
+        setData(res.data);
+        setError("");
+      })
+      .catch((err) => {
+        setLoading(false);
+        setData({});
+        setError("error is there");
+        console.log(error);
+      });
+  }, []);
   return (
     <div className="super-all">
       <div className="sidebar">
@@ -69,7 +91,7 @@ function SuperAdminDashboard() {
           <div className="cards">
             <div className="cards-single">
               <div className="in-card">
-                <h1>54</h1>
+                <h1>2</h1>
                 <span>doners</span>
               </div>
               <div className="in-ic">
@@ -78,8 +100,8 @@ function SuperAdminDashboard() {
             </div>
             <div className="cards-single">
               <div className="in-card">
-                <h1>54</h1>
-                <span>doners</span>
+                <h1></h1>
+                <span>Applicants</span>
               </div>
               <div className="in-ic">
                 <span className="las la-clipboard-list"></span>

@@ -5,7 +5,13 @@ import boy from "../media/boy.jpeg";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import { useHistory, Link, BrowserRouter as Router, Route, useParams } from "react-router-dom";
+import {
+  useHistory,
+  Link,
+  BrowserRouter as Router,
+  Route,
+  useParams,
+} from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
 import Footer from "./Footer";
 import { makeStyles } from "@material-ui/core/styles";
@@ -14,20 +20,18 @@ import "../styles/viewscholar.css";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
-import MoreAboutDoner from './MoreAboutDoner';
-
+import MoreAboutDoner from "./MoreAboutDoner";
 
 function ViewScholarship() {
+  let { scholarParams } = useParams();
 
-  let {scholarParams} = useParams();
-
-  console.log(scholarParams.split('&'))
+  console.log(scholarParams.split("&"));
 
   const [data, setData] = useState(0);
   const [funder, setFunder] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
-  const [donarId, setDonarId] = useState('');
+  const [donarId, setDonarId] = useState("");
 
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -39,26 +43,27 @@ function ViewScholarship() {
   useEffect(() => {
     async function fetchMyApi() {
       let response = await fetch(
-        `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${scholarParams.split('&')[0]}`
+        `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${
+          scholarParams.split("&")[0]
+        }`
       );
       response = await response.json();
       setData([response]);
+
       setDonarId(response.scholarships.createdBy);
       console.log(data);
 
       // funder data
       let funderRes = await fetch(
-        `https://bckendapi.herokuapp.com/api/donar/donarprofile/${scholarParams.split('&')[1]}`
+        `https://bckendapi.herokuapp.com/api/donar/donarprofile/${
+          scholarParams.split("&")[1]
+        }`
       );
       funderRes = await funderRes.json();
       setFunder([funderRes]);
       //console.log(funder);
     }
     fetchMyApi();
-
-
-
-
   }, []);
   const useStyles = makeStyles((theme) => ({
     button: {
@@ -175,14 +180,14 @@ function ViewScholarship() {
       </div>
       <div className="single-sch">
         <div className="left-sing">
-          <h2>{ data  === 0 ? "" : data[0].scholarships.name}</h2>
+          <h2>{data === 0 ? "" : data[0].scholarships.name}</h2>
           <div className="img-sc">
             <img src={gir} alt="" />
             <div className="two-head" style={{ marginLeft: "1rem" }}>
               <h4>Funded by </h4>
-              <p>{ funder  === 0 ? "" : funder[0].name}</p>
+              <p>{funder === 0 ? "" : funder[0].name}</p>
             </div>
-            <Link to={`/more-about-donar/${scholarParams.split('&')[1]}`}>
+            <Link to={`/more-about-donar/${scholarParams.split("&")[1]}`}>
               <h4
                 style={{
                   marginLeft: "26rem",
@@ -195,65 +200,62 @@ function ViewScholarship() {
                 Learn more about the Donor <DoubleArrowIcon />
               </h4>
             </Link>
-
           </div>
           <img className="big-img" src={boy} />
           <p className="des-pp">
-            { data  === 0 ? "" : data[0].scholarships.description}
+            {data === 0 ? "" : data[0].scholarships.description}
           </p>
         </div>
         <div className="right-sing">
           <div className="right-doll">
             <h1>
-              { data  === 0 ? "" : data[0].scholarships.awardAmount}
-               <span>OPEN</span>
+              {data === 0 ? "" : data[0].scholarships.awardAmount}
+              <span>OPEN</span>
             </h1>
-            <p>{ data  === 0 ? "" : data[0].scholarships.winnersLimit} winner</p>
+            <p>{data === 0 ? "" : data[0].scholarships.winnersLimit} winner</p>
           </div>
           <button>Contribute</button>
           <div className="con-1">
             <h5>Application Deadline</h5>
             <p>
-
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data  === 0 ? "" : data[0].scholarships.awardDate)
+                  new Date(data === 0 ? "" : data[0].scholarships.awardDate)
                     .toString()
                     .split(" ")[1]
                 }
               </span>
-
               -
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data  === 0 ? "" : data[0].scholarships.awardDate)
+                  new Date(data === 0 ? "" : data[0].scholarships.awardDate)
                     .toString()
                     .split(" ")[2]
                 }
               </span>
-
               -
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data  === 0 ? "" : data[0].scholarships.awardDate)
+                  new Date(data === 0 ? "" : data[0].scholarships.awardDate)
                     .toString()
                     .split(" ")[3]
                 }
               </span>
-
-
-
-              </p>
-          </div>
-          <div className="con-1">
-            <h5>Winners Announced</h5>
-            <p>
-              N/A
             </p>
           </div>
           <div className="con-1">
+            <h5>Winners Announced</h5>
+            <p>N/A</p>
+          </div>
+          <div className="con-1">
             <h5>Education Level</h5>
-            <p>{ data  === 0 ? "" : data[0].scholarships.eligible.map((e,i) => (<span key={i}>{e}, </span>))}</p>
+            <p>
+              {data === 0
+                ? ""
+                : data[0].scholarships.eligible.map((e, i) => (
+                    <span key={i}>{e}, </span>
+                  ))}
+            </p>
           </div>
           <div className="social">
             <h1>SHARE</h1>
