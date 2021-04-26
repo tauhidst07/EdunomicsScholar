@@ -10,7 +10,7 @@ function SignUp() {
   const history = useHistory();
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     axios
       .post("https://bckendapi.herokuapp.com/api/user/signup-donar", data)
       .then(function (response) {
