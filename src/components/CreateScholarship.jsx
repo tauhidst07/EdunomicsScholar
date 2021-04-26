@@ -266,6 +266,26 @@ function CreateScholarship() {
             placeholder="Enter amount per winner"
           />
         </div>
+        <div className="mind">
+          <h1 style={{ marginLeft: ".1rem" }}>Question 1 to Applicant</h1>
+          <input
+            className="u-input"
+            type="text"
+            name="question1"
+            ref={register}
+            placeholder="question1"
+          />
+        </div>
+        <div className="mind">
+          <h1 style={{ marginLeft: ".1rem" }}>Question 2 to Applicant</h1>
+          <input
+            className="u-input"
+            type="text"
+            name="question2"
+            ref={register}
+            placeholder="question2"
+          />
+        </div>
         <button
           className="signin"
           style={{ width: "300px", marginLeft: "30rem", marginTop: "2rem" }}
