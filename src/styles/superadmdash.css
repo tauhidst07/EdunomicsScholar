@@ -11,7 +11,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  background: rgb(61, 192, 236);
+  background: rgb(175, 179, 179);
   z-index: 100;
 }
 .sidebar-brand {
@@ -55,7 +55,7 @@ header {
   z-index: 100;
 }
 .search-wrapper {
-  border: 1px solid rgb(228, 75, 75);
+  border: 1px solid rgb(211, 204, 204);
   border-radius: 30px;
   height: 30px;
   display: flex;
@@ -95,7 +95,7 @@ main {
   margin-top: 75px;
   padding: 2rem 1.5rem;
   background: rgb(244, 247, 244);
-  /* min-height: calc(100vh - 90px); */
+  min-height: calc(100vh - 95px);
 }
 .cards {
   display: flex;
