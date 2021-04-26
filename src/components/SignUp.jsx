@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/signup.css";
 import { Link, useHistory } from "react-router-dom";
+import VisibilityIcon from "@material-ui/icons/Visibility";
+import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import edu from "../media/edu.png";
 import { useForm } from "react-hook-form";
 
@@ -9,6 +11,8 @@ import axios from "axios";
 function SignUp() {
   const history = useHistory();
   const { register, handleSubmit } = useForm();
+  const [typePass, setTypePass] = useState(false);
+
   const onSubmit = (data) => {
     // console.log(data);
     axios
@@ -93,14 +97,19 @@ function SignUp() {
             placeholder="Email"
           />
           <h2 className="pass">Password</h2>
-          <input
-            className="u-input"
-            ref={register}
-            type="password"
-            data-test="password"
-            name="password"
-            placeholder="Password"
-          />
+          <div className="showhide">
+            <input
+              className="u-input"
+              ref={register}
+              type={typePass ? "text" : "password"}
+              data-test="password"
+              name="password"
+              placeholder="Password"
+            />
+            <small onClick={() => setTypePass(!typePass)}>
+              {typePass ? <VisibilityOffIcon /> : <VisibilityIcon />}
+            </small>
+          </div>
 
           <button className="signin" style={{ marginTop: "1rem" }}>
             Sign Up
