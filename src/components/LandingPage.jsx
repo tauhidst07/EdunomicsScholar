@@ -83,7 +83,7 @@ function LandingPage() {
             </MenuItem>
           </Menu>
 
-          <Link to="/login" className="bt2">
+          <Link to="/loginApli" className="bt2">
             Login
           </Link>
         </div>
@@ -123,8 +123,8 @@ function LandingPage() {
               Fellowships
             </h1>
             <p className="un-p">
-              On Edunomics, anyone and any company can create targeted funds that
-              enable incredible people to reach their full potential.
+              On Edunomics, anyone and any company can create targeted funds
+              that enable incredible people to reach their full potential.
             </p>
           </div>
         </div>
@@ -137,8 +137,8 @@ function LandingPage() {
               Fellowships
             </h1>
             <p className="un-p">
-              On Edunomics, anyone and any company can create targeted funds that
-              enable incredible people to reach their full potential.
+              On Edunomics, anyone and any company can create targeted funds
+              that enable incredible people to reach their full potential.
             </p>
           </div>
           <img className="im1" src={girl} alt="st" />
