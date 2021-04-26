@@ -100,7 +100,8 @@ function SuperAdminDashboard() {
             </div>
             <div className="cards-single">
               <div className="in-card">
-                <h1></h1>
+                <h1>2</h1>
+                {/* <h1>{data.donar.total}</h1> */}
                 <span>Applicants</span>
               </div>
               <div className="in-ic">
