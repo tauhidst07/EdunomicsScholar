@@ -131,9 +131,6 @@ function SuperAdminDashboard() {
               <div className="card">
                 <div className="card-header">
                   <h1>Scholarships</h1>
-                  {/* <button>
-                    see all<span className="las la-arrrow-right"></span>
-                  </button> */}
                 </div>
                 <div className="card-body">
                   <table width="100%">
@@ -178,42 +175,6 @@ function SuperAdminDashboard() {
                 </div>
               </div>
             </div>
-            {/* <div className="customer">
-              <div className="card">
-                <div className="card-header">
-                  <h1>new customer</h1>
-                  <button>
-                    see all<span className="las la-arrrow-right"></span>
-                  </button>
-                </div>
-                <div className="card-body">
-                  <div className="customer">
-                    <div>
-                      <img src={gir} width="40px" height="30px" alt="" />
-                      <div>
-                        <h4>hello its me</h4>
-                        <small>jjjgjg</small>
-                      </div>
-                    </div>
-                    <span className="las la-user-circle"></span>
-                    <span className="las la-comment"></span>
-                    <span className="las la-phone"></span>
-                  </div>
-                  <div className="customer">
-                    <div>
-                      <img src={gir} width="40px" height="30px" alt="" />
-                      <div>
-                        <h4>hello its me</h4>
-                        <small>jjjgjg</small>
-                      </div>
-                    </div>
-                    <span className="las la-user-circle"></span>
-                    <span className="las la-comment"></span>
-                    <span className="las la-phone"></span>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
         </main>
       </div>
