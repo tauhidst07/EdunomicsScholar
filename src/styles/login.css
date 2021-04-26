@@ -91,3 +91,14 @@
   background-color: transparent;
   font-weight: 600;
 }
+.showhide {
+  position: relative;
+}
+.showhide small {
+  position: absolute;
+  top: 40%;
+  right: 20px;
+  color: grey;
+  font-weight: 700;
+  cursor: pointer;
+}

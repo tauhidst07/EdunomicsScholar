@@ -18,6 +18,7 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [typePass, setTypePass] = useState(false);
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
@@ -54,15 +55,21 @@ function Login() {
             placeholder="Email"
           />
           <h2 className="pass">Password</h2>
-          <input
-            className="u-input"
-            type="password"
-            ref={register}
-            name="password"
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
-            placeholder="Password"
-          />
+          <div className="showhide">
+            <input
+              className="u-input "
+              type={typePass ? "text" : "password"}
+              ref={register}
+              name="password"
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              placeholder="Password"
+            />
+            <small onClick={() => setTypePass(!typePass)}>
+              {typePass ? "Show" : "Hide"}
+            </small>
+          </div>
+
           <p className="forgot">forgot password ?</p>
           <button className="signin">Sign In</button>
           <p className="dont">Don't have an account?</p>
