@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Chat from "./Chat";
 
 import "../styles/superadmdash.css";
 import gir from "../media/gir.jpeg";
@@ -94,7 +95,7 @@ function SuperAdminDashboard() {
           <div className="cards">
             <div className="cards-single">
               <div className="in-card">
-                <h1>{data===0? "": data.donar.total}</h1>
+                <h1>{data === 0 ? "" : data.donar.total}</h1>
                 <span>doners</span>
               </div>
               <div className="in-ic">
@@ -103,9 +104,7 @@ function SuperAdminDashboard() {
             </div>
             <div className="cards-single">
               <div className="in-card">
-
-
-                <h1>{data===0? "": data.applicant.total}</h1>
+                <h1>{data === 0 ? "" : data.applicant.total}</h1>
                 {/* <h1>{data.donar.total}</h1> */}
 
                 <span>Applicants</span>
@@ -116,7 +115,7 @@ function SuperAdminDashboard() {
             </div>
             <div className="cards-single">
               <div className="in-card">
-                <h1>{data===0? "": data.scholarship.total}</h1>
+                <h1>{data === 0 ? "" : data.scholarship.total}</h1>
                 <span>Scholarship</span>
               </div>
               <div className="in-ic">
@@ -125,7 +124,7 @@ function SuperAdminDashboard() {
             </div>
             <div className="cards-single">
               <div className="in-card">
-                <h1>{data===0? "": data.donar.total}</h1>
+                <h1>{data === 0 ? "" : data.donar.total}</h1>
                 <span>doners</span>
               </div>
               <div className="in-ic">
@@ -149,17 +148,17 @@ function SuperAdminDashboard() {
                       </tr>
                     </thead>
                     <tbody>
-                      {data===0? "": data.scholarship.all.map((e,i) => (
-                        <tr>
-                          <td key={i}>{e.name}</td>
-                          <td>$500</td>
-                          <td>
-                            <span className="status"></span>pending
-                          </td>
-                        </tr>
-                      ))}
-
-                      
+                      {data === 0
+                        ? ""
+                        : data.scholarship.all.map((e, i) => (
+                            <tr>
+                              <td key={i}>{e.name}</td>
+                              <td>$500</td>
+                              <td>
+                                <span className="status"></span>pending
+                              </td>
+                            </tr>
+                          ))}
                     </tbody>
                   </table>
                 </div>
@@ -168,6 +167,7 @@ function SuperAdminDashboard() {
           </div>
         </main>
       </div>
+      <Chat />
     </div>
   );
 }
