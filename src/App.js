@@ -1,10 +1,10 @@
 import React from "react";
 import "../src/styles/App.css";
 import LandingPage from "./components/LandingPage";
-import SignUp from "./components/SignUp";
+import SignUp from "./components/donar/SignUp";
 import SignUpApplicant from "./components/SignUpApplicant";
 import DonerGrantPage from "./components/DonerGrantPage";
-import Login from "./components/Login";
+import Login from "./components/donar/Login";
 import { Route, Switch } from "react-router-dom";
 import AppliGrantPage from "./components/AppliGrantPage";
 import JoinDoner from "./components/JoinDoner";
