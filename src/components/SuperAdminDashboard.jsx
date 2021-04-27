@@ -11,11 +11,12 @@ function SuperAdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [data, setData] = useState({});
+  console.log(data);
   useEffect(() => {
     axios
       .get(`https://bckendapi.herokuapp.com/api/admin`)
       .then((res) => {
-        console.log(res);
+        console.log(res.data);
 
         setLoading(false);
         setData(res.data);
@@ -91,7 +92,7 @@ function SuperAdminDashboard() {
           <div className="cards">
             <div className="cards-single">
               <div className="in-card">
-                <h1>2</h1>
+                <h1>2s</h1>
                 <span>doners</span>
               </div>
               <div className="in-ic">
