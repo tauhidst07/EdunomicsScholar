@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "../../styles/signup.css";
+import "../styles/signup.css";
 import { Link, useHistory } from "react-router-dom";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
-import edu from "../../media/edu.png";
+import edu from "../media/edu.png";
 import { useForm } from "react-hook-form";
 
 import axios from "axios";

@@ -1,5 +1,5 @@
-import Header from "../Header";
-import "../../styles/login.css";
+import Header from "./Header";
+import "../styles/login.css";
 import { Link, useHistory } from "react-router-dom";
 import React, { useState, useContext } from "react";
 import VisibilityIcon from "@material-ui/icons/Visibility";
