@@ -53,6 +53,7 @@ import NotFound from "./components/NotFound";
 import ApliViewScholarship from "./components/ApliViewScholarship";
 import ApliMoreAboutDoner from "./components/ApliMoreAboutDoner";
 import SuperAdminDashboard from "./components/SuperAdminDashboard";
+import Chat from "./components/Chat";
 
 function App() {
   return (
@@ -208,6 +209,9 @@ function App() {
           </Route>
           <Route exact path="/superAdminDashboard">
             <SuperAdminDashboard />
+          </Route>
+          <Route exact path="/chat">
+            <Chat />
           </Route>
           <Route>
             <NotFound />
