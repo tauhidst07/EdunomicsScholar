@@ -1,6 +1,6 @@
 // import ".././styles/chat.css";
 
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import gir from "../media/gir.jpeg";
 
 import {
@@ -11,29 +11,25 @@ import {
 } from "react-chat-widget";
 
 import "react-chat-widget/lib/styles.css";
-
-class Chat extends Component {
-  componentDidMount() {
+const Chat = () => {
+  useEffect(() => {
     addResponseMessage("Hi How are you!");
-  }
 
-  handleNewUserMessage = (newMessage) => {
-    console.log(`New message incomig! ${newMessage}`);
-    // Now send the message throught the backend API
-  };
+    // const handleNewUserMessage = (newMessage) => {
+    //   console.log(`New message incomig! ${newMessage}`);
+    // };
+  }, []);
 
-  render() {
-    return (
-      <div className="chat">
-        <Widget
-          handleNewUserMessage={this.handleNewUserMessage}
-          profileAvatar={gir}
-          title="Rakesh Baghel"
-          subtitle="edunomics"
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="chat">
+      <Widget
+        // handleNewUserMessage={handleNewUserMessage}
+        profileAvatar={gir}
+        title="Rakesh Baghel"
+        subtitle="edunomics"
+      />
+    </div>
+  );
+};
 
 export default Chat;
