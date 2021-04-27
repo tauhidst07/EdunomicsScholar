@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 function SuperAdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [data, setData] = useState(0);
+  const [data, setData] = useState({});
   console.log(data);
   useEffect(() => {
     axios
@@ -94,7 +94,13 @@ function SuperAdminDashboard() {
           <div className="cards">
             <div className="cards-single">
               <div className="in-card">
-                <h1>{data===0? "": data.donar.total}</h1>
+<<<<<<< HEAD
+                <h1>{}</h1>
+||||||| 9504c3a
+                <h1>2</h1>
+=======
+                <h1>2s</h1>
+>>>>>>> 32b5dd4412e8eddbc36cbe8a5b9fc1b3a6946070
                 <span>doners</span>
               </div>
               <div className="in-ic">
@@ -103,11 +109,14 @@ function SuperAdminDashboard() {
             </div>
             <div className="cards-single">
               <div className="in-card">
-
-
-                <h1>{data===0? "": data.applicant.total}</h1>
+<<<<<<< HEAD
+                <h1>{}</h1>
+||||||| 9504c3a
+                <h1></h1>
+=======
+                <h1>2</h1>
                 {/* <h1>{data.donar.total}</h1> */}
-
+>>>>>>> 32b5dd4412e8eddbc36cbe8a5b9fc1b3a6946070
                 <span>Applicants</span>
               </div>
               <div className="in-ic">
@@ -116,8 +125,8 @@ function SuperAdminDashboard() {
             </div>
             <div className="cards-single">
               <div className="in-card">
-                <h1>{data===0? "": data.scholarship.total}</h1>
-                <span>Scholarship</span>
+                <h1>54</h1>
+                <span>doners</span>
               </div>
               <div className="in-ic">
                 <span className="las la-user-circle"></span>
@@ -125,7 +134,7 @@ function SuperAdminDashboard() {
             </div>
             <div className="cards-single">
               <div className="in-card">
-                <h1>{data===0? "": data.donar.total}</h1>
+                <h1>$54</h1>
                 <span>doners</span>
               </div>
               <div className="in-ic">
@@ -149,17 +158,34 @@ function SuperAdminDashboard() {
                       </tr>
                     </thead>
                     <tbody>
-                      {data===0? "": data.scholarship.all.map((e,i) => (
-                        <tr>
-                          <td key={i}>{e.name}</td>
-                          <td>$500</td>
-                          <td>
-                            <span className="status"></span>pending
-                          </td>
-                        </tr>
-                      ))}
-
-                      
+                      <tr>
+                        <td>Edunomics</td>
+                        <td>$500</td>
+                        <td>
+                          <span className="status"></span>pending
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Tophire</td>
+                        <td>$100</td>
+                        <td>
+                          <span className="status"></span>done
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Howard</td>
+                        <td>$100</td>
+                        <td>
+                          <span className="status"></span>pending
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Nit</td>
+                        <td>$40</td>
+                        <td>
+                          <span className="status"></span>begin
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
