@@ -57,7 +57,7 @@ function AllApliScholarship() {
                     <div className="apply">
                       <Link
                         className="apply-bt1"
-                        to={`/apli-view-scholar/${e._id}&${e.createdBy}`}
+                        to={`/apli-view-scholar/${e._id}`}
                       >
                         Apply to scholarship
                       </Link>

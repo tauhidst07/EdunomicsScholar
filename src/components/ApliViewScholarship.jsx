@@ -27,6 +27,7 @@ import axios from "axios";
 
 function ApliViewScholarship() {
   let { scholarParams } = useParams();
+  console.log(scholarParams)
 
   let encodedToken = localStorage.getItem("auth-token");
 
@@ -34,10 +35,8 @@ function ApliViewScholarship() {
   // console.log(scholarParams.split('&'))
 
   const [data, setData] = useState(0);
-  const [funder, setFunder] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
-  const [donarId, setDonarId] = useState("");
   const [applied, setApplied] = useState(false);
 
   const handleClick = (e) => {
@@ -48,17 +47,25 @@ function ApliViewScholarship() {
   };
 
   useEffect(() => {
+    axios
+      .get(`https://bckendapi.herokuapp.com/api/donar/oneScholarship/${scholarParams}`)
+      .then(res => {
+        res = res.data;
+        setData(res)
+        console.log(res)
+      })
+      .catch(err => console.log(err))
+
     async function fetchMyApi() {
       let response = await fetch(
-        `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${
-          scholarParams.split("&")[0]
-        }`
+        `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${scholarParams}`
       );
       response = await response.json();
-      setData([response]);
-      console.log(data);
+      await setData([response]);
+      await console.log(data);
 
-      setDonarId(response.scholarships.createdBy);
+      //setDonarId(response.scholarships.createdBy);
+      /*
       if (response.scholarships.applicants.indexOf(appliId) > -1) {
         setApplied(true);
         console.log(response.scholarships.applicants.indexOf(appliId), applied);
@@ -67,28 +74,20 @@ function ApliViewScholarship() {
         setApplied(false);
         console.log(appliId, false);
       }
+*/
 
-      // funder data
-      let funderRes = await fetch(
-        `https://bckendapi.herokuapp.com/api/donar/donarprofile/${
-          scholarParams.split("&")[1]
-        }`
-      );
-      funderRes = await funderRes.json();
-      setFunder([funderRes]);
-      //console.log(funder);
     }
-    fetchMyApi();
+    //fetchMyApi();
   }, []);
 
   const applySchoarship = async () => {
     //console.log(appliId)
     if (data != 0 && appliId) {
-      let prevApplicants = data[0].scholarships.applicants;
+      let prevApplicants = data.applicants.applicants;
       prevApplicants.push({ applicant: appliId, status: "submitted" });
 
       console.log(prevApplicants);
-      let url = `https://bckendapi.herokuapp.com/api/donar/editScholarship/${data[0].scholarships._id}`;
+      let url = `https://bckendapi.herokuapp.com/api/donar/editScholarship/${data.applicants._id}`;
       const res = await axios.patch(url, { applicants: prevApplicants });
       history.push("/myapplications/:scholarid");
 
@@ -137,12 +136,12 @@ function ApliViewScholarship() {
 
       <div className="single-sch">
         <div className="left-sing">
-          <h2>{data === 0 ? "" : data[0].scholarships.name}</h2>
+          <h2>{data === 0 ? "" : data.applicants.name}</h2>
           <div className="img-sc">
             <img src={gir} alt="" />
             <div className="two-head" style={{ marginLeft: "1rem" }}>
               <h4>Funded by </h4>
-              <p>{funder === 0 ? "" : funder[0].name}</p>
+              <p>{data === 0 ? "" : data.applicants.createdBy.name}</p>
             </div>
             <Link to={`/apli-more-aboutdoner/${scholarParams.split("&")[1]}`}>
               <h4
@@ -160,16 +159,16 @@ function ApliViewScholarship() {
           </div>
           <img className="big-img" src={boy} />
           <p className="des-pp">
-            {data === 0 ? "" : data[0].scholarships.description}
+            {data === 0 ? "" : data.applicants.description}
           </p>
         </div>
         <div className="right-sing">
           <div className="right-doll">
             <h1>
-              {data === 0 ? "" : data[0].scholarships.awardAmount}
+              {data === 0 ? "" : data.applicants.awardAmount}
               <span>OPEN</span>
             </h1>
-            <p>{data === 0 ? "" : data[0].scholarships.winnersLimit} winner</p>
+            <p>{/*data === 0 ? "" : data[0].scholarships.winnersLimit*/} winner</p>
           </div>
           <div onClick={applySchoarship}>
             <button className="apply-sc" disabled={applied}>
@@ -182,7 +181,7 @@ function ApliViewScholarship() {
             <p>
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data === 0 ? "" : data[0].scholarships.awardDate)
+                  new Date(data === 0 ? "" : data.applicants.deadline)
                     .toString()
                     .split(" ")[1]
                 }
@@ -190,7 +189,7 @@ function ApliViewScholarship() {
               -
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data === 0 ? "" : data[0].scholarships.awardDate)
+                  new Date(data === 0 ? "" : data.applicants.deadline)
                     .toString()
                     .split(" ")[2]
                 }
@@ -198,7 +197,7 @@ function ApliViewScholarship() {
               -
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data === 0 ? "" : data[0].scholarships.awardDate)
+                  new Date(data === 0 ? "" : data.applicants.deadline)
                     .toString()
                     .split(" ")[3]
                 }
@@ -207,14 +206,38 @@ function ApliViewScholarship() {
           </div>
           <div className="con-1">
             <h5>Winners Announced</h5>
-            <p>N/A</p>
+            <p>
+              <span style={{ marginLeft: ".1rem" }}>
+                {
+                  new Date(data === 0 ? "" : data.applicants.awardDate)
+                    .toString()
+                    .split(" ")[1]
+                }
+              </span>
+              -
+              <span style={{ marginLeft: ".1rem" }}>
+                {
+                  new Date(data === 0 ? "" : data.applicants.awardDate)
+                    .toString()
+                    .split(" ")[2]
+                }
+              </span>
+              -
+              <span style={{ marginLeft: ".1rem" }}>
+                {
+                  new Date(data === 0 ? "" : data.applicants.awardDate)
+                    .toString()
+                    .split(" ")[3]
+                }
+              </span>
+            </p>
           </div>
           <div className="con-1">
             <h5>Education Level</h5>
             <p>
               {data === 0
                 ? ""
-                : data[0].scholarships.eligible.map((e, i) => (
+                : data.applicants.eligible.map((e, i) => (
                     <span key={i}>{e}, </span>
                   ))}
             </p>
