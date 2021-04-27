@@ -12,7 +12,7 @@ import JoinAppli from "./components/JoinAppli";
 import LoginApplicant from "./components/LoginApplicant";
 import Dashboard from "./components/Dashboard";
 import Profile from "./components/Profile";
-import About from "./components/About";
+import About from "./components/common/About";
 import ContactUs from "./components/ContactUs";
 import Faq from "./components/Faq";
 import HowItWorks from "./components/HowItWorks";
