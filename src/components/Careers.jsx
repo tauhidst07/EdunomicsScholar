@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "../Header";
-import Footer from "../Footer";
-import girl from "../../media/girl.jpg";
-import boy from "../../media/boy.jpeg";
-import "../../styles/careers.css";
-import globe from "../../media/globe.png";
-import health from "../../media/healthcare.png";
-import rocket from "../../media/rocket.png";
-import mount from "../../media/mountain.png";
+import Header from "./Header";
+import Footer from "./Footer";
+import girl from "../media/girl.jpg";
+import boy from "../media/boy.jpeg";
+import "../styles/careers.css";
+import globe from "../media/globe.png";
+import health from "../media/healthcare.png";
+import rocket from "../media/rocket.png";
+import mount from "../media/mountain.png";
 
 function Careers() {
   return (
