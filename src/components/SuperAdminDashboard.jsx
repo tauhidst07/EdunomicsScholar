@@ -18,7 +18,9 @@ function SuperAdminDashboard() {
         console.log(res);
 
         setLoading(false);
-        setData(res.data);
+        let resData = res.data;
+        setData(resData);
+        console.log(data);
         setError("");
       })
       .catch((err) => {
@@ -91,7 +93,7 @@ function SuperAdminDashboard() {
           <div className="cards">
             <div className="cards-single">
               <div className="in-card">
-                <h1>2</h1>
+                <h1>{}</h1>
                 <span>doners</span>
               </div>
               <div className="in-ic">
@@ -100,7 +102,7 @@ function SuperAdminDashboard() {
             </div>
             <div className="cards-single">
               <div className="in-card">
-                <h1></h1>
+                <h1>{}</h1>
                 <span>Applicants</span>
               </div>
               <div className="in-ic">
