@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/faq.css";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -24,7 +24,6 @@ function Faq() {
               <br /> If you don’t see the answer to your question, let us know
               at
               <a href="mailto:donors@pride.edunomics.in">
-                {" "}
                 donors@pride.edunomics.in
               </a>
               .

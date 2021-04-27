@@ -33,9 +33,9 @@ function SuperAdminDashboard() {
       });
   }, []);
   return (
-    <div className="super-all">
-      <div className="sidebar">
-        <div className="sidebar-brand dashboardHeader__logo">
+    <div className="super-alls">
+      <div className="sidebars">
+        <div className="sidebar-brands dashboardHeader__logo">
           <Link
             to="/dashboard"
             className="logo-main"
@@ -44,7 +44,7 @@ function SuperAdminDashboard() {
             <img src={logo} alt="edu logo" />
           </Link>
         </div>
-        <div className="sidebar-menu">
+        <div className="sidebar-menus">
           <ul>
             <li>
               <a href="">
@@ -73,8 +73,8 @@ function SuperAdminDashboard() {
           </ul>
         </div>
       </div>
-      <div className="main-content">
-        <header>
+      <div className="main-contents">
+        <header className="supheader">
           <h1 style={{ marginTop: ".4rem", fontWeight: 700, color: "grey" }}>
             Super Admin Dashboard
           </h1>
