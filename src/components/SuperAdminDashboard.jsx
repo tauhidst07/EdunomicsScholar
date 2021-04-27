@@ -82,7 +82,7 @@ function SuperAdminDashboard() {
             <img src={gir} style={{ width: "40px", height: "30px" }} alt="" />
 
             <div>
-              <h1>Rakesh</h1>
+              <h1>Rakesh Baghel</h1>
               <small>Super Admin</small>
             </div>
           </div>
