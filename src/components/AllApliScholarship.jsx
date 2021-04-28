@@ -22,7 +22,7 @@ function AllApliScholarship() {
       setData([response]);
       setLoading(false);
 
-      // console.log(data)
+      console.log(data);
     }
 
     fetchMyApi();
