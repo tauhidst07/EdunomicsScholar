@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import DashboardHeader from "./DashboardHeader";
-import Points from "./Points";
-import Footer from "./Footer";
+import DashboardHeader from "../DashboardHeader";
+import Points from "../Points";
+import Footer from "../Footer";
 import axios from "axios";
-import profile from "../media/profile.png";
+import profile from "../../media/profile.png";
 import jwt from "jsonwebtoken";
 import Loader from "react-loader-spinner";
 
-import "../styles/dashboard.css";
+import "../../styles/dashboard.css";
 
 function Dashboard() {
   const [loading, setLoading] = useState(true);
