@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DashboardHeader from "../DashboardHeader";
-import Points from "../Points";
+import Points from "../common/Points";
 import Footer from "../Footer";
 import axios from "axios";
 import profile from "../../media/profile.png";

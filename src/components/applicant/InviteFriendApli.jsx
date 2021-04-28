@@ -1,7 +1,7 @@
 import React from "react";
-import DashboardHeader from "./DashboardHeader";
+import DashboardHeader from "../DashboardHeader";
 
-import Footer from "./Footer";
+import Footer from "../Footer";
 
 function InviteFriendApli() {
   return (

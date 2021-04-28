@@ -1,10 +1,10 @@
-import Footer from "./Footer";
+import Footer from "../Footer";
 import React, { useState, useEffect } from "react";
-import logo from "../media/edu.png";
+import logo from "../../media/edu.png";
 import { makeStyles } from "@material-ui/core/styles";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { useHistory,Link } from "react-router-dom";
-import "../styles/invite.css";
+import { useHistory, Link } from "react-router-dom";
+import "../../styles/invite.css";
 import PersonIcon from "@material-ui/icons/Person";
 
 function InviteApplicants() {
@@ -39,10 +39,12 @@ function InviteApplicants() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-        <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
+          <Link
+            to="/donar-dash"
+            className="logo-main"
+            style={{ cursor: "pointer" }}
+          >
             <img src={logo} alt="edu logo" />
-
-          
           </Link>
         </div>
         <ul className="dashboardHeader__routes">
@@ -139,8 +141,9 @@ function InviteApplicants() {
         <h2>Filter by :</h2>
       </div>
       <div className="invite-main">
-       <h1 style={{textAlign:"center",marginBottom:"5rem"}}>
-       COMING SOON......</h1> 
+        <h1 style={{ textAlign: "center", marginBottom: "5rem" }}>
+          COMING SOON......
+        </h1>
         {/* <div className="invite-left"></div>
         <div className="invite-right"></div> */}
       </div>
