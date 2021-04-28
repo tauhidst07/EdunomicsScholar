@@ -5,7 +5,7 @@ import Anyque from "./Anyque";
 import "../../styles/landingpage.css";
 import girl from "../../media/stud.jpg";
 
-import HowItWorksHeader from "../HowItWorksHeader";
+import HowItWorksHeader from "./HowItWorksHeader";
 import "../../styles/howitworks.css";
 import boy from "../../media/boy.jpeg";
 import { Link } from "react-router-dom";

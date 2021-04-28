@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/howitworks.css";
+import "../../styles/howitworks.css";
 import { Link } from "react-router-dom";
 
 function HowItWorksHeader({ isactive, isdoner, isaward, isprice, isfaq }) {

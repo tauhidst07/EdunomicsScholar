@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HowItWorksHeader from "../HowItWorksHeader";
+import HowItWorksHeader from "./HowItWorksHeader";
 import "../../styles/howitworks.css";
 import "../../styles/dashboardHeader.css";
 
