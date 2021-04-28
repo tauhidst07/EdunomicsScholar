@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Header";
-import st from "../media/st.jpg";
-import Footer from "./Footer";
+import Header from "../Header";
+import st from "../../media/st.jpg";
+import Footer from "../Footer";
 import { Link } from "react-router-dom";
 
 function AppliGrantPage() {

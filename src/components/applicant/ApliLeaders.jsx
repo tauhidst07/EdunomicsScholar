@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import DashboardHeader from "./DashboardHeader"
-import Footer from "./Footer"
+import DashboardHeader from "../DashboardHeader";
+import Footer from "../Footer";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -13,7 +13,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 
 function ApliLeaders() {
-    const [error, setError] = useState("");
+  const [error, setError] = useState("");
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -41,38 +41,38 @@ function ApliLeaders() {
   function BasicTable() {
     const classes = useStyles();
     return (
-        <TableContainer component={Paper}>
-          <Table className={classes.table} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell># STUDENT</TableCell>
-                <TableCell align="right">CITY</TableCell>
-                <TableCell align="right">SCHOOL</TableCell>
-  
-                <TableCell align="right">BOLD POINTS</TableCell>
+      <TableContainer component={Paper}>
+        <Table className={classes.table} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell># STUDENT</TableCell>
+              <TableCell align="right">CITY</TableCell>
+              <TableCell align="right">SCHOOL</TableCell>
+
+              <TableCell align="right">BOLD POINTS</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {data.map((row) => (
+              <TableRow key={row.name}>
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <TableCell align="right">{row.education.degrees}</TableCell>
+                <TableCell align="right">{row._id}</TableCell>
+
+                <TableCell align="right">{row.points}</TableCell>
               </TableRow>
-            </TableHead>
-            <TableBody>
-              {data.map((row) => (
-                <TableRow key={row.name}>
-                  <TableCell component="th" scope="row">
-                    {row.name}
-                  </TableCell>
-                  <TableCell align="right">{row.education.degrees}</TableCell>
-                  <TableCell align="right">{row._id}</TableCell>
-  
-                  <TableCell align="right">{row.points}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      );
-    }
-    return (
-        <div>
-            <DashboardHeader islead={true}/>
-            <div className="leader_main">
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    );
+  }
+  return (
+    <div>
+      <DashboardHeader islead={true} />
+      <div className="leader_main">
         <h1>Leaderboards</h1>
         <div className="lead-p">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -97,9 +97,9 @@ function ApliLeaders() {
       </div>
       <BasicTable />
 
-            <Footer/>
-        </div>
-    )
+      <Footer />
+    </div>
+  );
 }
 
-export default ApliLeaders
+export default ApliLeaders;

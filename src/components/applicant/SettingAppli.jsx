@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-import DashboardHeader from "./DashboardHeader"
+import DashboardHeader from "../DashboardHeader";
 import Modal from "react-modal";
 import TextField from "@material-ui/core/TextField";
 import RoomIcon from "@material-ui/icons/Room";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
-import "../styles/settingdonar.css";
-import ContactInfoUpdate from "./ContactInfoUpdate";
+import "../../styles/settingdonar.css";
+import ContactInfoUpdate from "../ContactInfoUpdate";
 
 function SettingAppli() {
-  
   const [anchorEl, setAnchorEl] = useState(null);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [hide, setHide] = useState(false);
@@ -54,10 +53,10 @@ function SettingAppli() {
     setIsOpen(false);
   }
 
-    return (
-        <div>
-            <DashboardHeader/>
-            <div>
+  return (
+    <div>
+      <DashboardHeader />
+      <div>
         <div className="set-head">
           <h1>Settings</h1>
         </div>
@@ -152,9 +151,8 @@ function SettingAppli() {
         </div>
       </Modal>
       {hide ? <ContactInfoUpdate /> : null}
-
-        </div>
-    )
+    </div>
+  );
 }
 
-export default SettingAppli
+export default SettingAppli;

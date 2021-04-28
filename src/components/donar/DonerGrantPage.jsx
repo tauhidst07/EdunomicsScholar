@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/donergrant.css";
-import Header from "./Header";
-import schol from "../media/schol.jpg";
-import Footer from "./Footer";
+import "../../styles/donergrant.css";
+import Header from "../Header";
+import schol from "../../media/schol.jpg";
+import Footer from "../Footer";
 import { Link } from "react-router-dom";
 
 function DonerGrantPage() {

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import logo from "../media/edu.png";
-import Footer from "./Footer";
-import profileImage from "../media/profile.png";
+import logo from "../../media/edu.png";
+import Footer from "../Footer";
+import profileImage from "../../media/profile.png";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
 import jwt from "jsonwebtoken";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import "../styles/donerprofile.css";
+import "../../styles/donerprofile.css";
 
 function DonerProfile() {
   const [loading, setLoading] = useState(true);
