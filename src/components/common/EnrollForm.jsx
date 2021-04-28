@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import Footer from "./Footer";
+import Footer from "../Footer";
 import TextField from "@material-ui/core/TextField";
-import edu from "../media/edu.png";
+import edu from "../../media/edu.png";
 import { Link } from "react-router-dom";
 
-import "../styles/enroll.css";
-import boy from "../media/boy.jpeg";
+import "../../styles/enroll.css";
+import boy from "../../media/boy.jpeg";
 
 const EnrollForm = () => {
   const [modalIsOpen, setIsOpen] = useState(false);

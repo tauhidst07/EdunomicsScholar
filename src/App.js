@@ -23,7 +23,7 @@ import Careers from "./components/common/Careers";
 import Privacy from "./components/common/Privacy";
 import Terms from "./components/common/TermsOfUse";
 import Press from "./components/common/Press";
-import Enroll from "./components/EnrollmentS";
+import Enroll from "./components/common/EnrollmentS";
 import ResearchReport from "./components/common/ReseacrhReport";
 import ScholorshipRules from "./components/common/ScholarRules";
 import EasyScholar from "./components/common/EasyScholar";
