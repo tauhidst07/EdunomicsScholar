@@ -40,7 +40,7 @@ function AllScholarship() {
     }
 
     fetchMyApi();
-  }, [data]);
+  }, []);
   return (
     <div>
       <div className="dashboardHeader">

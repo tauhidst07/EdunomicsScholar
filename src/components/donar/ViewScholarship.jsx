@@ -48,10 +48,11 @@ function ViewScholarship() {
         }`
       );
       response = await response.json();
+      console.log("DATA",response);
       setData([response]);
 
-      setDonarId(response.scholarships.createdBy);
-      console.log(data);
+      //setDonarId(response.scholarships.createdBy);
+      console.log("DATA",data);
 
       // funder data
       let funderRes = await fetch(
@@ -180,7 +181,7 @@ function ViewScholarship() {
       </div>
       <div className="single-sch">
         <div className="left-sing">
-          <h2>{data === 0 ? "" : data[0].scholarships.name}</h2>
+          <h2>{data === 0 ? "" : data[0].applicants.name}</h2>
           <div className="img-sc">
             <img src={gir} alt="" />
             <div className="two-head" style={{ marginLeft: "1rem" }}>
@@ -203,16 +204,16 @@ function ViewScholarship() {
           </div>
           <img className="big-img" src={boy} />
           <p className="des-pp">
-            {data === 0 ? "" : data[0].scholarships.description}
+            {data === 0 ? "" : data[0].applicants.description}
           </p>
         </div>
         <div className="right-sing">
           <div className="right-doll">
             <h1>
-              {data === 0 ? "" : data[0].scholarships.awardAmount}
+              {data === 0 ? "" : data[0].applicants.awardAmount}
               <span>OPEN</span>
             </h1>
-            <p>{data === 0 ? "" : data[0].scholarships.winnersLimit} winner</p>
+            <p>{data === 0 ? "" : data[0].applicants.winnersLimit} winner</p>
           </div>
           <button>Contribute</button>
           <div className="con-1">
@@ -220,7 +221,7 @@ function ViewScholarship() {
             <p>
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data === 0 ? "" : data[0].scholarships.awardDate)
+                  new Date(data === 0 ? "" : data[0].applicants.deadline)
                     .toString()
                     .split(" ")[1]
                 }
@@ -228,7 +229,7 @@ function ViewScholarship() {
               -
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data === 0 ? "" : data[0].scholarships.awardDate)
+                  new Date(data === 0 ? "" : data[0].applicants.deadline)
                     .toString()
                     .split(" ")[2]
                 }
@@ -236,7 +237,7 @@ function ViewScholarship() {
               -
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data === 0 ? "" : data[0].scholarships.awardDate)
+                  new Date(data === 0 ? "" : data[0].applicants.deadline)
                     .toString()
                     .split(" ")[3]
                 }
@@ -245,14 +246,38 @@ function ViewScholarship() {
           </div>
           <div className="con-1">
             <h5>Winners Announced</h5>
-            <p>N/A</p>
+            <p>
+              <span style={{ marginLeft: ".1rem" }}>
+                {
+                  new Date(data === 0 ? "" : data[0].applicants.awardDate)
+                    .toString()
+                    .split(" ")[1]
+                }
+              </span>
+              -
+              <span style={{ marginLeft: ".1rem" }}>
+                {
+                  new Date(data === 0 ? "" : data[0].applicants.awardDate)
+                    .toString()
+                    .split(" ")[2]
+                }
+              </span>
+              -
+              <span style={{ marginLeft: ".1rem" }}>
+                {
+                  new Date(data === 0 ? "" : data[0].applicants.awardDate)
+                    .toString()
+                    .split(" ")[3]
+                }
+              </span>
+            </p>
           </div>
           <div className="con-1">
             <h5>Education Level</h5>
             <p>
               {data === 0
                 ? ""
-                : data[0].scholarships.eligible.map((e, i) => (
+                : data[0].applicants.eligible.map((e, i) => (
                     <span key={i}>{e}, </span>
                   ))}
             </p>
