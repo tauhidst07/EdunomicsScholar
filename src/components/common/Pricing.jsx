@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import Anyque from "./Anyque";
-import HowItWorksHeader from "./HowItWorksHeader";
-import "../styles/howitworks.css";
+import Header from "../Header";
+import Footer from "../Footer";
+import Anyque from "../Anyque";
+import HowItWorksHeader from "../HowItWorksHeader";
+import "../../styles/howitworks.css";
 import { Link } from "react-router-dom";
 
 function Pricing() {

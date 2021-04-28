@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import "../styles/privacy.css";
+import Header from "../Header";
+import Footer from "../Footer";
+import "../../styles/privacy.css";
 
 function Privacy() {
   return (
@@ -90,7 +90,7 @@ function Privacy() {
         <h2>How we share your information</h2>
         <p>
           We will share your information with scholarship providers, applicable
-          academic institutions, and as otherwise necessary to provide the 
+          academic institutions, and as otherwise necessary to provide the
           service to you. By using the Bold service, you acknowledge, confirm,
           and consent to: (i) Bold’s generation of revenue from its partnerships
           with scholarship providers, applicable academic institutions, and
@@ -141,8 +141,8 @@ function Privacy() {
         <h2>For our international users</h2>
         <p>
           The Site and the Services we offer through it are U.S. based and are
-          controlled, operated and administered by  and its Sub-processors
-          from offices and servers within the United States. The Site and this
+          controlled, operated and administered by and its Sub-processors from
+          offices and servers within the United States. The Site and this
           Privacy Policy is strictly intended for audiences located in the
           United States and are provided in accordance with and subject to
           applicable United States law. If you decide to continue to access our
@@ -156,13 +156,13 @@ function Privacy() {
         <p>
           For more information about our privacy practices, if you have
           questions, or if you would like to make a complaint, please contact us
-          by e-mail at privacy@pride.edunomics.in or by mail using the details provided
-          below: <br />
+          by e-mail at privacy@pride.edunomics.in or by mail using the details
+          provided below: <br />
           <br />
           Effective Date: January 18, 2021.
           <br />
-          <br /> pride.edunomics.in, Inc., 133 Kearny #400, San Francisco CA 94108 United
-          States
+          <br /> pride.edunomics.in, Inc., 133 Kearny #400, San Francisco CA
+          94108 United States
         </p>
       </div>
 
