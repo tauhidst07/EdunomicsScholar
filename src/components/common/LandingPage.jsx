@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/landingpage.css";
 import Footer from "../Footer";
-import DonerLanding from "../DonerLanding";
+import DonerLanding from "../donar/DonerLanding";
 import boy from "../../media/boy.jpeg";
 import girl from "../../media/girl.jpg";
 import { Link, useHistory } from "react-router-dom";

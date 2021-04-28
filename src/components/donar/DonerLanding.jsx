@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/donerlanding.css";
+import "../../styles/donerlanding.css";
 import { Link } from "react-router-dom";
 
 function DonerLanding() {

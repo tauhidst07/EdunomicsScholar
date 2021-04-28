@@ -4,7 +4,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 import HowItWorksHeader from "../HowItWorksHeader";
 
-import FAQs from "../FAQs";
+import FAQs from "./FAQs";
 
 function Faq() {
   function Header1() {

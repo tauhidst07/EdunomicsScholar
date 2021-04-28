@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import DashboardHeader from "./DashboardHeader";
-import FinanceField from "./profileFields/FinanceField";
-import FutureIntrestsField from "./profileFields/FutureIntrestsField";
-import PublicServicesField from "./profileFields/PublicServicesField";
-import SportsField from "./profileFields/SportsField";
-import CareerField from "./profileFields/CareerField";
-import ArtsField from "./profileFields/ArtsField";
-import ResearchField from "./profileFields/ResearchField";
-import Footer from "./Footer";
-import profileImage from "../media/profile.png";
-import "../styles/profile.css";
+import DashboardHeader from "../DashboardHeader";
+import FinanceField from "../profileFields/FinanceField";
+import FutureIntrestsField from "../profileFields/FutureIntrestsField";
+import PublicServicesField from "../profileFields/PublicServicesField";
+import SportsField from "../profileFields/SportsField";
+import CareerField from "../profileFields/CareerField";
+import ArtsField from "../profileFields/ArtsField";
+import ResearchField from "../profileFields/ResearchField";
+import Footer from "../Footer";
+import profileImage from "../../media/profile.png";
+import "../../styles/profile.css";
 import jwt from "jsonwebtoken";
 import Loader from "react-loader-spinner";
 

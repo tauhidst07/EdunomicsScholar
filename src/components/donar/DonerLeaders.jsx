@@ -1,10 +1,10 @@
-import Footer from "./Footer";
+import Footer from "../Footer";
 import React, { useState, useEffect } from "react";
-import logo from "../media/edu.png";
+import logo from "../../media/edu.png";
 // import { makeStyles } from "@material-ui/core/styles";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { useHistory,Link } from "react-router-dom";
-import "../styles/invite.css";
+import { useHistory, Link } from "react-router-dom";
+import "../../styles/invite.css";
 import PersonIcon from "@material-ui/icons/Person";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
@@ -16,88 +16,86 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import axios from "axios";
 
-
-
 function DonerLeaders() {
-   
-    const [anchorEl, setAnchorEl] = useState(null);
-    const history = useHistory();
-    const [error, setError] = useState("");
-    const [data, setData] = useState([]);
-  
-    const handleClick = (e) => {
-      setAnchorEl(e.currentTarget);
-    };
-    const handleClose = () => {
-      setAnchorEl(null);
-    };
-  
-    useEffect(() => {
-        axios
-          .get("https://bckendapi.herokuapp.com/api/user/leaders")
-          .then((res) => {
-            console.log(res.data.data);
-            // setLoading(false);
-            setData(res.data.data);
-            setError("");
-          })
-          .catch((err) => {
-            // setLoading(false);
-            setData({});
-            setError("error is there");
-            console.log(error);
-          });
-      }, []);
-    const useStyles = makeStyles((theme) => ({
-      button: {
-        margin: theme.spacing(1),
-        table: {
-            minWidth: 650,
-          },
-      },
-    }));
- 
-    
-        function BasicTable() {
-            const classes = useStyles();
-        
-            return (
-              <TableContainer component={Paper}>
-                <Table className={classes.table} aria-label="simple table">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell># STUDENT</TableCell>
-                      <TableCell align="right">CITY</TableCell>
-                      <TableCell align="right">SCHOOL</TableCell>
-        
-                      <TableCell align="right">BOLD POINTS</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {data.map((row) => (
-                      <TableRow key={row.name}>
-                        <TableCell component="th" scope="row">
-                          {row.name}
-                        </TableCell>
-                        <TableCell align="right">{row.education.degrees}</TableCell>
-                        <TableCell align="right">{row._id}</TableCell>
-        
-                        <TableCell align="right">{row.points}</TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            );
-          }
-    return (
-        <div>
-             <div className="dashboardHeader">
-        <div className="dashboardHeader__logo">
-        <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
-            <img src={logo} alt="edu logo" />
+  const [anchorEl, setAnchorEl] = useState(null);
+  const history = useHistory();
+  const [error, setError] = useState("");
+  const [data, setData] = useState([]);
 
-          
+  const handleClick = (e) => {
+    setAnchorEl(e.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  useEffect(() => {
+    axios
+      .get("https://bckendapi.herokuapp.com/api/user/leaders")
+      .then((res) => {
+        console.log(res.data.data);
+        // setLoading(false);
+        setData(res.data.data);
+        setError("");
+      })
+      .catch((err) => {
+        // setLoading(false);
+        setData({});
+        setError("error is there");
+        console.log(error);
+      });
+  }, []);
+  const useStyles = makeStyles((theme) => ({
+    button: {
+      margin: theme.spacing(1),
+      table: {
+        minWidth: 650,
+      },
+    },
+  }));
+
+  function BasicTable() {
+    const classes = useStyles();
+
+    return (
+      <TableContainer component={Paper}>
+        <Table className={classes.table} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell># STUDENT</TableCell>
+              <TableCell align="right">CITY</TableCell>
+              <TableCell align="right">SCHOOL</TableCell>
+
+              <TableCell align="right">BOLD POINTS</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {data.map((row) => (
+              <TableRow key={row.name}>
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <TableCell align="right">{row.education.degrees}</TableCell>
+                <TableCell align="right">{row._id}</TableCell>
+
+                <TableCell align="right">{row.points}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    );
+  }
+  return (
+    <div>
+      <div className="dashboardHeader">
+        <div className="dashboardHeader__logo">
+          <Link
+            to="/donar-dash"
+            className="logo-main"
+            style={{ cursor: "pointer" }}
+          >
+            <img src={logo} alt="edu logo" />
           </Link>
         </div>
         <ul className="dashboardHeader__routes">
@@ -110,12 +108,12 @@ function DonerLeaders() {
           </li>
 
           <li className="inviteFrineds">
-            <a href="/invite-applicant" >
-              Invite Applicants
-            </a>
+            <a href="/invite-applicant">Invite Applicants</a>
           </li>
           <li className="leaders">
-            <a href="/leaders" className="activeRoute">Leaders</a>
+            <a href="/leaders" className="activeRoute">
+              Leaders
+            </a>
           </li>
         </ul>
         <div className="dashboardHeader__menu">
@@ -183,18 +181,15 @@ function DonerLeaders() {
       <div className="leader_main">
         <h1> Student Leaderboards</h1>
         <div className="lead-p">
-         
           <p>
-          Browse leaderboards to find the boldest students in your region!
-
-
+            Browse leaderboards to find the boldest students in your region!
           </p>
         </div>
       </div>
       <BasicTable />
-      <Footer/>
-        </div>
-    )
+      <Footer />
+    </div>
+  );
 }
 
-export default DonerLeaders
+export default DonerLeaders;
