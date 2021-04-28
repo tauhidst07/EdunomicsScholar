@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import "../styles/landingpage.css";
-import Footer from "./Footer";
-import DonerLanding from "./DonerLanding";
-import boy from "../media/boy.jpeg";
-import girl from "../media/girl.jpg";
+import "../../styles/landingpage.css";
+import Footer from "../Footer";
+import DonerLanding from "../DonerLanding";
+import boy from "../../media/boy.jpeg";
+import girl from "../../media/girl.jpg";
 import { Link, useHistory } from "react-router-dom";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 
 // import Select from "react-select";
-import edu from "../media/edu.png";
+import edu from "../../media/edu.png";
 
 function LandingPage() {
   const history = useHistory();

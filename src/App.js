@@ -1,6 +1,6 @@
 import React from "react";
 import "../src/styles/App.css";
-import LandingPage from "./components/LandingPage";
+import LandingPage from "./components/common/LandingPage";
 import SignUp from "./components/SignUp";
 import SignUpApplicant from "./components/SignUpApplicant";
 import DonerGrantPage from "./components/DonerGrantPage";
