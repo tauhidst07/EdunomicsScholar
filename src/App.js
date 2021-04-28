@@ -33,7 +33,7 @@ import DonarDashboard from "./components/DonarDashboard";
 import DonerProfile from "./components/DonerProfile";
 import CreateScholarship from "./components/CreateScholarship";
 import AllScholarship from "./components/AllScholarship";
-import AllContact from "./components/AllContactUs";
+import AllContact from "./components/common/AllContactUs";
 import AppliedScholarship from "./components/AllApliScholarship";
 import SettingsDoner from "./components/SettingsDoner";
 import ViewScholarship from "./components/ViewScholarship";
