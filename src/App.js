@@ -17,7 +17,7 @@ import ContactUs from "./components/ContactUs";
 import Faq from "./components/Faq";
 import HowItWorks from "./components/HowItWorks";
 import Pricing from "./components/Pricing";
-import Award from "./components/AwardFeatures";
+import Award from "./components/common/AwardFeatures";
 import DonerCredits from "./components/DonerCredits";
 import Careers from "./components/common/Careers";
 import Privacy from "./components/Privacy";
