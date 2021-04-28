@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import logo from "../media/edu.png";
-import gir from "../media/gir.jpeg";
-import boy from "../media/boy.jpeg";
+import logo from "../../media/edu.png";
+import gir from "../../media/gir.jpeg";
+import boy from "../../media/boy.jpeg";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -13,10 +13,10 @@ import {
   useParams,
 } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
-import Footer from "./Footer";
+import Footer from "../Footer";
 import { makeStyles } from "@material-ui/core/styles";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import "../styles/viewscholar.css";
+import "../../styles/viewscholar.css";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";

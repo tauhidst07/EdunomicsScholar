@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from "react";
-import logo from "../media/edu.png";
+import logo from "../../media/edu.png";
 import { makeStyles } from "@material-ui/core/styles";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { useHistory ,Link} from "react-router-dom";
-import "../styles/moreaboutdoner.css";
+import { useHistory, Link } from "react-router-dom";
+import "../../styles/moreaboutdoner.css";
 import PersonIcon from "@material-ui/icons/Person";
-import Footer from "./Footer";
-import scholar from "../media/schola.jpeg";
+import Footer from "../Footer";
+import scholar from "../../media/schola.jpeg";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
-import {useParams} from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
-
-function MoreAboutDoner({match}) {
+function MoreAboutDoner({ match }) {
   const [data, setData] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
   //const { handle } = props.match.params;
-  let {donarId} = useParams();
+  let { donarId } = useParams();
   //console.log(donarId)
 
   const handleClick = (e) => {
@@ -55,15 +54,9 @@ function MoreAboutDoner({match}) {
       response = await response.json();
       setData([response]);
       //console.log(data);
-
     }
     fetchMyApi();
-
-
-
-
   }, []);
-
 
   const useStyles = makeStyles((theme) => ({
     button: {
@@ -74,10 +67,12 @@ function MoreAboutDoner({match}) {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-        <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
+          <Link
+            to="/donar-dash"
+            className="logo-main"
+            style={{ cursor: "pointer" }}
+          >
             <img src={logo} alt="edu logo" />
-
-          
           </Link>
         </div>
         <ul className="dashboardHeader__routes">
@@ -159,25 +154,31 @@ function MoreAboutDoner({match}) {
         </div>
       </div>
 
-     < IconLabelButtons/>
+      <IconLabelButtons />
       <div className="more-donar">
-        <h1>Donor Profile: { data  === 0 ? "" : data[0].name}</h1>
+        <h1>Donor Profile: {data === 0 ? "" : data[0].name}</h1>
         {console.log(data)}
         <p>
-          Scholarships, grants, and award winners for { data  === 0 ? "" : data[0].name}
+          Scholarships, grants, and award winners for{" "}
+          {data === 0 ? "" : data[0].name}
         </p>
       </div>
       <div className="don-details">
         <div className="doner-det">
           <img src={scholar} alt="" />
-          <h1>
-            { data  === 0 ? "" : data[0].name}
-          </h1>
+          <h1>{data === 0 ? "" : data[0].name}</h1>
           <h4 style={{ display: "flex", alignItems: "center" }}>
             <LocationOnIcon />
             N/A
           </h4>
-          <p>Date- { data  === 0 ? "" : data[0].createdOn === undefined ? 'N/A' : data[0].createdOn}</p>
+          <p>
+            Date-{" "}
+            {data === 0
+              ? ""
+              : data[0].createdOn === undefined
+              ? "N/A"
+              : data[0].createdOn}
+          </p>
         </div>
         <div className="doner-right">
           <div className="doner-three">
@@ -190,14 +191,24 @@ function MoreAboutDoner({match}) {
               <p>Total Awards</p>
             </div>
             <div className="part1">
-              <h1>{ data  === 0 ? "" : data[0].createdOn === undefined ? 'N/A' : data[0].createdOn}</h1>
+              <h1>
+                {data === 0
+                  ? ""
+                  : data[0].createdOn === undefined
+                  ? "N/A"
+                  : data[0].createdOn}
+              </h1>
               <p>Joined Edunomics.in</p>
             </div>
           </div>
           <div className="bot-doner">
             <h1>Mission</h1>
             <p>
-              { data  === 0 ? "" : data[0].mission === undefined ? 'N/A' : data[0].mission}
+              {data === 0
+                ? ""
+                : data[0].mission === undefined
+                ? "N/A"
+                : data[0].mission}
             </p>
           </div>
         </div>

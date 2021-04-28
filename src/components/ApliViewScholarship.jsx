@@ -20,14 +20,14 @@ import "../styles/viewscholar.css";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
-import MoreAboutDoner from "./MoreAboutDoner";
+import MoreAboutDoner from "./donar/MoreAboutDoner";
 import DashboardHeader from "./DashboardHeader";
 import jwt from "jsonwebtoken";
 import axios from "axios";
 
 function ApliViewScholarship() {
   let { scholarParams } = useParams();
-  console.log(scholarParams)
+  console.log(scholarParams);
 
   let encodedToken = localStorage.getItem("auth-token");
 
@@ -48,13 +48,15 @@ function ApliViewScholarship() {
 
   useEffect(() => {
     axios
-      .get(`https://bckendapi.herokuapp.com/api/donar/oneScholarship/${scholarParams}`)
-      .then(res => {
+      .get(
+        `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${scholarParams}`
+      )
+      .then((res) => {
         res = res.data;
-        setData(res)
-        console.log(res)
+        setData(res);
+        console.log(res);
       })
-      .catch(err => console.log(err))
+      .catch((err) => console.log(err));
 
     async function fetchMyApi() {
       let response = await fetch(
@@ -75,7 +77,6 @@ function ApliViewScholarship() {
         console.log(appliId, false);
       }
 */
-
     }
     //fetchMyApi();
   }, []);
@@ -168,7 +169,9 @@ function ApliViewScholarship() {
               {data === 0 ? "" : data.applicants.awardAmount}
               <span>OPEN</span>
             </h1>
-            <p>{/*data === 0 ? "" : data[0].scholarships.winnersLimit*/} winner</p>
+            <p>
+              {/*data === 0 ? "" : data[0].scholarships.winnersLimit*/} winner
+            </p>
           </div>
           <div onClick={applySchoarship}>
             <button className="apply-sc" disabled={applied}>
