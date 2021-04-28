@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/notfound.css";
-import not from "../media/not.gif";
+import "../../styles/notfound.css";
+import not from "../../media/not.gif";
 
 function NotFound() {
   return (

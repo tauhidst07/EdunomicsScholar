@@ -49,7 +49,7 @@ import ApliLeaders from "./components/ApliLeaders";
 import DonerLeaders from "./components/DonerLeaders";
 import { MyIdProvider } from "./components/context/MyId";
 import InviteFriendApli from "./components/InviteFriendApli";
-import NotFound from "./components/NotFound";
+import NotFound from "./components/common/NotFound";
 import ApliViewScholarship from "./components/ApliViewScholarship";
 import ApliMoreAboutDoner from "./components/ApliMoreAboutDoner";
 import SuperAdminDashboard from "./components/SuperAdminDashboard";
