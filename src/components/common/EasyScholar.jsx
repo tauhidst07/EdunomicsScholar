@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import boy from "../media/boy.jpeg";
-import "../styles/easy.css";
+import Header from "../Header";
+import Footer from "../Footer";
+import boy from "../../media/boy.jpeg";
+import "../../styles/easy.css";
 import SchlorBox from "./SchlorBox";
 
 function EasyScholar() {

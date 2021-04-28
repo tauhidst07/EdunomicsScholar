@@ -1,5 +1,5 @@
 import React from "react";
-import boy from "../media/boy.jpeg";
+import boy from "../../media/boy.jpeg";
 
 function SchlorBox() {
   return (
