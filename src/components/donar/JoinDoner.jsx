@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import edu from "../media/edu.png";
-import "../styles/joindoner.css";
+import edu from "../../media/edu.png";
+import "../../styles/joindoner.css";
 
 function JoinDoner() {
   return (

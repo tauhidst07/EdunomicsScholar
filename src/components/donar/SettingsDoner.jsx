@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import TextField from "@material-ui/core/TextField";
 
-import logo from "../media/edu.png";
+import logo from "../../media/edu.png";
 import RoomIcon from "@material-ui/icons/Room";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
-import "../styles/settingdonar.css";
-import ContactInfoUpdate from "./ContactInfoUpdate";
+import "../../styles/settingdonar.css";
+import ContactInfoUpdate from "../ContactInfoUpdate";
 
 function SettingsDoner() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -60,10 +60,12 @@ function SettingsDoner() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-        <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
+          <Link
+            to="/donar-dash"
+            className="logo-main"
+            style={{ cursor: "pointer" }}
+          >
             <img src={logo} alt="edu logo" />
-
-          
           </Link>
         </div>
         <ul className="dashboardHeader__routes">

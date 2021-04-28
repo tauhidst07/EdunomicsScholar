@@ -1,7 +1,7 @@
 import React from "react";
-import edu from "../media/edu.png";
+import edu from "../../media/edu.png";
 import { Link, useHistory } from "react-router-dom";
-import "../styles/createschlor.css";
+import "../../styles/createschlor.css";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 import { makeStyles } from "@material-ui/core/styles";

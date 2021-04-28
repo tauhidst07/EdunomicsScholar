@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "../styles/leaders.css";
+import "../../styles/leaders.css";
 // import DashboardHeader from "./DashboardHeader";
-import Footer from "./Footer";
-import logo from "../media/edu.png";
+import Footer from "../Footer";
+import logo from "../../media/edu.png";
 import { Link, useHistory } from "react-router-dom";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
