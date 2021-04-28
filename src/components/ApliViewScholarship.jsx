@@ -254,7 +254,7 @@ function ApliViewScholarship() {
           </div>
         </div>
       </div>
-      <div className="app-down">
+      {/* <div className="app-down">
         <h1>Scholarship application</h1>
         <p>ESSAY TOPIC</p>
         <h2>
@@ -263,7 +263,29 @@ function ApliViewScholarship() {
           education journey?
         </h2>
         <h3>400–600 words</h3>
+      </div> */}
+      <div className="mind">
+        <h1 style={{ marginLeft: ".1rem" }}>Question 1 to Applicant</h1>
+        <input
+          className="u-input"
+          type="text"
+          name="question1"
+          // ref={register}
+          placeholder="Answer 1"
+        />
       </div>
+      <div className="mind">
+        <h1 style={{ marginLeft: ".1rem" }}>Question 2 to Applicant</h1>
+        <input
+          style={{ marginBottom: "2rem" }}
+          className="u-input"
+          type="text"
+          name="question1"
+          // ref={register}
+          placeholder="Answer 2"
+        />
+      </div>
+      <Footer />
     </div>
   );
 }
