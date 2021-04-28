@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/any.css";
+import "../../styles/any.css";
 import { Link } from "react-router-dom";
 
 function Anyque() {

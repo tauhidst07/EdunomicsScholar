@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 // import axios from "axios";
-import Footer from "./Footer";
-import boy from "../media/boy.jpeg";
-import "../styles/allscholar.css";
-import logo from "../media/edu.png";
+import Footer from "../Footer";
+import boy from "../../media/boy.jpeg";
+import "../../styles/allscholar.css";
+import logo from "../../media/edu.png";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { Link,useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import PersonIcon from "@material-ui/icons/Person";
 import LocalConvenienceStoreIcon from "@material-ui/icons/LocalConvenienceStore";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
@@ -15,8 +15,6 @@ import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function AllScholarship() {
- 
-
   const [loading, setLoading] = useState(true);
   //const [error, setError] = useState("");
   const [data, setData] = useState(0);
@@ -31,17 +29,15 @@ function AllScholarship() {
   };
 
   useEffect(() => {
-   
     async function fetchMyApi() {
       let response = await fetch(
         "https://bckendapi.herokuapp.com/api/applicant/allScholarships"
       );
       response = await response.json();
       setData([response]);
-      setLoading(false)
-      console.log(data)
+      setLoading(false);
+      console.log(data);
     }
-
 
     fetchMyApi();
   }, [data]);
@@ -49,10 +45,12 @@ function AllScholarship() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-          <Link to="/donar-dash" className="logo-main" style={{ cursor: "pointer" }}>
+          <Link
+            to="/donar-dash"
+            className="logo-main"
+            style={{ cursor: "pointer" }}
+          >
             <img src={logo} alt="edu logo" />
-
-          
           </Link>
         </div>
         <ul className="dashboardHeader__routes">
@@ -135,104 +133,101 @@ function AllScholarship() {
           </div>
         </div>
       </div>
-      {loading ? <div style={{textAlign:"center",alignItems:"center"}}><Loader type="ThreeDots" 
-        color="grey"
-        height={100}
-        width={100}/></div> : <div style={{position:"relative"}}>
-          <div><h1 style={{ marginTop: "2rem", textAlign: "center" }}>
-        scholarships {data === 0 ? 0 : data[0].count}</h1>
-         {data === 0
-        ? console.log("not fetched")
-        : data[0].scholarships.map((e) => (
-            <div key={e._id} className="main-boxshadow ">
-              <div className="sc-box ">
-                <img src={boy} alt="st" />
-                <div className="sc-head">
-                  <h3>{e.name}</h3>
-                  <span>Funded by</span>
-                  <p>
-                    Become eligible for this scholarship by showcasing that you
-                    know how to navigate your student loan options.
-                  </p>
-                </div>
+      {loading ? (
+        <div style={{ textAlign: "center", alignItems: "center" }}>
+          <Loader type="ThreeDots" color="grey" height={100} width={100} />
+        </div>
+      ) : (
+        <div style={{ position: "relative" }}>
+          <div>
+            <h1 style={{ marginTop: "2rem", textAlign: "center" }}>
+              scholarships {data === 0 ? 0 : data[0].count}
+            </h1>
+            {data === 0
+              ? console.log("not fetched")
+              : data[0].scholarships.map((e) => (
+                  <div key={e._id} className="main-boxshadow ">
+                    <div className="sc-box ">
+                      <img src={boy} alt="st" />
+                      <div className="sc-head">
+                        <h3>{e.name}</h3>
+                        <span>Funded by</span>
+                        <p>
+                          Become eligible for this scholarship by showcasing
+                          that you know how to navigate your student loan
+                          options.
+                        </p>
+                      </div>
 
-                <div className="apply">
-                  <Link
-                    className="apply-bt1"
-                    to={`/view-scholarship/${e._id}&${e.createdBy}`}
+                      <div className="apply">
+                        <Link
+                          className="apply-bt1"
+                          to={`/view-scholarship/${e._id}&${e.createdBy}`}
+                        >
+                          View scholarship
+                        </Link>
+                        <button className="apply-bt2">Contribute</button>
+                      </div>
+                    </div>
 
-                  >
-                    View scholarship
-                  </Link>
-                  <button className="apply-bt2">Contribute</button>
-                </div>
-              </div>
-
-              <div className="elgi-field sc-box">
-                <div className="field-el">
-                  <h2>
-                    <LocalConvenienceStoreIcon />
-                    Education level
-                  </h2>
-                  <p>Any</p>
-                </div>
-                <div className="field-el">
-                  <h2>
-                    <AttachMoneyIcon />
-                    Amount
-                  </h2>
-                  <p>{e.awardAmount}</p>
-                </div>
-                <div className="field-el">
-                  <h2>
-                    <CardGiftcardIcon /> Scholarships awarded
-                  </h2>
-                  <p>{e.winnersLimit}</p>
-                </div>
-                <div className="field-el">
-                  <h2>
-                    <CakeIcon />
-                    Deadline
-                  </h2>
-                  <p>
-                    <span>
-                      {
-                        new Date(e.awardDate.toString())
-                          .toString()
-                          .split(" ")[1]
-                      }
-                      -
-                    </span>
-                    <span style={{ marginLeft: ".1rem" }}>
-                      {
-                        new Date(e.awardDate.toString())
-                          .toString()
-                          .split(" ")[2]
-                      }
-                    </span>
-                    -
-                    <span style={{ marginLeft: ".1rem" }}>
-                      {
-                        new Date(e.awardDate.toString())
-                          .toString()
-                          .split(" ")[3]
-                      }
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-      </div>
-      
-        
-     
-     
-      </div>}
-      
-      
-
-    
+                    <div className="elgi-field sc-box">
+                      <div className="field-el">
+                        <h2>
+                          <LocalConvenienceStoreIcon />
+                          Education level
+                        </h2>
+                        <p>Any</p>
+                      </div>
+                      <div className="field-el">
+                        <h2>
+                          <AttachMoneyIcon />
+                          Amount
+                        </h2>
+                        <p>{e.awardAmount}</p>
+                      </div>
+                      <div className="field-el">
+                        <h2>
+                          <CardGiftcardIcon /> Scholarships awarded
+                        </h2>
+                        <p>{e.winnersLimit}</p>
+                      </div>
+                      <div className="field-el">
+                        <h2>
+                          <CakeIcon />
+                          Deadline
+                        </h2>
+                        <p>
+                          <span>
+                            {
+                              new Date(e.awardDate.toString())
+                                .toString()
+                                .split(" ")[1]
+                            }
+                            -
+                          </span>
+                          <span style={{ marginLeft: ".1rem" }}>
+                            {
+                              new Date(e.awardDate.toString())
+                                .toString()
+                                .split(" ")[2]
+                            }
+                          </span>
+                          -
+                          <span style={{ marginLeft: ".1rem" }}>
+                            {
+                              new Date(e.awardDate.toString())
+                                .toString()
+                                .split(" ")[3]
+                            }
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>

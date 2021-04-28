@@ -1,24 +1,25 @@
 import React, { useState } from "react";
+import "../../styles/signup.css";
 import { Link, useHistory } from "react-router-dom";
-import { useForm } from "react-hook-form";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
+import edu from "../../media/edu.png";
+import { useForm } from "react-hook-form";
+
 import axios from "axios";
-import edu from "../media/edu.png";
 
-function SignUpApplicant() {
+function SignUp() {
   const history = useHistory();
-
   const { register, handleSubmit } = useForm();
   const [typePass, setTypePass] = useState(false);
 
   const onSubmit = (data) => {
     // console.log(data);
     axios
-      .post("https://bckendapi.herokuapp.com/api/user/signup", data)
+      .post("https://bckendapi.herokuapp.com/api/user/signup-donar", data)
       .then(function (response) {
         console.log(response);
-        history.push("/loginApli");
+        history.push("/login");
       })
       .catch(function (error) {
         console.log(error);
@@ -59,51 +60,50 @@ function SignUpApplicant() {
             ></path>
           </svg>
 
-          <Link to="/loginApli" className="already">
+          <Link to="/login" className="already">
             Already have an account?
           </Link>
         </div>
       </nav>
 
       <div className="loginbox">
-        <h1 className="welcome">Sign Up as an Applicant</h1>
-
+        <h1 className="welcome">Sign Up as a Donor</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="uname">Name</h2>
           <input
             ref={register}
-            name="name"
             className="u-input"
             type="text"
-            data-test="username"
+            name="name"
+            data-test="name"
             placeholder="Name"
           />
           <h2 className="uname">Username</h2>
           <input
-            ref={register}
-            name="username"
             className="u-input"
+            ref={register}
             type="text"
             data-test="username"
+            name="username"
             placeholder="username"
           />
           <h2 className="uname">Email</h2>
           <input
-            ref={register}
-            name="email"
             className="u-input"
+            ref={register}
             type="text"
-            data-test="username"
+            name="email"
+            data-test="email"
             placeholder="Email"
           />
           <h2 className="pass">Password</h2>
           <div className="showhide">
             <input
-              ref={register}
-              name="password"
               className="u-input"
+              ref={register}
               type={typePass ? "text" : "password"}
               data-test="password"
+              name="password"
               placeholder="Password"
             />
             <small onClick={() => setTypePass(!typePass)}>
@@ -111,60 +111,13 @@ function SignUpApplicant() {
             </small>
           </div>
 
-          <h2 className="uname">DOB</h2>
-          <input
-            ref={register}
-            name="dob"
-            className="u-input"
-            type="date"
-            data-test="username"
-            placeholder="Date of birth"
-          />
-          <h2 className="uname">Gender</h2>
-          <input
-            ref={register}
-            name="gender"
-            className="u-input"
-            type="text"
-            data-test="username"
-            placeholder="Gender"
-          />
-          <h2 className="uname">Bio</h2>
-          <input
-            ref={register}
-            name="bio"
-            className="u-input"
-            type="text"
-            data-test="username"
-            placeholder="Bio"
-          />
-          <h2 className="uname">Location</h2>
-          <input
-            ref={register}
-            name="location"
-            className="u-input"
-            type="text"
-            data-test="username"
-            placeholder="Location"
-          />
-          <h2 className="uname">Address</h2>
-          <input
-            ref={register}
-            name="address"
-            className="u-input"
-            type="text"
-            data-test="username"
-            placeholder="Address"
-          />
-          {/* <p className="forgot">forgot password ?</p> */}
-          <button className="signin">Sign Up</button>
-          {/* <p className="dont">Don't have an account?</p> */}
+          <button className="signin" style={{ marginTop: "1rem" }}>
+            Sign Up
+          </button>
+
           <div className="option-signup" style={{ marginTop: "2rem" }}>
-            <Link to="/signup" className="opt1">
-              Sign up as a Donor
-            </Link>
-            <Link to="/loginApli" className="opt1">
-              Sign up as an Applicant
+            <Link to="/login" className="opt1">
+              Login as a Donor
             </Link>
           </div>
         </form>
@@ -173,4 +126,4 @@ function SignUpApplicant() {
   );
 }
 
-export default SignUpApplicant;
+export default SignUp;

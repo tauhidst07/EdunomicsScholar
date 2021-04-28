@@ -5,7 +5,7 @@ import "../../styles/dashboardHeader.css";
 
 import Header from "../Header";
 import Footer from "../Footer";
-import Anyque from "../Anyque";
+import Anyque from "./Anyque";
 import { Link } from "react-router-dom";
 import pic1 from "../../media/award-1.png";
 import pic2 from "../../media/award-2.png";

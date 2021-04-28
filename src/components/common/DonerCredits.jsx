@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Header";
 import Footer from "../Footer";
-import Anyque from "../Anyque";
+import Anyque from "./Anyque";
 import "../../styles/landingpage.css";
 import girl from "../../media/stud.jpg";
 

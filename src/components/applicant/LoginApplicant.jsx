@@ -1,10 +1,10 @@
-import Header from "./Header";
+import Header from "../Header";
 import React, { useState } from "react";
 import jwt from "jsonwebtoken";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 
-import "../styles/login.css";
+import "../../styles/login.css";
 
 import { Link, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
