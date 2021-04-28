@@ -85,7 +85,7 @@ function CreateScholarship() {
     data.essayNeeded = false;
     data.createdBy = myId._id;
 
-    console.log(data);
+    console.log("ghghgd", data);
 
     axios
       .post("https://bckendapi.herokuapp.com/api/donar/scholarship", data)
