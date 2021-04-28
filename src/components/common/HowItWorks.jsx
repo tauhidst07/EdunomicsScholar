@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import HowItWorksHeader from "./HowItWorksHeader";
-import "../styles/howitworks.css";
-import "../styles/dashboardHeader.css";
+import HowItWorksHeader from "../HowItWorksHeader";
+import "../../styles/howitworks.css";
+import "../../styles/dashboardHeader.css";
 
-import Header from "./Header";
-import Footer from "./Footer";
-import Anyque from "./Anyque";
+import Header from "../Header";
+import Footer from "../Footer";
+import Anyque from "../Anyque";
 import { Link } from "react-router-dom";
-import pic1 from "../media/award-1.png";
-import pic2 from "../media/award-2.png";
-import pic3 from "../media/award-3.png";
+import pic1 from "../../media/award-1.png";
+import pic2 from "../../media/award-2.png";
+import pic3 from "../../media/award-3.png";
 
 function HowItWorks() {
   const [createAward, setCreateAward] = useState(true);

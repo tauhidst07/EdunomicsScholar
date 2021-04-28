@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../Header";
+import Footer from "../Footer";
 
 function ReseacrhReport() {
   return (
@@ -21,8 +21,8 @@ function ReseacrhReport() {
           the country.
           <br />
           <br /> To help understand the problem in more detail, we’re sharing
-          the results of our proprietary research with pride.edunomics.in members, based
-          on over 122387 loans reported.
+          the results of our proprietary research with pride.edunomics.in
+          members, based on over 122387 loans reported.
           <br />
           <br /> Do women or men have more student debt? Which states have the
           highest debt per student? Which private lenders offer the lowest
@@ -37,9 +37,9 @@ function ReseacrhReport() {
           their decision-making processes for borrowing, their plans for
           repayment, and their top questions about their loans.
           <br />
-          <br /> We then reviewed survey data collected from 122387 pride.edunomics.in
-          members to surface patterns in student loans. Our survey data
-          included:
+          <br /> We then reviewed survey data collected from 122387
+          pride.edunomics.in members to surface patterns in student loans. Our
+          survey data included:
         </p>
         <li>
           Detailed loan data, including initial loan amount, principal
