@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Header from "./Header";
-import Footer from "./Footer";
-import SchlorBox from "./SchlorBox";
-import boy from "../media/boy.jpeg";
+import Header from "../Header";
+import Footer from "../Footer";
+import SchlorBox from "../SchlorBox";
+import boy from "../../media/boy.jpeg";
 
 function ScholarshipforWomen() {
   const [loading, setLoading] = useState(true);

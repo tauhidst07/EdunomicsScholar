@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../Header";
+import Footer from "../Footer";
 
 function TermsOfUse() {
   return (
@@ -9,17 +9,18 @@ function TermsOfUse() {
       <div className="pri-main">
         <h1>Terms of Use</h1>
         <p>
-          This website is operated by pride.edunomics.in, Inc (“Bold”). Throughout this
-          website (the “site”), the terms “we”, “us” and “our” refer to Bold.
-          Bold offers this site, including all information, tools and services
-          available from this site to you (the “Service”), conditioned upon your
-          acceptance of all terms, conditions, policies and notices stated here
-          (the “Terms”). If you do not agree to these Terms, you must not access
-          the site nor do you have the right to use our Service. We reserve the
-          right to update, change, or replace any part of these Terms by posting
-          updates and/or changes here at which time they shall be binding on
-          you. The headings used in this agreement are included for convenience
-          only and will not limit or otherwise affect these Terms.
+          This website is operated by pride.edunomics.in, Inc (“Bold”).
+          Throughout this website (the “site”), the terms “we”, “us” and “our”
+          refer to Bold. Bold offers this site, including all information, tools
+          and services available from this site to you (the “Service”),
+          conditioned upon your acceptance of all terms, conditions, policies
+          and notices stated here (the “Terms”). If you do not agree to these
+          Terms, you must not access the site nor do you have the right to use
+          our Service. We reserve the right to update, change, or replace any
+          part of these Terms by posting updates and/or changes here at which
+          time they shall be binding on you. The headings used in this agreement
+          are included for convenience only and will not limit or otherwise
+          affect these Terms.
         </p>
       </div>
       <div className="pri-main2">
@@ -42,8 +43,8 @@ function TermsOfUse() {
           2. ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION
         </h2>
         <p>
-          Although edunomics attempts to provide accurate product descriptions and
-          other information, we are not responsible if information made
+          Although edunomics attempts to provide accurate product descriptions
+          and other information, we are not responsible if information made
           available on the site is not accurate, complete or current. The
           material on the site is provided for general information only and
           should not be relied upon or used as the sole basis for making
@@ -95,27 +96,27 @@ function TermsOfUse() {
           designed to provide a means for edunomics to generate revenue by
           advertising and linking to those affiliates’ products or services.
           When such affiliate relationships exist and there is an opportunity
-          for edunomics to be compensated for referring you to the affiliate, edunomics
-          will clearly and conspicuously disclose that to you.
+          for edunomics to be compensated for referring you to the affiliate,
+          edunomics will clearly and conspicuously disclose that to you.
         </p>
         <h2>6. DISCLAIMER OF WARRANTIES; LIMITATION OF LIABILITY</h2>
         <p>
           We will share your information with scholarship providers, applicable
-          academic institutions, and as otherwise necessary to provide the edunomics
-          service to you. By using the edunomics service, you acknowledge, confirm,
-          and consent to: (i) edunomics’s generation of revenue from its partnerships
-          with scholarship providers, applicable academic institutions, and
-          other third parties who are necessary for edunomics to provide its services
-          to you, and (ii) edunomics’s use of your information and data on edunomics’s
-          platform in order to do so. This includes third party processors
-          (“Sub-processors”) which generally refers to technology vendors that
-          need access to and use of your personal information to give us
-          additional personal data about you, and to perform analytics and other
-          work that we may need to outsource. These Sub-processors are bound by
-          law and/or contract to protect the confidentiality and security of
-          your personal information. They only process your personal information
-          to provide requested services for us, and only act on our documented
-          instructions. <br />
+          academic institutions, and as otherwise necessary to provide the
+          edunomics service to you. By using the edunomics service, you
+          acknowledge, confirm, and consent to: (i) edunomics’s generation of
+          revenue from its partnerships with scholarship providers, applicable
+          academic institutions, and other third parties who are necessary for
+          edunomics to provide its services to you, and (ii) edunomics’s use of
+          your information and data on edunomics’s platform in order to do so.
+          This includes third party processors (“Sub-processors”) which
+          generally refers to technology vendors that need access to and use of
+          your personal information to give us additional personal data about
+          you, and to perform analytics and other work that we may need to
+          outsource. These Sub-processors are bound by law and/or contract to
+          protect the confidentiality and security of your personal information.
+          They only process your personal information to provide requested
+          services for us, and only act on our documented instructions. <br />
           <br /> For example, we use Google Analytics to help us understand how
           our customers use the Site. You can read more about how Google uses
           your information here. You can also opt-out of Google Analytics here.{" "}
@@ -128,10 +129,11 @@ function TermsOfUse() {
           only shared in an aggregated and anonymized manner. <br />
           <br /> Additionally, if you indicate you are interested in particular
           educational institutions in your profile or via other means when using
-          edunomics’s platform, edunomics may share your data with those educational
-          institutions from time to time. If you do not want edunomics to share your
-          data with those educational institutions at all, please let us know by
-          contacting privacy@pride.edunomics.in. <br />
+          edunomics’s platform, edunomics may share your data with those
+          educational institutions from time to time. If you do not want
+          edunomics to share your data with those educational institutions at
+          all, please let us know by contacting privacy@pride.edunomics.in.{" "}
+          <br />
           <br />
           Finally, we may also share your information to comply with applicable
           laws and regulations, to respond to a subpoena, search warrant or
@@ -152,28 +154,29 @@ function TermsOfUse() {
         <h2>11. GOVERNING LAW</h2>
         <p>
           The Site and the Services we offer through it are U.S. based and are
-          controlled, operated and administered by edunomics and its Sub-processors
-          from offices and servers within the United States. The Site and this
-          Privacy Policy is strictly intended for audiences located in the
-          United States and are provided in accordance with and subject to
-          applicable United States law. If you decide to continue to access our
-          Site from your location outside the United States, you hereby agree
-          that your use of the Site or any services we may offer are subject to
-          this Policy and your personal information will be transferred or
-          processed in the United States, and you may have fewer privacy rights
-          and protections than you have in your country of origin.
+          controlled, operated and administered by edunomics and its
+          Sub-processors from offices and servers within the United States. The
+          Site and this Privacy Policy is strictly intended for audiences
+          located in the United States and are provided in accordance with and
+          subject to applicable United States law. If you decide to continue to
+          access our Site from your location outside the United States, you
+          hereby agree that your use of the Site or any services we may offer
+          are subject to this Policy and your personal information will be
+          transferred or processed in the United States, and you may have fewer
+          privacy rights and protections than you have in your country of
+          origin.
         </p>
         <h2>12. PERSONAL INFORMATION</h2>
         <p>
           For more information about our privacy practices, if you have
           questions, or if you would like to make a complaint, please contact us
-          by e-mail at privacy@pride.edunomics.in or by mail using the details provided
-          below: <br />
+          by e-mail at privacy@pride.edunomics.in or by mail using the details
+          provided below: <br />
           <br />
           Effective Date: January 18, 2021.
           <br />
-          <br /> pride.edunomics.in, Inc., 133 Kearny #400, San Francisco CA 94108 United
-          States
+          <br /> pride.edunomics.in, Inc., 133 Kearny #400, San Francisco CA
+          94108 United States
         </p>
       </div>
       <Footer />
