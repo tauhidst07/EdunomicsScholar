@@ -5,17 +5,19 @@ import VisibilityIcon from "@material-ui/icons/Visibility";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import edu from "../../media/edu.png";
 import { useForm } from "react-hook-form";
-import validate from "./validationDonor";
+import WarningIcon from "@material-ui/icons/Warning";
+// import validate from "./validationDonor";
 
 import axios from "axios";
 
 function SignUp() {
   const history = useHistory();
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, errors } = useForm();
   const [typePass, setTypePass] = useState(false);
-  const [errors, setErrors] = useState({});
+  // const [errors, setErrors] = useState({});
 
   const onSubmit = (data) => {
+    // setErrors(validate());
     // console.log(data);
     axios
       .post("https://bckendapi.herokuapp.com/api/user/signup-donar", data)
@@ -73,41 +75,201 @@ function SignUp() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="uname">Name</h2>
           <input
-            ref={register}
+            ref={register({ required: true, maxLength: 10 })}
             className="u-input"
             type="text"
             name="name"
             data-test="name"
             placeholder="Name"
           />
+          {errors.name && errors.name.type === "required" && (
+            <p
+              style={{
+                marginTop: ".4rem",
+                color: "red",
+                fontSize: ".7rem",
+                fontWeight: 700,
+                textAlign: "center",
+                display: "flex",
+              }}
+            >
+              <WarningIcon
+                style={{
+                  color: "red",
+                  fontSize: ".7rem",
+                  textAlign: "center",
+                  marginRight: ".3rem",
+                }}
+              />
+              This name field is required
+            </p>
+          )}
+          {errors.name && errors.name.type === "maxLength" && (
+            <p
+              style={{
+                marginTop: ".4rem",
+                color: "red",
+                fontSize: ".7rem",
+                fontWeight: 700,
+                textAlign: "center",
+                display: "flex",
+              }}
+            >
+              {" "}
+              <WarningIcon
+                style={{
+                  color: "red",
+                  fontSize: ".7rem",
+                  textAlign: "center",
+                  marginRight: ".3rem",
+                }}
+              />{" "}
+              Your input exceed maximum length
+            </p>
+          )}
           <h2 className="uname">Username</h2>
           <input
             className="u-input"
-            ref={register}
+            ref={register({ required: true, maxLength: 10 })}
             type="text"
             data-test="username"
             name="username"
             placeholder="username"
           />
+          {errors.username && errors.username.type === "required" && (
+            <p
+              style={{
+                marginTop: ".4rem",
+                color: "red",
+                fontSize: ".7rem",
+                fontWeight: 700,
+                textAlign: "center",
+                display: "flex",
+              }}
+            >
+              {" "}
+              <WarningIcon
+                style={{
+                  color: "red",
+                  fontSize: ".7rem",
+                  textAlign: "center",
+                  marginRight: ".3rem",
+                }}
+              />
+              This name field is required
+            </p>
+          )}
+          {errors.username && errors.username.type === "maxLength" && (
+            <p
+              style={{
+                marginTop: ".4rem",
+                color: "red",
+                fontSize: ".7rem",
+                fontWeight: 700,
+                textAlign: "center",
+                display: "flex",
+              }}
+            >
+              {" "}
+              <WarningIcon
+                style={{
+                  color: "red",
+                  fontSize: ".7rem",
+                  textAlign: "center",
+                  marginRight: ".3rem",
+                }}
+              />
+              Your input exceed maximum length
+            </p>
+          )}
           <h2 className="uname">Email</h2>
           <input
             className="u-input"
-            ref={register}
+            ref={register({ required: true, pattern: /^\S+@\S+$/i })}
             type="text"
             name="email"
             data-test="email"
             placeholder="Email"
           />
+          {errors.email && (
+            <p
+              style={{
+                marginTop: ".4rem",
+                color: "red",
+                fontSize: ".7rem",
+                fontWeight: 700,
+                textAlign: "center",
+                display: "flex",
+              }}
+            >
+              {" "}
+              <WarningIcon
+                style={{
+                  color: "red",
+                  fontSize: ".7rem",
+                  textAlign: "center",
+                  marginRight: ".3rem",
+                }}
+              />{" "}
+              This email field is required
+            </p>
+          )}
           <h2 className="pass">Password</h2>
           <div className="showhide">
             <input
               className="u-input"
-              ref={register}
+              ref={register({ required: true, minLength: 6 })}
               type={typePass ? "text" : "password"}
               data-test="password"
               name="password"
               placeholder="Password"
             />
+            {errors.password && errors.password.type === "required" && (
+              <p
+                style={{
+                  marginTop: ".4rem",
+                  color: "red",
+                  fontSize: ".7rem",
+                  fontWeight: 700,
+                  textAlign: "center",
+                  display: "flex",
+                }}
+              >
+                {" "}
+                <WarningIcon
+                  style={{
+                    color: "red",
+                    fontSize: ".7rem",
+                    textAlign: "center",
+                    marginRight: ".3rem",
+                  }}
+                />
+                This name field is required
+              </p>
+            )}
+            {errors.password && errors.password.type === "minLength" && (
+              <p
+                style={{
+                  marginTop: ".4rem",
+                  color: "red",
+                  fontSize: ".7rem",
+                  fontWeight: 700,
+                  textAlign: "center",
+                  display: "flex",
+                }}
+              >
+                {" "}
+                <WarningIcon
+                  style={{
+                    color: "red",
+                    fontSize: ".7rem",
+                    textAlign: "center",
+                    marginRight: ".3rem",
+                  }}
+                />
+                Password must have at least 6 characters
+              </p>
+            )}
             <small onClick={() => setTypePass(!typePass)}>
               {typePass ? <VisibilityOffIcon /> : <VisibilityIcon />}
             </small>
