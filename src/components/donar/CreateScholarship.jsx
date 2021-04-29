@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
+// import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
 import axios from "axios";
 import jwt from "jsonwebtoken";
@@ -18,16 +18,21 @@ import Select from "react-select";
 import { useForm } from "react-hook-form";
 
 function Multidrop() {
-  const eduName = [
-    { value: 1, edu: "High School" },
-    { value: 2, edu: "Graduate" },
-    { value: 3, edu: "Post Graduate" },
+  var eduName = [
+    { value: 1, label: "High School" },
+    { value: 2, label: "Graduate" },
+    { value: 3, label: "Post Graduate" },
   ];
 
-  const [options] = useState(data);
+  var [displayValue, getValue] = useState([]);
+  var dbHandle = (e) => {
+    getValue(Array.isArray(e) ? e.map((x) => x.label) : []);
+    console.log(displayValue);
+  };
   return (
-    <div>
-      <Select options={eduName}></Select>
+    <div style={{ width: "40%", alignItems: "center" }}>
+      <Select isMulti options={eduName} onChange={dbHandle}></Select>
+      {displayValue}
     </div>
     // <div style={{ alignItems: "center", display: "flex" }}>
     //   <div className="mldrop">
