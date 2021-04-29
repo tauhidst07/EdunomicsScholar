@@ -83,16 +83,7 @@ function SignUp() {
             placeholder="Name"
           />
           {errors.name && errors.name.type === "required" && (
-            <p
-              style={{
-                marginTop: ".4rem",
-                color: "red",
-                fontSize: ".7rem",
-                fontWeight: 700,
-                textAlign: "center",
-                display: "flex",
-              }}
-            >
+            <p className="validinputs">
               <WarningIcon
                 style={{
                   color: "red",
@@ -105,16 +96,7 @@ function SignUp() {
             </p>
           )}
           {errors.name && errors.name.type === "maxLength" && (
-            <p
-              style={{
-                marginTop: ".4rem",
-                color: "red",
-                fontSize: ".7rem",
-                fontWeight: 700,
-                textAlign: "center",
-                display: "flex",
-              }}
-            >
+            <p className="validinputs">
               {" "}
               <WarningIcon
                 style={{
@@ -137,16 +119,7 @@ function SignUp() {
             placeholder="username"
           />
           {errors.username && errors.username.type === "required" && (
-            <p
-              style={{
-                marginTop: ".4rem",
-                color: "red",
-                fontSize: ".7rem",
-                fontWeight: 700,
-                textAlign: "center",
-                display: "flex",
-              }}
-            >
+            <p className="validinputs">
               {" "}
               <WarningIcon
                 style={{
@@ -160,16 +133,7 @@ function SignUp() {
             </p>
           )}
           {errors.username && errors.username.type === "maxLength" && (
-            <p
-              style={{
-                marginTop: ".4rem",
-                color: "red",
-                fontSize: ".7rem",
-                fontWeight: 700,
-                textAlign: "center",
-                display: "flex",
-              }}
-            >
+            <p className="validinputs">
               {" "}
               <WarningIcon
                 style={{
@@ -192,16 +156,7 @@ function SignUp() {
             placeholder="Email"
           />
           {errors.email && (
-            <p
-              style={{
-                marginTop: ".4rem",
-                color: "red",
-                fontSize: ".7rem",
-                fontWeight: 700,
-                textAlign: "center",
-                display: "flex",
-              }}
-            >
+            <p className="validinputs">
               {" "}
               <WarningIcon
                 style={{
@@ -225,16 +180,7 @@ function SignUp() {
               placeholder="Password"
             />
             {errors.password && errors.password.type === "required" && (
-              <p
-                style={{
-                  marginTop: ".4rem",
-                  color: "red",
-                  fontSize: ".7rem",
-                  fontWeight: 700,
-                  textAlign: "center",
-                  display: "flex",
-                }}
-              >
+              <p className="validinputs">
                 {" "}
                 <WarningIcon
                   style={{
@@ -248,16 +194,7 @@ function SignUp() {
               </p>
             )}
             {errors.password && errors.password.type === "minLength" && (
-              <p
-                style={{
-                  marginTop: ".4rem",
-                  color: "red",
-                  fontSize: ".7rem",
-                  fontWeight: 700,
-                  textAlign: "center",
-                  display: "flex",
-                }}
-              >
+              <p className="validinputs">
                 {" "}
                 <WarningIcon
                   style={{
