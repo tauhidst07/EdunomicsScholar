@@ -13,7 +13,6 @@
     "chokidar": "^2.1.8",
     "formik": "^2.2.6",
     "jsonwebtoken": "^8.5.1",
-    "multiselect-react-dropdown": "^1.6.11",
     "react": "^16.13.1",
     "react-chat-widget": "^3.0.5",
     "react-date-picker": "^8.1.0",
