@@ -13,14 +13,15 @@ import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
 import axios from "axios";
 import jwt from "jsonwebtoken";
+import Select from "react-select";
 
 import { useForm } from "react-hook-form";
 
 function Multidrop() {
   const data = [
-    { edu: "High School", id: "1" },
-    { edu: "Graduate", id: "2" },
-    { edu: "PostGraduate", id: "1" },
+    { value: 1, edu: "High School" },
+    { value: 2, edu: "Graduate" },
+    { value: 3, edu: "Post Graduate" },
   ];
 
   const [options] = useState(data);
