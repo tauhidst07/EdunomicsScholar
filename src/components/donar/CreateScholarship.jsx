@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import edu from "../../media/edu.png";
 import { Link, useHistory } from "react-router-dom";
+import { Multiselect } from "multiselect-react-dropdown";
 import "../../styles/createschlor.css";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
@@ -14,6 +15,24 @@ import axios from "axios";
 import jwt from "jsonwebtoken";
 
 import { useForm } from "react-hook-form";
+
+function Multidrop() {
+  const data = [
+    { edu: "High School", id: "1" },
+    { edu: "Graduate", id: "2" },
+    { edu: "PostGraduate", id: "1" },
+  ];
+
+  const [options] = useState(data);
+  return (
+    <div style={{ alignItems: "center", display: "flex" }}>
+      <div className="mldrop">
+        <h1 style={{ marginBottom: ".6rem" }}> Select education levels</h1>
+        <Multiselect options={options} displayValue="edu" />
+      </div>
+    </div>
+  );
+}
 
 function CreateScholarship() {
   const history = useHistory();
@@ -48,7 +67,8 @@ function CreateScholarship() {
 
     return (
       <div>
-        <Button className={classes.button} onClick={handleOpen}>
+        <Multidrop />
+        {/* <Button className={classes.button} onClick={handleOpen}>
           Select education levels
         </Button>
         <FormControl className={classes.formControl}>
@@ -71,7 +91,7 @@ function CreateScholarship() {
             <MenuItem value={"Undergraduate"}>Undergraduate</MenuItem>
             <MenuItem value={"Graduate"}>Graduate</MenuItem>
           </Select>
-        </FormControl>
+        </FormControl> */}
       </div>
     );
   }
