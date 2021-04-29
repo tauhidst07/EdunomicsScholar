@@ -156,7 +156,7 @@ function SignUp() {
                   marginRight: ".3rem",
                 }}
               />
-              This name field is required
+              This username field is required
             </p>
           )}
           {errors.username && errors.username.type === "maxLength" && (
@@ -244,7 +244,7 @@ function SignUp() {
                     marginRight: ".3rem",
                   }}
                 />
-                This name field is required
+                This password field is required
               </p>
             )}
             {errors.password && errors.password.type === "minLength" && (

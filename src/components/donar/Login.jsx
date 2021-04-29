@@ -6,6 +6,7 @@ import VisibilityIcon from "@material-ui/icons/Visibility";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import axios from "axios";
 import jwt from "jsonwebtoken";
+import WarningIcon from "@material-ui/icons/Warning";
 
 import { useForm } from "react-hook-form";
 // import { MyId } from "./context/MyId";
@@ -22,7 +23,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [typePass, setTypePass] = useState(false);
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
     // console.log(data);
     axios
@@ -50,23 +51,92 @@ function Login() {
           <input
             className="u-input"
             type="text"
-            ref={register}
+            ref={register({ required: true, pattern: /^\S+@\S+$/i })}
             name="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             placeholder="Email"
           />
+          {errors.email && (
+            <p
+              style={{
+                marginTop: ".4rem",
+                color: "red",
+                fontSize: ".7rem",
+                fontWeight: 700,
+                textAlign: "center",
+                display: "flex",
+              }}
+            >
+              {" "}
+              <WarningIcon
+                style={{
+                  color: "red",
+                  fontSize: ".7rem",
+                  textAlign: "center",
+                  marginRight: ".3rem",
+                }}
+              />{" "}
+              This email field is required
+            </p>
+          )}
           <h2 className="pass">Password</h2>
           <div className="showhide">
             <input
               className="u-input "
               type={typePass ? "text" : "password"}
-              ref={register}
+              ref={register({ required: true, minLength: 6 })}
               name="password"
               onChange={(e) => setPassword(e.target.value)}
               value={password}
               placeholder="Password"
             />
+            {errors.password && errors.password.type === "required" && (
+              <p
+                style={{
+                  marginTop: ".4rem",
+                  color: "red",
+                  fontSize: ".7rem",
+                  fontWeight: 700,
+                  textAlign: "center",
+                  display: "flex",
+                }}
+              >
+                {" "}
+                <WarningIcon
+                  style={{
+                    color: "red",
+                    fontSize: ".7rem",
+                    textAlign: "center",
+                    marginRight: ".3rem",
+                  }}
+                />
+                This password field is required
+              </p>
+            )}
+            {errors.password && errors.password.type === "minLength" && (
+              <p
+                style={{
+                  marginTop: ".4rem",
+                  color: "red",
+                  fontSize: ".7rem",
+                  fontWeight: 700,
+                  textAlign: "center",
+                  display: "flex",
+                }}
+              >
+                {" "}
+                <WarningIcon
+                  style={{
+                    color: "red",
+                    fontSize: ".7rem",
+                    textAlign: "center",
+                    marginRight: ".3rem",
+                  }}
+                />
+                Password must have at least 6 characters
+              </p>
+            )}
             <small onClick={() => setTypePass(!typePass)}>
               {typePass ? <VisibilityOffIcon /> : <VisibilityIcon />}
             </small>
