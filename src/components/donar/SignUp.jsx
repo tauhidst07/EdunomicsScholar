@@ -12,13 +12,14 @@ function SignUp() {
   const history = useHistory();
   const { register, handleSubmit } = useForm();
   const [typePass, setTypePass] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const onSubmit = (data) => {
     // console.log(data);
     axios
       .post("https://bckendapi.herokuapp.com/api/user/signup-donar", data)
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         history.push("/login");
       })
       .catch(function (error) {
