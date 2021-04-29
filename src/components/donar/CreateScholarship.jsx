@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import edu from "../../media/edu.png";
 import { Link, useHistory } from "react-router-dom";
-import { Multiselect } from "multiselect-react-dropdown";
+
 import "../../styles/createschlor.css";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
