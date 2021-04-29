@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-// import logo from "../media/edu.png";
+
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import "../styles/moreaboutdoner.css";
-// import PersonIcon from "@material-ui/icons/Person";
 
 import scholar from "../media/schola.jpeg";
 import LocationOnIcon from "@material-ui/icons/LocationOn";

@@ -105,7 +105,6 @@ function SuperAdminDashboard() {
             <div className="cards-single">
               <div className="in-card">
                 <h1>{data === 0 ? "" : data.applicant.total}</h1>
-                {/* <h1>{data.donar.total}</h1> */}
 
                 <span>Applicants</span>
               </div>
@@ -173,4 +172,3 @@ function SuperAdminDashboard() {
 }
 
 export default SuperAdminDashboard;
-// /api/donar/allAppliedApplicants/applicantID
