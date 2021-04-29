@@ -18,7 +18,7 @@ import Select from "react-select";
 import { useForm } from "react-hook-form";
 
 function Multidrop() {
-  const data = [
+  const eduName = [
     { value: 1, edu: "High School" },
     { value: 2, edu: "Graduate" },
     { value: 3, edu: "Post Graduate" },
@@ -26,12 +26,15 @@ function Multidrop() {
 
   const [options] = useState(data);
   return (
-    <div style={{ alignItems: "center", display: "flex" }}>
-      <div className="mldrop">
-        <h1 style={{ marginBottom: ".6rem" }}> Select education levels</h1>
-        <Multiselect options={options} displayValue="edu" />
-      </div>
+    <div>
+      <Select options={eduName}></Select>
     </div>
+    // <div style={{ alignItems: "center", display: "flex" }}>
+    //   <div className="mldrop">
+    //     <h1 style={{ marginBottom: ".6rem" }}> Select education levels</h1>
+    //     <Multiselect options={options} displayValue="edu" />
+    //   </div>
+    // </div>
   );
 }
 
