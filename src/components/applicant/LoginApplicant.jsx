@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import jwt from "jsonwebtoken";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
+import WarningIcon from "@material-ui/icons/Warning";
 
 import "../../styles/login.css";
 
@@ -22,7 +23,7 @@ function LoginApplicant() {
   const [password, setPassword] = useState("");
   const [typePass, setTypePass] = useState(false);
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
     // console.log(data);
     axios
@@ -52,11 +53,25 @@ function LoginApplicant() {
               className="u-input"
               name="email"
               onChange={(e) => setEmail(e.target.value)}
-              ref={register}
+              ref={register({ required: true, pattern: /^\S+@\S+$/i })}
               value={email}
               type="text"
               placeholder="Email"
             />
+            {errors.email && (
+              <p className="validinputs">
+                {" "}
+                <WarningIcon
+                  style={{
+                    color: "red",
+                    fontSize: ".7rem",
+                    textAlign: "center",
+                    marginRight: ".3rem",
+                  }}
+                />{" "}
+                This email field is required
+              </p>
+            )}
             <h2 className="pass">Password</h2>
             <div className="showhide">
               <input
@@ -65,9 +80,46 @@ function LoginApplicant() {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
                 type={typePass ? "text" : "password"}
-                ref={register}
+                ref={register({ required: true, minLength: 6 })}
                 placeholder="Password"
               />
+              {errors.password && errors.password.type === "required" && (
+                <p className="validinputs">
+                  {" "}
+                  <WarningIcon
+                    style={{
+                      color: "red",
+                      fontSize: ".7rem",
+                      textAlign: "center",
+                      marginRight: ".3rem",
+                    }}
+                  />
+                  This password field is required
+                </p>
+              )}
+              {errors.password && errors.password.type === "minLength" && (
+                <p
+                  style={{
+                    marginTop: ".4rem",
+                    color: "red",
+                    fontSize: ".7rem",
+                    fontWeight: 700,
+                    textAlign: "center",
+                    display: "flex",
+                  }}
+                >
+                  {" "}
+                  <WarningIcon
+                    style={{
+                      color: "red",
+                      fontSize: ".7rem",
+                      textAlign: "center",
+                      marginRight: ".3rem",
+                    }}
+                  />
+                  Password must have at least 6 characters
+                </p>
+              )}
               <small onClick={() => setTypePass(!typePass)}>
                 {typePass ? <VisibilityOffIcon /> : <VisibilityIcon />}
               </small>
