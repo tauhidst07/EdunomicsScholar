@@ -79,6 +79,33 @@ function SignUpApplicant() {
             data-test="username"
             placeholder="Name"
           />
+          {errors.name && errors.name.type === "required" && (
+            <p className="validinputs">
+              <WarningIcon
+                style={{
+                  color: "red",
+                  fontSize: ".7rem",
+                  textAlign: "center",
+                  marginRight: ".3rem",
+                }}
+              />
+              This name field is required
+            </p>
+          )}
+          {errors.name && errors.name.type === "maxLength" && (
+            <p className="validinputs">
+              {" "}
+              <WarningIcon
+                style={{
+                  color: "red",
+                  fontSize: ".7rem",
+                  textAlign: "center",
+                  marginRight: ".3rem",
+                }}
+              />{" "}
+              Your input exceed maximum length
+            </p>
+          )}
           <h2 className="uname">Username</h2>
           <input
             ref={register({ required: true, maxLength: 10 })}
@@ -88,6 +115,34 @@ function SignUpApplicant() {
             data-test="username"
             placeholder="username"
           />
+          {errors.username && errors.username.type === "required" && (
+            <p className="validinputs">
+              {" "}
+              <WarningIcon
+                style={{
+                  color: "red",
+                  fontSize: ".7rem",
+                  textAlign: "center",
+                  marginRight: ".3rem",
+                }}
+              />
+              This username field is required
+            </p>
+          )}
+          {errors.username && errors.username.type === "maxLength" && (
+            <p className="validinputs">
+              {" "}
+              <WarningIcon
+                style={{
+                  color: "red",
+                  fontSize: ".7rem",
+                  textAlign: "center",
+                  marginRight: ".3rem",
+                }}
+              />
+              Your input exceed maximum length
+            </p>
+          )}
           <h2 className="uname">Email</h2>
           <input
             ref={register({ required: true, pattern: /^\S+@\S+$/i })}
@@ -97,6 +152,20 @@ function SignUpApplicant() {
             data-test="username"
             placeholder="Email"
           />
+          {errors.email && (
+            <p className="validinputs">
+              {" "}
+              <WarningIcon
+                style={{
+                  color: "red",
+                  fontSize: ".7rem",
+                  textAlign: "center",
+                  marginRight: ".3rem",
+                }}
+              />{" "}
+              This email field is required
+            </p>
+          )}
           <h2 className="pass">Password</h2>
           <div className="showhide">
             <input
@@ -107,6 +176,34 @@ function SignUpApplicant() {
               data-test="password"
               placeholder="Password"
             />
+            {errors.password && errors.password.type === "required" && (
+              <p className="validinputs">
+                {" "}
+                <WarningIcon
+                  style={{
+                    color: "red",
+                    fontSize: ".7rem",
+                    textAlign: "center",
+                    marginRight: ".3rem",
+                  }}
+                />
+                This password field is required
+              </p>
+            )}
+            {errors.password && errors.password.type === "minLength" && (
+              <p className="validinputs">
+                {" "}
+                <WarningIcon
+                  style={{
+                    color: "red",
+                    fontSize: ".7rem",
+                    textAlign: "center",
+                    marginRight: ".3rem",
+                  }}
+                />
+                Password must have at least 6 characters
+              </p>
+            )}
             <small onClick={() => setTypePass(!typePass)}>
               {typePass ? <VisibilityOffIcon /> : <VisibilityIcon />}
             </small>
