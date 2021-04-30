@@ -5,11 +5,12 @@ import VisibilityIcon from "@material-ui/icons/Visibility";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import axios from "axios";
 import edu from "../../media/edu.png";
+import WarningIcon from "@material-ui/icons/Warning";
 
 function SignUpApplicant() {
   const history = useHistory();
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, errors } = useForm();
   const [typePass, setTypePass] = useState(false);
 
   const onSubmit = (data) => {
@@ -71,7 +72,7 @@ function SignUpApplicant() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="uname">Name</h2>
           <input
-            ref={register}
+            ref={register({ required: true, maxLength: 10 })}
             name="name"
             className="u-input"
             type="text"
@@ -80,7 +81,7 @@ function SignUpApplicant() {
           />
           <h2 className="uname">Username</h2>
           <input
-            ref={register}
+            ref={register({ required: true, maxLength: 10 })}
             name="username"
             className="u-input"
             type="text"
@@ -89,7 +90,7 @@ function SignUpApplicant() {
           />
           <h2 className="uname">Email</h2>
           <input
-            ref={register}
+            ref={register({ required: true, pattern: /^\S+@\S+$/i })}
             name="email"
             className="u-input"
             type="text"
@@ -99,7 +100,7 @@ function SignUpApplicant() {
           <h2 className="pass">Password</h2>
           <div className="showhide">
             <input
-              ref={register}
+              ref={register({ required: true, minLength: 6 })}
               name="password"
               className="u-input"
               type={typePass ? "text" : "password"}
