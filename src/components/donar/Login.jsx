@@ -4,14 +4,13 @@ import { Link, useHistory } from "react-router-dom";
 import React, { useState } from "react";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
-import axios from "axios";
-import jwt from "jsonwebtoken";
+// import axios from "axios";
+// import jwt from "jsonwebtoken";
 import WarningIcon from "@material-ui/icons/Warning";
 import { loginDonor } from "../redux/actions/authAction";
 import { useDispatch } from "react-redux";
 
 import { useForm } from "react-hook-form";
-// import { MyId } from "./context/MyId";
 
 function Login() {
   const history = useHistory();
