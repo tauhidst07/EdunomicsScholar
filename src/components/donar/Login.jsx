@@ -7,6 +7,8 @@ import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import axios from "axios";
 import jwt from "jsonwebtoken";
 import WarningIcon from "@material-ui/icons/Warning";
+import { login } from "../redux/actions/authAction";
+import { useDispatch } from "react-redux";
 
 import { useForm } from "react-hook-form";
 // import { MyId } from "./context/MyId";
@@ -24,6 +26,9 @@ function Login() {
   const [typePass, setTypePass] = useState(false);
 
   const { register, handleSubmit, errors } = useForm();
+
+  const dispatch = useDispatch();
+
   const onSubmit = (data) => {
     // console.log(data);
     axios
@@ -36,6 +41,7 @@ function Login() {
         console.log(encodedToken);
         console.log(jwt.decode(encodedToken));
         history.push("/donar-dash");
+        dispatch(login(data));
       })
       .catch(function (error) {
         console.log(error);

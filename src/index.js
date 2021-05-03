@@ -2,14 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import { Provider } from "react-redux";
-import store from "./components/redux/store";
+// import store from "./components/redux/store";
+// import { Provider } from "react-redux";
+import DataProvider from "./components/redux/store";
 
 ReactDOM.render(
-  <Provider store={store}>
-    <BrowserRouter>
+  // <Provider store={store}>
+  <BrowserRouter>
+    <DataProvider>
       <App />
-    </BrowserRouter>
-  </Provider>,
+    </DataProvider>
+  </BrowserRouter>,
+  // </Provider>
   document.getElementById("root")
 );
