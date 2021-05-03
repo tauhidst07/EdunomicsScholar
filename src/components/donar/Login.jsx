@@ -7,7 +7,7 @@ import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import axios from "axios";
 import jwt from "jsonwebtoken";
 import WarningIcon from "@material-ui/icons/Warning";
-import { login } from "../redux/actions/authAction";
+import { loginDonor } from "../redux/actions/authAction";
 import { useDispatch } from "react-redux";
 
 import { useForm } from "react-hook-form";
@@ -31,21 +31,21 @@ function Login() {
 
   const onSubmit = (data) => {
     // console.log(data);
-    axios
-      .post("https://bckendapi.herokuapp.com/api/user/signin-donar", data)
-      .then(function (response) {
-        //console.log(response.data);
-        localStorage.setItem("auth-token", response.data.token);
-        //localStorage.setItem("jwt", JSON.stringify(data));
-        let encodedToken = localStorage.getItem("auth-token");
-        console.log(encodedToken);
-        console.log(jwt.decode(encodedToken));
-        history.push("/donar-dash");
-        dispatch(login(data));
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    // axios
+    //   .post("https://bckendapi.herokuapp.com/api/user/signin-donar", data)
+    //   .then(function (response) {
+    //     localStorage.setItem("auth-token", response.data.token);
+
+    //     let encodedToken = localStorage.getItem("auth-token");
+    //     console.log(encodedToken);
+    //     console.log(jwt.decode(encodedToken));
+    //     history.push("/donar-dash");
+    //     dispatch(login(data));
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+    dispatch(loginDonor(data));
   };
   return (
     <div>

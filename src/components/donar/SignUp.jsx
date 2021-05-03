@@ -6,7 +6,8 @@ import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import edu from "../../media/edu.png";
 import { useForm } from "react-hook-form";
 import WarningIcon from "@material-ui/icons/Warning";
-// import validate from "./validationDonor";
+import { signupDonor } from "../redux/actions/authAction";
+import { useDispatch } from "react-redux";
 
 import axios from "axios";
 
@@ -15,19 +16,21 @@ function SignUp() {
   const { register, handleSubmit, errors } = useForm();
   const [typePass, setTypePass] = useState(false);
   // const [errors, setErrors] = useState({});
+  const dispatch = useDispatch();
 
   const onSubmit = (data) => {
     // setErrors(validate());
     // console.log(data);
-    axios
-      .post("https://bckendapi.herokuapp.com/api/user/signup-donar", data)
-      .then(function (response) {
-        // console.log(response);
-        history.push("/login");
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    // axios
+    //   .post("https://bckendapi.herokuapp.com/api/user/signup-donar", data)
+    //   .then(function (response) {
+    //     // console.log(response);
+    //     history.push("/login");
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+    dispatch(signupDonor(data));
   };
 
   return (
