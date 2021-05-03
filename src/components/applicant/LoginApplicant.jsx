@@ -60,7 +60,6 @@ function LoginApplicant() {
             />
             {errors.email && (
               <p className="validinputs">
-                {" "}
                 <WarningIcon
                   style={{
                     color: "red",
@@ -68,7 +67,7 @@ function LoginApplicant() {
                     textAlign: "center",
                     marginRight: ".3rem",
                   }}
-                />{" "}
+                />
                 This email field is required
               </p>
             )}
@@ -85,7 +84,6 @@ function LoginApplicant() {
               />
               {errors.password && errors.password.type === "required" && (
                 <p className="validinputs">
-                  {" "}
                   <WarningIcon
                     style={{
                       color: "red",
@@ -108,7 +106,6 @@ function LoginApplicant() {
                     display: "flex",
                   }}
                 >
-                  {" "}
                   <WarningIcon
                     style={{
                       color: "red",
