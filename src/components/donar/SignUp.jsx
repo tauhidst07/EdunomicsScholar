@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import WarningIcon from "@material-ui/icons/Warning";
 import { signupDonor } from "../redux/actions/authAction";
 import { useDispatch } from "react-redux";
-
+import Alert from "../Alert";
 import axios from "axios";
 
 function SignUp() {
@@ -30,9 +30,9 @@ function SignUp() {
     //   .catch(function (error) {
     //     console.log(error);
     //   });
-    history.push("/login");
 
     dispatch(signupDonor(data));
+    history.push("/login");
   };
 
   return (
@@ -75,6 +75,7 @@ function SignUp() {
         </div>
       </nav>
 
+      <Alert />
       <div className="loginbox">
         <h1 className="welcome">Sign Up as a Donor</h1>
         <form onSubmit={handleSubmit(onSubmit)}>

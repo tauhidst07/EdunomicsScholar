@@ -5,7 +5,7 @@ import SignUp from "./components/donar/SignUp";
 import SignUpApplicant from "./components/applicant/SignUpApplicant";
 import DonerGrantPage from "./components/donar/DonerGrantPage";
 import Login from "./components/donar/Login";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Router } from "react-router-dom";
 import AppliGrantPage from "./components/applicant/AppliGrantPage";
 import JoinDoner from "./components/donar/JoinDoner";
 import JoinAppli from "./components/applicant/JoinAppli";

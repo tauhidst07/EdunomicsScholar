@@ -1,7 +1,21 @@
 import React from "react";
-
+import "../styles/loading.css";
 function Loading() {
-  return <div></div>;
+  return (
+    <div className="load-main" style={{ background: "#0008", color: "white" }}>
+      <svg width="205" height="250" viewBox="0 0 40 50">
+        <polygon
+          stroke="#fff"
+          strokeWidth="1"
+          fill="none"
+          points="20,1 40 ,40 1,40"
+        />
+        <text fill="#fff" x="5" y="47">
+          Loading
+        </text>
+      </svg>
+    </div>
+  );
 }
 
 export default Loading;
