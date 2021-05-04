@@ -87,6 +87,7 @@ function SignUp() {
             name="name"
             data-test="name"
             placeholder="Name"
+            style={{ background: `${errors.name ? "#e4414114" : ""}` }}
           />
           {errors.name && errors.name.type === "required" && (
             <p className="validinputs">
@@ -123,6 +124,7 @@ function SignUp() {
             data-test="username"
             name="username"
             placeholder="username"
+            style={{ background: `${errors.username ? "#e4414114" : ""}` }}
           />
           {errors.username && errors.username.type === "required" && (
             <p className="validinputs">
@@ -160,6 +162,7 @@ function SignUp() {
             name="email"
             data-test="email"
             placeholder="Email"
+            style={{ background: `${errors.email ? "#e4414114" : ""}` }}
           />
           {errors.email && (
             <p className="validinputs">
@@ -184,6 +187,7 @@ function SignUp() {
               data-test="password"
               name="password"
               placeholder="Password"
+              style={{ background: `${errors.password ? "#e4414114" : ""}` }}
             />
             {errors.password && errors.password.type === "required" && (
               <p className="validinputs">

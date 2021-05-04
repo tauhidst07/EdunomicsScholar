@@ -63,6 +63,7 @@ function Login() {
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             placeholder="Email"
+            style={{ background: `${errors.email ? "#e4414114" : ""}` }}
           />
           {errors.email && (
             <p className="validinputs">
@@ -87,6 +88,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
               value={password}
               placeholder="Password"
+              style={{ background: `${errors.password ? "#e4414114" : ""}` }}
             />
             {errors.password && errors.password.type === "required" && (
               <p className="validinputs">
