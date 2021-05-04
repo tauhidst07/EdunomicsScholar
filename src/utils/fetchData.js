@@ -10,7 +10,10 @@ export const signupDonorAPI = async (url, post) => {
 export const signinDonorAPI = async (url, post, token) => {
   const res = await axios.post(
     `https://bckendapi.herokuapp.com/api/user/${url}`,
-    post
+    post,
+    {
+      headers: { Authorization: token },
+    }
   );
   return res;
 };

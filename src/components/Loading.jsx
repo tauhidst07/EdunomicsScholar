@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/loading.css";
 function Loading() {
   return (
-    <div className="load-main" style={{ background: "#0008", color: "white" }}>
+    <div className="load-main" style={{ background: "#0005", color: "white" }}>
       <svg width="205" height="250" viewBox="0 0 40 50">
         <polygon
           stroke="#fff"
@@ -11,7 +11,7 @@ function Loading() {
           points="20,1 40 ,40 1,40"
         />
         <text fill="#fff" x="5" y="47">
-          Loading
+          Loading...
         </text>
       </svg>
     </div>

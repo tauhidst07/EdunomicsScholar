@@ -8,11 +8,11 @@ import DataProvider from "./components/redux/store";
 
 ReactDOM.render(
   // <Provider store={store}>
-  <BrowserRouter>
-    <DataProvider>
+  <DataProvider>
+    <BrowserRouter>
       <App />
-    </DataProvider>
-  </BrowserRouter>,
+    </BrowserRouter>
+  </DataProvider>,
   // </Provider>
   document.getElementById("root")
 );

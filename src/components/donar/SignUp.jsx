@@ -30,9 +30,9 @@ function SignUp() {
     //   .catch(function (error) {
     //     console.log(error);
     //   });
+    // history.push("/login");
 
-    dispatch(signupDonor(data));
-    history.push("/login");
+    dispatch(signupDonor(data, history));
   };
 
   return (
