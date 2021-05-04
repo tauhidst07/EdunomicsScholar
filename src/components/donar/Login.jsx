@@ -4,6 +4,8 @@ import { Link, useHistory } from "react-router-dom";
 import React, { useState } from "react";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
+import Alert from "../Alert";
+
 // import axios from "axios";
 // import jwt from "jsonwebtoken";
 import WarningIcon from "@material-ui/icons/Warning";
@@ -48,6 +50,7 @@ function Login() {
   return (
     <div>
       <Header isActive={true} />
+      <Alert />
       <div className="loginbox">
         <h1 className="welcome">Welcome Back</h1>
         <form onSubmit={handleSubmit(onSubmit)}>

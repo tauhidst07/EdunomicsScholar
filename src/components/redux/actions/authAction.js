@@ -48,13 +48,13 @@ export const loginDonor = (data, history) => async (dispatch) => {
       },
     });
     localStorage.setItem("auth-token", true);
-    // dispatch({
-    //   type: "NOTIFY",
-    //   payload: {
-    //     success: res.data.message,
-    //   },
-    // });
-    // console.log(res);
+    dispatch({
+      type: "NOTIFY",
+      payload: {
+        success: "succesfully login",
+      },
+    });
+    // console.log(res.data._id);
   } catch (err) {
     dispatch({
       type: "NOTIFY",
