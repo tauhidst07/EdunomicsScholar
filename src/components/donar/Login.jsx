@@ -15,10 +15,10 @@ import { useForm } from "react-hook-form";
 function Login() {
   const history = useHistory();
 
-  // let checkToken = localStorage.getItem("auth-token");
-  // if (checkToken != null) {
-  //   history.push("/donar-dash");
-  // }
+  let checkToken = localStorage.getItem("auth-token");
+  if (checkToken != null) {
+    history.push("/donar-dash");
+  }
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -43,7 +43,7 @@ function Login() {
     //   .catch(function (error) {
     //     console.log(error);
     //   });
-    dispatch(loginDonor(data));
+    dispatch(loginDonor(data, history));
   };
   return (
     <div>

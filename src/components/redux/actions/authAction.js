@@ -33,11 +33,11 @@ export const signupDonor = (data, history) => async (dispatch) => {
   }
 };
 
-export const loginDonor = (data) => async (dispatch) => {
+export const loginDonor = (data, history) => async (dispatch) => {
   try {
     dispatch({ type: "NOTIFY", payload: { loading: true } });
     const res = await signinDonorAPI("signin-donar", data);
-    // history.push("/donar-dash");
+    history.push("/donar-dash");
 
     console.log(res);
     dispatch({
@@ -48,12 +48,12 @@ export const loginDonor = (data) => async (dispatch) => {
       },
     });
     localStorage.setItem("auth-token", true);
-    dispatch({
-      type: "NOTIFY",
-      payload: {
-        success: res.data.message,
-      },
-    });
+    // dispatch({
+    //   type: "NOTIFY",
+    //   payload: {
+    //     success: res.data.message,
+    //   },
+    // });
     // console.log(res);
   } catch (err) {
     dispatch({

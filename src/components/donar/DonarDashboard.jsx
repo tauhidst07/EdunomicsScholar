@@ -38,36 +38,32 @@ function DonarDashboard() {
   useEffect(() => {
     //console.log(myId);
     //606ac845c5d23600159eaf4a
-    axios
-      .get(
-        `https://bckendapi.herokuapp.com/api/donar/donarDashboard/${myId._id}`
-      )
-      .then((res) => {
-        console.log(res.data);
-
-        setLoading(false);
-        setData(res.data);
-        setError("");
-      });
-
-    // my scholar
-
-    axios
-      .get(
-        `https://bckendapi.herokuapp.com/api/donar/myScholarships/${myId._id}`
-      )
-      .then((res) => {
-        console.log(res.data);
-        setData2(res.data.scholarships);
-        setCount(res.data.count);
-      })
-
-      .catch((err) => {
-        setLoading(false);
-        setData({});
-        setError("error is there");
-        console.log(error);
-      });
+    // axios
+    //   .get(
+    //     `https://bckendapi.herokuapp.com/api/donar/donarDashboard/${myId._id}`
+    //   )
+    //   .then((res) => {
+    //     console.log(res.data);
+    //     setLoading(false);
+    //     setData(res.data);
+    //     setError("");
+    //   });
+    // // my scholar
+    // axios
+    //   .get(
+    //     `https://bckendapi.herokuapp.com/api/donar/myScholarships/${myId._id}`
+    //   )
+    //   .then((res) => {
+    //     console.log(res.data);
+    //     setData2(res.data.scholarships);
+    //     setCount(res.data.count);
+    //   })
+    //   .catch((err) => {
+    //     setLoading(false);
+    //     setData({});
+    //     setError("error is there");
+    //     console.log(error);
+    //   });
   }, []);
   return (
     <div>
