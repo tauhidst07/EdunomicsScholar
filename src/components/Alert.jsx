@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import Loading from "./Loading";
 import Toast from "./Toast";
 
-function Alert({ ishide }) {
+function Alert({ isSignup }) {
   const { notify } = useSelector((state) => state);
 
   return (
     <div>
       {notify.loading && <Loading />}
-      {notify.success && <Toast />}
+      {isSignup ? <></> : <>{notify.success && <Toast />}</>}
 
       {/* <Toast /> */}
     </div>
