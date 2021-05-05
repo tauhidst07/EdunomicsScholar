@@ -9,9 +9,9 @@ function Alert() {
   return (
     <div>
       {notify.loading && <Loading />}
-      {/* {notify.error && <Toast />} */}
+      {notify.success && <Toast />}
 
-      <Toast />
+      {/* <Toast /> */}
     </div>
   );
 }

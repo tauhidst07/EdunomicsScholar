@@ -15,8 +15,14 @@ export function DescriptionAlerts() {
 
   return (
     <Alert
+      className="alert-type"
       severity="success"
-      style={{ display: "flex", justifyContent: "center" }}
+      // style={{
+      //   display: "flex",
+      //   justifyContent: "center",
+      //   WebkitAnimation: "cssAnimation 5s forwards",
+      //   animation: "cssAnimation 5s forwards",
+      // }}
     >
       <AlertTitle>Registration Successfull</AlertTitle>
       Signin to Donate — <strong>check it out!</strong>
