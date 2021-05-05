@@ -75,7 +75,7 @@ function SignUp() {
         </div>
       </nav>
 
-      <Alert />
+      <Alert style={{ display: "none" }} />
       <div className="loginbox">
         <h1 className="welcome">Sign Up as a Donor</h1>
         <form onSubmit={handleSubmit(onSubmit)}>

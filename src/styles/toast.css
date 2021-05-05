@@ -1,8 +1,8 @@
 .alert-type {
   display: flex;
   justify-content: center;
-  -webkit-animation: cssAnimation 5s forwards;
-  animation: cssAnimation 5s forwards;
+  -webkit-animation: cssAnimation 3s forwards;
+  animation: cssAnimation 3s forwards;
 }
 
 @keyframes cssAnimation {
