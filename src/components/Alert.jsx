@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Loading from "./Loading";
 import Toast from "./Toast";
 
-function Alert() {
+function Alert({ ishide }) {
   const { notify } = useSelector((state) => state);
 
   return (
