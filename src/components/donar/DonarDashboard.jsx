@@ -12,7 +12,8 @@ import jwt from "jsonwebtoken";
 import img from "../../media/scholar-img.jpeg";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-
+import { DonorDASH } from "../redux/actions/authAction";
+import { useDispatch } from "react-redux";
 function DonarDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -34,6 +35,7 @@ function DonarDashboard() {
   let encodedToken = localStorage.getItem("auth-token");
 
   let myId = jwt.decode(encodedToken);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     //console.log(myId);
@@ -64,6 +66,7 @@ function DonarDashboard() {
     //     setError("error is there");
     //     console.log(error);
     //   });
+    dispatch(DonorDASH(data, history));
   }, []);
   return (
     <div>

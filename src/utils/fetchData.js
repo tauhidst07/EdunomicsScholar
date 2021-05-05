@@ -17,3 +17,13 @@ export const signinDonorAPI = async (url, post, token) => {
   );
   return res;
 };
+export const DonorDashAPI = async (token, id) => {
+  const res = await axios.get(
+    `https://bckendapi.herokuapp.com/api/donar/donarDashboard/${id}`,
+
+    {
+      headers: { Authorization: token },
+    }
+  );
+  return res;
+};

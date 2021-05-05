@@ -1,7 +1,12 @@
-import { signinDonorAPI, signupDonorAPI } from "../../../utils/fetchData";
+import {
+  signinDonorAPI,
+  signupDonorAPI,
+  DonorDashAPI,
+} from "../../../utils/fetchData";
 
 export const TYPES = {
   AUTH: "AUTH",
+  GETDONOR: "GETDONOR",
 };
 
 export const signupDonor = (data, history) => async (dispatch) => {
@@ -58,7 +63,37 @@ export const loginDonor = (data, history) => async (dispatch) => {
     dispatch({
       type: "NOTIFY",
       payload: {
-        error: "wrong",
+        error: err.response.data.message,
+      },
+    });
+  }
+};
+export const DonorDASH = (data, history) => async (dispatch) => {
+  try {
+    dispatch({ type: "GETDONOR", payload: { loading: true } });
+    const res = await DonorDashAPI("id", data);
+    // history.push("/donar-dash");
+
+    console.log(res);
+    dispatch({
+      type: "AUTH",
+      payload: {
+        token: res.data.token,
+        user: res.data,
+      },
+    });
+    localStorage.setItem("auth-token", true);
+    dispatch({
+      type: "NOTIFY",
+      payload: {
+        success: "succesfully login",
+      },
+    });
+  } catch (err) {
+    dispatch({
+      type: "NOTIFY",
+      payload: {
+        error: err.response.data.message,
       },
     });
   }
