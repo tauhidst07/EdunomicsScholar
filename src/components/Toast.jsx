@@ -14,16 +14,7 @@ export function DescriptionAlerts() {
   const classes = useStyles();
 
   return (
-    <Alert
-      className="alert-type"
-      severity="success"
-      // style={{
-      //   display: "flex",
-      //   justifyContent: "center",
-      //   WebkitAnimation: "cssAnimation 5s forwards",
-      //   animation: "cssAnimation 5s forwards",
-      // }}
-    >
+    <Alert className="alert-type" severity="success">
       <AlertTitle>Registration Successfull</AlertTitle>
       Signin to Donate — <strong>check it out!</strong>
     </Alert>
@@ -34,12 +25,6 @@ function Toast() {
     <div>
       <DescriptionAlerts />
     </div>
-    // <div className="toast" style={{ right: "5px" }}>
-    //   <div className="toast-header">
-    //     <button>&times;</button>
-    //   </div>
-    //   <div className="toast-body">toast body</div>
-    // </div>
   );
 }
 
