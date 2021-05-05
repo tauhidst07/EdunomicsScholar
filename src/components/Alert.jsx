@@ -10,8 +10,6 @@ function Alert({ isSignup }) {
     <div>
       {notify.loading && <Loading />}
       {isSignup ? <></> : <>{notify.success && <Toast />}</>}
-
-      {/* <Toast /> */}
     </div>
   );
 }

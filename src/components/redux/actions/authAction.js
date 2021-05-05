@@ -58,7 +58,7 @@ export const loginDonor = (data, history) => async (dispatch) => {
     dispatch({
       type: "NOTIFY",
       payload: {
-        error: err.response.data.message,
+        error: "wrong",
       },
     });
   }
