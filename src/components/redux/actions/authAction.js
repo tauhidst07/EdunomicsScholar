@@ -54,7 +54,6 @@ export const loginDonor = (data, history) => async (dispatch) => {
         success: "succesfully login",
       },
     });
-    // console.log(res.data._id);
   } catch (err) {
     dispatch({
       type: "NOTIFY",
