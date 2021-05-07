@@ -13,14 +13,15 @@ import img from "../../media/scholar-img.jpeg";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { DonorDASH } from "../redux/actions/authAction";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
 function DonarDashboard() {
   const { auth } = useSelector((state) => state);
-  console.log({ auth });
+  console.log(auth);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(auth);
+  console.log(data);
   const [data2, setData2] = useState([]);
   const [count, setCount] = useState();
   // const {scholarid} = useParams()
