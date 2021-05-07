@@ -14,9 +14,9 @@ import Footer from "./Footer";
 
 function ApliMoreAboutDoner() {
   const [data, setData] = useState(0);
-  // const [anchorEl, setAnchorEl] = useState(null);
+
   const history = useHistory();
-  //const { handle } = props.match.params;
+
   let { donarId } = useParams();
   //console.log(donarId)
 
