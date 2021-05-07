@@ -77,7 +77,6 @@ export const DonorDASH = (data, history) => async (dispatch) => {
     const getToken = localStorage.getItem("token");
     dispatch({ type: "GETDONOR", payload: { loading: true } });
     const res = await DonorDashAPI(getToken, data);
-    // history.push("/donar-dash");
 
     console.log(res);
     dispatch({
@@ -87,7 +86,7 @@ export const DonorDASH = (data, history) => async (dispatch) => {
         user: res.data,
       },
     });
-    localStorage.setItem("auth-token", true);
+    // localStorage.setItem("auth-token", true);
     dispatch({
       type: "NOTIFY",
       payload: {
