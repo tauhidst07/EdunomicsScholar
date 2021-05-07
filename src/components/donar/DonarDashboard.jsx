@@ -14,7 +14,10 @@ import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { DonorDASH } from "../redux/actions/authAction";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 function DonarDashboard() {
+  const { auth } = useSelector((state) => state);
+  console.log({ auth });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [data, setData] = useState([]);
