@@ -7,6 +7,7 @@ import {
 export const TYPES = {
   AUTH: "AUTH",
   GETDONOR: "GETDONOR",
+  GET_PROFILE: " GET_PROFILE",
 };
 
 export const signupDonor = (data, history) => async (dispatch) => {
