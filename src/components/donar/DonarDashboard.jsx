@@ -12,16 +12,18 @@ import jwt from "jsonwebtoken";
 import img from "../../media/scholar-img.jpeg";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import { DonorDASH } from "../redux/actions/authAction";
+import { getData } from "../redux/actions/authAction";
 import { useDispatch, useSelector } from "react-redux";
 
 function DonarDashboard() {
-  const { auth } = useSelector((state) => state);
-  console.log(auth);
-  const [loading, setLoading] = useState(true);
+  const { auth1, auth2, myData, loader } = useSelector((state) => state.auth);
+  // console.log(auth1);
+  // console.log(auth2);
+  console.log(myData);
+  // const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [data, setData] = useState(auth);
-  console.log(data);
+  const [data, setData] = useState(myData);
+  // console.log(data);
   const [data2, setData2] = useState([]);
   const [count, setCount] = useState();
 
@@ -34,12 +36,14 @@ function DonarDashboard() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  let encodedToken = localStorage.getItem("auth-token");
+  let encodedToken = localStorage.getItem("token");
 
   let myId = jwt.decode(encodedToken);
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(getData(myId._id));
+
     //console.log(myId);
     //606ac845c5d23600159eaf4a
     // axios
@@ -68,7 +72,7 @@ function DonarDashboard() {
     //     setError("error is there");
     //     console.log(error);
     //   });
-    dispatch(DonorDASH(data));
+    // dispatch(DonorDASH(data));
   }, []);
   return (
     <div>
@@ -162,14 +166,14 @@ function DonarDashboard() {
           </div>
         </div>
       </div>
-      {loading ? (
+      {loader ? (
         <div style={{ textAlign: "center", alignItems: "center" }}>
           <Loader type="ThreeDots" color="grey" height={100} width={100} />
         </div>
       ) : (
         <div>
           <div className="donar-dashhead">
-            <h1> Welcome Back, {data.name}!</h1>
+            <h1> Welcome Back, {myData?.name}!</h1>
             <div className="donar-sidehead">
               <p>
                 Total Donations
@@ -210,7 +214,7 @@ function DonarDashboard() {
                     ></path>
                   </svg>
                   <p className="curr" style={{ marginLeft: "1rem" }}>
-                    {data.creadit}
+                    {myData?.creadit}
                   </p>
                 </div>
               </div>

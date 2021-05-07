@@ -3,11 +3,15 @@ import {
   signupDonorAPI,
   DonorDashAPI,
 } from "../../../utils/fetchData";
+import axios from "axios";
+import jwt from "jsonwebtoken";
 
 export const TYPES = {
   AUTH: "AUTH",
   GETDONOR: "GETDONOR",
-  GET_PROFILE: " GET_PROFILE",
+  GET_PROFILE: "GET_PROFILE",
+  GET_DATA: "GET_DATA",
+  SET_LOADER: "SET_LOADER",
 };
 
 export const signupDonor = (data, history) => async (dispatch) => {
@@ -73,33 +77,62 @@ export const loginDonor = (data, history) => async (dispatch) => {
     });
   }
 };
-export const DonorDASH = (data, history) => async (dispatch) => {
-  try {
-    const getToken = localStorage.getItem("token");
-    dispatch({ type: "GETDONOR", payload: { loading: true } });
-    const res = await DonorDashAPI(getToken, data);
+// export const DonorDASH = (data, history) => async (dispatch) => {
+//   try {
+//     const getToken = localStorage.getItem("token");
+//     dispatch({ type: "GETDONOR", payload: { loading: true } });
+//     const res = await DonorDashAPI(getToken, data);
 
-    console.log(res);
-    dispatch({
-      type: "AUTH",
-      payload: {
-        token: res.data.token,
-        user: res.data,
-      },
-    });
-    // localStorage.setItem("auth-token", true);
-    dispatch({
-      type: "NOTIFY",
-      payload: {
-        success: "succesfully login",
-      },
-    });
-  } catch (err) {
-    dispatch({
-      type: "NOTIFY",
-      payload: {
-        error: "error",
-      },
-    });
-  }
+//     console.log(res);
+//     dispatch({
+//       type: "AUTH",
+//       payload: {
+//         token: res.data.token,
+//         user: res.data,
+//       },
+//     });
+
+//     dispatch({
+//       type: "NOTIFY",
+//       payload: {
+//         success: "succesfully login",
+//       },
+//     });
+//   } catch (err) {
+//     dispatch({
+//       type: "NOTIFY",
+//       payload: {
+//         error: "error",
+//       },
+//     });
+//   }
+// };
+
+export const loaderHelper = (data) => {
+  return {
+    type: "SET_LOADER",
+    payload: data,
+  };
+};
+
+export const getData = (id) => {
+  console.log("function called");
+  return async (dispatch) => {
+    try {
+      dispatch(loaderHelper(true));
+
+      const { data } = await axios({
+        method: "Get",
+        url: `https://bckendapi.herokuapp.com/api/donar/donarDashboard/${id}`,
+      });
+      dispatch(loaderHelper(false));
+
+      dispatch({
+        type: "GET_DATA",
+        payload: data,
+      });
+    } catch (err) {
+      console.log("Error in getStage");
+    }
+  };
 };
