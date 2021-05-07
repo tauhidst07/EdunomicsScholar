@@ -24,8 +24,6 @@ function DonarDashboard() {
   console.log(data);
   const [data2, setData2] = useState([]);
   const [count, setCount] = useState();
-  // const {scholarid} = useParams()
-  // console.log(scholarid.split('&'))
 
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
