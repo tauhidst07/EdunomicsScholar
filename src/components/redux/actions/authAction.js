@@ -44,7 +44,7 @@ export const loginDonor = (data, history) => async (dispatch) => {
     const res = await signinDonorAPI("signin-donar", data);
     history.push("/donar-dash");
 
-    console.log(res);
+    // console.log(res);
     dispatch({
       type: "AUTH",
       payload: {
@@ -53,6 +53,10 @@ export const loginDonor = (data, history) => async (dispatch) => {
       },
     });
     localStorage.setItem("auth-token", true);
+    localStorage.setItem("token", res.data.token);
+
+    localStorage.setItem("id", res.data._id);
+
     dispatch({
       type: "NOTIFY",
       payload: {
@@ -70,8 +74,9 @@ export const loginDonor = (data, history) => async (dispatch) => {
 };
 export const DonorDASH = (data, history) => async (dispatch) => {
   try {
+    const getToken = localStorage.getItem("token");
     dispatch({ type: "GETDONOR", payload: { loading: true } });
-    const res = await DonorDashAPI("id", data);
+    const res = await DonorDashAPI(getToken, data);
     // history.push("/donar-dash");
 
     console.log(res);
@@ -93,7 +98,7 @@ export const DonorDASH = (data, history) => async (dispatch) => {
     dispatch({
       type: "NOTIFY",
       payload: {
-        error: err.response.data.message,
+        error: "error",
       },
     });
   }
