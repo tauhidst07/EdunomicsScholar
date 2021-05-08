@@ -24,12 +24,9 @@ function DonarDashboard() {
   console.log(myData);
   console.log(mySchlData);
 
-  // const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [data, setData] = useState(myData);
-  // console.log(data);
-  // const [data1, setData1] = useState(`${mySchlData}`);
-  // console.log(data1);
+
   const [data2, setData2] = useState(mySchlData);
   console.log(data2);
   const [count, setCount] = useState(mySchlData);
