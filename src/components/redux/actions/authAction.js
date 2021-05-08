@@ -1,10 +1,10 @@
 import {
   signinDonorAPI,
   signupDonorAPI,
-  DonorDashAPI,
+  // DonorDashAPI,
 } from "../../../utils/fetchData";
 import axios from "axios";
-import jwt from "jsonwebtoken";
+// import jwt from "jsonwebtoken";
 
 export const TYPES = {
   AUTH: "AUTH",
@@ -12,6 +12,8 @@ export const TYPES = {
   GET_PROFILE: "GET_PROFILE",
   GET_DATA: "GET_DATA",
   SET_LOADER: "SET_LOADER",
+  GET_MY_SCHOL: "GET_MY_SCHOL",
+  SET_CREATE_SCHOL: "SET_CREATE_SCHOL",
 };
 
 export const signupDonor = (data, history) => async (dispatch) => {
@@ -47,6 +49,11 @@ export const loginDonor = (data, history) => async (dispatch) => {
   try {
     dispatch({ type: "NOTIFY", payload: { loading: true } });
     const res = await signinDonorAPI("signin-donar", data);
+    localStorage.setItem("auth-token", true);
+    localStorage.setItem("token", res.data.token);
+
+    localStorage.setItem("id", res.data._id);
+
     history.push("/donar-dash");
 
     // console.log(res);
@@ -57,10 +64,6 @@ export const loginDonor = (data, history) => async (dispatch) => {
         user: res.data,
       },
     });
-    localStorage.setItem("auth-token", true);
-    localStorage.setItem("token", res.data.token);
-
-    localStorage.setItem("id", res.data._id);
 
     dispatch({
       type: "NOTIFY",
@@ -72,7 +75,7 @@ export const loginDonor = (data, history) => async (dispatch) => {
     dispatch({
       type: "NOTIFY",
       payload: {
-        error: err.response.data.message,
+        error: "error",
       },
     });
   }
@@ -116,7 +119,6 @@ export const loaderHelper = (data) => {
 };
 
 export const getData = (id) => {
-  console.log("function called");
   return async (dispatch) => {
     try {
       dispatch(loaderHelper(true));
@@ -133,6 +135,57 @@ export const getData = (id) => {
       });
     } catch (err) {
       console.log("Error in getStage");
+    }
+  };
+};
+
+// export const loaderHelper = (data) => {
+//   return {
+//     type: "SET_LOADER",
+//     payload: data,
+//   };
+// };
+
+export const getmySchlData = (id) => {
+  return async (dispatch) => {
+    try {
+      // dispatch(loaderHelper(true));
+
+      const { data } = await axios({
+        method: "Get",
+        url: `https://bckendapi.herokuapp.com/api/donar/myScholarships/${id}`,
+      });
+      // dispatch(loaderHelper(false));
+
+      dispatch({
+        type: "GET_MY_SCHOL",
+        payload: data,
+      });
+    } catch (err) {
+      console.log("Error in getStage");
+    }
+  };
+};
+
+export const postCreateSchol = (dataSchol, history) => {
+  return async (dispatch) => {
+    try {
+      dispatch(loaderHelper(true));
+
+      const { data } = await axios({
+        method: "Post",
+        url: `https://bckendapi.herokuapp.com/api/donar/scholarship/`,
+        data: dataSchol,
+      });
+      dispatch(loaderHelper(false));
+
+      dispatch({
+        type: "SET_CREATE_SCHOL",
+        payload: data,
+      });
+      history.push("/all-scholar");
+    } catch (err) {
+      console.log(err);
     }
   };
 };

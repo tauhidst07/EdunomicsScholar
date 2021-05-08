@@ -17,7 +17,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 function AllScholarship() {
   const [loading, setLoading] = useState(true);
   //const [error, setError] = useState("");
-  const [data, setData] = useState(0);
+  const [data, setData] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
 
@@ -27,6 +27,7 @@ function AllScholarship() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  console.log(data);
 
   useEffect(() => {
     async function fetchMyApi() {
@@ -34,9 +35,9 @@ function AllScholarship() {
         "https://bckendapi.herokuapp.com/api/applicant/allScholarships"
       );
       response = await response.json();
-      setData([response]);
+
+      setData(response);
       setLoading(false);
-      console.log(data);
     }
 
     fetchMyApi();
@@ -141,11 +142,11 @@ function AllScholarship() {
         <div style={{ position: "relative" }}>
           <div>
             <h1 style={{ marginTop: "2rem", textAlign: "center" }}>
-              scholarships {data === 0 ? 0 : data[0].count}
+              scholarships {data === 0 ? 0 : data.count}
             </h1>
             {data === 0
               ? console.log("not fetched")
-              : data[0].scholarships.map((e) => (
+              : data.scholarships.reverse().map((e) => (
                   <div key={e._id} className="main-boxshadow ">
                     <div className="sc-box ">
                       <img src={boy} alt="st" />

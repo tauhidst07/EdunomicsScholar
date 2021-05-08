@@ -14,8 +14,11 @@ import Button from "@material-ui/core/Button";
 import axios from "axios";
 import jwt from "jsonwebtoken";
 import Select from "react-select";
+// import { getData, getmySchlData } from "../redux/actions/authAction";
+import { useDispatch, useSelector } from "react-redux";
 
 import { useForm } from "react-hook-form";
+import { postCreateSchol } from "../redux/actions/authAction";
 
 function Multidrop() {
   var eduName = [
@@ -45,6 +48,7 @@ function Multidrop() {
 
 function CreateScholarship() {
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const useStyles = makeStyles((theme) => ({
     button: {
@@ -107,26 +111,27 @@ function CreateScholarship() {
 
   // FORM HANDLING -R
   const { register, handleSubmit } = useForm();
+
   const onSubmit = (data) => {
-    let encodedToken = localStorage.getItem("auth-token");
+    let encodedToken = localStorage.getItem("token");
     let myId = jwt.decode(encodedToken);
     data.donationAllow = false;
     data.essayNeeded = false;
     data.createdBy = myId._id;
 
     console.log("ghghgd", data);
-
-    axios
-      .post("https://bckendapi.herokuapp.com/api/donar/scholarship", data)
-      .then(function (response) {
-        console.log(response);
-        if (response.status === 201) {
-          history.push("/all-scholar");
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    dispatch(postCreateSchol(data, history));
+    // axios
+    //   .post("https://bckendapi.herokuapp.com/api/donar/scholarship", data)
+    //   .then(function (response) {
+    //     console.log(response);
+    //     if (response.status === 201) {
+    //       history.push("/all-scholar");
+    //     }
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
   };
 
   return (
