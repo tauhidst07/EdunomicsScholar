@@ -10,11 +10,15 @@ import jwt from "jsonwebtoken";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "../../styles/donerprofile.css";
+import { getDonorProfile } from "../redux/actions/authAction";
+import { useDispatch, useSelector } from "react-redux";
 
 function DonerProfile() {
-  const [loading, setLoading] = useState(true);
+  const { donProfile, loader } = useSelector((state) => state.auth);
+
+  // const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [data, setData] = useState({});
+  const [data, setData] = useState(donProfile);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
 
@@ -24,27 +28,30 @@ function DonerProfile() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const dispatch = useDispatch();
 
   useEffect(() => {
     let encodedToken = localStorage.getItem("token");
 
     let myId = jwt.decode(encodedToken);
     console.log(myId);
-    axios
-      .get(`https://bckendapi.herokuapp.com/api/donar/donarprofile/${myId._id}`)
-      .then((res) => {
-        console.log(res);
+    dispatch(getDonorProfile(myId?._id));
 
-        setLoading(false);
-        setData(res.data);
-        setError("");
-      })
-      .catch((err) => {
-        setLoading(false);
-        setData({});
-        setError("error is there");
-        console.log(error);
-      });
+    // axios
+    //   .get(`https://bckendapi.herokuapp.com/api/donar/donarprofile/${myId._id}`)
+    //   .then((res) => {
+    //     console.log(res);
+
+    //     setLoading(false);
+    //     setData(res.data);
+    //     setError("");
+    //   })
+    //   .catch((err) => {
+    //     setLoading(false);
+    //     setData({});
+    //     setError("error is there");
+    //     console.log(error);
+    //   });
   }, []);
   return (
     <div>
@@ -137,20 +144,20 @@ function DonerProfile() {
           </div>
         </div>
       </div>
-      {loading ? (
+      {loader ? (
         <div style={{ textAlign: "center", alignItems: "center" }}>
           <Loader type="ThreeDots" color="grey" height={100} width={100} />
         </div>
       ) : (
         <div>
           <div className="pro-doner">
-            <h1>Donor Profile: {data.name}</h1>
-            <p>Scholarships, grants, and award winners for {data.name}</p>
+            <h1>Donor Profile: {data?.name}</h1>
+            <p>Scholarships, grants, and award winners for {data?.name}</p>
           </div>
 
           <div className="img-boxx" style={{ marginBottom: "4rem" }}>
             <img className="pro-imgd" src={profileImage} alt="profile" />
-            <h1>{data.name}</h1>
+            <h1>{data?.name}</h1>
             <p>Edit</p>
           </div>
           <div className="mission">

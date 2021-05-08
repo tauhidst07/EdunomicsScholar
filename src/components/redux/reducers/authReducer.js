@@ -8,6 +8,7 @@ const initialState = {
   mySchl: [],
   Schol: [],
   allSchol: [],
+  donProfile: null,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -24,6 +25,8 @@ const authReducer = (state = initialState, action) => {
       return { ...state, Schol: action.payload };
     case TYPES.GET_ALL_SCHOL:
       return { ...state, allSchol: action.payload };
+    case TYPES.GET_DONOR_PROFILE:
+      return { ...state, donProfile: action.payload };
     default:
       return { auth2: state };
   }

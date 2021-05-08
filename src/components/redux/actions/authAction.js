@@ -10,6 +10,7 @@ export const TYPES = {
   GET_MY_SCHOL: "GET_MY_SCHOL",
   SET_CREATE_SCHOL: "SET_CREATE_SCHOL",
   GET_ALL_SCHOL: "GET_ALL_SCHOL",
+  GET_DONOR_PROFILE: "GET_DONOR_PROFILE",
 };
 
 export const signupDonor = (data, history) => async (dispatch) => {
@@ -158,6 +159,27 @@ export const getAllSchlor = () => {
 
       dispatch({
         type: "GET_ALL_SCHOL",
+        payload: data,
+      });
+    } catch (err) {
+      console.log("Error in getStage");
+    }
+  };
+};
+
+export const getDonorProfile = (id) => {
+  return async (dispatch) => {
+    try {
+      dispatch(loaderHelper(true));
+
+      const { data } = await axios({
+        method: "Get",
+        url: `https://bckendapi.herokuapp.com/api/donar/donarprofile/${id}`,
+      });
+      dispatch(loaderHelper(false));
+
+      dispatch({
+        type: "GET_DONOR_PROFILE",
         payload: data,
       });
     } catch (err) {
