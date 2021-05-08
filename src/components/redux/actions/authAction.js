@@ -80,36 +80,6 @@ export const loginDonor = (data, history) => async (dispatch) => {
     });
   }
 };
-// export const DonorDASH = (data, history) => async (dispatch) => {
-//   try {
-//     const getToken = localStorage.getItem("token");
-//     dispatch({ type: "GETDONOR", payload: { loading: true } });
-//     const res = await DonorDashAPI(getToken, data);
-
-//     console.log(res);
-//     dispatch({
-//       type: "AUTH",
-//       payload: {
-//         token: res.data.token,
-//         user: res.data,
-//       },
-//     });
-
-//     dispatch({
-//       type: "NOTIFY",
-//       payload: {
-//         success: "succesfully login",
-//       },
-//     });
-//   } catch (err) {
-//     dispatch({
-//       type: "NOTIFY",
-//       payload: {
-//         error: "error",
-//       },
-//     });
-//   }
-// };
 
 export const loaderHelper = (data) => {
   return {
@@ -139,18 +109,9 @@ export const getData = (id) => {
   };
 };
 
-// export const loaderHelper = (data) => {
-//   return {
-//     type: "SET_LOADER",
-//     payload: data,
-//   };
-// };
-
 export const getmySchlData = (id) => {
   return async (dispatch) => {
     try {
-      // dispatch(loaderHelper(true));
-
       const { data } = await axios({
         method: "Get",
         url: `https://bckendapi.herokuapp.com/api/donar/myScholarships/${id}`,
