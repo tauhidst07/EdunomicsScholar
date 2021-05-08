@@ -9,6 +9,7 @@ export const TYPES = {
   SET_LOADER: "SET_LOADER",
   GET_MY_SCHOL: "GET_MY_SCHOL",
   SET_CREATE_SCHOL: "SET_CREATE_SCHOL",
+  GET_ALL_SCHOL: "GET_ALL_SCHOL",
 };
 
 export const signupDonor = (data, history) => async (dispatch) => {
@@ -140,6 +141,27 @@ export const postCreateSchol = (dataSchol, history) => {
       history.push("/all-scholar");
     } catch (err) {
       console.log(err);
+    }
+  };
+};
+
+export const getAllSchlor = () => {
+  return async (dispatch) => {
+    try {
+      dispatch(loaderHelper(true));
+
+      const { data } = await axios({
+        method: "Get",
+        url: `https://bckendapi.herokuapp.com/api/applicant/allScholarships`,
+      });
+      dispatch(loaderHelper(false));
+
+      dispatch({
+        type: "GET_ALL_SCHOL",
+        payload: data,
+      });
+    } catch (err) {
+      console.log("Error in getStage");
     }
   };
 };

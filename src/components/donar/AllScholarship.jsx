@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import axios from "axios";
+
 import Footer from "../Footer";
 import boy from "../../media/boy.jpeg";
 import "../../styles/allscholar.css";
@@ -13,11 +13,16 @@ import CardGiftcardIcon from "@material-ui/icons/CardGiftcard";
 import CakeIcon from "@material-ui/icons/Cake";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { getAllSchlor } from "../redux/actions/authAction";
+import { useDispatch, useSelector } from "react-redux";
 
 function AllScholarship() {
-  const [loading, setLoading] = useState(true);
+  const { allSchol, loader } = useSelector((state) => state.auth);
+  console.log(allSchol);
+  // const [loading, setLoading] = useState(true);
   //const [error, setError] = useState("");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(allSchol);
+  console.log(data);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
 
@@ -27,20 +32,21 @@ function AllScholarship() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  console.log(data);
+  // console.log(data);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    async function fetchMyApi() {
-      let response = await fetch(
-        "https://bckendapi.herokuapp.com/api/applicant/allScholarships"
-      );
-      response = await response.json();
+    dispatch(getAllSchlor());
 
-      setData(response);
-      setLoading(false);
-    }
-
-    fetchMyApi();
+    // async function fetchMyApi() {
+    //   let response = await fetch(
+    //     "https://bckendapi.herokuapp.com/api/applicant/allScholarships"
+    //   );
+    //   response = await response.json();
+    //   setData(response);
+    //   setLoading(false);
+    // }
+    // fetchMyApi();
   }, []);
   return (
     <div>
@@ -134,7 +140,7 @@ function AllScholarship() {
           </div>
         </div>
       </div>
-      {loading ? (
+      {loader ? (
         <div style={{ textAlign: "center", alignItems: "center" }}>
           <Loader type="ThreeDots" color="grey" height={100} width={100} />
         </div>
@@ -142,11 +148,11 @@ function AllScholarship() {
         <div style={{ position: "relative" }}>
           <div>
             <h1 style={{ marginTop: "2rem", textAlign: "center" }}>
-              scholarships {data === 0 ? 0 : data.count}
+              scholarships {data === 0 ? 0 : data?.count}
             </h1>
             {data === 0
               ? console.log("not fetched")
-              : data.scholarships.reverse().map((e) => (
+              : data?.scholarships.reverse().map((e) => (
                   <div key={e._id} className="main-boxshadow ">
                     <div className="sc-box ">
                       <img src={boy} alt="st" />
