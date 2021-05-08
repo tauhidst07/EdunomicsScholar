@@ -78,7 +78,7 @@ function DonerLeaders() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data?.map((row) => (
+            {leaders?.data?.map((row) => (
               <TableRow key={row.name}>
                 <TableCell component="th" scope="row">
                   {row.name}
