@@ -1,10 +1,5 @@
-import {
-  signinDonorAPI,
-  signupDonorAPI,
-  // DonorDashAPI,
-} from "../../../utils/fetchData";
+import { signinDonorAPI, signupDonorAPI } from "../../../utils/fetchData";
 import axios from "axios";
-// import jwt from "jsonwebtoken";
 
 export const TYPES = {
   AUTH: "AUTH",
@@ -56,7 +51,6 @@ export const loginDonor = (data, history) => async (dispatch) => {
 
     history.push("/donar-dash");
 
-    // console.log(res);
     dispatch({
       type: "AUTH",
       payload: {
@@ -116,7 +110,6 @@ export const getmySchlData = (id) => {
         method: "Get",
         url: `https://bckendapi.herokuapp.com/api/donar/myScholarships/${id}`,
       });
-      // dispatch(loaderHelper(false));
 
       dispatch({
         type: "GET_MY_SCHOL",
