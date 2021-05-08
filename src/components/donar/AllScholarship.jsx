@@ -148,11 +148,11 @@ function AllScholarship() {
         <div style={{ position: "relative" }}>
           <div>
             <h1 style={{ marginTop: "2rem", textAlign: "center" }}>
-              scholarships {data === 0 ? 0 : data?.count}
+              scholarships {allSchol === 0 ? 0 : allSchol?.count}
             </h1>
-            {data === 0
+            {allSchol === 0
               ? console.log("not fetched")
-              : data?.scholarships.reverse().map((e) => (
+              : allSchol?.scholarships.reverse().map((e) => (
                   <div key={e._id} className="main-boxshadow ">
                     <div className="sc-box ">
                       <img src={boy} alt="st" />
