@@ -11,6 +11,7 @@ export const TYPES = {
   SET_CREATE_SCHOL: "SET_CREATE_SCHOL",
   GET_ALL_SCHOL: "GET_ALL_SCHOL",
   GET_DONOR_PROFILE: "GET_DONOR_PROFILE",
+  GET_LEADERS: "GET_LEADERS",
 };
 
 export const signupDonor = (data, history) => async (dispatch) => {
@@ -184,6 +185,27 @@ export const getDonorProfile = (id) => {
       });
     } catch (err) {
       console.log("Error in getStage");
+    }
+  };
+};
+
+export const getLeaders = () => {
+  return async (dispatch) => {
+    try {
+      // dispatch(loaderHelper(true));
+
+      const { data } = await axios({
+        method: "Get",
+        url: `https://bckendapi.herokuapp.com/api/user/leaders`,
+      });
+      // dispatch(loaderHelper(false));
+
+      dispatch({
+        type: "GET_LEADERS",
+        payload: data,
+      });
+    } catch (err) {
+      console.log(err);
     }
   };
 };

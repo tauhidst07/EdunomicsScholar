@@ -15,12 +15,17 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import axios from "axios";
+import { getLeaders } from "../redux/actions/authAction";
+import { useDispatch, useSelector } from "react-redux";
 
 function DonerLeaders() {
+  const { leaders } = useSelector((state) => state.auth);
+  console.log(leaders);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
   const [error, setError] = useState("");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(leaders);
+  console.log(data);
 
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -28,22 +33,25 @@ function DonerLeaders() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    axios
-      .get("https://bckendapi.herokuapp.com/api/user/leaders")
-      .then((res) => {
-        console.log(res.data.data);
-        // setLoading(false);
-        setData(res.data.data);
-        setError("");
-      })
-      .catch((err) => {
-        // setLoading(false);
-        setData({});
-        setError("error is there");
-        console.log(error);
-      });
+    dispatch(getLeaders());
+
+    // axios
+    //   .get("https://bckendapi.herokuapp.com/api/user/leaders")
+    //   .then((res) => {
+    //     console.log(res.data.data);
+    //     // setLoading(false);
+    //     setData(res.data.data);
+    //     setError("");
+    //   })
+    //   .catch((err) => {
+    //     // setLoading(false);
+    //     setData({});
+    //     setError("error is there");
+    //     console.log(error);
+    //   });
   }, []);
   const useStyles = makeStyles((theme) => ({
     button: {
@@ -70,7 +78,7 @@ function DonerLeaders() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.map((row) => (
+            {data?.map((row) => (
               <TableRow key={row.name}>
                 <TableCell component="th" scope="row">
                   {row.name}
