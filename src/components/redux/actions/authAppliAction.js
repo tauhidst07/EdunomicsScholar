@@ -1,7 +1,10 @@
 import { signinAppliAPI, signupAppliAPI } from "../../../utils/fetchData";
+import axios from "axios";
 
 export const TYPES = {
   AUTH_APPLI: "AUTH_APPLI",
+  APPLI_DASH: "APPLI_DASH",
+  SET_LOADER: "SET_LOADER",
 };
 
 export const signupAppli = (data, history) => async (dispatch) => {
@@ -66,4 +69,31 @@ export const loginAppli = (data, history) => async (dispatch) => {
       },
     });
   }
+};
+
+export const loaderHelper = (data) => {
+  return {
+    type: "SET_LOADER",
+    payload: data,
+  };
+};
+export const appliDash = (id) => {
+  return async (dispatch) => {
+    try {
+      dispatch(loaderHelper(true));
+
+      const { data } = await axios({
+        method: "Get",
+        url: `https://bckendapi.herokuapp.com/api/user/dashboard/${id}`,
+      });
+      dispatch(loaderHelper(false));
+
+      dispatch({
+        type: "APPLI_DASH",
+        payload: data,
+      });
+    } catch (err) {
+      console.log("Error in getStage");
+    }
+  };
 };

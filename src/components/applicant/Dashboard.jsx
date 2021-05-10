@@ -6,40 +6,49 @@ import axios from "axios";
 import profile from "../../media/profile.png";
 import jwt from "jsonwebtoken";
 import Loader from "react-loader-spinner";
+import { appliDash } from "../redux/actions/authAppliAction";
+import { useDispatch, useSelector } from "react-redux";
 
 import "../../styles/dashboard.css";
 
 function Dashboard() {
+  const { loader, appliData } = useSelector((state) => state.authAppli);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [data, setData] = useState({});
+  const [data, setData] = useState(appliData);
+  console.log(appliData);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     let encodedToken = localStorage.getItem("token");
 
     let myId = jwt.decode(encodedToken);
-    console.log(myId);
-    axios
-      .get(`https://bckendapi.herokuapp.com/api/user/dashboard/${myId._id}`)
-      .then((res) => {
-        console.log(res);
+    // console.log(myId);
+    dispatch(appliDash(myId?._id));
+    // dispatch(getmySchlData(myId?._id));
+    // axios
+    //   .get(`https://bckendapi.herokuapp.com/api/user/dashboard/${myId._id}`)
+    //   .then((res) => {
+    //     console.log(res);
 
-        setLoading(false);
-        setData(res.data);
-        setError("");
-      })
-      .catch((err) => {
-        setLoading(false);
-        setData({});
-        setError("error is there");
-        console.log(error);
-      });
+    //     setLoading(false);
+    //     setData(res.data);
+    //     setError("");
+    //   })
+    //   .catch((err) => {
+    //     setLoading(false);
+    //     setData({});
+    //     setError("error is there");
+    //     console.log(error);
+    //   });
   }, []);
 
   return (
     <div className="dashboard">
       <DashboardHeader />
-      {loading ? (
+      {loader ? (
         <div style={{ textAlign: "center", alignItems: "center" }}>
           <Loader type="ThreeDots" color="grey" height={100} width={100} />
         </div>
@@ -54,8 +63,8 @@ function Dashboard() {
                   alt="profile"
                   width="70"
                 />
-                <h1 className="userInfo__name">Hey, {data.name}!</h1>
-                <div className="userInfo__points">{data.points}</div>
+                <h1 className="userInfo__name">Hey, {appliData?.name}!</h1>
+                <div className="userInfo__points">{appliData?.points}</div>
               </div>
               <div className="userEarningPoints">
                 <a href="/">
