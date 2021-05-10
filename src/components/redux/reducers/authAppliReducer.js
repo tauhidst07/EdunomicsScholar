@@ -11,4 +11,4 @@ const authAppliReducer = (state = initialState, action) => {
   }
 };
 
-export default profileReducer;
+export default authAppliReducer;
