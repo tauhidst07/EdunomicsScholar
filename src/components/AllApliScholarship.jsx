@@ -8,41 +8,47 @@ import CakeIcon from "@material-ui/icons/Cake";
 import DashboardHeader from "./DashboardHeader";
 import Footer from "./Footer";
 import Loader from "react-loader-spinner";
+import { getAllSchlor } from "../components/redux/actions/authAppliAction";
+import { useDispatch, useSelector } from "react-redux";
 
 function AllApliScholarship() {
-  const [data, setData] = useState(0);
-  const [loading, setLoading] = useState(true);
+  const { allSchol, loader } = useSelector((state) => state.authAppli);
+  useState(allSchol);
+  // const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    async function fetchMyApi() {
-      let response = await fetch(
-        "https://bckendapi.herokuapp.com/api/applicant/allScholarships"
-      );
-      response = await response.json();
-      setData([response]);
-      setLoading(false);
-      console.log(response);
+    dispatch(getAllSchlor());
 
-      console.log(data);
-    }
+    // async function fetchMyApi() {
+    //   let response = await fetch(
+    //     "https://bckendapi.herokuapp.com/api/applicant/allScholarships"
+    //   );
+    //   response = await response.json();
+    //   setData([response]);
+    //   setLoading(false);
+    //   console.log(response);
 
-    fetchMyApi();
+    //   console.log(data);
+    // }
+
+    // fetchMyApi();
   }, []);
   return (
     <div>
       <DashboardHeader isActive={true} />
-      {loading ? (
+      {loader ? (
         <div style={{ textAlign: "center", alignItems: "center" }}>
           <Loader type="ThreeDots" color="grey" height={100} width={100} />
         </div>
       ) : (
         <div>
           <h1 style={{ marginTop: "2rem", textAlign: "center" }}>
-            scholarships {data === 0 ? 0 : data[0].count}
+            scholarships {allSchol === 0 ? 0 : allSchol?.count}
           </h1>
-          {data === 0
+          {allSchol === 0
             ? console.log("not fetched")
-            : data[0].scholarships.map((e) => (
+            : allSchol?.scholarships?.reverse().map((e) => (
                 <div key={e._id} className="main-boxshadow ">
                   <div className="sc-box ">
                     <img src={boy} alt="st" />
