@@ -1,11 +1,14 @@
 import { TYPES } from "../actions/authAppliAction";
 
-const initialState = {};
+const initialState = {
+  authAppli: null,
+};
 
 const authAppliReducer = (state = initialState, action) => {
   switch (action.type) {
-    case TYPES.GET_PROFILE:
-      return action.payload;
+    case TYPES.AUTH_APPLI:
+      return { authAppli: action.payload };
+
     default:
       return state;
   }
