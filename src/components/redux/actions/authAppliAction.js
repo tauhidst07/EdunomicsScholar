@@ -8,6 +8,7 @@ export const TYPES = {
   GET_ALL_SCHOL: "GET_ALL_SCHOL",
   GET_LEADERS: "GET_LEADERS",
   GET_APPLI_PROFILE: "GET_APPLI_PROFILE",
+  GET_MY_APPLI: "GET_MY_APPLI",
 };
 
 export const signupAppli = (data, history) => async (dispatch) => {
@@ -153,6 +154,26 @@ export const getAppliProfile = (id) => {
 
       dispatch({
         type: "GET_APPLI_PROFILE",
+        payload: data,
+      });
+    } catch (err) {
+      console.log("Error in getStage");
+    }
+  };
+};
+export const getmyAppli = (id) => {
+  return async (dispatch) => {
+    try {
+      dispatch(loaderHelper(true));
+
+      const { data } = await axios({
+        method: "Get",
+        url: `https://bckendapi.herokuapp.com/api/applicant/myScholarships/${id}`,
+      });
+      dispatch(loaderHelper(false));
+
+      dispatch({
+        type: "GET_MY_APPLI",
         payload: data,
       });
     } catch (err) {

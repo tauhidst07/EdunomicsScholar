@@ -20,8 +20,8 @@ import { useDispatch, useSelector } from "react-redux";
 const Profile = () => {
   const { profiles, loader } = useSelector((state) => state.authAppli);
 
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState("");
   const [data, setData] = useState(profiles);
   console.log(profiles);
   const dispatch = useDispatch();

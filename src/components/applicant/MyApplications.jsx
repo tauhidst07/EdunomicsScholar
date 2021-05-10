@@ -6,39 +6,46 @@ import axios from "axios";
 import Loader from "react-loader-spinner";
 import { Link, useHistory } from "react-router-dom";
 import img from "../../media/scholar-img.jpeg";
+import { getmyAppli } from "../redux/actions/authAppliAction";
+import { useDispatch, useSelector } from "react-redux";
 
 const MyApplications = () => {
+  const { myAppli, loader } = useSelector((state) => state.authAppli);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(myAppli);
+  console.log(myAppli);
   const [data2, setData2] = useState([]);
   // const [count,setCount] = useState()
 
   const history = useHistory();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     let encodedToken = localStorage.getItem("token");
 
     let myId = jwt.decode(encodedToken);
+    dispatch(getmyAppli(myId?._id));
 
-    axios
-      .get(
-        `https://bckendapi.herokuapp.com/api/applicant/myScholarships/${myId._id}`
-      )
-      .then((res) => {
-        console.log(res.data.scholarships);
-        setData(res.data.scholarships);
-        setLoading(false);
+    // axios
+    //   .get(
+    //     `https://bckendapi.herokuapp.com/api/applicant/myScholarships/${myId._id}`
+    //   )
+    //   .then((res) => {
+    //     console.log(res.data.scholarships);
+    //     setData(res.data.scholarships);
+    //     setLoading(false);
 
-        // setData2(res.data)
-        // setCount(res.data.count)
-      })
+    //     // setData2(res.data)
+    //     // setCount(res.data.count)
+    //   })
 
-      .catch((err) => {
-        setData({});
-        setError("error is there");
-        console.log(error);
-      });
+    //   .catch((err) => {
+    //     setData({});
+    //     setError("error is there");
+    //     console.log(error);
+    //   });
   }, []);
 
   const [selected, setSelected] = useState("all");
@@ -46,13 +53,13 @@ const MyApplications = () => {
   return (
     <div className="myApplication">
       <DashboardHeader activeapp={true} myapplication="myapplications" />
-      {loading ? (
+      {loader ? (
         <div style={{ textAlign: "center", alignItems: "center" }}>
           <Loader type="ThreeDots" color="grey" height={100} width={100} />
         </div>
       ) : (
         <div className="myApplication__main">
-          <h1>My Applications</h1>
+          <h1>My Applications ({myAppli?.count})</h1>
 
           <ul className="myapplication__tabs">
             <li
@@ -126,7 +133,7 @@ const MyApplications = () => {
               Archive <span></span>
             </li>
           </ul>
-          {data.map((item) => (
+          {myAppli?.scholarships?.map((item) => (
             <div className="myApplication__main__scholarships">
               <div className="myApplication__main__scholarships_Container">
                 <a href="/">
