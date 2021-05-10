@@ -14,39 +14,47 @@ import profileImage from "../../media/profile.png";
 import "../../styles/profile.css";
 import jwt from "jsonwebtoken";
 import Loader from "react-loader-spinner";
+import { getAppliProfile } from "../redux/actions/authAppliAction";
+import { useDispatch, useSelector } from "react-redux";
 
 const Profile = () => {
+  const { profiles, loader } = useSelector((state) => state.authAppli);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [data, setData] = useState({});
+  const [data, setData] = useState(profiles);
+  console.log(profiles);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    let encodedToken = localStorage.getItem("auth-token");
+    let encodedToken = localStorage.getItem("token");
 
     let myId = jwt.decode(encodedToken);
     console.log(myId);
-    axios
-      .get(`https://bckendapi.herokuapp.com/api/user/dashboard/${myId._id}`)
-      .then((res) => {
-        console.log(res);
+    dispatch(getAppliProfile(myId?._id));
 
-        setLoading(false);
-        setData(res.data);
-        setError("");
-      })
-      .catch((err) => {
-        setLoading(false);
-        setData({});
-        setError("error is there");
-        console.log(error);
-      });
+    // axios
+    //   .get(`https://bckendapi.herokuapp.com/api/user/dashboard/${myId._id}`)
+    //   .then((res) => {
+    //     console.log(res);
+
+    //     setLoading(false);
+    //     setData(res.data);
+    //     setError("");
+    //   })
+    //   .catch((err) => {
+    //     setLoading(false);
+    //     setData({});
+    //     setError("error is there");
+    //     console.log(error);
+    //   });
   }, []);
 
   return (
     <>
       <div className="profile">
         <DashboardHeader />
-        {loading ? (
+        {loader ? (
           <div style={{ textAlign: "center", alignItems: "center" }}>
             <Loader type="ThreeDots" color="grey" height={100} width={100} />
           </div>
@@ -172,7 +180,7 @@ const Profile = () => {
                     </li>
                     <li>
                       <div>Gender</div>
-                      <div>{data.gender}</div>
+                      <div>{profiles?.gender}</div>
                       <div>
                         <svg
                           width="18"
@@ -204,7 +212,7 @@ const Profile = () => {
                     </li>
                     <li>
                       <div>Ethnicity</div>
-                      <div>{data.ethnicity}</div>
+                      <div>{profiles?.ethnicity}</div>
                       <div>
                         <svg
                           width="18"
@@ -236,7 +244,7 @@ const Profile = () => {
                     </li>
                     <li>
                       <div>Religion</div>
-                      <div>{data.religion}</div>
+                      <div>{profiles?.religion}</div>
                       <div>
                         <svg
                           width="18"
@@ -290,7 +298,7 @@ const Profile = () => {
                   <div className="profile__containerLeft__additionalIntest">
                     <span>ADDITIONAL INTRESTS</span>
                     <ul>
-                      <li>{data.additionalIntrests}</li>
+                      <li>{profiles?.additionalIntrests}</li>
                       <li></li>
                       <li></li>
                     </ul>
@@ -327,10 +335,10 @@ const Profile = () => {
                 <div className="profile__containerRight__header">
                   <div>
                     <div className="profile__containerRight__headerName">
-                      <h1>{data.name}</h1>
+                      <h1>{profiles?.name}</h1>
                     </div>
                     <div className="profile__containerRight__headerPoints">
-                      {data.points}
+                      {profiles?.points}
                     </div>
                   </div>
 
@@ -679,7 +687,7 @@ const Profile = () => {
 
                 <div className="profileBio">
                   <h1 className="profileHeading">Bio</h1>
-                  <p>{data.bio}</p>
+                  <p>{profiles?.bio}</p>
                   <div className="profileBio__link">
                     <div>
                       <div>
