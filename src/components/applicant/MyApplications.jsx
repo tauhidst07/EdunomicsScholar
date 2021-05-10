@@ -12,11 +12,11 @@ import { useDispatch, useSelector } from "react-redux";
 const MyApplications = () => {
   const { myAppli, loader } = useSelector((state) => state.authAppli);
 
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState("");
   const [data, setData] = useState(myAppli);
   console.log(myAppli);
-  const [data2, setData2] = useState([]);
+  // const [data2, setData2] = useState([]);
   // const [count,setCount] = useState()
 
   const history = useHistory();
