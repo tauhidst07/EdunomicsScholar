@@ -14,8 +14,8 @@ import "../../styles/dashboard.css";
 function Dashboard() {
   const { loader, appliData } = useSelector((state) => state.authAppli);
 
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState("");
   const [data, setData] = useState(appliData);
   console.log(appliData);
 
