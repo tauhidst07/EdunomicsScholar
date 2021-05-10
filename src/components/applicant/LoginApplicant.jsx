@@ -4,8 +4,10 @@ import jwt from "jsonwebtoken";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import WarningIcon from "@material-ui/icons/Warning";
-
+import { loginAppli } from "../redux/actions/authAppliAction";
+import { useDispatch } from "react-redux";
 import "../../styles/login.css";
+import Alert from "../Alert";
 
 import { Link, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -24,27 +26,31 @@ function LoginApplicant() {
   const [typePass, setTypePass] = useState(false);
 
   const { register, handleSubmit, errors } = useForm();
+  const dispatch = useDispatch();
+
   const onSubmit = (data) => {
     // console.log(data);
-    axios
-      .post("https://bckendapi.herokuapp.com/api/user/signin", data)
-      .then(function (response) {
-        console.log(response);
-        localStorage.setItem("auth-token", response.data.token);
-        let encodedToken = localStorage.getItem("auth-token");
-        // console.log(encodedToken)
-        // console.log(jwt.decode(encodedToken))
-        // localStorage.setItem("jwt", JSON.stringify(data));
-        history.push("/dashboard");
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    // axios
+    //   .post("https://bckendapi.herokuapp.com/api/user/signin", data)
+    //   .then(function (response) {
+    //     console.log(response);
+    //     localStorage.setItem("auth-token", response.data.token);
+    //     let encodedToken = localStorage.getItem("auth-token");
+    //     // console.log(encodedToken)
+    //     // console.log(jwt.decode(encodedToken))
+    //     // localStorage.setItem("jwt", JSON.stringify(data));
+    //     history.push("/dashboard");
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+    dispatch(loginAppli(data, history));
   };
   return (
     <div>
       <div>
         <Header isappliactive={true} />
+        <Alert />
         <div className="loginbox">
           <h1 className="welcome">Welcome Back</h1>
           <form onSubmit={handleSubmit(onSubmit)}>

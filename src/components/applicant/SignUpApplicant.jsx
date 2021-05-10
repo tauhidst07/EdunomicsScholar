@@ -4,26 +4,32 @@ import { useForm } from "react-hook-form";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import axios from "axios";
+import Alert from "../Alert";
+
 import edu from "../../media/edu.png";
 import WarningIcon from "@material-ui/icons/Warning";
+import { signupAppli } from "../redux/actions/authAppliAction";
+import { useDispatch } from "react-redux";
 
 function SignUpApplicant() {
   const history = useHistory();
 
   const { register, handleSubmit, errors } = useForm();
   const [typePass, setTypePass] = useState(false);
+  const dispatch = useDispatch();
 
   const onSubmit = (data) => {
     // console.log(data);
-    axios
-      .post("https://bckendapi.herokuapp.com/api/user/signup", data)
-      .then(function (response) {
-        console.log(response);
-        history.push("/loginApli");
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    // axios
+    //   .post("https://bckendapi.herokuapp.com/api/user/signup", data)
+    //   .then(function (response) {
+    //     console.log(response);
+    //     history.push("/loginApli");
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+    dispatch(signupAppli(data, history));
   };
 
   return (
@@ -65,7 +71,9 @@ function SignUpApplicant() {
           </Link>
         </div>
       </nav>
-
+      <div>
+        <Alert isAppSignup={true} />
+      </div>
       <div className="loginbox">
         <h1 className="welcome">Sign Up as an Applicant</h1>
 

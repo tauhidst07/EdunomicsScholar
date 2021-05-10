@@ -15,7 +15,7 @@ function Dashboard() {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    let encodedToken = localStorage.getItem("auth-token");
+    let encodedToken = localStorage.getItem("token");
 
     let myId = jwt.decode(encodedToken);
     console.log(myId);

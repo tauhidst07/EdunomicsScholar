@@ -8,7 +8,7 @@ export const signupAppli = (data, history) => async (dispatch) => {
   try {
     dispatch({ type: "NOTIFY", payload: { loading: true } });
     const res = await signupAppliAPI("signup", data);
-    console.log(res);
+    // console.log(res);
     history.push("/loginApli");
     dispatch({
       type: "AUTH_APPLI",
@@ -28,6 +28,41 @@ export const signupAppli = (data, history) => async (dispatch) => {
       type: "NOTIFY",
       payload: {
         error: err.response.data.message,
+      },
+    });
+  }
+};
+
+export const loginAppli = (data, history) => async (dispatch) => {
+  try {
+    dispatch({ type: "NOTIFY", payload: { loading: true } });
+    const res = await signinAppliAPI("signin", data);
+    localStorage.setItem("auth-token", true);
+    localStorage.setItem("token", res.data.token);
+
+    localStorage.setItem("id", res.data._id);
+    console.log(res);
+    history.push("/dashboard");
+
+    dispatch({
+      type: "AUTH",
+      payload: {
+        token: res.data.token,
+        user: res.data,
+      },
+    });
+
+    dispatch({
+      type: "NOTIFY",
+      payload: {
+        success: "succesfully login",
+      },
+    });
+  } catch (err) {
+    dispatch({
+      type: "NOTIFY",
+      payload: {
+        error: "error",
       },
     });
   }
