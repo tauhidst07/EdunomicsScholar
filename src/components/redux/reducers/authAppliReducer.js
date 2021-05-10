@@ -5,6 +5,7 @@ const initialState = {
   appliData: [],
   loader: false,
   allSchol: [],
+  leaders: [],
 };
 
 const authAppliReducer = (state = initialState, action) => {
@@ -17,6 +18,8 @@ const authAppliReducer = (state = initialState, action) => {
       return { loader: action.payload };
     case TYPES.GET_ALL_SCHOL:
       return { ...state, allSchol: action.payload };
+    case TYPES.GET_LEADERS:
+      return { ...state, leaders: action.payload };
     default:
       return state;
   }

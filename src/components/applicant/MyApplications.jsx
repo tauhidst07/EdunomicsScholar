@@ -17,7 +17,7 @@ const MyApplications = () => {
   const history = useHistory();
 
   useEffect(() => {
-    let encodedToken = localStorage.getItem("auth-token");
+    let encodedToken = localStorage.getItem("token");
 
     let myId = jwt.decode(encodedToken);
 

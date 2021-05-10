@@ -11,26 +11,33 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import { getLeaders } from "../redux/actions/authAppliAction";
+import { useDispatch, useSelector } from "react-redux";
 
 function ApliLeaders() {
-  const [error, setError] = useState("");
-  const [data, setData] = useState([]);
+  const { leaders } = useSelector((state) => state.authAppli);
+  console.log(leaders);
+  // const [error, setError] = useState("");
+  const [data, setData] = useState(leaders);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    axios
-      .get("https://bckendapi.herokuapp.com/api/user/leaders")
-      .then((res) => {
-        console.log(res.data.data);
-        // setLoading(false);
-        setData(res.data.data);
-        setError("");
-      })
-      .catch((err) => {
-        // setLoading(false);
-        setData({});
-        setError("error is there");
-        console.log(error);
-      });
+    dispatch(getLeaders());
+
+    // axios
+    //   .get("https://bckendapi.herokuapp.com/api/user/leaders")
+    //   .then((res) => {
+    //     console.log(res.data.data);
+    //     // setLoading(false);
+    //     setData(res.data.data);
+    //     setError("");
+    //   })
+    //   .catch((err) => {
+    //     // setLoading(false);
+    //     setData({});
+    //     setError("error is there");
+    //     console.log(error);
+    //   });
   }, []);
   const useStyles = makeStyles({
     table: {
@@ -53,7 +60,7 @@ function ApliLeaders() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.map((row) => (
+            {leaders?.data?.map((row) => (
               <TableRow key={row.name}>
                 <TableCell component="th" scope="row">
                   {row.name}

@@ -6,6 +6,7 @@ export const TYPES = {
   APPLI_DASH: "APPLI_DASH",
   SET_LOADER: "SET_LOADER",
   GET_ALL_SCHOL: "GET_ALL_SCHOL",
+  GET_LEADERS: "GET_LEADERS",
 };
 
 export const signupAppli = (data, history) => async (dispatch) => {
@@ -115,6 +116,26 @@ export const getAllSchlor = () => {
       });
     } catch (err) {
       console.log("Error in getStage");
+    }
+  };
+};
+export const getLeaders = () => {
+  return async (dispatch) => {
+    try {
+      // dispatch(loaderHelper(true));
+
+      const { data } = await axios({
+        method: "Get",
+        url: `https://bckendapi.herokuapp.com/api/user/leaders`,
+      });
+      // dispatch(loaderHelper(false));
+      // console.log(data);
+      dispatch({
+        type: "GET_LEADERS",
+        payload: data,
+      });
+    } catch (err) {
+      console.log(err);
     }
   };
 };

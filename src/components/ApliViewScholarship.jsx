@@ -29,7 +29,7 @@ function ApliViewScholarship() {
   let { scholarParams } = useParams();
   console.log(scholarParams);
 
-  let encodedToken = localStorage.getItem("auth-token");
+  let encodedToken = localStorage.getItem("token");
 
   let appliId = jwt.decode(encodedToken)._id;
   // console.log(scholarParams.split('&'))
