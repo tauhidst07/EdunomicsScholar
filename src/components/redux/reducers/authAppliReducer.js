@@ -1,4 +1,4 @@
-import { TYPES } from "../actions/authAction";
+import { TYPES } from "../actions/authAppliAction";
 
 const initialState = {};
 
