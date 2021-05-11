@@ -21,7 +21,7 @@ function DonarDashboard() {
   );
   // console.log(auth1);
   // console.log(auth2);
-  console.log(myData);
+  // console.log(myData);
   console.log(mySchlData);
 
   const [error, setError] = useState("");
@@ -402,7 +402,7 @@ function DonarDashboard() {
                     <div className="finishApplicationBtn">
                       <a href={`/appliedapplicants`}>
                         <button style={{ cursor: "pointer" }}>
-                          <span>5 Applicants</span>
+                          <span>{item?.applicants?.length} Applicant</span>
                           <svg
                             width="18"
                             height="18"

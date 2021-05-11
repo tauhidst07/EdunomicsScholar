@@ -147,7 +147,7 @@ function Dashboard() {
                             fill="#5D57FB"
                           ></path>
                         </svg>
-                        {data.points}
+                        {appliData?.points}
                       </div>
                     </div>
                   </div>
