@@ -11,9 +11,13 @@ import img from "../../media/scholar-img.jpeg";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import RedeemIcon from "@material-ui/icons/Redeem";
 import Loader from "react-loader-spinner";
+import { getmySchlData } from "../redux/actions/authAction";
+import { useDispatch, useSelector } from "react-redux";
 
 const AppliedApplicants = () => {
-  const [loading, setLoading] = useState(true);
+  const { loader, mySchlData } = useSelector((state) => state.auth);
+  console.log(mySchlData);
+  // const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [data, setData] = useState([]);
   const [data2, setData2] = useState([]);
@@ -28,24 +32,27 @@ const AppliedApplicants = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const dispatch = useDispatch();
 
   useEffect(() => {
     let encodedToken = localStorage.getItem("token");
 
     let myId = jwt.decode(encodedToken);
-    console.log(myId);
-    //606ac845c5d23600159eaf4a
-    axios
-      .get(
-        `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${myId._id}`
-      )
-      .then((res) => {
-        console.log(res);
+    // console.log(myId);
+    dispatch(getmySchlData(myId?._id));
 
-        setLoading(false);
-        setData(res.data);
-        setError("");
-      });
+    //606ac845c5d23600159eaf4a
+    // axios
+    //   .get(
+    //     `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${myId._id}`
+    //   )
+    //   .then((res) => {
+    //     console.log(res);
+
+    //     setLoading(false);
+    //     setData(res.data);
+    //     setError("");
+    //   });
 
     // my scholar
 
@@ -160,13 +167,13 @@ const AppliedApplicants = () => {
         </div>
       </div>
       <div className="myApplication">
-        {loading ? (
+        {loader ? (
           <div style={{ textAlign: "center", alignItems: "center" }}>
             <Loader type="ThreeDots" color="grey" height={100} width={100} />
           </div>
         ) : (
           <div className="myApplication__main">
-            <h1>Applicants</h1>
+            <h1>Applicants ({mySchlData?.scholarships?.applicants?.length})</h1>
 
             <div className="myApplication__main__scholarships">
               <div className="myApplication__main__scholarships_Container">
