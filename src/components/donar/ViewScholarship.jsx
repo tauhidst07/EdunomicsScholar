@@ -118,10 +118,10 @@ function ViewScholarship() {
           </li>
 
           <li className="inviteFrineds">
-            <a href="/">Invite Applicants</a>
+            <a href="/invite-applicant">Invite Applicants</a>
           </li>
           <li className="leaders">
-            <a href="/leaders">Leaders</a>
+            <a href="/doner-leaders">Leaders</a>
           </li>
         </ul>
         <div className="dashboardHeader__menu">

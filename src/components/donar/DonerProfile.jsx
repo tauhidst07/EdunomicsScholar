@@ -15,7 +15,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 function DonerProfile() {
   const { donProfile, loader } = useSelector((state) => state.auth);
-
+  // console.log(donProfile);
   // const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [data, setData] = useState(donProfile);
@@ -34,7 +34,7 @@ function DonerProfile() {
     let encodedToken = localStorage.getItem("token");
 
     let myId = jwt.decode(encodedToken);
-    console.log(myId);
+    // console.log(myId);
     dispatch(getDonorProfile(myId?._id));
 
     // axios
@@ -151,13 +151,15 @@ function DonerProfile() {
       ) : (
         <div>
           <div className="pro-doner">
-            <h1>Donor Profile: {data?.name}</h1>
-            <p>Scholarships, grants, and award winners for {data?.name}</p>
+            <h1>Donor Profile: {donProfile?.name}</h1>
+            <p>
+              Scholarships, grants, and award winners for {donProfile?.name}
+            </p>
           </div>
 
           <div className="img-boxx" style={{ marginBottom: "4rem" }}>
             <img className="pro-imgd" src={profileImage} alt="profile" />
-            <h1>{data?.name}</h1>
+            <h1>{donProfile?.name}</h1>
             <p>Edit</p>
           </div>
           <div className="mission">

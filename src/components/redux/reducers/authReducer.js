@@ -11,6 +11,7 @@ const initialState = {
   donProfile: null,
   leaders: [],
   viewSchol: null,
+  moreAboutDon: null,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -33,6 +34,8 @@ const authReducer = (state = initialState, action) => {
       return { ...state, leaders: action.payload };
     case TYPES.GET_VIEW_SCHOL:
       return { ...state, viewSchol: action.payload };
+    case TYPES.GET_VIEW_SCHOL:
+      return { ...state, moreAboutDon: action.payload };
     default:
       return { auth2: state };
   }
