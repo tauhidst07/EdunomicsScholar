@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
-// import PersonIcon from "@material-ui/icons/Person";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import TextField from "@material-ui/core/TextField";
-
 import logo from "../../media/edu.png";
 import RoomIcon from "@material-ui/icons/Room";
 import { Menu, MenuItem, Button } from "@material-ui/core";
@@ -45,17 +43,12 @@ function SettingsDoner() {
     setIsOpen(true);
   }
 
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    //subtitle.style.color = '#f00';
-  }
+  function afterOpenModal() {}
 
   function closeModal() {
     setIsOpen(false);
   }
-  // const handleChange = () => {
-  //   setHide(true);
-  // };
+
   return (
     <div>
       <div className="dashboardHeader">
