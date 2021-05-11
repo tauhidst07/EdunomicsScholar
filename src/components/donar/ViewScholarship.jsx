@@ -21,12 +21,12 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import MoreAboutDoner from "./MoreAboutDoner";
-import { getViewSchol, getMoreDon } from "../redux/actions/authAction";
+import { getViewSchol, getFunder } from "../redux/actions/authAction";
 import { useDispatch, useSelector } from "react-redux";
 
 function ViewScholarship() {
-  const { viewSchol, moreAboutDon } = useSelector((state) => state.auth);
-  console.log(moreAboutDon);
+  const { viewSchol, getfunder } = useSelector((state) => state.auth);
+  // console.log(moreAboutDon);
 
   let { scholarParams } = useParams();
 
@@ -52,7 +52,7 @@ function ViewScholarship() {
   useEffect(() => {
     async function fetchMyApi() {
       dispatch(getViewSchol(scholarParams));
-      dispatch(getMoreDon(scholarParams));
+      dispatch(getFunder(scholarParams));
 
       // let response = await fetch(
       //   `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${
@@ -204,7 +204,7 @@ function ViewScholarship() {
             <img src={gir} alt="" />
             <div className="two-head" style={{ marginLeft: "1rem" }}>
               <h4>Funded by </h4>
-              <p>{moreAboutDon === 0 ? "" : moreAboutDon?.name}</p>
+              <p>{getfunder === 0 ? "" : getfunder?.name}</p>
             </div>
             <Link to={`/more-about-donar/${scholarParams.split("&")[1]}`}>
               <h4

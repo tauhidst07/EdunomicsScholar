@@ -13,6 +13,7 @@ export const TYPES = {
   GET_DONOR_PROFILE: "GET_DONOR_PROFILE",
   GET_LEADERS: "GET_LEADERS",
   GET_VIEW_SCHOL: "GET_VIEW_SCHOL",
+  GET_FUNDER: "GET_FUNDER",
   MORE_ABOUT_DON: "MORE_ABOUT_DON",
 };
 
@@ -231,7 +232,7 @@ export const getViewSchol = (scholarParams) => {
     }
   };
 };
-export const getMoreDon = (scholarParams) => {
+export const getFunder = (scholarParams) => {
   return async (dispatch) => {
     try {
       const { data } = await axios({
@@ -242,7 +243,7 @@ export const getMoreDon = (scholarParams) => {
       });
       // console.log(data);
       dispatch({
-        type: "MORE_ABOUT_DON",
+        type: "GET_FUNDER",
         payload: data,
       });
     } catch (err) {
