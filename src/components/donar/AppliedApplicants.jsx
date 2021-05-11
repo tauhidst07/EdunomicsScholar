@@ -18,10 +18,10 @@ const AppliedApplicants = () => {
   const { loader, mySchlData } = useSelector((state) => state.auth);
   console.log(mySchlData);
   // const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-  const [data, setData] = useState([]);
-  const [data2, setData2] = useState([]);
-  const [count, setCount] = useState();
+  // const [error, setError] = useState("");
+  // const [data, setData] = useState([]);
+  // const [data2, setData2] = useState([]);
+  // const [count, setCount] = useState();
 
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
@@ -105,7 +105,6 @@ const AppliedApplicants = () => {
         </ul>
         <div className="dashboardHeader__menu">
           <div className="btn">
-            {/* <Select className="bt1" /> */}
             <Button
               style={{
                 fontSize: "14px",
