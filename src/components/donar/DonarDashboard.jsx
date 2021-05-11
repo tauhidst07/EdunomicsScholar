@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useParams } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import Footer from "../Footer";
@@ -19,9 +18,7 @@ function DonarDashboard() {
   const { auth1, auth2, myData, loader, mySchlData } = useSelector(
     (state) => state.auth
   );
-  // console.log(auth1);
-  // console.log(auth2);
-  // console.log(myData);
+
   console.log(mySchlData);
 
   const [error, setError] = useState("");
