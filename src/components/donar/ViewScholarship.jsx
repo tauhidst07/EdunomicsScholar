@@ -21,18 +21,21 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import MoreAboutDoner from "./MoreAboutDoner";
-import { getViewSchol } from "../redux/actions/authAction";
+import { getViewSchol, getMoreDon } from "../redux/actions/authAction";
 import { useDispatch, useSelector } from "react-redux";
 
 function ViewScholarship() {
-  const { viewSchol, loader } = useSelector((state) => state.auth);
-  console.log(viewSchol);
+  const { viewSchol, moreAboutDon } = useSelector((state) => state.auth);
+  console.log(moreAboutDon);
 
   let { scholarParams } = useParams();
 
-  console.log(scholarParams.split("&"));
+  // console.log(scholarParams.split("&"));
 
   const [data, setData] = useState(0);
+  // setviewSchol([viewSchol]);
+
+  // console.log(viewSchol);
   const [funder, setFunder] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
@@ -48,7 +51,8 @@ function ViewScholarship() {
 
   useEffect(() => {
     async function fetchMyApi() {
-      dispatch(getViewSchol());
+      dispatch(getViewSchol(scholarParams));
+      dispatch(getMoreDon(scholarParams));
 
       // let response = await fetch(
       //   `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${
@@ -56,20 +60,20 @@ function ViewScholarship() {
       //   }`
       // );
       // response = await response.json();
-      // console.log("DATA",response);
-      // setData([response]);
+      // console.log("viewSchol",response);
+      // setviewSchol([response]);
 
       // //setDonarId(response.scholarships.createdBy);
-      // console.log("DATA",data);
+      // console.log("viewSchol",viewSchol);
 
-      // funder data
-      let funderRes = await fetch(
-        `https://bckendapi.herokuapp.com/api/donar/donarprofile/${
-          scholarParams.split("&")[1]
-        }`
-      );
-      funderRes = await funderRes.json();
-      setFunder([funderRes]);
+      // funder viewSchol
+      // let funderRes = await fetch(
+      //   `https://bckendapi.herokuapp.com/api/donar/donarprofile/${
+      //     scholarParams.split("&")[1]
+      //   }`
+      // );
+      // funderRes = await funderRes.json();
+      // setFunder([funderRes]);
       //console.log(funder);
     }
     fetchMyApi();
@@ -104,7 +108,13 @@ function ViewScholarship() {
     <div>
       <div className="dashboardHeader">
         <div className="dashboardHeader__logo">
-          <img src={logo} alt="edu logo" />
+          <Link
+            to="/donar-dash"
+            className="logo-main"
+            style={{ cursor: "pointer" }}
+          >
+            <img src={logo} alt="edu logo" />
+          </Link>
         </div>
         <ul className="dashboardHeader__routes">
           <li className="dashboard">
@@ -189,12 +199,12 @@ function ViewScholarship() {
       </div>
       <div className="single-sch">
         <div className="left-sing">
-          <h2>{data === 0 ? "" : data[0].applicants.name}</h2>
+          <h2>{viewSchol === 0 ? "" : viewSchol?.applicants?.name}</h2>
           <div className="img-sc">
             <img src={gir} alt="" />
             <div className="two-head" style={{ marginLeft: "1rem" }}>
               <h4>Funded by </h4>
-              <p>{funder === 0 ? "" : funder[0].name}</p>
+              <p>{moreAboutDon === 0 ? "" : moreAboutDon?.name}</p>
             </div>
             <Link to={`/more-about-donar/${scholarParams.split("&")[1]}`}>
               <h4
@@ -212,16 +222,19 @@ function ViewScholarship() {
           </div>
           <img className="big-img" src={boy} />
           <p className="des-pp">
-            {data === 0 ? "" : data[0].applicants.description}
+            {viewSchol === 0 ? "" : viewSchol?.applicants?.description}
           </p>
         </div>
         <div className="right-sing">
           <div className="right-doll">
             <h1>
-              {data === 0 ? "" : data[0].applicants.awardAmount}
+              {viewSchol === 0 ? "" : viewSchol?.applicants?.awardAmount}
               <span>OPEN</span>
             </h1>
-            <p>{data === 0 ? "" : data[0].applicants.winnersLimit} winner</p>
+            <p>
+              {viewSchol === 0 ? "" : viewSchol?.applicants?.winnersLimit}{" "}
+              winner
+            </p>
           </div>
           <button>Contribute</button>
           <div className="con-1">
@@ -229,7 +242,9 @@ function ViewScholarship() {
             <p>
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data === 0 ? "" : data[0].applicants.deadline)
+                  new Date(
+                    viewSchol === 0 ? "" : viewSchol?.applicants?.deadline
+                  )
                     .toString()
                     .split(" ")[1]
                 }
@@ -237,7 +252,9 @@ function ViewScholarship() {
               -
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data === 0 ? "" : data[0].applicants.deadline)
+                  new Date(
+                    viewSchol === 0 ? "" : viewSchol?.applicants?.deadline
+                  )
                     .toString()
                     .split(" ")[2]
                 }
@@ -245,7 +262,9 @@ function ViewScholarship() {
               -
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data === 0 ? "" : data[0].applicants.deadline)
+                  new Date(
+                    viewSchol === 0 ? "" : viewSchol?.applicants?.deadline
+                  )
                     .toString()
                     .split(" ")[3]
                 }
@@ -257,7 +276,9 @@ function ViewScholarship() {
             <p>
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data === 0 ? "" : data[0].applicants.awardDate)
+                  new Date(
+                    viewSchol === 0 ? "" : viewSchol?.applicants?.awardDate
+                  )
                     .toString()
                     .split(" ")[1]
                 }
@@ -265,7 +286,9 @@ function ViewScholarship() {
               -
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data === 0 ? "" : data[0].applicants.awardDate)
+                  new Date(
+                    viewSchol === 0 ? "" : viewSchol?.applicants?.awardDate
+                  )
                     .toString()
                     .split(" ")[2]
                 }
@@ -273,7 +296,9 @@ function ViewScholarship() {
               -
               <span style={{ marginLeft: ".1rem" }}>
                 {
-                  new Date(data === 0 ? "" : data[0].applicants.awardDate)
+                  new Date(
+                    viewSchol === 0 ? "" : viewSchol?.applicants?.awardDate
+                  )
                     .toString()
                     .split(" ")[3]
                 }
@@ -283,9 +308,9 @@ function ViewScholarship() {
           <div className="con-1">
             <h5>Education Level</h5>
             <p>
-              {data === 0
+              {viewSchol === 0
                 ? ""
-                : data[0].applicants.eligible.map((e, i) => (
+                : viewSchol?.applicants?.eligible.map((e, i) => (
                     <span key={i}>{e}, </span>
                   ))}
             </p>

@@ -13,6 +13,7 @@ export const TYPES = {
   GET_DONOR_PROFILE: "GET_DONOR_PROFILE",
   GET_LEADERS: "GET_LEADERS",
   GET_VIEW_SCHOL: "GET_VIEW_SCHOL",
+  MORE_ABOUT_DON: "MORE_ABOUT_DON",
 };
 
 export const signupDonor = (data, history) => async (dispatch) => {
@@ -210,6 +211,7 @@ export const getLeaders = () => {
     }
   };
 };
+
 export const getViewSchol = (scholarParams) => {
   return async (dispatch) => {
     try {
@@ -222,6 +224,25 @@ export const getViewSchol = (scholarParams) => {
 
       dispatch({
         type: "GET_VIEW_SCHOL",
+        payload: data,
+      });
+    } catch (err) {
+      console.log("Error in getStage");
+    }
+  };
+};
+export const getMoreDon = (scholarParams) => {
+  return async (dispatch) => {
+    try {
+      const { data } = await axios({
+        method: "Get",
+        url: `https://bckendapi.herokuapp.com/api/donar/donarprofile/${
+          scholarParams.split("&")[1]
+        }`,
+      });
+      // console.log(data);
+      dispatch({
+        type: "MORE_ABOUT_DON",
         payload: data,
       });
     } catch (err) {

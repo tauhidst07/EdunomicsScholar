@@ -34,7 +34,7 @@ const authReducer = (state = initialState, action) => {
       return { ...state, leaders: action.payload };
     case TYPES.GET_VIEW_SCHOL:
       return { ...state, viewSchol: action.payload };
-    case TYPES.GET_VIEW_SCHOL:
+    case TYPES.MORE_ABOUT_DON:
       return { ...state, moreAboutDon: action.payload };
     default:
       return { auth2: state };
