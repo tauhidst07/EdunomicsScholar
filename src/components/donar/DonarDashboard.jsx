@@ -21,7 +21,7 @@ function DonarDashboard() {
 
   console.log(mySchlData);
 
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
   const [data, setData] = useState(myData);
 
   const [data2, setData2] = useState(mySchlData);
@@ -46,8 +46,6 @@ function DonarDashboard() {
     dispatch(getData(myId?._id));
     dispatch(getmySchlData(myId?._id));
 
-    //console.log(myId);
-    //606ac845c5d23600159eaf4a
     // axios
     //   .get(
     //     `https://bckendapi.herokuapp.com/api/donar/donarDashboard/${myId._id}`
