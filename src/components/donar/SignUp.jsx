@@ -19,7 +19,6 @@ function SignUp() {
   const dispatch = useDispatch();
 
   const onSubmit = (data) => {
-    // setErrors(validate());
     // console.log(data);
     // axios
     //   .post("https://bckendapi.herokuapp.com/api/user/signup-donar", data)
