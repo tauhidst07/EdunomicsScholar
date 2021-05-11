@@ -12,6 +12,7 @@ const initialState = {
   leaders: [],
   viewSchol: null,
   getfunder: null,
+  moreaboutDon: null,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -36,6 +37,8 @@ const authReducer = (state = initialState, action) => {
       return { ...state, viewSchol: action.payload };
     case TYPES.GET_FUNDER:
       return { ...state, getfunder: action.payload };
+    case TYPES.MORE_ABOUT_DON:
+      return { ...state, moreaboutDon: action.payload };
     default:
       return { auth2: state };
   }

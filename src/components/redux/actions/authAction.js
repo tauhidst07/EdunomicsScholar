@@ -251,3 +251,20 @@ export const getFunder = (scholarParams) => {
     }
   };
 };
+export const moreAboutDon = (donarId) => {
+  return async (dispatch) => {
+    try {
+      const { data } = await axios({
+        method: "Get",
+        url: `https://bckendapi.herokuapp.com/api/donar/donarprofile/${donarId}`,
+      });
+      // console.log(data);
+      dispatch({
+        type: "MORE_ABOUT_DON",
+        payload: data,
+      });
+    } catch (err) {
+      console.log("Error in getStage");
+    }
+  };
+};

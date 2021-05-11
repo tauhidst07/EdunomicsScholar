@@ -10,8 +10,12 @@ import scholar from "../../media/schola.jpeg";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import { useParams } from "react-router-dom";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import { moreAboutDon } from "../redux/actions/authAction";
+import { useDispatch, useSelector } from "react-redux";
 
 function MoreAboutDoner({ match }) {
+  const { moreaboutDon } = useSelector((state) => state.auth);
+  // console.log(moreaboutDon);
   const [data, setData] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
@@ -45,17 +49,20 @@ function MoreAboutDoner({ match }) {
       </div>
     );
   }
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    async function fetchMyApi() {
-      let response = await fetch(
-        `https://bckendapi.herokuapp.com/api/donar/donarprofile/${donarId}`
-      );
-      response = await response.json();
-      setData([response]);
-      //console.log(data);
-    }
-    fetchMyApi();
+    dispatch(moreAboutDon(donarId));
+
+    // async function fetchMyApi() {
+    //   let response = await fetch(
+    //     `https://bckendapi.herokuapp.com/api/donar/donarprofile/${donarId}`
+    //   );
+    //   response = await response.json();
+    //   setData([response]);
+    //   //console.log(data);
+    // }
+    // fetchMyApi();
   }, []);
 
   const useStyles = makeStyles((theme) => ({
@@ -156,28 +163,28 @@ function MoreAboutDoner({ match }) {
 
       <IconLabelButtons />
       <div className="more-donar">
-        <h1>Donor Profile: {data === 0 ? "" : data[0].name}</h1>
+        <h1>Donor Profile: {moreaboutDon === 0 ? "" : moreaboutDon?.name}</h1>
         {console.log(data)}
         <p>
           Scholarships, grants, and award winners for{" "}
-          {data === 0 ? "" : data[0].name}
+          {moreaboutDon === 0 ? "" : moreaboutDon?.name}
         </p>
       </div>
       <div className="don-details">
         <div className="doner-det">
           <img src={scholar} alt="" />
-          <h1>{data === 0 ? "" : data[0].name}</h1>
+          <h1>{moreaboutDon === 0 ? "" : moreaboutDon?.name}</h1>
           <h4 style={{ display: "flex", alignItems: "center" }}>
             <LocationOnIcon />
             N/A
           </h4>
           <p>
             Date-{" "}
-            {data === 0
+            {moreaboutDon === 0
               ? ""
-              : data[0].createdOn === undefined
+              : moreaboutDon?.createdOn === undefined
               ? "N/A"
-              : data[0].createdOn}
+              : moreaboutDon?.createdOn}
           </p>
         </div>
         <div className="doner-right">
@@ -192,11 +199,11 @@ function MoreAboutDoner({ match }) {
             </div>
             <div className="part1">
               <h1>
-                {data === 0
+                {moreaboutDon === 0
                   ? ""
-                  : data[0].createdOn === undefined
+                  : moreaboutDon?.createdOn === undefined
                   ? "N/A"
-                  : data[0].createdOn}
+                  : moreaboutDon?.createdOn}
               </h1>
               <p>Joined Edunomics.in</p>
             </div>
@@ -204,11 +211,11 @@ function MoreAboutDoner({ match }) {
           <div className="bot-doner">
             <h1>Mission</h1>
             <p>
-              {data === 0
+              {moreaboutDon === 0
                 ? ""
-                : data[0].mission === undefined
+                : moreaboutDon?.mission === undefined
                 ? "N/A"
-                : data[0].mission}
+                : moreaboutDon?.mission}
             </p>
           </div>
         </div>
