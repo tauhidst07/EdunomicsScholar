@@ -1,5 +1,6 @@
 import { signinDonorAPI, signupDonorAPI } from "../../../utils/fetchData";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 export const TYPES = {
   AUTH: "AUTH",
@@ -211,15 +212,19 @@ export const getLeaders = () => {
   };
 };
 export const getViewSchol = (id) => {
+  let { scholarParams } = useParams();
+
+  console.log(scholarParams.split("&"));
   return async (dispatch) => {
     try {
-      dispatch(loaderHelper(true));
+      // dispatch(loaderHelper(true));
 
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/donar/donarprofile/${id}`,
+        url: `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${
+          scholarParams.split("&")[0]
+        }`,
       });
-      dispatch(loaderHelper(false));
 
       dispatch({
         type: "GET_VIEW_SCHOL",

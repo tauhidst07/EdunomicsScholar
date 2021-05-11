@@ -21,8 +21,13 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import MoreAboutDoner from "./MoreAboutDoner";
+import { getViewSchol } from "../redux/actions/authAction";
+import { useDispatch, useSelector } from "react-redux";
 
 function ViewScholarship() {
+  const { viewSchol, loader } = useSelector((state) => state.auth);
+  console.log(viewSchol);
+
   let { scholarParams } = useParams();
 
   console.log(scholarParams.split("&"));
@@ -39,20 +44,23 @@ function ViewScholarship() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const dispatch = useDispatch();
 
   useEffect(() => {
     async function fetchMyApi() {
-      let response = await fetch(
-        `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${
-          scholarParams.split("&")[0]
-        }`
-      );
-      response = await response.json();
-      console.log("DATA",response);
-      setData([response]);
+      dispatch(getViewSchol());
 
-      //setDonarId(response.scholarships.createdBy);
-      console.log("DATA",data);
+      // let response = await fetch(
+      //   `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${
+      //     scholarParams.split("&")[0]
+      //   }`
+      // );
+      // response = await response.json();
+      // console.log("DATA",response);
+      // setData([response]);
+
+      // //setDonarId(response.scholarships.createdBy);
+      // console.log("DATA",data);
 
       // funder data
       let funderRes = await fetch(
