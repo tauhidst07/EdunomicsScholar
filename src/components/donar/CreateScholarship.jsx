@@ -140,6 +140,12 @@ var [displayValue, getValue] = useState([]);
     data.essayNeeded = false;
     data.createdBy = myId._id;
     data.eligible = eligibility;
+    let askquiz = data.askedQuiz;
+    console.log('ASKQUIZ');
+  console.log(askquiz);
+    data.askedQuiz = [{
+      quiz: [askquiz]
+    }]
 
     console.log("ghghgd", data);
     dispatch(postCreateSchol(data, history));
@@ -327,7 +333,7 @@ var [displayValue, getValue] = useState([]);
           <input
             className="u-input"
             type="text"
-            name="question1"
+            name="askedQuiz"
             ref={register}
             placeholder="question1"
           />

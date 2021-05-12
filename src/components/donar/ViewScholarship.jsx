@@ -327,11 +327,23 @@ function ViewScholarship() {
       <div className="app-down">
         <h1>Scholarship application</h1>
         <p>ESSAY TOPIC</p>
-        <h2>
-          Tell us about one teacher, counselor, or social worker who helped you
-          pursue higher education. How did this person impact your higher
-          education journey?{" "}
-        </h2>
+
+          {
+            viewSchol === 0
+            ? ""
+            : viewSchol?.applicants?.askedQuiz.map((e, i) => (
+                //console.log(e.quiz)
+                e.quiz.map((q) => (
+                  //console.log(q)
+                  <h2>{q}</h2>
+                ))
+
+          ))
+          /*
+
+          console.log(viewSchol?.applicants?.askedQuiz,'askedQuiz')*/
+        }
+
         <h3>400–600 words</h3>
       </div>
       <Footer />
