@@ -15,7 +15,7 @@ import { getOneSCholAppli } from "../redux/actions/authAction";
 import { useDispatch, useSelector } from "react-redux";
 
 const AppliedApplicants = () => {
-  const params = useParams();
+  const [id] = useParams();
   const { loader, appliedScholAppli } = useSelector((state) => state.auth);
   console.log(appliedScholAppli);
   // const [loading, setLoading] = useState(true);
