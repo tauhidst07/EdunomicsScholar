@@ -20,8 +20,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { postCreateSchol } from "../redux/actions/authAction";
 
-
-
 function CreateScholarship() {
   const history = useHistory();
   const dispatch = useDispatch();
@@ -35,12 +33,11 @@ function CreateScholarship() {
       { value: 2, label: "Graduate" },
       { value: 3, label: "Post Graduate" },
     ];
-var [displayValue, getValue] = useState([]);
+    var [displayValue, getValue] = useState([]);
 
-  useEffect(() => {
-    eligibility = displayValue
-  },[displayValue])
-
+    useEffect(() => {
+      eligibility = displayValue;
+    }, [displayValue]);
 
     var dbHandle = (e) => {
       //getValue(Array.isArray(e) ? e.map((x) => x.label) : []);
@@ -49,7 +46,7 @@ var [displayValue, getValue] = useState([]);
       //getValue(e)
       //console.log(displayValue);
     };
-  /*
+    /*
     useEffect(() => {
       console.log(displayValue, 'effect//')
     },[displayValue])
@@ -67,9 +64,6 @@ var [displayValue, getValue] = useState([]);
       // </div>
     );
   }
-
-
-
 
   const useStyles = makeStyles((theme) => ({
     button: {
@@ -141,11 +135,13 @@ var [displayValue, getValue] = useState([]);
     data.createdBy = myId._id;
     data.eligible = eligibility;
     let askquiz = data.askedQuiz;
-    console.log('ASKQUIZ');
-  console.log(askquiz);
-    data.askedQuiz = [{
-      quiz: [askquiz]
-    }]
+    // console.log('ASKQUIZ');
+    // console.log(askquiz);
+    data.askedQuiz = [
+      {
+        quiz: [askquiz],
+      },
+    ];
 
     console.log("ghghgd", data);
     dispatch(postCreateSchol(data, history));
