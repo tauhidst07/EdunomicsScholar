@@ -15,7 +15,7 @@ import { getOneSCholAppli } from "../redux/actions/authAction";
 import { useDispatch, useSelector } from "react-redux";
 
 const AppliedApplicants = () => {
-  const [id] = useParams();
+  const { id } = useParams();
   const { loader, appliedScholAppli } = useSelector((state) => state.auth);
   console.log(appliedScholAppli);
   // const [loading, setLoading] = useState(true);
@@ -174,7 +174,8 @@ const AppliedApplicants = () => {
         ) : (
           <div className="myApplication__main">
             <h1>
-              Applicants ({getOneSCholAppli?.scholarships?.applicants?.length})
+              Applicants ({appliedScholAppli?.applicants?.applicants?.length})
+              {/* {console.log(appliedScholAppli, 'skkks')} */}
             </h1>
 
             <div className="myApplication__main__scholarships">
@@ -183,7 +184,12 @@ const AppliedApplicants = () => {
                   <img width="120px" height="80px" src={img} />
 
                   <div className="myApplication__main__scholarships_ContainerContent">
-                    <div className="myApplication__title">Applicant Name</div>
+                    <div className="myApplication__title">
+                      {
+                        appliedScholAppli?.applicants?.applicants[0].applicant
+                          ?.name
+                      }
+                    </div>
                     <ul className="myscholarship__details">
                       <li>
                         <div>
@@ -192,6 +198,12 @@ const AppliedApplicants = () => {
                         <div>
                           <div>Status</div>
                           <div>Applied</div>
+                          <div>
+                            {
+                              appliedScholAppli?.applicants?.applicants[0]
+                                .status
+                            }
+                          </div>
                         </div>
                       </li>
 
