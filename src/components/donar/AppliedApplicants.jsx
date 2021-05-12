@@ -11,12 +11,12 @@ import img from "../../media/scholar-img.jpeg";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import RedeemIcon from "@material-ui/icons/Redeem";
 import Loader from "react-loader-spinner";
-import { getmySchlData } from "../redux/actions/authAction";
+import { getOneSCholAppli } from "../redux/actions/authAction";
 import { useDispatch, useSelector } from "react-redux";
 
 const AppliedApplicants = () => {
-  const { loader, mySchlData } = useSelector((state) => state.auth);
-  console.log(mySchlData);
+  const { loader, appliedScholAppli } = useSelector((state) => state.auth);
+  console.log(appliedScholAppli);
   // const [loading, setLoading] = useState(true);
   // const [error, setError] = useState("");
   // const [data, setData] = useState([]);
@@ -39,7 +39,7 @@ const AppliedApplicants = () => {
 
     let myId = jwt.decode(encodedToken);
     // console.log(myId);
-    dispatch(getmySchlData(myId?._id));
+    dispatch(getOneSCholAppli(myId?._id));
 
     //606ac845c5d23600159eaf4a
     // axios
@@ -172,7 +172,9 @@ const AppliedApplicants = () => {
           </div>
         ) : (
           <div className="myApplication__main">
-            <h1>Applicants ({mySchlData?.scholarships?.applicants?.length})</h1>
+            <h1>
+              Applicants ({getOneSCholAppli?.scholarships?.applicants?.length})
+            </h1>
 
             <div className="myApplication__main__scholarships">
               <div className="myApplication__main__scholarships_Container">

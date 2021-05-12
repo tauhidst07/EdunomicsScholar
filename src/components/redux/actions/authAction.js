@@ -15,6 +15,7 @@ export const TYPES = {
   GET_VIEW_SCHOL: "GET_VIEW_SCHOL",
   GET_FUNDER: "GET_FUNDER",
   MORE_ABOUT_DON: "MORE_ABOUT_DON",
+  ONE_SCHOL_APPLI: "ONE_SCHOL_APPLI",
 };
 
 export const signupDonor = (data, history) => async (dispatch) => {
@@ -265,6 +266,23 @@ export const moreAboutDon = (donarId) => {
       });
     } catch (err) {
       console.log("Error in getStage");
+    }
+  };
+};
+
+export const getOneSCholAppli = (id) => {
+  return async (dispatch) => {
+    try {
+      const { data } = await axios({
+        method: "Get",
+        url: `https://bckendapi.herokuapp.com/api/donar/oneScholarshipApli/${id}`,
+      });
+      dispatch({
+        type: "ONE_SCHOL_APPLI",
+        payload: data,
+      });
+    } catch (err) {
+      console.log(id, "Error in getStage");
     }
   };
 };
