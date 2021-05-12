@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import edu from "../../media/edu.png";
 import { Link, useHistory } from "react-router-dom";
 
@@ -20,35 +20,56 @@ import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { postCreateSchol } from "../redux/actions/authAction";
 
-function Multidrop() {
-  var eduName = [
-    { value: 1, label: "High School" },
-    { value: 2, label: "Graduate" },
-    { value: 3, label: "Post Graduate" },
-  ];
 
-  var [displayValue, getValue] = useState([]);
-  var dbHandle = (e) => {
-    getValue(Array.isArray(e) ? e.map((x) => x.label) : []);
-    console.log(displayValue);
-  };
-  return (
-    <div style={{ width: "40%", alignItems: "center" }}>
-      <Select isMulti options={eduName} onChange={dbHandle}></Select>
-      {displayValue}
-    </div>
-    // <div style={{ alignItems: "center", display: "flex" }}>
-    //   <div className="mldrop">
-    //     <h1 style={{ marginBottom: ".6rem" }}> Select education levels</h1>
-    //     <Multiselect options={options} displayValue="edu" />
-    //   </div>
-    // </div>
-  );
-}
 
 function CreateScholarship() {
   const history = useHistory();
   const dispatch = useDispatch();
+
+  //select dropdown function
+  let eligibility = [];
+
+  function Multidrop() {
+    var eduName = [
+      { value: 1, label: "High School" },
+      { value: 2, label: "Graduate" },
+      { value: 3, label: "Post Graduate" },
+    ];
+var [displayValue, getValue] = useState([]);
+
+  useEffect(() => {
+    eligibility = displayValue
+  },[displayValue])
+
+
+    var dbHandle = (e) => {
+      //getValue(Array.isArray(e) ? e.map((x) => x.label) : []);
+      getValue(Array.isArray(e) ? e.map((x) => x.label) : []);
+      //console.log(e, 'E');
+      //getValue(e)
+      //console.log(displayValue);
+    };
+  /*
+    useEffect(() => {
+      console.log(displayValue, 'effect//')
+    },[displayValue])
+  */
+    return (
+      <div style={{ width: "40%", alignItems: "center" }}>
+        <Select isMulti options={eduName} onChange={dbHandle}></Select>
+        {displayValue}
+      </div>
+      // <div style={{ alignItems: "center", display: "flex" }}>
+      //   <div className="mldrop">
+      //     <h1 style={{ marginBottom: ".6rem" }}> Select education levels</h1>
+      //     <Multiselect options={options} displayValue="edu" />
+      //   </div>
+      // </div>
+    );
+  }
+
+
+
 
   const useStyles = makeStyles((theme) => ({
     button: {
@@ -118,6 +139,7 @@ function CreateScholarship() {
     data.donationAllow = false;
     data.essayNeeded = false;
     data.createdBy = myId._id;
+    data.eligible = eligibility;
 
     console.log("ghghgd", data);
     dispatch(postCreateSchol(data, history));

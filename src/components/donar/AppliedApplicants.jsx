@@ -11,11 +11,23 @@ import img from "../../media/scholar-img.jpeg";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import RedeemIcon from "@material-ui/icons/Redeem";
 import Loader from "react-loader-spinner";
-import { getOneSCholAppli } from "../redux/actions/authAction";
+import { getOneSCholAppli  } from "../redux/actions/authAction";
 import { useDispatch, useSelector } from "react-redux";
 
 const AppliedApplicants = () => {
-  const params = useParams();
+  const {id} = useParams();
+  console.log('ID',id);
+/*
+  useEffect(() => {
+    async function fetchMyApi() {
+      dispatch(getOneSCholAppli(id));
+
+
+    }
+    fetchMyApi();
+  }, []);
+*/
+
   const { loader, appliedScholAppli } = useSelector((state) => state.auth);
   console.log(appliedScholAppli);
   // const [loading, setLoading] = useState(true);
@@ -40,7 +52,7 @@ const AppliedApplicants = () => {
 
     let myId = jwt.decode(encodedToken);
     // console.log(myId);
-    dispatch(getOneSCholAppli(myId?._id));
+    dispatch(getOneSCholAppli(id));
 
     //606ac845c5d23600159eaf4a
     // axios
@@ -174,7 +186,8 @@ const AppliedApplicants = () => {
         ) : (
           <div className="myApplication__main">
             <h1>
-              Applicants ({getOneSCholAppli?.scholarships?.applicants?.length})
+              Applicants ({appliedScholAppli?.applicants?.applicants?.length})
+              {console.log(appliedScholAppli, 'skkks')}
             </h1>
 
             <div className="myApplication__main__scholarships">
@@ -183,7 +196,8 @@ const AppliedApplicants = () => {
                   <img width="120px" height="80px" src={img} />
 
                   <div className="myApplication__main__scholarships_ContainerContent">
-                    <div className="myApplication__title">Applicant Name</div>
+                    <div className="myApplication__title">{appliedScholAppli?.applicants?.applicants[0].applicant?.name}</div>
+                    {console.log(appliedScholAppli?.applicants?.applicants[0].applicant?.name,'abcd')}
                     <ul className="myscholarship__details">
                       <li>
                         <div>
@@ -191,7 +205,7 @@ const AppliedApplicants = () => {
                         </div>
                         <div>
                           <div>Status</div>
-                          <div>Applied</div>
+                          <div>{appliedScholAppli?.applicants?.applicants[0].status}</div>
                         </div>
                       </li>
 
