@@ -28,7 +28,6 @@ import ResearchReport from "./components/common/ReseacrhReport";
 import ScholorshipRules from "./components/common/ScholarRules";
 import EasyScholar from "./components/common/EasyScholar";
 import ScholarshipforWomen from "./components/common/ScholarshipforWomen";
-// import Leaders from "./components/donar/Leaders";
 import DonarDashboard from "./components/donar/DonarDashboard";
 import DonerProfile from "./components/donar/DonerProfile";
 import CreateScholarship from "./components/donar/CreateScholarship";
@@ -140,9 +139,7 @@ function App() {
         <Route exact path="/scholar-women">
           <ScholarshipforWomen />
         </Route>
-        {/* <Route exact path="/leaders">
-          <Leaders />
-        </Route> */}
+
         <Route exact path="/donar-dash">
           <DonarDashboard />
         </Route>
