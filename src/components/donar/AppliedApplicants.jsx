@@ -40,7 +40,7 @@ const AppliedApplicants = () => {
 
     let myId = jwt.decode(encodedToken);
     // console.log(myId);
-    dispatch(getOneSCholAppli(myId?._id));
+    dispatch(getOneSCholAppli(id));
 
     //606ac845c5d23600159eaf4a
     // axios
