@@ -4,7 +4,7 @@ import logo from "../../media/edu.png";
 import PersonIcon from "@material-ui/icons/Person";
 import jwt from "jsonwebtoken";
 import { Menu, MenuItem, Button } from "@material-ui/core";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import Footer from "../Footer";
 import "../../styles/MyApplication.css";
 import img from "../../media/scholar-img.jpeg";
@@ -15,6 +15,7 @@ import { getOneSCholAppli } from "../redux/actions/authAction";
 import { useDispatch, useSelector } from "react-redux";
 
 const AppliedApplicants = () => {
+  const params = useParams();
   const { loader, appliedScholAppli } = useSelector((state) => state.auth);
   console.log(appliedScholAppli);
   // const [loading, setLoading] = useState(true);

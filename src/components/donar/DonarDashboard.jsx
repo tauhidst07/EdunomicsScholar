@@ -395,7 +395,8 @@ function DonarDashboard() {
                     </a>
 
                     <div className="finishApplicationBtn">
-                      <a href={`/appliedapplicants/${items?.applicants?._id}`}>
+                      <a href={`/appliedapplicants/${item?._id}`}>
+                        {console.log(item, "jhj")}
                         <button style={{ cursor: "pointer" }}>
                           <span>{item?.applicants?.length} Applicant</span>
                           <svg

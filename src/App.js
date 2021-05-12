@@ -176,7 +176,7 @@ function App() {
         <Route exact path="/invite-applicant">
           <InviteApplicants />
         </Route>
-        <Route exact path="/appliedapplicants">
+        <Route exact path="/appliedapplicants/:id">
           <AppliedApplicants />
         </Route>
         <Route exact path="/testing">
