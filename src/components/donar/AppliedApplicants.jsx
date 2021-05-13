@@ -217,7 +217,7 @@ const AppliedApplicants = () => {
                             >
                               Rank
                             </div>
-                            <div>N/A</div>
+                            <div style={{ color: "red" }}>N/A</div>
                           </div>
                         </li>
 
@@ -269,7 +269,7 @@ const AppliedApplicants = () => {
                               Applied On
                             </div>
                             <div>
-                              <span>
+                              <span style={{ color: "#5d57fb" }}>
                                 {
                                   new Date(item?.appliedOn.toString())
                                     .toString()
@@ -277,7 +277,12 @@ const AppliedApplicants = () => {
                                 }
                                 -
                               </span>
-                              <span style={{ marginLeft: ".1rem" }}>
+                              <span
+                                style={{
+                                  marginLeft: ".1rem",
+                                  color: "#5d57fb",
+                                }}
+                              >
                                 {
                                   new Date(item?.appliedOn.toString())
                                     .toString()
@@ -285,7 +290,12 @@ const AppliedApplicants = () => {
                                 }
                               </span>
                               -
-                              <span style={{ marginLeft: ".1rem" }}>
+                              <span
+                                style={{
+                                  marginLeft: ".1rem",
+                                  color: "#5d57fb",
+                                }}
+                              >
                                 {
                                   new Date(item?.appliedOn.toString())
                                     .toString()
