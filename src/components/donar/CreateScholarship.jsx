@@ -61,11 +61,7 @@ function CreateScholarship() {
       //getValue(e)
       //console.log(displayValue);
     };
-    /*
-    useEffect(() => {
-      console.log(displayValue, 'effect//')
-    },[displayValue])
-  */
+
     return (
       <div style={{ width: "40%", alignItems: "center" }}>
         <Select isMulti options={eduName} onChange={dbHandle}></Select>
