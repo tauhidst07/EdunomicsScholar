@@ -4,7 +4,7 @@ import logo from "../../media/edu.png";
 // import { makeStyles } from "@material-ui/core/styles";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 import { useHistory, Link } from "react-router-dom";
-import "../../styles/invite.css";
+import "../../styles/leaders.css";
 import PersonIcon from "@material-ui/icons/Person";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";

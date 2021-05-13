@@ -175,7 +175,6 @@ const AppliedApplicants = () => {
           <div className="myApplication__main">
             <h1>
               Applicants ({appliedScholAppli?.applicants?.applicants?.length})
-              {/* {console.log(appliedScholAppli, 'skkks')} */}
             </h1>
             {appliedScholAppli?.applicants?.applicants?.map((item) => (
               <div className="myApplication__main__scholarships">
@@ -186,7 +185,6 @@ const AppliedApplicants = () => {
                     <div className="myApplication__main__scholarships_ContainerContent">
                       <div className="myApplication__title">
                         {item?.applicant?.name}
-                        {/* {console.log(item)} */}
                       </div>
                       <ul className="myscholarship__details">
                         <li>
@@ -253,58 +251,58 @@ const AppliedApplicants = () => {
                           <div>
                             <div>Applied On</div>
                             <div>
-               
-                          <span>
-                            {
-                              new Date(item?.appliedOn.toString())
-                                .toString()
-                                .split(" ")[1]
-                            }
-                            -
-                          </span>
-                          <span style={{ marginLeft: ".1rem" }}>
-                            {
-                              new Date(item?.appliedOn.toString())
-                                .toString()
-                                .split(" ")[2]
-                            }
-                          </span>
-                          -
-                          <span style={{ marginLeft: ".1rem" }}>
-                            {
-                              new Date(item?.appliedOn.toString())
-                                .toString()
-                                .split(" ")[3]
-                            }
-                          </span>
-                        </div>
+                              <span>
+                                {
+                                  new Date(item?.appliedOn.toString())
+                                    .toString()
+                                    .split(" ")[1]
+                                }
+                                -
+                              </span>
+                              <span style={{ marginLeft: ".1rem" }}>
+                                {
+                                  new Date(item?.appliedOn.toString())
+                                    .toString()
+                                    .split(" ")[2]
+                                }
+                              </span>
+                              -
+                              <span style={{ marginLeft: ".1rem" }}>
+                                {
+                                  new Date(item?.appliedOn.toString())
+                                    .toString()
+                                    .split(" ")[3]
+                                }
+                              </span>
+                            </div>
                           </div>
-                           
                         </li>
                       </ul>
                     </div>
                   </a>
 
                   <div className="finishApplicationBtn">
-                  <Link to={`/more-about-applicant/${item?.applicant._id}/${id}/${item?._id}`}>
-                    <button>
-                      View Application
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          d="M6.75 13.5L11.25 9L6.75 4.5"
-                          stroke="#ACB4BF"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    </button>
-                  </Link>
+                    <Link
+                      to={`/more-about-applicant/${item?.applicant._id}/${id}/${item?._id}`}
+                    >
+                      <button style={{ cursor: "pointer" }}>
+                        View Application
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                        >
+                          <path
+                            d="M6.75 13.5L11.25 9L6.75 4.5"
+                            stroke="#ACB4BF"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
