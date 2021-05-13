@@ -274,11 +274,16 @@ export const moreAboutDon = (donarId) => {
 
 export const getOneSCholAppli = (id) => {
   return async (dispatch) => {
+    
     try {
       const { data } = await axios({
         method: "Get",
         url: `https://bckendapi.herokuapp.com/api/donar/oneScholarshipApli/${id}`,
       });
+
+     
+      
+
       dispatch({
         type: "ONE_SCHOL_APPLI",
         payload: data,
@@ -289,20 +294,20 @@ export const getOneSCholAppli = (id) => {
   };
 };
 
-export const updateScholarStatus = (scholarshipId) => {
+export const updateScholarStatus = (scholarshipId,appliedId, status) => {
   return async (dispatch) => {
     try {
-  
 
       const { data } = await axios({
         method: "Patch",
-        url: `https://bckendapi.herokuapp.com/api/donar/editScholarship/${scholarshipId}`,
+        url: `http://bckendapi.herokuapp.com/api/donar/editApplicantStatus/${scholarshipId}/${appliedId}`,
+        data: {"applicantStatus": status}
       });
      
 
       dispatch({
         type: "UPDATE_SCHOL",
-        payload: data,
+        payload: {data,status},
       });
     } catch (err) {
       console.log("Error in getStage");
