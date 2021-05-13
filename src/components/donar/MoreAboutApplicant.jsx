@@ -19,7 +19,7 @@ function MoreAboutApplicant() {
 
   const [status, setStatus] = useState("submitted");
 
-  const {appliId, scholarId} = useParams();
+  const {appliId, scholarId, appliedId} = useParams();
 
   
   const dispatch = useDispatch();
@@ -28,9 +28,13 @@ function MoreAboutApplicant() {
   useEffect(() => {
      dispatch(getOneSCholAppli(scholarId));
 
-     dispatch(updateScholarStatus(scholarId ));
-    console.log(status);
+     dispatch(updateScholarStatus(scholarId, appliedId, status));
+     
+     
   }, [status]);
+
+  
+
 
   return (
     <div>
@@ -38,7 +42,7 @@ function MoreAboutApplicant() {
       <div className="more-donar">
         <h1>Applicant Profile: 
          {
-          //console.log(e, 'ejdkej')
+          //console.log(appliedScholAppli, 'ejdkej')
           appliedScholAppli?.applicants?.applicants.map((e) => (
             (e.applicant._id === appliId) ? e.applicant.name : ''
             //console.log(e.applicant)
@@ -99,8 +103,10 @@ function MoreAboutApplicant() {
             <select
               className="f-btn1"
               onChange={(e) => {
+                
                 setStatus(e.target.value);
               }}
+              value= {status}
             >
               <option value="submitted">submitted</option>
               <option value="review">review</option>

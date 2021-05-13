@@ -251,11 +251,12 @@ const AppliedApplicants = () => {
                             </svg>
                           </div>
                           <div>
-                            <div>Deadline</div>
+                            <div>Applied On</div>
                             <div>
+               
                           <span>
                             {
-                              new Date(appliedScholAppli?.applicants?.deadline.toString())
+                              new Date(item?.appliedOn.toString())
                                 .toString()
                                 .split(" ")[1]
                             }
@@ -263,7 +264,7 @@ const AppliedApplicants = () => {
                           </span>
                           <span style={{ marginLeft: ".1rem" }}>
                             {
-                              new Date(appliedScholAppli?.applicants?.deadline.toString())
+                              new Date(item?.appliedOn.toString())
                                 .toString()
                                 .split(" ")[2]
                             }
@@ -271,7 +272,7 @@ const AppliedApplicants = () => {
                           -
                           <span style={{ marginLeft: ".1rem" }}>
                             {
-                              new Date(appliedScholAppli?.applicants?.deadline.toString())
+                              new Date(item?.appliedOn.toString())
                                 .toString()
                                 .split(" ")[3]
                             }
@@ -285,7 +286,7 @@ const AppliedApplicants = () => {
                   </a>
 
                   <div className="finishApplicationBtn">
-                  <Link to={`/more-about-applicant/${item?.applicant._id}/${id}`}>
+                  <Link to={`/more-about-applicant/${item?.applicant._id}/${id}/${item?._id}`}>
                     <button>
                       View Application
                       <svg
