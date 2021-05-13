@@ -192,8 +192,15 @@ const AppliedApplicants = () => {
                             <AccessTimeIcon />
                           </div>
                           <div>
-                            <div>Status</div>
-                            <div> {item?.status}</div>
+                            <div
+                              style={{ marginBottom: ".5rem", fontWeight: 700 }}
+                            >
+                              Status
+                            </div>
+                            <div style={{ color: "green" }}>
+                              {" "}
+                              {item?.status}
+                            </div>
                           </div>
                         </li>
 
@@ -202,7 +209,11 @@ const AppliedApplicants = () => {
                             <RedeemIcon />
                           </div>
                           <div>
-                            <div>Rank</div>
+                            <div
+                              style={{ marginBottom: ".5rem", fontWeight: 700 }}
+                            >
+                              Rank
+                            </div>
                             <div>N/A</div>
                           </div>
                         </li>
@@ -249,7 +260,11 @@ const AppliedApplicants = () => {
                             </svg>
                           </div>
                           <div>
-                            <div>Applied On</div>
+                            <div
+                              style={{ marginBottom: ".5rem", fontWeight: 700 }}
+                            >
+                              Applied On
+                            </div>
                             <div>
                               <span>
                                 {

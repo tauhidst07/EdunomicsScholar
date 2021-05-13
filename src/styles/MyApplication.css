@@ -1,16 +1,15 @@
-.myApplication{
+.myApplication {
   min-height: 100vh;
+  background-color: rgb(248, 246, 244);
 }
 
-.myApplication > .myApplication__main{
+.myApplication > .myApplication__main {
   padding-top: 36px;
   padding-left: 90px;
   padding-right: 90px;
 }
 
-
-.myApplication__main > h1{
-
+.myApplication__main > h1 {
   color: rgb(16, 8, 38);
   line-height: 125%;
   font-size: 32px;
@@ -18,8 +17,7 @@
   margin-bottom: 39px;
 }
 
-
-.myapplication__tabs{
+.myapplication__tabs {
   display: flex;
   padding: 0;
   list-style-type: none;
@@ -32,7 +30,7 @@
   padding-inline-start: 40px;
 }
 
-.myapplication__tabs li{
+.myapplication__tabs li {
   padding-bottom: 13px;
   color: #76788c;
   font-weight: 600;
@@ -43,65 +41,61 @@
   cursor: pointer;
 }
 
-.myapplication__tabs li:not(:last-child){
+.myapplication__tabs li:not(:last-child) {
   margin-right: 28px;
 }
 
-
-
-.myApplication__main__activeLi{
-  color: #5d57fb!important;
+.myApplication__main__activeLi {
+  color: #5d57fb !important;
   box-shadow: inset 0 -2px 0 #5d57fb;
 }
 
-
-.myapplication__tabs li:hover{
-  color: #5d57fb!important;
+.myapplication__tabs li:hover {
+  color: #5d57fb !important;
 }
 
-.myapplication__tabs li span{
+.myapplication__tabs li span {
   background-color: #f2f4f7;
   border-radius: 10px;
   padding: 0 7px;
   margin-left: 3px;
 }
 
-.myApplication__main__scholarships{
-      background-color: #f9fafb;
+.myApplication__main__scholarships {
+  background-color: #8e9194;
+  border-radius: 2px;
+  border: 1px solid rgb(211, 207, 207);
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 6px -6px black;
 }
 
-.myApplication__main__scholarships_Container{
+.myApplication__main__scholarships_Container {
   background-color: #fff;
-padding: 16px 20px;
-box-shadow: 0 1px 5px rgba(0,0,0,.04), 0 1px 3px rgba(0,0,0,.05);
-border-radius: 4px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-
+  padding: 16px 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.myApplication__main__scholarships_Container:hover{
-  box-shadow: 0 4px 30px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.05);
+.myApplication__main__scholarships_Container:hover {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-.finishApplicationBtn > div{
+.finishApplicationBtn > div {
   display: flex;
   justify-content: flex-end;
 }
 
-.myApplication__main__scholarships_Container > a{
+.myApplication__main__scholarships_Container > a {
   color: inherit;
   text-decoration: none;
   display: flex;
   align-items: center;
 }
 
-
-
-
-
-.myApplication__main__scholarships_ContainerContent{
+.myApplication__main__scholarships_ContainerContent {
   display: flex;
   flex-direction: column;
   padding-left: 30px;
@@ -109,31 +103,30 @@ justify-content: space-between;
   justify-content: space-between;
 }
 
-.myApplication__title{
+.myApplication__title {
   font-weight: bold;
   font-size: 20px;
   line-height: 21px;
   color: #100826;
 }
 
-.myscholarship__details{
+.myscholarship__details {
   width: 500px;
   justify-content: space-between;
 }
 
 .myscholarship__details,
-.myscholarship__details li{
+.myscholarship__details li {
   display: flex;
   align-items: center;
 }
 
-
 .myscholarship__details li div:last-child div:first-child {
   font-size: small;
-    color: #9597a6;
+  color: #9597a6;
 }
 
-.MuiSvgIcon-root{
+.MuiSvgIcon-root {
   color: rgb(143, 153, 166);
 }
 
@@ -141,15 +134,11 @@ justify-content: space-between;
   font-weight: bold;
 }
 
-.myscholarship__details svg{
+.myscholarship__details svg {
   margin-right: 10px;
 }
 
-
-
-
-
-.finishApplicationBtn  button{
+.finishApplicationBtn button {
   background: #5d57fb;
   box-sizing: border-box;
   border-radius: 4px;
