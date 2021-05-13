@@ -97,6 +97,7 @@
 }
 
 .myApplication__main__scholarships_ContainerContent {
+  margin-left: 2rem;
   display: flex;
   flex-direction: column;
   padding-left: 30px;

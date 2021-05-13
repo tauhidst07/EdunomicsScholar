@@ -246,7 +246,10 @@ function DonarDashboard() {
               fontWeight: 700,
             }}
           >
-            My Scholarships list ({mySchlData?.count})
+            My Scholarships list{" "}
+            <span style={{ color: "green", marginLeft: ".5rem" }}>
+              ({mySchlData?.count})
+            </span>
           </h1>
           {mySchlData?.scholarships?.length != 0 ||
           mySchlData?.scholarships != null ? (
