@@ -14,6 +14,7 @@ const initialState = {
   getfunder: null,
   moreaboutDon: null,
   appliedScholAppli: null,
+  editSchol:null
 };
 
 const authReducer = (state = initialState, action) => {
@@ -42,6 +43,8 @@ const authReducer = (state = initialState, action) => {
       return { ...state, moreaboutDon: action.payload };
     case TYPES.ONE_SCHOL_APPLI:
       return { ...state, appliedScholAppli: action.payload };
+      case TYPES.UPDATE_SCHOL:
+      return { ...state, editSchol: action.payload };
     default:
       return { auth2: state };
   }

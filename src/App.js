@@ -170,7 +170,7 @@ function App() {
         <Route exact path="/more-about-donar/:donarId">
           <MoreAboutDoner />
         </Route>
-        <Route exact path="/more-about-applicant">
+        <Route exact path="/more-about-applicant/:appliId/:scholarId">
           <MoreAboutApplicant />
         </Route>
         <Route exact path="/invite-applicant">

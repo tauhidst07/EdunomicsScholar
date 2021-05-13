@@ -10,11 +10,25 @@ import scholar from "../../media/schola.jpeg";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import { useParams } from "react-router-dom";
 import DashboardHeader from "../DashboardHeader";
+import { getOneSCholAppli,updateScholarStatus } from "../redux/actions/authAction";
+import { useDispatch, useSelector } from "react-redux";
 
 function MoreAboutApplicant() {
+  const { loader, appliedScholAppli,editSchol} = useSelector((state) => state.auth);
+  console.log(editSchol);
+
   const [status, setStatus] = useState("submitted");
 
+  const {appliId, scholarId} = useParams();
+
+  
+  const dispatch = useDispatch();
+
+  //   let myId = jwt.decode(encodedToken);
   useEffect(() => {
+     dispatch(getOneSCholAppli(scholarId));
+
+     dispatch(updateScholarStatus(scholarId ));
     console.log(status);
   }, [status]);
 
@@ -22,13 +36,35 @@ function MoreAboutApplicant() {
     <div>
       <DashboardHeader />
       <div className="more-donar">
-        <h1>Applicant Profile: Applicant Name</h1>
+        <h1>Applicant Profile: 
+         {
+          //console.log(e, 'ejdkej')
+          appliedScholAppli?.applicants?.applicants.map((e) => (
+            (e.applicant._id === appliId) ? e.applicant.name : ''
+            //console.log(e.applicant)
+            
+          ))
+          
+            
+        
+        }
+        </h1>
         <p>Applicant Bio here</p>
       </div>
       <div className="don-details">
         <div className="doner-det">
           <img src={scholar} alt="" />
-          <h1>Applicant Name</h1>
+          <h1>  {
+          //console.log(e, 'ejdkej')
+          appliedScholAppli?.applicants?.applicants.map((e) => (
+            (e.applicant._id === appliId) ? e.applicant.name : ''
+            //console.log(e.applicant)
+            
+          ))
+          
+            
+        
+        }</h1>
           <h4 style={{ display: "flex", alignItems: "center" }}>
             <LocationOnIcon />
             N/A

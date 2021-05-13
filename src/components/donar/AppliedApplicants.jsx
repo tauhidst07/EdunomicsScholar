@@ -195,8 +195,7 @@ const AppliedApplicants = () => {
                           </div>
                           <div>
                             <div>Status</div>
-                            <div>Applied</div>
-                            <div> {item?.applicant?.status}</div>
+                            <div> {item?.status}</div>
                           </div>
                         </li>
 
@@ -252,15 +251,41 @@ const AppliedApplicants = () => {
                             </svg>
                           </div>
                           <div>
-                            <div>Applied On</div>
-                            <div>22 - july - 2021</div>
+                            <div>Deadline</div>
+                            <div>
+                          <span>
+                            {
+                              new Date(appliedScholAppli?.applicants?.deadline.toString())
+                                .toString()
+                                .split(" ")[1]
+                            }
+                            -
+                          </span>
+                          <span style={{ marginLeft: ".1rem" }}>
+                            {
+                              new Date(appliedScholAppli?.applicants?.deadline.toString())
+                                .toString()
+                                .split(" ")[2]
+                            }
+                          </span>
+                          -
+                          <span style={{ marginLeft: ".1rem" }}>
+                            {
+                              new Date(appliedScholAppli?.applicants?.deadline.toString())
+                                .toString()
+                                .split(" ")[3]
+                            }
+                          </span>
+                        </div>
                           </div>
+                           
                         </li>
                       </ul>
                     </div>
                   </a>
 
                   <div className="finishApplicationBtn">
+                  <Link to={`/more-about-applicant/${item?.applicant._id}/${id}`}>
                     <button>
                       View Application
                       <svg
@@ -278,6 +303,7 @@ const AppliedApplicants = () => {
                         ></path>
                       </svg>
                     </button>
+                  </Link>
                   </div>
                 </div>
               </div>
