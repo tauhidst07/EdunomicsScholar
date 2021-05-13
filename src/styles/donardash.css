@@ -120,18 +120,18 @@
 
 .sc-box {
   box-shadow: 0 8px 6px -6px black !important;
+  border-radius: 2px;
+  border: 1px solid rgb(211, 207, 207);
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 6px -6px black;
 }
 
-.approved_scholarships{
+.approved_scholarships {
   margin: 1rem 0;
 }
 
-
-@media screen and (max-width: 768px){
-
-  .userInfo{
+@media screen and (max-width: 768px) {
+  .userInfo {
     flex-direction: column;
   }
-
-
 }

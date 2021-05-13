@@ -258,7 +258,12 @@ function DonarDashboard() {
                 >
                   <div className="myApplication__main__scholarships_Container sc-box">
                     <a href={`/view-scholarship/${item._id}&${myId._id}`}>
-                      <img width="120px" height="80px" src={img} />
+                      <img
+                        width="120px"
+                        height="80px"
+                        src={img}
+                        className="imshaw"
+                      />
 
                       <div className="myApplication__main__scholarships_ContainerContent">
                         <div className="myApplication__title">{item.name}</div>
@@ -288,8 +293,17 @@ function DonarDashboard() {
                               </svg>
                             </div>
                             <div>
-                              <div style={{ marginBottom: ".5rem" }}>Type</div>
-                              <div>Eassy required</div>
+                              <div
+                                style={{
+                                  marginBottom: ".5rem",
+                                  fontWeight: 700,
+                                }}
+                              >
+                                Type
+                              </div>
+                              <div style={{ color: "grey" }}>
+                                Eassy required
+                              </div>
                             </div>
                           </li>
 
@@ -332,10 +346,15 @@ function DonarDashboard() {
                               </svg>
                             </div>
                             <div>
-                              <div style={{ marginBottom: ".5rem" }}>
+                              <div
+                                style={{
+                                  marginBottom: ".5rem",
+                                  fontWeight: 700,
+                                }}
+                              >
                                 Deadline
                               </div>
-                              <div>Jun 1, 2022</div>
+                              <div style={{ color: "red" }}>Jun 1, 2022</div>
                             </div>
                           </li>
 
@@ -384,10 +403,17 @@ function DonarDashboard() {
                               </svg>
                             </div>
                             <div>
-                              <div style={{ marginBottom: ".5rem" }}>
+                              <div
+                                style={{
+                                  marginBottom: ".5rem",
+                                  fontWeight: 700,
+                                }}
+                              >
                                 Amount
                               </div>
-                              <div>{item.awardAmount}</div>
+                              <div style={{ color: "#5d57fb" }}>
+                                {item.awardAmount}
+                              </div>
                             </div>
                           </li>
                         </ul>
