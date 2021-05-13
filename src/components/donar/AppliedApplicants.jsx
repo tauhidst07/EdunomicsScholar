@@ -183,7 +183,12 @@ const AppliedApplicants = () => {
               <div className="myApplication__main__scholarships">
                 <div className="myApplication__main__scholarships_Container">
                   <a href="/">
-                    <img width="120px" height="80px" src={img} />
+                    <img
+                      width="120px"
+                      height="80px"
+                      src={img}
+                      className="imshaw"
+                    />
 
                     <div className="myApplication__main__scholarships_ContainerContent">
                       <div className="myApplication__title">

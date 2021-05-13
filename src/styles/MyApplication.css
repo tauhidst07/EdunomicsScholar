@@ -153,3 +153,8 @@
   align-items: center;
   white-space: nowrap;
 }
+.imshaw {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px #ccc;
+}
