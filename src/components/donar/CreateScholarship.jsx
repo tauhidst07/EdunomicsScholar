@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import edu from "../../media/edu.png";
 import { Link, useHistory } from "react-router-dom";
-
+// import { Button } from "@material-ui/core";
 import "../../styles/createschlor.css";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
@@ -23,7 +23,11 @@ import { postCreateSchol } from "../redux/actions/authAction";
 function CreateScholarship() {
   const history = useHistory();
   const dispatch = useDispatch();
+  const [addMore, setAddMore] = useState([]);
 
+  const addMoreHandle = () => {
+    setAddMore([...addMore]);
+  };
   //select dropdown function
   let eligibility = [];
 
@@ -333,6 +337,9 @@ function CreateScholarship() {
             ref={register}
             placeholder="question1"
           />
+          <Button variant="contained" color="primary">
+            Add more
+          </Button>
         </div>
         {/* <div className="mind">
           <h1 style={{ marginLeft: ".1rem" }}>Question 2 to Applicant</h1>
