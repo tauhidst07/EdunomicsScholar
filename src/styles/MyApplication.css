@@ -10,9 +10,9 @@
 }
 
 .myApplication__main > h1 {
-  color: rgb(16, 8, 38);
+  color: rgb(33, 33, 34);
   line-height: 125%;
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 39px;
 }

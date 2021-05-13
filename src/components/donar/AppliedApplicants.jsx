@@ -174,7 +174,10 @@ const AppliedApplicants = () => {
         ) : (
           <div className="myApplication__main">
             <h1>
-              Applicants ({appliedScholAppli?.applicants?.applicants?.length})
+              Number of Applicants applied :
+              <span style={{ color: "green", marginLeft: ".5rem" }}>
+                ({appliedScholAppli?.applicants?.applicants?.length})
+              </span>
             </h1>
             {appliedScholAppli?.applicants?.applicants?.map((item) => (
               <div className="myApplication__main__scholarships">
