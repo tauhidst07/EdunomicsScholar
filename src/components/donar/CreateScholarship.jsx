@@ -19,15 +19,26 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { useForm } from "react-hook-form";
 import { postCreateSchol } from "../redux/actions/authAction";
+import { TextField } from "@material-ui/core";
 
 function CreateScholarship() {
   const history = useHistory();
   const dispatch = useDispatch();
-  const [addMore, setAddMore] = useState([]);
+  const [addMore, setAddMore] = useState([
+    {
+      first: "",
+    },
+  ]);
 
-  const addMoreHandle = () => {
-    setAddMore([...addMore]);
+  const handleiChange = (i, e) => {
+    const values = [...addMore];
+    values[i][e.target.name] = e.target.value;
+    setAddMore(values);
   };
+  const handleAddMore = () => {
+    setAddMore([...addMore, { first: "" }]);
+  };
+
   //select dropdown function
   let eligibility = [];
 
@@ -60,12 +71,6 @@ function CreateScholarship() {
         <Select isMulti options={eduName} onChange={dbHandle}></Select>
         {displayValue}
       </div>
-      // <div style={{ alignItems: "center", display: "flex" }}>
-      //   <div className="mldrop">
-      //     <h1 style={{ marginBottom: ".6rem" }}> Select education levels</h1>
-      //     <Multiselect options={options} displayValue="edu" />
-      //   </div>
-      // </div>
     );
   }
 
@@ -100,30 +105,6 @@ function CreateScholarship() {
     return (
       <div>
         <Multidrop />
-        {/* <Button className={classes.button} onClick={handleOpen}>
-          Select education levels
-        </Button>
-        <FormControl className={classes.formControl}>
-          <InputLabel id="demo-controlled-open-select-label">Select</InputLabel>
-          <Select
-            labelId="demo-controlled-open-select-label"
-            id="demo-controlled-open-select"
-            open={open}
-            onClose={handleClose}
-            onOpen={handleOpen}
-            value={age}
-            onChange={handleChange}
-            name="eligible"
-            ref={register}
-          >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={"High School"}>High School</MenuItem>
-            <MenuItem value={"Undergraduate"}>Undergraduate</MenuItem>
-            <MenuItem value={"Graduate"}>Graduate</MenuItem>
-          </Select>
-        </FormControl> */}
       </div>
     );
   }
@@ -328,7 +309,30 @@ function CreateScholarship() {
             placeholder="Enter amount per winner"
           />
         </div>
-        <div className="mind">
+        {addMore.map((inputF, i) => (
+          <div className="mind" key={i}>
+            <h1 style={{ marginLeft: ".1rem" }}>Question {i} to Applicant</h1>
+            <TextField
+              className="u-input"
+              variant="filled"
+              placeholder="question"
+              value={inputF.first}
+              onChange={(e) => handleiChange(i, e)}
+            />
+            {/* <input
+              className="u-input"
+              type="text"
+              name="askedQuiz"
+              ref={register}
+              placeholder="question1"
+            /> */}
+            <Button variant="contained" color="primary" onClick={handleAddMore}>
+              Add more
+            </Button>
+          </div>
+        ))}
+
+        {/* <div className="mind">
           <h1 style={{ marginLeft: ".1rem" }}>Question 1 to Applicant</h1>
           <input
             className="u-input"
@@ -340,17 +344,8 @@ function CreateScholarship() {
           <Button variant="contained" color="primary">
             Add more
           </Button>
-        </div>
-        {/* <div className="mind">
-          <h1 style={{ marginLeft: ".1rem" }}>Question 2 to Applicant</h1>
-          <input
-            className="u-input"
-            type="text"
-            name="question2"
-            ref={register}
-            placeholder="question2"
-          />
         </div> */}
+
         <button
           className="signin"
           style={{ width: "300px", marginLeft: "30rem", marginTop: "2rem" }}
