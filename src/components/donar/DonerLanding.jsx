@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function DonerLanding() {
   return (
     <div className="doner-landing">
-      <div className="don-1">
+      <div className="don-1 imshaw2">
         <Link
           to="/donergrant"
           className="heed"
@@ -32,7 +32,7 @@ function DonerLanding() {
           mentoring and part time jobs or whatever form you can !
         </p>
       </div>
-      <div className="don-2">
+      <div className="don-2 imshaw2">
         <h2>
           Continue as <br />
           an Applicant
