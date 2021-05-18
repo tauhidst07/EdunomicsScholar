@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function DonerLanding() {
   return (
     <div className="doner-landing">
-      <div className="don-1">
+      <div className="don-1 imshaw2">
         <Link
           to="/donergrant"
           className="heed"
@@ -28,11 +28,11 @@ function DonerLanding() {
           </svg>
         </div>
         <p>
-          Create scholarships, fellowships, and grants for the people and causes
-          you care most about.
+          Lets give back to society as scholarships, loans, fellowship,
+          mentoring and part time jobs or whatever form you can !
         </p>
       </div>
-      <div className="don-2">
+      <div className="don-2 imshaw2">
         <h2>
           Continue as <br />
           an Applicant
@@ -49,8 +49,8 @@ function DonerLanding() {
           </svg>
         </div>
         <p>
-          Explore exclusive scholarships, fellowships, and grants, matched to
-          you.
+          Explore opportunities to grow via getting recognised and connect with
+          professionals who can make you leaders of Indian Dream !
         </p>
       </div>
     </div>

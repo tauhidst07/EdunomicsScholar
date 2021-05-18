@@ -65,7 +65,7 @@ function CreateScholarship() {
     return (
       <div style={{ width: "40%", alignItems: "center" }}>
         <Select isMulti options={eduName} onChange={dbHandle}></Select>
-        {displayValue}
+        {/* {displayValue} */}
       </div>
     );
   }

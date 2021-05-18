@@ -90,21 +90,22 @@ function LandingPage() {
       </nav>
       <div className="main">
         <div className="hero">
-          <h1 className="heading">Fighting Student Debt</h1>
+          <h1 className="heading">Democratising education and economy </h1>
           <p className="sub-head">
-            Create or apply to exclusive scholarships, fellowships, and grants,
-            in minutes.
+            Create or apply scholarships, loans, fellowship, mentoring and part
+            time jobs with ease
           </p>
           <DonerLanding />
         </div>
       </div>
       <div className="mid">
         <div className="edu">
-          <h1 className="edu-head">Education Drives Opportunity</h1>
+          <h1 className="edu-head">Education drives growth</h1>
           <p className="edu-p">
-            But access to quality, affordable education is not equal. The
-            average college graduate is $30,000+ in debt. They’re less likely to
-            start businesses, pursue dream careers, buy homes, and more.
+            But access to quality and affordable education is a Dream. Average
+            College graduate is in debt of 5 Lacs+. They’re less likely to start
+            businesses, pursue dream careers, buy homes, and more. And make this
+            nation a vibrant economy. Need to unlock this.
           </p>
           <Link to="/donergrant">
             <button className="bt0">Edunomics Donors</button>
@@ -116,15 +117,15 @@ function LandingPage() {
       </div>
       <div className="lady-1">
         <div className="b1">
-          <img className="im1" src={boy} alt="st" />
+          <img className="im1 imshaw" src={boy} alt="st" />
           <div className="text1">
             <h1 className="un-head">
-              Unlocking Impact Through Targeted Scholarships, Grants and
-              Fellowships
+              Lets bridge the Gap and create impact through scholarships, loans,
+              fellowship, mentoring and part time jobs
             </h1>
             <p className="un-p">
-              On Edunomics, anyone and any company can create targeted funds
-              that enable incredible people to reach their full potential.
+              On Edunomics, anyone, group or any company can create targeted
+              help that enable incredible people to reach their full potential.
             </p>
           </div>
         </div>
@@ -133,15 +134,16 @@ function LandingPage() {
         <div className="b1">
           <div className="text1" style={{ marginRight: "2rem" }}>
             <h1 className="un-head">
-              Unlocking Impact Through Targeted Scholarships, Grants and
-              Fellowships
+              Lets empower and subsidise education for the better economy
             </h1>
             <p className="un-p">
-              On Edunomics, anyone and any company can create targeted funds
-              that enable incredible people to reach their full potential.
+              Our team along with AI based model do the heavy lifting lifting,
+              making the review and award process seamless for Donors and
+              Applicants. We are in process of getting the tax-deduction
+              certificates.
             </p>
           </div>
-          <img className="im1" src={girl} alt="st" />
+          <img className="im1 imshaw" src={girl} alt="st" />
         </div>
       </div>
       <Footer />
