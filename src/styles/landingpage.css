@@ -44,8 +44,7 @@
   display: flex;
 }
 .main {
-  background: radial-gradient(at center center, #2d7e9270, #1c40617c 100%),
-    url("../media/deg.jpg");
+  background: url("../media/classroom7.jpg");
 
   background-position: center;
   width: 100%;
@@ -53,7 +52,7 @@
   min-height: 130vh;
   background-size: cover;
   object-fit: contain;
-  z-index: 1;
+  /* z-index: 1; */
   /* flex-direction: column; */
   height: 100%;
   /* position: relative; */
