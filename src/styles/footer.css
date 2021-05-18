@@ -1,12 +1,10 @@
-.footer{
+.footer {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  background-color: rgb(233, 233, 233);
-  margin-top: 50px;
+  background-color: #1b1430;
   padding: 30px 0;
-} 
-
+}
 
 .foot-1 {
   flex-flow: wrap;
@@ -19,8 +17,6 @@
   padding: 20px;
   padding-bottom: 90px;
 }
-
-
 
 .rights {
   color: #6d7b8c;
@@ -59,7 +55,6 @@
   cursor: pointer;
 }
 .down-footer {
-  
   width: 60%;
   padding: 20px;
   display: flex;
@@ -71,70 +66,72 @@
 .doner {
   font-size: 14px;
   line-height: 142%;
-  color: #0c0c0c;
+  color: white;
   text-transform: uppercase;
   font-weight: 800;
 }
-.down1 > p {
-  font-weight: 800;
-  font-size: 18px;
+.down1 p {
+  font-size: 17px;
+
   line-height: 150%;
-  color: #100826;
+  color: white;
+
   text-decoration: none;
   cursor: pointer;
 }
-.down2 > p {
-  font-weight: 800;
-  font-size: 18px;
+.down2 p {
+  font-size: 17px;
+
   line-height: 150%;
-  color: #100826;
+  color: white;
   text-decoration: none;
   cursor: pointer;
 }
-.down3 > p {
-  font-weight: 800;
-  font-size: 18px;
+.down3 p {
+  font-size: 17px;
+
   line-height: 150%;
-  color: #100826;
+  color: white;
+
   text-decoration: none;
   cursor: pointer;
 }
 
-.doner{
+.doner {
   padding-bottom: 10px !important;
 }
 
-@media screen and (max-width: 768px){
-
-  .down-footer{
+@media screen and (max-width: 768px) {
+  .down-footer {
     flex-direction: column;
   }
 
-  .bottomBorder{
+  .bottomBorder {
     width: 50px;
   }
-  
-
 }
 
-
-.bottomBorder{
+.bottomBorder {
   height: 3px;
   width: 60%;
   background-color: black;
   border-radius: 20em;
 }
 
-.f-btn2{
-  border: 1px solid lightgray;
+.f-btn2 {
+  border: 1px solid #1b1430;
+  padding: 0 14px;
+}
+.f-btn1 {
+  padding: 0 14px;
 }
 
 @media screen and (max-width: 768px) {
-  .footer{
+  .footer {
     flex-direction: column;
     align-items: center;
   }
-  .bottomBorder{
+  .bottomBorder {
     width: 40%;
   }
 }

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "../../styles/landingpage.css";
 import Footer from "../Footer";
 import DonerLanding from "../donar/DonerLanding";
-import boy from "../../media/boy.jpeg";
-import girl from "../../media/girl.jpg";
+import boy from "../../media/im-220805.jpeg";
+import girl from "../../media/indian-students.jpg";
 import { Link, useHistory } from "react-router-dom";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 
@@ -144,6 +144,20 @@ function LandingPage() {
             </p>
           </div>
           <img className="im1 imshaw" src={girl} alt="st" />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            padding: "2rem",
+          }}
+        >
+          <Link to="/donergrant">
+            <button className="bt0">Edunomics Donors</button>
+          </Link>
+          <Link to="appligrant">
+            <button className="bt0">Edunomics Applicant</button>
+          </Link>
         </div>
       </div>
       <Footer />

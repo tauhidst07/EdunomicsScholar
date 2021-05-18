@@ -13,22 +13,23 @@ function About() {
         <div className="hero-about">
           <h1>OUR MISSION</h1>
           <h2 className="fight">
-            Fighting <br />
-            Student <span style={{ color: "blue" }}> Debt</span>
+            Creating growth ecosystem through <br />
+            <span style={{ color: "blue" }}> opportunities</span>
           </h2>
           <p>
-            The average student today will graduate more than $30,000 in debt
-            and is far less likely to start small businesses, seek the highest
-            impact careers, buy homes, or start families.
+            Enable every Indian student to get best of education, training and
+            mentoring along with opportunities to work as a part time employee
+            to hone his skill so that 90% students are employable from day zero
           </p>
           <br />
           <p>At Edunomics, we believe that’s a problem worth solving.</p>
           <div className="block1">
             <h1>Unlocking opportunity</h1>
             <p>
-              The average student today will graduate more than $30,000 in debt
-              and is far less likely to start small businesses, seek the highest
-              impact careers, buy homes, or start families.
+              The world is full of incredible people who are an opportunity away
+              from making a huge positive impact. By enabling anyone and any
+              company to create targeted scholarships, fellowships, and grants,
+              Bold.org unlocks that opportunity.
             </p>
           </div>
           <div className="block1">
@@ -37,8 +38,16 @@ function About() {
               Students around the country are taking on huge amounts of debt to
               get access to the education they want and need. By enabling
               students to fund their education through exclusive funding
-              opportunities, Edunomics broadens access to that education in an
+              opportunities, Bold.org broadens access to that education in an
               affordable and sustainable way.
+            </p>
+          </div>
+          <div className="block1" style={{ paddingBottom: "3rem" }}>
+            <h1>Solving Difficult problem in education and economy </h1>
+            <p>
+              Empowering student by building alongside students and donors,
+              moving quickly, and taking ownership as part of a wonderful remote
+              team.
             </p>
           </div>
         </div>

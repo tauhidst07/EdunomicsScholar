@@ -27,7 +27,7 @@ function DonerLanding() {
             ></path>
           </svg>
         </div>
-        <p>
+        <p style={{ color: "black" }}>
           Lets give back to society as scholarships, loans, fellowship,
           mentoring and part time jobs or whatever form you can !
         </p>
@@ -48,7 +48,7 @@ function DonerLanding() {
             ></path>
           </svg>
         </div>
-        <p>
+        <p style={{ color: "black" }}>
           Explore opportunities to grow via getting recognised and connect with
           professionals who can make you leaders of Indian Dream !
         </p>

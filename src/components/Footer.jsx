@@ -11,7 +11,11 @@ function Footer() {
           <Link to="/" className="logo-main" style={{ cursor: "pointer" }}>
             <img className="log-pic" src={edu} alt="logo" />
           </Link>
-          <h2 className="rights"> All Rights Reserved <span style={{fontWeight:700}}>pride.edunomics.in</span></h2>
+          <h2 className="rights">
+            {" "}
+            All Rights Reserved{" "}
+            <span style={{ fontWeight: 700 }}>pride.edunomics.in</span>
+          </h2>
         </div>
         <div className="footer-btns">
           <Link to="/joindoner">
@@ -24,7 +28,9 @@ function Footer() {
       </div>
       <div className="down-footer">
         <div className="down1">
-          <h1 className="doner">DONORS<div className="bottomBorder"></div></h1>
+          <h1 className="doner">
+            DONORS<div className="bottomBorder"></div>
+          </h1>
           <Link to="/how-it-works">
             <p>How it works</p>
           </Link>
@@ -42,7 +48,9 @@ function Footer() {
           </Link>
         </div>
         <div className="down2">
-          <h1 className="doner">Applicants<div className="bottomBorder"></div></h1>
+          <h1 className="doner">
+            Applicants<div className="bottomBorder"></div>
+          </h1>
           <Link to="/r-report">
             <p>Research Reports</p>
           </Link>
@@ -58,10 +66,11 @@ function Footer() {
           <Link to="/scholar-women">
             <p>Training</p>
           </Link>
-         
         </div>
         <div className="down3">
-          <h1 className="doner">Company<div className="bottomBorder"></div></h1>
+          <h1 className="doner">
+            Company<div className="bottomBorder"></div>
+          </h1>
           <Link to="about">
             <p>About Us</p>
           </Link>
