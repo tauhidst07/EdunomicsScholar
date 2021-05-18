@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/header.css";
 import { Link, useHistory } from "react-router-dom";
-import edu from "../media/edu.png";
+import edu from "../media/newlogo.png";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 
 function Header({ isDoner, isApplicant, isActive, isappliactive }) {

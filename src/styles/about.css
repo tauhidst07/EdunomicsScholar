@@ -38,10 +38,11 @@
   font-size: 70px;
   line-height: 125%;
   margin: 31px 0 40px;
+  /* margin-top: 4rem; */
   margin-left: 9rem;
   color: #fff;
-  padding-top: 40px;
-  padding-bottom: 70px;
+  padding-top: 4rem;
+  padding-bottom: 40px;
 }
 .hero-about > p {
   font-size: 22px;

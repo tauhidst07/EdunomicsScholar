@@ -11,11 +11,18 @@ function About() {
           <Header />
         </div>
         <div className="hero-about">
-          <h1>OUR MISSION</h1>
           <h2 className="fight">
             Creating growth ecosystem through <br />
             <span style={{ color: "blue" }}> opportunities</span>
           </h2>
+          <h1 style={{ marginBottom: "3rem" }}>OUR VISION</h1>
+          <p>
+            Unlocking the potential of indian young demography though
+            motivating, funding and upskilling the masses to lead Indian Dream
+          </p>
+
+          <h1 style={{ marginBottom: "3rem" }}>OUR MISSION</h1>
+
           <p>
             Enable every Indian student to get best of education, training and
             mentoring along with opportunities to work as a part time employee

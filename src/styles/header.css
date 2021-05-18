@@ -4,7 +4,7 @@
 
   width: 100%;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
   /* background-color: rgb(129, 17, 129); */
 }
 .bt11 {
@@ -49,7 +49,7 @@
   /* color: rgb(255, 255, 255) !important; */
   margin-left: 0.5rem;
   cursor: pointer;
-  background: #5d57fb;
+  background: #005d33;
   color: #fff !important;
   border: none;
 }
@@ -67,7 +67,7 @@
   box-shadow: 0 1px 3px rgb(0 0 0 / 5%), 0 1px 5px rgb(0 0 0 / 4%);
 }
 .tg1 {
-  color: #5d57fb;
+  background: #005d33;
   background-color: #fff;
   height: 28px;
   line-height: 28px;
@@ -79,7 +79,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 100%;
-  background: #5d57fb;
+  background: #005d33;
   color: #e8e9ed;
   border: 0.1px solid rgb(228, 223, 223);
   /* padding: 0.5rem; */
@@ -89,7 +89,7 @@
   text-align: center;
 }
 .log-pic {
-  width: 250px;
+  width: 220px;
 }
 .company-menu {
   margin-left: 60rem !important;

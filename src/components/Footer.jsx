@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/footer.css";
-import edu from "../media/edu.png";
+import edu from "../media/newlogo.png";
 import { Link } from "react-router-dom";
 
 function Footer() {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import edu from "../../media/edu.png";
+import edu from "../../media/newlogo.png";
 import { Link, useHistory } from "react-router-dom";
 // import { Button } from "@material-ui/core";
 import "../../styles/createschlor.css";

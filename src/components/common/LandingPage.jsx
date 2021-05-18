@@ -8,7 +8,7 @@ import { Link, useHistory } from "react-router-dom";
 import { Menu, MenuItem, Button } from "@material-ui/core";
 
 // import Select from "react-select";
-import edu from "../../media/edu.png";
+import edu from "../../media/newlogo.png";
 
 function LandingPage() {
   const history = useHistory();
@@ -23,7 +23,12 @@ function LandingPage() {
     <div>
       <nav className="land-head">
         <Link to="/" className="logo" style={{ cursor: "pointer" }}>
-          <img src={edu} className="log-pic" alt="logog" />
+          <img
+            src={edu}
+            className="log-pic"
+            alt="logog"
+            // style={{ backgroundColor: "white" }}
+          />
         </Link>
         <div className="btn">
           {/* <Select className="bt1" /> */}
