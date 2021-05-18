@@ -19,7 +19,6 @@ function SignUpApplicant() {
   const dispatch = useDispatch();
 
   const onSubmit = (data) => {
-    // console.log(data);
     // axios
     //   .post("https://bckendapi.herokuapp.com/api/user/signup", data)
     //   .then(function (response) {
