@@ -26,7 +26,7 @@ function Privacy() {
         </p>
         <h2>Your privacy matters to you and it matters to us.</h2>
         <p>
-          At Bold, your privacy is a top priority. The information provided
+          At Edunomics, your privacy is a top priority. The information provided
           below is not just so we can make our lawyers happy, but to show you
           that we can be trusted with your information. If you are a California
           resident, please see our
@@ -81,30 +81,30 @@ function Privacy() {
           <br />
           <br />
           Additionally, Edunomics participates in affiliate advertising programs
-          designed to provide a means for Bold to generate revenue by
+          designed to provide a means for edunomics to generate revenue by
           advertising and linking to those affiliates’ products or services.
           When such affiliate relationships exist and there is an opportunity
-          for Bold to be compensated for referring you to the affiliate, Bold
-          will clearly and conspicuously disclose that to you.
+          for edunomics to be compensated for referring you to the affiliate,
+          edunomics will clearly and conspicuously disclose that to you.
         </p>
         <h2>How we share your information</h2>
         <p>
           We will share your information with scholarship providers, applicable
           academic institutions, and as otherwise necessary to provide the
-          service to you. By using the Bold service, you acknowledge, confirm,
-          and consent to: (i) Bold’s generation of revenue from its partnerships
-          with scholarship providers, applicable academic institutions, and
-          other third parties who are necessary for Bold to provide its services
-          to you, and (ii) Bold’s use of your information and data on Bold’s
-          platform in order to do so. This includes third party processors
-          (“Sub-processors”) which generally refers to technology vendors that
-          need access to and use of your personal information to give us
-          additional personal data about you, and to perform analytics and other
-          work that we may need to outsource. These Sub-processors are bound by
-          law and/or contract to protect the confidentiality and security of
-          your personal information. They only process your personal information
-          to provide requested services for us, and only act on our documented
-          instructions. <br />
+          service to you. By using the edunomics service, you acknowledge,
+          confirm, and consent to: (i) edunomics generation of revenue from its
+          partnerships with scholarship providers, applicable academic
+          institutions, and other third parties who are necessary for edunomics
+          to provide its services to you, and (ii) edunomics use of your
+          information and data on edunomics platform in order to do so. This
+          includes third party processors (“Sub-processors”) which generally
+          refers to technology vendors that need access to and use of your
+          personal information to give us additional personal data about you,
+          and to perform analytics and other work that we may need to outsource.
+          These Sub-processors are bound by law and/or contract to protect the
+          confidentiality and security of your personal information. They only
+          process your personal information to provide requested services for
+          us, and only act on our documented instructions. <br />
           <br /> For example, we use Google Analytics to help us understand how
           our customers use the Site. You can read more about how Google uses
           your information here. You can also opt-out of Google Analytics here.{" "}
@@ -117,10 +117,11 @@ function Privacy() {
           only shared in an aggregated and anonymized manner. <br />
           <br /> Additionally, if you indicate you are interested in particular
           educational institutions in your profile or via other means when using
-          edunomics platform, Bold may share your data with those educational
-          institutions from time to time. If you do not want Bold to share your
-          data with those educational institutions at all, please let us know by
-          contacting privacy@pride.edunomics.in. <br />
+          edunomics platform, edunomics may share your data with those
+          educational institutions from time to time. If you do not want
+          edunomics to share your data with those educational institutions at
+          all, please let us know by contacting privacy@pride.edunomics.in.{" "}
+          <br />
           <br />
           Finally, we may also share your information to comply with applicable
           laws and regulations, to respond to a subpoena, search warrant or

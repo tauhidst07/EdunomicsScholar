@@ -76,7 +76,7 @@ function Dashboard() {
                 <div>
                   <div>
                     Earn
-                    <span>50</span> more Bold Points to unlock
+                    <span>50</span> more Points to unlock
                     <br /> a new $2,000 scholarship
                   </div>
 
@@ -206,7 +206,7 @@ function Dashboard() {
             </div>
           </div>
           <div className="earnablePoints">
-            <h3>EARN BOLD POINTS</h3>
+            <h3>EARN POINTS</h3>
             <h1>Increase Your Chances of Winning</h1>
             <div>
               <Points />

@@ -9,18 +9,18 @@ function TermsOfUse() {
       <div className="pri-main">
         <h1>Terms of Use</h1>
         <p>
-          This website is operated by pride.edunomics.in, Inc (“Bold”).
+          This website is operated by pride.edunomics.in, Inc (“edunomics”).
           Throughout this website (the “site”), the terms “we”, “us” and “our”
-          refer to Bold. Bold offers this site, including all information, tools
-          and services available from this site to you (the “Service”),
-          conditioned upon your acceptance of all terms, conditions, policies
-          and notices stated here (the “Terms”). If you do not agree to these
-          Terms, you must not access the site nor do you have the right to use
-          our Service. We reserve the right to update, change, or replace any
-          part of these Terms by posting updates and/or changes here at which
-          time they shall be binding on you. The headings used in this agreement
-          are included for convenience only and will not limit or otherwise
-          affect these Terms.
+          refer to edunomics. edunomics offers this site, including all
+          information, tools and services available from this site to you (the
+          “Service”), conditioned upon your acceptance of all terms, conditions,
+          policies and notices stated here (the “Terms”). If you do not agree to
+          these Terms, you must not access the site nor do you have the right to
+          use our Service. We reserve the right to update, change, or replace
+          any part of these Terms by posting updates and/or changes here at
+          which time they shall be binding on you. The headings used in this
+          agreement are included for convenience only and will not limit or
+          otherwise affect these Terms.
         </p>
       </div>
       <div className="pri-main2">
@@ -32,12 +32,12 @@ function TermsOfUse() {
           purposes stated on the Site itself and as described in this Agreement
           and in accordance with any Service Agreement that you have with us. We
           reserve the right to refuse Service to anyone for any reason at any
-          time. Users are the sole creators of their accounts and Bold may not
-          independently verify the information provided. You are responsible for
-          maintaining the confidentiality of your Bold account and password. You
-          shall be responsible for all uses of your account and password,
-          whether or not authorized by you. You agree to immediately notify Bold
-          of any unauthorized use of your account or password.
+          time. Users are the sole creators of their accounts and edunomics may
+          not independently verify the information provided. You are responsible
+          for maintaining the confidentiality of your edunomics account and
+          password. You shall be responsible for all uses of your account and
+          password, whether or not authorized by you. You agree to immediately
+          notify edunomics of any unauthorized use of your account or password.
         </p>
         <h2 style={{ fontSize: "24px", marginTop: "2rem" }}>
           2. ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION

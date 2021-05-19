@@ -36,7 +36,7 @@ function About() {
               The world is full of incredible people who are an opportunity away
               from making a huge positive impact. By enabling anyone and any
               company to create targeted scholarships, fellowships, and grants,
-              Bold.org unlocks that opportunity.
+              edunomics.in unlocks that opportunity.
             </p>
           </div>
           <div className="block1">
@@ -45,8 +45,8 @@ function About() {
               Students around the country are taking on huge amounts of debt to
               get access to the education they want and need. By enabling
               students to fund their education through exclusive funding
-              opportunities, Bold.org broadens access to that education in an
-              affordable and sustainable way.
+              opportunities, edunomics.in broadens access to that education in
+              an affordable and sustainable way.
             </p>
           </div>
           <div className="block1" style={{ paddingBottom: "3rem" }}>

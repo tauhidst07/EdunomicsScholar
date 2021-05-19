@@ -189,9 +189,7 @@ function DonerLeaders() {
       <div className="leader_main">
         <h1> Student Leaderboards</h1>
         <div className="lead-p">
-          <p>
-            Browse leaderboards to find the boldest students in your region!
-          </p>
+          <p>Browse leaderboards to find the best students in your region!</p>
         </div>
       </div>
       <BasicTable />

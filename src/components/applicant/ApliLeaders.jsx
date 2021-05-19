@@ -56,7 +56,7 @@ function ApliLeaders() {
               <TableCell align="right">CITY</TableCell>
               <TableCell align="right">SCHOOL</TableCell>
 
-              <TableCell align="right">BOLD POINTS</TableCell>
+              <TableCell align="right">POINTS</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -97,8 +97,8 @@ function ApliLeaders() {
             ></path>
           </svg>
           <p>
-            Move up the leaderboards and become the boldest student in your
-            region to increase your chances of winning!
+            Move up the leaderboards and become the BEST student in your region
+            to increase your chances of winning!
           </p>
         </div>
       </div>
