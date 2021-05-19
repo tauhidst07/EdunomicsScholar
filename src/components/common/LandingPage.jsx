@@ -120,13 +120,14 @@ function LandingPage() {
           </Link>
         </div>
       </div>
-      <div className="lady-1">
+      <div className="lady-1" style={{ margin: "1rem" }}>
         <div className="b1">
           <img className="im1 imshaw" src={boy} alt="st" />
           <div className="text1">
             <h1 className="un-head">
-              Lets bridge the Gap and create impact through scholarships, loans,
-              fellowship, mentoring and part time jobs
+              <span style={{ color: "green" }}> Lets bridge the Gap </span>
+              and create impact through scholarships, loans, fellowship,
+              mentoring and part time jobs
             </h1>
             <p className="un-p">
               On Edunomics, anyone, group or any company can create targeted
@@ -135,11 +136,14 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="lady-1">
+      <div className="lady-1" style={{ margin: "1rem" }}>
         <div className="b1">
+          <img className="im1 imshaw" src={girl} alt="st" />
+
           <div className="text1" style={{ marginRight: "2rem" }}>
             <h1 className="un-head">
-              Lets empower and subsidise education for the better economy
+              <span style={{ color: "green" }}> Lets Empower </span>
+              and subsidise education for the better economy
             </h1>
             <p className="un-p">
               Our team along with AI based model do the heavy lifting lifting,
@@ -148,13 +152,12 @@ function LandingPage() {
               certificates.
             </p>
           </div>
-          <img className="im1 imshaw" src={girl} alt="st" />
         </div>
         <div
           style={{
             display: "flex",
             justifyContent: "center",
-            padding: "2rem",
+            padding: "4rem",
           }}
         >
           <Link to="/donergrant">

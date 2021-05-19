@@ -38,7 +38,7 @@ function DonerGrantPage() {
           <h1 className="feature">Grants Featured By:</h1>
         </div>
         <div className="right-sec">
-          <img className="zahir" src={schol} alt="g" />
+          <img className="zahir imshaw2" src={schol} alt="g" />
         </div>
       </div>
       <div className="create1" style={{ marginTop: "2rem" }}>
