@@ -1,9 +1,9 @@
-a{
+a {
   text-decoration: none;
   color: black;
 }
 
-.dashboardHeader{
+.dashboardHeader {
   background-color: white !important;
   position: sticky;
   top: 0;
@@ -11,36 +11,35 @@ a{
 }
 
 .dashboardHeader,
-.dashboardHeader__routes{
+.dashboardHeader__routes {
   display: flex;
 }
 
-.dashboardHeader{
+.dashboardHeader {
   border-bottom: 1px solid lightgray;
   justify-content: space-evenly;
   align-items: center;
   height: 9vh;
 }
 
-.dashboardHeader__logo img{
+.dashboardHeader__logo img {
   width: 150px;
 }
 
-.dashboardHeader__routes{
-    align-items: center;
+.dashboardHeader__routes {
+  align-items: center;
 }
 
-.dashboardHeader__routes a{
+.dashboardHeader__routes a {
   padding: 8px 16px;
   font-size: 14px;
   line-height: 17px;
   text-decoration: none;
   font-weight: 600;
   white-space: nowrap;
-
 }
 
-.dashboardHeader__routes input{
+.dashboardHeader__routes input {
   outline: 0px;
   width: 100%;
   font-size: 14px;
@@ -57,26 +56,24 @@ a{
   height: 36px;
 }
 
-.activeRoute{
-  color: #5d57fb!important;
+.oute {
+  color: #5d57fb !important;
   background: #f5f6fc;
   border-radius: 20px;
 }
 
-.collaps-btn{
+.collaps-btn {
   display: none;
 }
 
-.right-icons{
+.right-icons {
   margin-left: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 @media screen and (max-width: 768px) {
- 
-
-  .dashboardHeader__routes{
+  .dashboardHeader__routes {
     position: absolute;
     top: 9vh;
     left: 0;
@@ -89,16 +86,10 @@ a{
     border-bottom: 1px solid lightgray;
   }
 
-  .hide{
+  .hide {
     display: none;
   }
-  .collaps-btn{
+  .collaps-btn {
     display: block;
   }
-
-
-
-
-
-
 }

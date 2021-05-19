@@ -63,7 +63,7 @@ function Footer() {
           <Link to="/scholar-women">
             <p>Scholarships for Women</p>
           </Link>
-          <Link to="/scholar-women">
+          <Link to="/tranning">
             <p>Training</p>
           </Link>
         </div>

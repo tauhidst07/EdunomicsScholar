@@ -11,7 +11,8 @@ function AppliGrantPage() {
       <div className="doner-grant">
         <div className="left-sec">
           <h1 className="left-h1">
-            Exclusive Grants and Scholarships, Matched to You
+            <span style={{ color: "black" }}> Exclusive Grants </span>
+            and Scholarships, Matched to You
           </h1>
           <p className="left-p">Ready to achieve your potential?</p>
           <Link to="/joinappli" className="grant-btn">

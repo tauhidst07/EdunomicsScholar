@@ -71,13 +71,13 @@
   color: #222224;
 }
 .don-1 :hover {
-  background-color: #005d33;
+  background-color: #c6c9c7;
   transition: background-color 2s ease-out;
   border-radius: 9px;
   cursor: pointer;
 }
 .don-2 :hover {
-  background-color: #005d33;
+  background-color: #cdd3d0;
 
   transition: background-color 2s ease-out;
   cursor: pointer;

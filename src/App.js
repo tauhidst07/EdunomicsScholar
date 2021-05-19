@@ -53,6 +53,7 @@ import ApliViewScholarship from "./components/ApliViewScholarship";
 import ApliMoreAboutDoner from "./components/ApliMoreAboutDoner";
 import SuperAdminDashboard from "./components/SuperAdminDashboard";
 import Chat from "./components/Chat";
+import Tranning from "./components/common/Training";
 
 function App() {
   return (
@@ -170,7 +171,10 @@ function App() {
         <Route exact path="/more-about-donar/:donarId">
           <MoreAboutDoner />
         </Route>
-        <Route exact path="/more-about-applicant/:appliId/:scholarId/:appliedId">
+        <Route
+          exact
+          path="/more-about-applicant/:appliId/:scholarId/:appliedId"
+        >
           <MoreAboutApplicant />
         </Route>
         <Route exact path="/invite-applicant">
@@ -208,6 +212,9 @@ function App() {
         </Route>
         <Route exact path="/chat">
           <Chat />
+        </Route>
+        <Route exact path="/tranning">
+          <Tranning />
         </Route>
         <Route>
           <NotFound />
