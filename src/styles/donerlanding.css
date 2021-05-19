@@ -39,7 +39,7 @@
   align-items: center;
   justify-content: space-between;
   /* padding-right: 4rem; */
-  color: #5d57fb;
+  color: #005d33;
   padding: 1rem;
 }
 .don-2 > h2 {
@@ -51,7 +51,7 @@
   align-items: center;
   justify-content: space-between;
   margin-right: 60px;
-  color: #1a0359;
+  color: #005d33;
   padding: 1rem;
 }
 .don-1 > p {
@@ -71,13 +71,14 @@
   color: #222224;
 }
 .don-1 :hover {
-  background-color: rgb(238, 245, 245);
+  background-color: #005d33;
   transition: background-color 2s ease-out;
   border-radius: 9px;
   cursor: pointer;
 }
 .don-2 :hover {
-  background-color: cadetblue;
+  background-color: #005d33;
+
   transition: background-color 2s ease-out;
   cursor: pointer;
   border-radius: 9px;
