@@ -114,7 +114,7 @@
 .bottomBorder {
   height: 3px;
   width: 60%;
-  background-color: black;
+  background-color: rgb(128, 124, 124);
   border-radius: 20em;
 }
 

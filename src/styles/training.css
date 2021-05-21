@@ -1,0 +1,257 @@
+.mod-container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.mod-flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.topload {
+  font-family: "Raleway", Helvetica, sans-serif;
+  letter-spacing: 2px;
+  color: rgb(3, 3, 3);
+  background-color: rgb(252, 248, 247);
+
+  line-height: 1.5;
+}
+
+.mod-text-center {
+  text-align: center;
+}
+
+.mod-h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.125);
+}
+
+.mod-para {
+  font-size: 1rem;
+  padding: 20px 0;
+}
+
+.mod-btn {
+  padding: 0;
+  background: transparent;
+  font-size: 0.9rem;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.mod-circle {
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.125);
+  font-size: 0.9rem;
+  padding: 10px;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-right: 0.5rem;
+}
+a {
+  text-decoration: none;
+}
+
+/*====================
+ HEADER
+ =====================*/
+.header {
+  background-color: rgba(9, 21, 62, 0.756);
+}
+.logo-image {
+  padding-bottom: 2rem;
+  text-align: left;
+  color: black;
+}
+
+.logo-image i {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  border: 2px solid black;
+  border-radius: 50%;
+  line-height: 4.6rem;
+  font-size: 2rem;
+  font-weight: 300;
+  vertical-align: baseline;
+  color: #005d33;
+}
+
+/*HERO SECTION */
+
+.hero-section {
+  text-align: left;
+}
+
+.hero-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.125);
+  margin-bottom: 30px;
+}
+
+.hero-para {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+section {
+  display: flex;
+}
+
+.leftside {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.ch {
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+}
+.vison {
+  margin-left: 4rem;
+  margin-top: 8rem;
+}
+.vis {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.visp {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.trainnew {
+  /* background-color: #005d33; */
+  border-radius: 5px;
+  margin-bottom: 3rem;
+}
+.social-menu {
+  margin-left: 5rem;
+}
+.social-menu ul {
+  position: absolute;
+  left: 50%;
+  margin-top: 2rem;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.social-menu ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+.social-menu ul li .fa {
+  color: #000000;
+  font-size: 25px;
+  line-height: 50px;
+  transition: 0.5s;
+}
+.social-menu ul li .fa:hover {
+  color: #ffffff;
+}
+.social-menu ul li a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  transition: 0.5s;
+  transform: translate(0, 0px);
+  box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+  transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+  background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+  background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+  background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+  background-color: #cd201f;
+}
+.social-menu ul li:nth-child(5) a:hover {
+  background-color: #0077b5;
+}
+
+.services,
+.teams {
+  height: 100%;
+  color: #fff;
+  /* background: #111; */
+}
+.max-width {
+  height: 300px;
+}
+.services .title::before,
+.teams .title::before {
+  background: #fff;
+}
+.services .title::after,
+.teams .title::after {
+  background: #111;
+}
+.serv-content {
+  display: flex;
+}
+.services .serv-content .card {
+  width: 400px;
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 35px 25px;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+  transition: all 0.3s ease;
+}
+.services .serv-content .card:hover {
+  background: #005d33;
+}
+.services .serv-content .card .box {
+  transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box {
+  transform: scale(1.05);
+}
+.services .serv-content .card i {
+  font-size: 50px;
+  color: #005d33;
+  transition: color 0.3s ease;
+}
+.services .serv-content .card:hover i {
+  color: #fff;
+}
+.services .serv-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
