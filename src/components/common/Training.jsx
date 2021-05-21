@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../Header";
 import "../../styles/training.css";
 import Footer from "../Footer";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import edu from "../../media/newlogo.png";
 import boy from "../../media/im-220805.jpeg";
 
