@@ -61,7 +61,6 @@ function Training() {
           </span>
         </h2>
         <div className="services" id="services">
-          {/* <div className="max-width"> */}
           <div className="serv-content">
             <div className="card">
               <div className="box">
@@ -91,7 +90,6 @@ function Training() {
               </div>
             </div>
           </div>
-          {/* </div> */}
         </div>
       </div>
       <div>
@@ -103,7 +101,6 @@ function Training() {
           aim's at!
         </h2>
         <div className="services" id="services">
-          {/* <div className="max-width"> */}
           <div className="serv-content">
             <div className="card">
               <div className="box">
