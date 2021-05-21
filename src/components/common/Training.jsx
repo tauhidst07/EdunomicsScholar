@@ -127,7 +127,6 @@ function Training() {
               </div>
             </div>
           </div>
-          {/* </div> */}
         </div>
       </div>
 
