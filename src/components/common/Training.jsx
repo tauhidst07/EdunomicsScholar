@@ -25,17 +25,24 @@ function Training() {
             students with serious aspirations to achieve their goal of success
             to work in challenging environment and grow fast
           </p>
-          <button style={{ background: "#005d33" }} className="f-btn1">
+          <button
+            style={{ background: "#005d33", width: "140px" }}
+            className="f-btn1"
+          >
             Apply Now
           </button>
         </div>
       </div>
+      <div></div>
       <section>
         <div className="leftside ">
           <img className="imshaw ch" src={boy} />
         </div>
         <div className="vison">
-          <h1 className="vis hero-heading">OUR VISION</h1>
+          <h1 className="vis hero-heading">
+            OUR{" "}
+            <span style={{ color: "#005d33", fontWeight: "bold" }}>VISION</span>
+          </h1>
           <p className="visp hero-para">
             <span style={{ color: "#005d33", fontWeight: "bold" }}>
               EDUNOMICS{" "}
@@ -44,40 +51,83 @@ function Training() {
           </p>
         </div>
       </section>
+      <div style={{ marginTop: "2rem" }}>
+        <h2 className="hero-heading" style={{ textAlign: "center" }}>
+          HOW DOES IT
+          <span
+            style={{ color: "#005d33", fontWeight: "bold", marginLeft: "5px" }}
+          >
+            WORK?
+          </span>
+        </h2>
+        <div className="services" id="services">
+          {/* <div className="max-width"> */}
+          <div className="serv-content">
+            <div className="card">
+              <div className="box">
+                <i className="fas fa-paint-brush"></i>
+                <div className="text">6 Weeks Long</div>
+                <p>
+                  Set and maintain flexible deadlines. No prior experience
+                  required
+                </p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="box">
+                <i className="fas fa-chart-line"></i>
+                <div className="text">12 Hours a day</div>
+                <p>3 Hours theory,9 hours practical training.</p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="box">
+                <i className="fas fa-code"></i>
+                <div className="text">24/7 Contact</div>
+                <p>
+                  Stuck? Connect with us anytime Get guidance from experts on
+                  various platforms
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* </div> */}
+        </div>
+      </div>
       <div>
-        <h2 class="hero-heading" style={{ textAlign: "center" }}>
+        <h2 className="hero-heading" style={{ textAlign: "center" }}>
           What{" "}
           <span style={{ color: "#005d33", fontWeight: "bold" }}>
             EDUNOMICS{" "}
           </span>{" "}
           aim's at!
         </h2>
-        <div class="services" id="services">
-          <div class="max-width">
-            <div class="serv-content">
-              <div class="card">
-                <div class="box">
-                  <i class="fas fa-paint-brush"></i>
-                  <div class="text">Web Design</div>
-                  <p>Job Opportunities at Edunomics or Network Companies</p>
-                </div>
+        <div className="services" id="services">
+          {/* <div className="max-width"> */}
+          <div className="serv-content">
+            <div className="card">
+              <div className="box">
+                <i className="fas fa-paint-brush"></i>
+                <div className="text">Web Design</div>
+                <p>Job Opportunities at Edunomics or Network Companies</p>
               </div>
-              <div class="card">
-                <div class="box">
-                  <i class="fas fa-chart-line"></i>
-                  <div class="text">Advertising</div>
-                  <p>Real World Experience By working on live projects</p>
-                </div>
+            </div>
+            <div className="card">
+              <div className="box">
+                <i className="fas fa-chart-line"></i>
+                <div className="text">Advertising</div>
+                <p>Real World Experience By working on live projects</p>
               </div>
-              <div class="card">
-                <div class="box">
-                  <i class="fas fa-code"></i>
-                  <div class="text">Apps Design</div>
-                  <p>Interaction with experts to get the basics done clear</p>
-                </div>
+            </div>
+            <div className="card">
+              <div className="box">
+                <i className="fas fa-code"></i>
+                <div className="text">Apps Design</div>
+                <p>Interaction with experts to get the basics done clear</p>
               </div>
             </div>
           </div>
+          {/* </div> */}
         </div>
       </div>
 
@@ -101,7 +151,8 @@ function Training() {
             style={{
               background: "#005d33",
               marginLeft: "5rem",
-              marginBottom: "1rem",
+              marginBottom: "1.5rem",
+              width: "140px",
             }}
             className="f-btn1"
           >

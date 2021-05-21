@@ -105,7 +105,7 @@ a {
 
 .hero-para {
   font-size: 1rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 2rem;
   margin-bottom: 2rem;
@@ -129,12 +129,13 @@ section {
   margin-top: 8rem;
 }
 .vis {
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   line-height: 2rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  margin-left: 3rem;
 }
 .visp {
   font-weight: 700;
@@ -142,6 +143,7 @@ section {
 }
 .trainnew {
   /* background-color: #005d33; */
+  background-color: #fff;
   border-radius: 5px;
   margin-bottom: 3rem;
 }
@@ -203,13 +205,13 @@ section {
 
 .services,
 .teams {
-  height: 100%;
+  height: 400px;
   color: #fff;
   /* background: #111; */
 }
-.max-width {
+/* .max-width {
   height: 300px;
-}
+} */
 .services .title::before,
 .teams .title::before {
   background: #fff;
@@ -223,6 +225,8 @@ section {
 }
 .services .serv-content .card {
   width: 400px;
+  height: 200px;
+
   background: #222;
   text-align: center;
   border-radius: 6px;
@@ -253,5 +257,9 @@ section {
 .services .serv-content .card .text {
   font-size: 25px;
   font-weight: 500;
-  margin: 10px 0 7px 0;
+  margin: 1rem 0;
+}
+.box p {
+  line-height: 2rem;
+  letter-spacing: 1px;
 }
