@@ -25,15 +25,17 @@ function Training() {
             students with serious aspirations to achieve their goal of success
             to work in challenging environment and grow fast
           </p>
-          <button
-            style={{ background: "#005d33", width: "140px" }}
-            className="f-btn1"
-          >
-            Apply Now
-          </button>
+          <Link to="/joinappli">
+            <button
+              style={{ background: "#005d33", width: "140px" }}
+              className="f-btn1"
+            >
+              Apply Now
+            </button>
+          </Link>
         </div>
       </div>
-      <div></div>
+
       <section>
         <div className="leftside ">
           <img className="imshaw ch" src={boy} />
