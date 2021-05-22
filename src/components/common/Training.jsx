@@ -12,11 +12,11 @@ function Training() {
       <Header appliAc={true} />
       <div className="headertrain topload">
         <div className="hero-section mod-container mod-text-center">
-          <div className="logo-image">
+          <div className="logo-image ">
             <i className="far fa-gem mod-text-center"></i>
           </div>
 
-          <h1 className="hero-heading">
+          <h1 className="hero-heading ">
             SCOUTING FOR INDUSTRY EXPOSURE AT{" "}
             <span style={{ color: "#005d33" }}>EDUNOMICS</span>
           </h1>
@@ -41,7 +41,7 @@ function Training() {
           <img className="imshaw ch" src={boy} />
         </div>
         <div className="vison">
-          <h1 className="vis hero-heading">
+          <h1 className="vis hero-heading imshaw">
             OUR{" "}
             <span style={{ color: "#005d33", fontWeight: "bold" }}>VISION</span>
           </h1>
@@ -54,7 +54,7 @@ function Training() {
         </div>
       </section>
       <div style={{ marginTop: "2rem" }}>
-        <h2 className="hero-heading" style={{ textAlign: "center" }}>
+        <h2 className="hero-heading " style={{ textAlign: "center" }}>
           HOW DOES IT
           <span
             style={{ color: "#005d33", fontWeight: "bold", marginLeft: "5px" }}
@@ -145,17 +145,19 @@ function Training() {
             Enlist yourself in courses like
             ReactJs,React-Native,NodeJs,MySQL,CSS,HTML,Flutter and Bootstrap.
           </span>
-          <button
-            style={{
-              background: "#005d33",
-              marginLeft: "5rem",
-              marginBottom: "1.5rem",
-              width: "140px",
-            }}
-            className="f-btn1"
-          >
-            Apply Now
-          </button>
+          <Link to="/joinappli">
+            <button
+              style={{
+                background: "#005d33",
+                width: "140px",
+                marginLeft: "5rem",
+                marginBottom: "1.5rem",
+              }}
+              className="f-btn1"
+            >
+              Apply Now
+            </button>
+          </Link>
         </div>
       </div>
 
