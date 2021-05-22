@@ -160,45 +160,45 @@ function Training() {
           </Link>
         </div>
       </div>
-      <div class="container-im">
-        <div class="logo-im"></div>
+      <div className="container-im">
+        <div className="logo-im"></div>
         <h1 className="lg-name"> Rakesh kumar </h1>
         <h3 className="lg-br"> CSE Grad | Enthusiast </h3>
-        <p class="bio-im">
+        <p className="bio-im">
           I think of myself as possessing a critical, dynamic and perpetual
           intelligence which I intend to allow it to operate.
         </p>
-        <p class="social-im">
+        <p className="social-im">
           <a
             title="Facebook"
             target="_blank"
             href="https://www.facebook.com/100006665290943"
           >
-            <i class=" s-btn fab fa-facebook-f"></i>
+            <i className=" s-btn fab fa-facebook-f"></i>
           </a>
           <a
             title="Instagram"
             target="_blank"
             href="https://www.instagram.com/saifylovezyou"
           >
-            <i class="s-btn fab fa-instagram"></i>
+            <i className="s-btn fab fa-instagram"></i>
           </a>
           <a
             title="Twitter"
             target="_blank"
             href="https://twitter.com/saifylovezyou"
           >
-            <i class="s-btn fab fa-twitter"></i>
+            <i className="s-btn fab fa-twitter"></i>
           </a>
           <a title="Codepen" target="_blank" href="https://codepen.io/saify/">
-            <i class="s-btn fab fa-codepen"></i>
+            <i className="s-btn fab fa-codepen"></i>
           </a>
           <a
             title="Linkedin"
             target="_blank"
             href="https://www.linkedin.com/in/saifuddins/"
           >
-            <i class="s-btn fab fa-linkedin-in"></i>
+            <i className="s-btn fab fa-linkedin-in"></i>
           </a>
         </p>
       </div>
