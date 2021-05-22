@@ -163,41 +163,25 @@ function Training() {
       <div className="container-im">
         <div className="logo-im"></div>
         <h1 className="lg-name"> Rakesh kumar </h1>
-        <h3 className="lg-br"> CSE Grad | Enthusiast </h3>
+        <h3 className="lg-br"> ME Grad | Enthusiast </h3>
         <p className="bio-im">
           I think of myself as possessing a critical, dynamic and perpetual
           intelligence which I intend to allow it to operate.
         </p>
         <p className="social-im">
-          <a
-            title="Facebook"
-            target="_blank"
-            href="https://www.facebook.com/100006665290943"
-          >
+          <a title="Facebook" target="_blank" href="">
             <i className=" s-btn fab fa-facebook-f"></i>
           </a>
-          <a
-            title="Instagram"
-            target="_blank"
-            href="https://www.instagram.com/saifylovezyou"
-          >
+          <a title="Instagram" target="_blank" href="">
             <i className="s-btn fab fa-instagram"></i>
           </a>
-          <a
-            title="Twitter"
-            target="_blank"
-            href="https://twitter.com/saifylovezyou"
-          >
+          <a title="Twitter" target="_blank" href="">
             <i className="s-btn fab fa-twitter"></i>
           </a>
-          <a title="Codepen" target="_blank" href="https://codepen.io/saify/">
+          <a title="Codepen" target="_blank" href="">
             <i className="s-btn fab fa-codepen"></i>
           </a>
-          <a
-            title="Linkedin"
-            target="_blank"
-            href="https://www.linkedin.com/in/saifuddins/"
-          >
+          <a title="Linkedin" target="_blank" href="">
             <i className="s-btn fab fa-linkedin-in"></i>
           </a>
         </p>
