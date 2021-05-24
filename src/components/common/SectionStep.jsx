@@ -4,6 +4,7 @@ import Persona from "../../media/CX_deployer-step-1.svg";
 import CJM from "../../media/CX_deployer-step-3.svg";
 import KBB from "../../media/CX_deployer-step4.svg";
 import Ideate from "../../media/CX_deployer-step-5.svg";
+import "../../styles/section.css";
 
 const SectionStep = ({
   img,
@@ -25,7 +26,7 @@ const SectionStep = ({
         />
       </div>
       <div className="contenmt-sec">
-        <div className="step h1">{step}</div>
+        <div className="step-h1">{step}</div>
         <h1 className="step-text">{title}</h1>
         <div className="step-desc">
           <p style={{ fontSize: "1.2em" }}>{text}</p>
