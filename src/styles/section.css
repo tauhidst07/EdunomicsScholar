@@ -14,7 +14,6 @@
 }
 .step-h1 {
   font-size: 2rem;
-  border-bottom: 2px solid grey;
 
   font-weight: 700;
   color: gray;
@@ -24,12 +23,17 @@
 
   font-weight: 700;
   margin-top: 0.8rem;
-  color: rgb(17, 16, 16);
+  color: rgb(63, 61, 61);
 }
 .step-desc {
   font-size: 1.4rem;
 
   font-weight: 500;
   margin-top: 0.8rem;
+  line-height: 2rem;
   color: rgb(46, 44, 44);
+}
+.hr-line {
+  width: 100px;
+  margin-left: 0.1rem;
 }

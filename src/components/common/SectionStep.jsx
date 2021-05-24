@@ -27,6 +27,7 @@ const SectionStep = ({
       </div>
       <div className="contenmt-sec">
         <div className="step-h1">{step}</div>
+        <hr className="hr-line" />
         <h1 className="step-text">{title}</h1>
         <div className="step-desc">
           <p style={{ fontSize: "1.2em" }}>{text}</p>
@@ -47,7 +48,7 @@ export default () => {
         img={Persona}
         step="Step 1"
       />
-      {/* <SectionStep
+      <SectionStep
         title="Design the value proposition"
         text="Use the business model canvas to identify and design values an organization should deliver to satisfy the needs of the customer."
         text2="What customer wants to achieve?"
@@ -78,7 +79,7 @@ export default () => {
         text2="What is the time to market to realize the transformed experience?"
         img={Ideate}
         step="Step 5"
-      /> */}
+      />
     </div>
   );
 };
