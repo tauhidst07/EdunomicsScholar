@@ -17,23 +17,47 @@ const SectionStep = ({
 }) => (
   <div className="top-section">
     <div className="row-sec">
-      <div className="down-sec">
-        <img
-          src={img}
-          alt="persona"
-          className="img-sec1"
-          style={{ height: "300px" }}
-        />
-      </div>
-      <div className="contenmt-sec">
-        <div className="step-h1">{step}</div>
-        <hr className="hr-line" />
-        <h1 className="step-text">{title}</h1>
-        <div className="step-desc">
-          <p style={{ fontSize: "1.2em" }}>{text}</p>
-          <p style={{ fontSize: "1.2em" }}>{text2}</p>
-        </div>
-      </div>
+      {isReversed ? (
+        <>
+          <div className="contenmt-sec">
+            <div className="step-h1">{step}</div>
+            <hr className="hr-line" />
+            <h1 className="step-text">{title}</h1>
+            <div className="step-desc">
+              <p style={{ fontSize: "1.2em" }}>{text}</p>
+              <p style={{ fontSize: "1.2em" }}>{text2}</p>
+            </div>
+          </div>
+          <div className="down-sec">
+            <img
+              src={img}
+              alt="persona"
+              className="img-sec1"
+              style={{ height: "300px" }}
+            />
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="down-sec">
+            <img
+              src={img}
+              alt="persona"
+              className="img-sec1"
+              style={{ height: "300px" }}
+            />
+          </div>
+          <div className="contenmt-sec">
+            <div className="step-h1">{step}</div>
+            <hr className="hr-line" />
+            <h1 className="step-text">{title}</h1>
+            <div className="step-desc">
+              <p style={{ fontSize: "1.2em" }}>{text}</p>
+              <p style={{ fontSize: "1.2em" }}>{text2}</p>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   </div>
 );
@@ -55,7 +79,7 @@ export default () => {
         img={BMC}
         step="Step 2"
         isGradient
-        isReversed
+        isReversed={true}
       />
       <SectionStep
         title="Map the customer journey"
