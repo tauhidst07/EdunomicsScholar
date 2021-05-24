@@ -164,10 +164,9 @@ function Training() {
         <div className="logo-im"></div>
         <h1 className="lg-name"> Rakesh kumar </h1>
         <h3 className="lg-br">
-        
-          ME Grad{" "}
+          ME Grad
           <span style={{ color: "green", marginRight: ".3rem" }}>|</span>
-          Enthusiast{" "}
+          Enthusiast
         </h3>
         <p className="bio-im">
           I think of myself as possessing a critical, dynamic and perpetual
