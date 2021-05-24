@@ -11,6 +11,23 @@ function Training() {
   return (
     <div>
       <Header appliAc={true} />
+      <section style={{ marginTop: "3rem" }}>
+        <div className="vison">
+          <h1 className="vis hero-heading imshaw">
+            OUR{" "}
+            <span style={{ color: "#005d33", fontWeight: "bold" }}>VISION</span>
+          </h1>
+          <p className="visp hero-para">
+            <span style={{ color: "#005d33", fontWeight: "bold" }}>
+              EDUNOMICS{" "}
+            </span>
+            will bridge the gap Between
+          </p>
+        </div>
+        <div className="leftside ">
+          <img className="imshaw ch" src={boy} />
+        </div>
+      </section>
       <div className="headertrain topload">
         <div className="hero-section mod-container mod-text-center">
           <div className="logo-image ">
@@ -37,23 +54,6 @@ function Training() {
         </div>
       </div>
 
-      <section>
-        <div className="leftside ">
-          <img className="imshaw ch" src={boy} />
-        </div>
-        <div className="vison">
-          <h1 className="vis hero-heading imshaw">
-            OUR{" "}
-            <span style={{ color: "#005d33", fontWeight: "bold" }}>VISION</span>
-          </h1>
-          <p className="visp hero-para">
-            <span style={{ color: "#005d33", fontWeight: "bold" }}>
-              EDUNOMICS{" "}
-            </span>
-            will bridge the gap Between
-          </p>
-        </div>
-      </section>
       <div style={{ marginTop: "2rem" }}>
         <h2 className="hero-heading " style={{ textAlign: "center" }}>
           HOW DOES IT

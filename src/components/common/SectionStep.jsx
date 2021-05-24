@@ -22,7 +22,7 @@ const SectionStep = ({
           src={img}
           alt="persona"
           className="img-sec1"
-          style={{ height: "400px" }}
+          style={{ height: "300px" }}
         />
       </div>
       <div className="contenmt-sec">
