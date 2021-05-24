@@ -5,6 +5,7 @@ import Footer from "../Footer";
 import { Link } from "react-router-dom";
 import edu from "../../media/newlogo.png";
 import boy from "../../media/im-220805.jpeg";
+import SectionStep from "./SectionStep";
 
 function Training() {
   return (
@@ -160,6 +161,7 @@ function Training() {
           </Link>
         </div>
       </div>
+      <SectionStep />
       <div className="container-im">
         <div className="logo-im"></div>
         <h1 className="lg-name"> Rakesh kumar </h1>
