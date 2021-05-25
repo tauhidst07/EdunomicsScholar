@@ -9,36 +9,31 @@ import PillTabs from "./TabsSection";
 export default function Features() {
   return (
     <section className="Features">
-      <div className="row">
-        <div className="col-12 col-md-8">
-          <div className="tab-content" id="v-pills-tabContent">
+      <div className="row-features">
+        <div className="fe-sec">
+          <div className="tab-content">
             <PillTabs
-              index="1"
               image={FeatureImg1}
               title="Designed for collaboration"
               subtitle="Comments and discussions in a project"
             />
             <PillTabs
-              index="2"
               image={FeatureImg3}
               title="Connected maps"
               subtitle="Avoid confusion and duplication by linking journey maps with persona, empathy and business model canvas"
             />
             <PillTabs
-              index="3"
               image={FeatureImg4}
               title="Export maps in multiple formats"
               subtitle="Export to PDF, PNG or CSV and Create impactful presentations."
             />
             <PillTabs
-              index="4"
               image={FeatureImg2}
               title="House of templates"
               subtitle="Designed by industry professionals with beautiful preset themes to jump start"
             />
 
             <PillTabs
-              index="5"
               image={FeatureImg5}
               title="Simple and flexible interface"
               subtitle="Straight forward, intuitive and configurable layout"
@@ -46,16 +41,15 @@ export default function Features() {
           </div>
         </div>
 
-        <div className="col-12 col-md-4">
+        <div className="tabsec">
           <div
-            className="nav flex-column nav-pills"
+            className="tabsec-in"
             id="v-pills-tab"
             role="tablist"
             aria-orientation="vertical"
           >
             <a
-              className="nav-link active"
-              id="v-pills-1"
+              className="nav-link-active"
               data-toggle="pill"
               href="#v-pills-tab-1"
               role="tab"
@@ -65,7 +59,6 @@ export default function Features() {
             </a>
             <a
               className="nav-link"
-              id="v-pills-2"
               data-toggle="pill"
               href="#v-pills-tab-2"
               role="tab"
@@ -75,7 +68,6 @@ export default function Features() {
             </a>
             <a
               className="nav-link"
-              id="v-pills-3"
               data-toggle="pill"
               href="#v-pills-tab-3"
               role="tab"
@@ -85,7 +77,6 @@ export default function Features() {
             </a>
             <a
               className="nav-link"
-              id="v-pills-4"
               data-toggle="pill"
               href="#v-pills-tab-4"
               role="tab"
@@ -96,7 +87,6 @@ export default function Features() {
 
             <a
               className="nav-link"
-              id="v-pills-5"
               data-toggle="pill"
               href="#v-pills-tab-5"
               role="tab"
