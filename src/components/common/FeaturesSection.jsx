@@ -1,10 +1,10 @@
 import React from "react";
-import FeatureImg1 from "../../../assets/Home/real-time-collaboration.svg";
-import FeatureImg2 from "../../../assets/Home/Audit-log.svg";
-import FeatureImg3 from "../../../assets/Home/connected-maps.svg";
-import FeatureImg4 from "../../../assets/Home/Download in any format.svg";
-import FeatureImg5 from "../../../assets/Home/Cloud-storage.svg";
-import PillTabs from "../PillTabs";
+import FeatureImg1 from "../../media/real-time-collaboration.svg";
+import FeatureImg2 from "../../media/Audit-log.svg";
+import FeatureImg3 from "../../media/connected-maps.svg";
+import FeatureImg4 from "../../media/Download in any format.svg";
+import FeatureImg5 from "../../media/Cloud-storage.svg";
+import PillTabs from "./TabsSection";
 
 export default function Features() {
   return (
