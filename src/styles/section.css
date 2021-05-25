@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   margin-right: 2rem;
+  margin-left: 2rem;
 }
 .contenmt-sec {
   margin-left: 4rem;

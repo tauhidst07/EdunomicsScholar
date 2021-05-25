@@ -6,15 +6,7 @@ import KBB from "../../media/CX_deployer-step4.svg";
 import Ideate from "../../media/CX_deployer-step-5.svg";
 import "../../styles/section.css";
 
-const SectionStep = ({
-  img,
-  title,
-  text,
-  text2,
-  step,
-  isReversed,
-  isGradient,
-}) => (
+const SectionStep = ({ img, title, text, text2, step, isReversed }) => (
   <div className="top-section">
     <div className="row-sec">
       {isReversed ? (
@@ -39,7 +31,7 @@ const SectionStep = ({
         </>
       ) : (
         <>
-          <div className="down-sec">
+          <div className="down-sec ">
             <img
               src={img}
               alt="persona"
