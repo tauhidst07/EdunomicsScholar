@@ -1,4 +1,5 @@
 import React from "react";
+import "../../styles/featuresection.css";
 
 function PillTabs({ image, title, subtitle }) {
   return (
@@ -7,8 +8,10 @@ function PillTabs({ image, title, subtitle }) {
         <div className="tbs-con">
           <img alt="" src={image} className="tab-im" />
         </div>
-        <p className="tab-t">{title}</p>
-        <p className="tab-p">{subtitle}</p>
+        <div className="text-rigth">
+          <p className="tab-t">{title}</p>
+          <p className="tab-p">{subtitle}</p>
+        </div>
       </div>
     </div>
   );
