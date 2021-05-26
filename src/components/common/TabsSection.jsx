@@ -8,9 +8,19 @@ function PillTabs({ image, title, subtitle }) {
         <div className="tbs-con">
           <img alt="" src={image} className="tab-im" />
         </div>
-        <div className="text-rigth">
-          <p className="tab-t">{title}</p>
-          <p className="tab-p">{subtitle}</p>
+        <div
+          className="text-rigth"
+          style={{ textAlign: "center", marginTop: "10px" }}
+        >
+          <p
+            className="tab-t"
+            style={{ fontSize: "30px", fontWeight: "bold", color: "grey" }}
+          >
+            {title}
+          </p>
+          <p className="tab-p" style={{ fontSize: "17px", marginTop: "5px" }}>
+            {subtitle}
+          </p>
         </div>
       </div>
     </div>

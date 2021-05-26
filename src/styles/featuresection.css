@@ -1,6 +1,32 @@
 .tabs-section {
   margin: 2rem;
+  max-width: 500px;
 }
 .tab-im {
   width: 100%;
+}
+.tabs {
+  max-width: 350px;
+}
+/* .tab-content {
+  background-color: cadetblue;
+} */
+.tab-im {
+  width: 300px;
+}
+.texttab {
+  font-size: 1.6rem;
+  margin: 10px;
+  font-weight: 500;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+}
+.tabsec {
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+.text-mains {
+  /* padding: 10px; */
+  /* text-align: center; */
+  background-color: #e5e5e5;
 }
