@@ -84,7 +84,7 @@ export default function Features() {
                 className="texttab"
                 onClick={() => {
                   setCollaboration(true);
-                  setfixColor(true);
+                  // setfixColor(true);
                   setMaps(false);
                   setFormat(false);
                   setTemplate(false);
