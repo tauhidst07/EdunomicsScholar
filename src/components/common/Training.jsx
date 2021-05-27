@@ -163,7 +163,16 @@ function Training() {
         </div>
       </div>
       <SectionStep />
-      <div style={{ margin: "4rem 0", background: "#e5e5e5", height: "400px" }}>
+      <div
+        className="demo imshaw"
+        style={{
+          margin: "4rem 0",
+          background: "#e5e5e5",
+          height: "400px",
+          width: "80%",
+          marginLeft: "8rem",
+        }}
+      >
         <Features />
       </div>
       <div className="container-im">
