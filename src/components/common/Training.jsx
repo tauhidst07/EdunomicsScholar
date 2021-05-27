@@ -163,7 +163,9 @@ function Training() {
         </div>
       </div>
       <SectionStep />
-      <Features />
+      <div style={{ margin: "4rem 0", background: "#e5e5e5" }}>
+        <Features />
+      </div>
       <div className="container-im">
         <div className="logo-im"></div>
         <h1 className="lg-name"> Rakesh kumar </h1>
