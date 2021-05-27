@@ -12,6 +12,7 @@ export default function Features() {
   const [format, setFormat] = useState(false);
   const [template, setTemplate] = useState(false);
   const [interfaced, setInterfaced] = useState(false);
+  // const [fixColor, setfixColor] = useState(false);
   return (
     <section className="Features" style={{ marginLeft: "9rem" }}>
       <div
@@ -83,6 +84,7 @@ export default function Features() {
                 className="texttab"
                 onClick={() => {
                   setCollaboration(true);
+                  setfixColor(true);
                   setMaps(false);
                   setFormat(false);
                   setTemplate(false);
