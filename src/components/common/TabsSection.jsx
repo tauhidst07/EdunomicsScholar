@@ -14,13 +14,18 @@ function PillTabs({ image, title, subtitle }) {
         >
           <p
             className="tab-t"
-            style={{ fontSize: "30px", fontWeight: "bold", color: "grey" }}
+            style={{ fontSize: "30px", fontWeight: "bold", color: "green" }}
           >
             {title}
           </p>
           <p
             className="tab-p"
-            style={{ fontSize: "17px", marginTop: "5px", lineHeight: "1.5rem" }}
+            style={{
+              fontSize: "17px",
+              marginTop: "5px",
+              lineHeight: "1.5rem",
+              color: "black",
+            }}
           >
             {subtitle}
           </p>

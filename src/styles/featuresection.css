@@ -30,6 +30,10 @@
   border-radius: 10px;
 }
 .texttab:hover {
-  background-color: cadetblue;
+  background-color: rgb(236, 245, 245);
   border-radius: 10px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px #ccc;
+  color: #5d975d;
 }
