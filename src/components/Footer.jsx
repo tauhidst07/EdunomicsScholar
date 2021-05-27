@@ -64,7 +64,7 @@ function Footer() {
             <p>Scholarships for Women</p>
           </Link>
           <Link to="/tranning">
-            <p>Training</p>
+            <p>Trainning</p>
           </Link>
         </div>
         <div className="down3">
