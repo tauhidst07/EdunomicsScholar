@@ -13,7 +13,7 @@ function Training() {
     <div>
       <Header appliAc={true} />
       <section style={{ marginTop: "3rem" }}>
-        <div className="vison">
+        <div className="vison" style={{ marginLeft: "28rem" }}>
           <h1 className="vis hero-heading imshaw">
             OUR{" "}
             <span style={{ color: "#005d33", fontWeight: "bold" }}>VISION</span>
@@ -25,9 +25,9 @@ function Training() {
             will bridge the gap Between
           </p>
         </div>
-        <div className="leftside ">
+        {/* <div className="leftside ">
           <img className="imshaw ch" src={boy} />
-        </div>
+        </div> */}
       </section>
       <div className="headertrain topload">
         <div className="hero-section mod-container mod-text-center">
