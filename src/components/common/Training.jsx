@@ -19,7 +19,13 @@ function Training() {
             <span style={{ color: "#005d33", fontWeight: "bold" }}>VISION</span>
           </h1>
           <p className="visp hero-para">
-            <span style={{ color: "#005d33", fontWeight: "bold" }}>
+            <span
+              style={{
+                color: "#005d33",
+                fontWeight: "bold",
+                marginLeft: "2rem",
+              }}
+            >
               EDUNOMICS{" "}
             </span>
             will bridge the gap Between
