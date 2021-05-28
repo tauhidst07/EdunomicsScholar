@@ -18,7 +18,6 @@ function ApliMoreAboutDoner() {
   const history = useHistory();
 
   let { donarId } = useParams();
-  //console.log(donarId)
 
   function IconLabelButtons() {
     const classes = useStyles();

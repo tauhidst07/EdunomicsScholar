@@ -19,7 +19,7 @@ function DashboardHeader({
   const [data, setData] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
-  // console.log(myapplication)
+
   const [collapse, setCollapse] = useState(false);
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -106,7 +106,6 @@ function DashboardHeader({
         </div>
         <div className="dashboardHeader__menu" style={{ marginLeft: "1.5rem" }}>
           <div className="btn">
-            {/* <Select className="bt1" /> */}
             <Button
               style={{
                 fontSize: "14px",
