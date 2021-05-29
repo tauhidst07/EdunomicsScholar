@@ -38,6 +38,11 @@
   font-weight: 700;
 }
 .activeR {
-  /* background-color: blue; */
-  color: blue;
+  /* background-color: rgb(236, 245, 245); */
+  border-radius: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px #ccc;
+  color: #5d975d;
+  font-weight: 700;
 }
