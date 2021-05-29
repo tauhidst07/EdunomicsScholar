@@ -81,9 +81,6 @@ export default function Features() {
         <div className="tabsec">
           <div className="tabsec-in" role="tablist" aria-orientation="vertical">
             <div className="text-mains">
-              {/* <h2 className={`how-it-works ${isaward ? "activeRoute" : ""} `}>
-                Award Features
-              </h2> */}
               <h5
                 className={`${collaboration ? "activeR texttab" : "texttab"}`}
                 onClick={() => {
@@ -109,7 +106,6 @@ export default function Features() {
                 setInterfaced(false);
               }}
             >
-              {" "}
               Connected maps{" "}
             </h5>
 
