@@ -1,5 +1,3 @@
-// import ".././styles/chat.css";
-
 import React, { useEffect } from "react";
 import gir from "../media/gir.jpeg";
 
