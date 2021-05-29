@@ -6,7 +6,7 @@ import FeatureImg4 from "../../media/Download in any format.svg";
 import FeatureImg5 from "../../media/Cloud-storage.svg";
 import PillTabs from "./TabsSection";
 
-export default function Features() {
+export default function Features({ isact }) {
   const [collaboration, setCollaboration] = useState(true);
   const [maps, setMaps] = useState(false);
   const [format, setFormat] = useState(false);
@@ -26,6 +26,7 @@ export default function Features() {
           <div className="tab-content">
             {collaboration ? (
               <PillTabs
+                isact={true}
                 id="#v-pills-tab-1"
                 image={FeatureImg1}
                 title="Designed for collaboration"
@@ -80,8 +81,12 @@ export default function Features() {
         <div className="tabsec">
           <div className="tabsec-in" role="tablist" aria-orientation="vertical">
             <div className="text-mains">
+              {/* <h2 className={`how-it-works ${isaward ? "activeRoute" : ""} `}>
+                Award Features
+              </h2> */}
               <h5
-                className="texttab"
+                // className="texttab"
+                className={`texttab ${isact ? "activeR" : ""}`}
                 onClick={() => {
                   setCollaboration(true);
                   // setfixColor(true);
