@@ -5,8 +5,9 @@ import FeatureImg3 from "../../media/connected-maps.svg";
 import FeatureImg4 from "../../media/Download in any format.svg";
 import FeatureImg5 from "../../media/Cloud-storage.svg";
 import PillTabs from "./TabsSection";
+import "../../styles/featuresection.css";
 
-export default function Features({ isact }) {
+export default function Features() {
   const [collaboration, setCollaboration] = useState(true);
   const [maps, setMaps] = useState(false);
   const [format, setFormat] = useState(false);
@@ -26,7 +27,6 @@ export default function Features({ isact }) {
           <div className="tab-content">
             {collaboration ? (
               <PillTabs
-                isact={true}
                 id="#v-pills-tab-1"
                 image={FeatureImg1}
                 title="Designed for collaboration"
@@ -85,11 +85,11 @@ export default function Features({ isact }) {
                 Award Features
               </h2> */}
               <h5
-                // className="texttab"
-                className={`texttab ${isact ? "activeR" : ""}`}
+                className={`${collaboration ? "activeR texttab" : "texttab"}`}
+                // className="activeR texttab"
                 onClick={() => {
                   setCollaboration(true);
-                  // setfixColor(true);
+
                   setMaps(false);
                   setFormat(false);
                   setTemplate(false);
@@ -101,7 +101,7 @@ export default function Features({ isact }) {
             </div>
 
             <h5
-              className="texttab"
+              className={`${maps ? "activeR texttab" : "texttab"}`}
               onClick={() => {
                 setCollaboration(false);
                 setMaps(true);
@@ -115,7 +115,7 @@ export default function Features({ isact }) {
             </h5>
 
             <h5
-              className="texttab"
+              className={`${format ? "activeR texttab" : "texttab"}`}
               onClick={() => {
                 setCollaboration(false);
                 setMaps(false);
@@ -128,7 +128,7 @@ export default function Features({ isact }) {
             </h5>
 
             <h5
-              className="texttab"
+              className={`${template ? "activeR texttab" : "texttab"}`}
               onClick={() => {
                 setCollaboration(false);
                 setMaps(false);
@@ -141,7 +141,7 @@ export default function Features({ isact }) {
             </h5>
 
             <h5
-              className="texttab"
+              className={`${interfaced ? "activeR texttab" : "texttab"}`}
               onClick={() => {
                 setCollaboration(false);
                 setMaps(false);

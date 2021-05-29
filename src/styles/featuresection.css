@@ -37,3 +37,7 @@
   color: #5d975d;
   font-weight: 700;
 }
+.activeR {
+  /* background-color: blue; */
+  color: blue;
+}
