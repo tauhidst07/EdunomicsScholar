@@ -86,7 +86,6 @@ export default function Features() {
               </h2> */}
               <h5
                 className={`${collaboration ? "activeR texttab" : "texttab"}`}
-                // className="activeR texttab"
                 onClick={() => {
                   setCollaboration(true);
 
