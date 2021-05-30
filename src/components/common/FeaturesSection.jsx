@@ -106,7 +106,7 @@ export default function Features() {
                 setInterfaced(false);
               }}
             >
-              Connected maps{" "}
+              Connected maps
             </h5>
 
             <h5
@@ -145,7 +145,7 @@ export default function Features() {
                 setInterfaced(true);
               }}
             >
-              {" "}
+             
               Simple and flexible interface
             </h5>
           </div>
