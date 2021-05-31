@@ -11,8 +11,8 @@ function EasyScholar() {
       <Header />
       <div className="lady-1">
         <div className="b1">
-          <img className="im1" src={boy} alt="st" />
-          <div className="text1">
+          <img className="im1 imshaw" src={boy} alt="st" />
+          <div className="text1" style={{ marginLeft: "2rem" }}>
             <h1 className="un-head">
               22 Easy Scholarships with Upcoming Deadlines
             </h1>

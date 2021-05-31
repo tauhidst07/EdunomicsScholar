@@ -56,7 +56,10 @@ function ContactUs() {
             placeholder="Message"
           />
 
-          <button className="signin" style={{ marginTop: "1rem" }}>
+          <button
+            className="signin"
+            style={{ marginTop: "1rem", background: "#005d33" }}
+          >
             Send Message
           </button>
         </form>

@@ -157,13 +157,20 @@ function HowItWorks() {
             Increase the value of your existing awards or create new ones with
             Donor Credits, funded by pride.edunomics.in.
           </p>
-          <button className="learn-more">Learn More</button>
+          <button className="learn-more" style={{ background: "#005d33" }}>
+            Learn More
+          </button>
         </div>
       </div>
       <div className="get-start">
         <h1>Get started by creating your donor profile.</h1>
         <Link to="/login">
-          <button className="get-start button">Create Your Profile</button>
+          <button
+            className="get-start button"
+            style={{ background: "#005d33" }}
+          >
+            Create Your Profile
+          </button>
         </Link>
       </div>
       <Anyque />

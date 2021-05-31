@@ -164,10 +164,14 @@ function LandingPage() {
           }}
         >
           <Link to="/donergrant">
-            <button className="bt0 imshaw">Edunomics Donors</button>
+            <button className="bt0 imshaw" style={{ background: "#005d33" }}>
+              Edunomics Donors
+            </button>
           </Link>
           <Link to="appligrant">
-            <button className="bt0 imshaw">Edunomics Applicant</button>
+            <button className="bt0 imshaw" style={{ background: "#005d33" }}>
+              Edunomics Applicant
+            </button>
           </Link>
         </div>
       </div>

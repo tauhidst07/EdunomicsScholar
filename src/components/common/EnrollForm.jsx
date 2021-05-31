@@ -55,7 +55,9 @@ const EnrollForm = () => {
       <div className="en-head">
         <h2>Connecting Colleges to Best-Fit Students</h2>
         <p>Edunomics matches your admissions team to top student prospects.</p>
-        <button onClick={openModal}>Connect with us</button>
+        <button style={{ background: "#005d33" }} onClick={openModal}>
+          Connect with us
+        </button>
       </div>
       <Modal
         isOpen={modalIsOpen}
@@ -143,15 +145,15 @@ const EnrollForm = () => {
             </div>
 
             <div className="profile__saveChangesContainer ">
-              <button>Submit</button>
+              <button style={{ background: "#005d33" }}>Submit</button>
             </div>
           </div>
         </div>
       </Modal>
       <div className="lady-1">
         <div className="b1">
-          <img className="im1" src={boy} alt="st" />
-          <div className="text1">
+          <img className="im1 imshaw" src={boy} alt="st" />
+          <div className="text1" style={{ marginLeft: "2rem" }}>
             <h1 className="un-head">
               Do the best work of your career, from anywhere.
             </h1>

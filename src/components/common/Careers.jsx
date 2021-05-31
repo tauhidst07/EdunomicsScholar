@@ -21,7 +21,7 @@ function Careers() {
           <div className="text1" style={{ marginRight: "2rem" }}>
             <h1 className="un-head">
               Join the Fight Against
-              <span style={{ color: "blue" }}> Student Debt</span>{" "}
+              <span style={{ color: "#005d33" }}> Student Debt</span>{" "}
             </h1>
             <p className="un-p">
               The average college graduate has $30k+ in debt and is far less
@@ -45,7 +45,7 @@ function Careers() {
       <div className="lady-1" style={{ backgroundColor: "grey" }}>
         <div className="b1">
           <img className="im1" src={boy} alt="st" />
-          <div className="text1">
+          <div className="text1" style={{ marginLeft: "2rem" }}>
             <h1 className="un-head">
               Do the best work of your career, from anywhere.
             </h1>

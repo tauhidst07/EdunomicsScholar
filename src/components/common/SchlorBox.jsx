@@ -5,7 +5,7 @@ function SchlorBox() {
   return (
     <div>
       <div className="sc-box " style={{ boxShadow: "0 8px 6px -6px black" }}>
-        <img src={boy} alt="st" />
+        <img src={boy} alt="st" className="imshaw" />
         <div className="sc-head">
           <h3>Smart Borrower No-Essay Scholarship & Loan Forgiveness Grant</h3>
           <span>Funded by</span>
@@ -15,7 +15,9 @@ function SchlorBox() {
           </p>
         </div>
         <div className="apply">
-          <button className="apply-bt1">Apply to scholarship</button>
+          <button className="apply-bt1" style={{ background: "#005d33" }}>
+            Apply to scholarship
+          </button>
           <button className="apply-bt2">Contribute</button>
         </div>
       </div>
