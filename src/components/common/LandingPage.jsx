@@ -122,8 +122,10 @@ function LandingPage() {
       </div>
       <div className="lady-1" style={{ margin: "1rem" }}>
         <div className="b1">
-          <img className="im1 imshaw" src={boy} alt="st" />
-          <div className="text1">
+          <img className="im1 imshaw" src={girl} alt="st" />
+
+          {/* <img className="im1 imshaw" src={boy} alt="st" /> */}
+          <div className="text1" style={{ marginLeft: "3.5rem" }}>
             <h1 className="un-head">
               <span style={{ color: "green" }}> Lets bridge the Gap </span>
               and create impact through scholarships, loans, fellowship,
@@ -138,7 +140,7 @@ function LandingPage() {
       </div>
       <div className="lady-1" style={{ margin: "1rem" }}>
         <div className="b1">
-          <img className="im1 imshaw" src={girl} alt="st" />
+          {/* <img className="im1 imshaw" src={girl} alt="st" /> */}
 
           <div className="text1" style={{ marginRight: "2rem" }}>
             <h1 className="un-head">
@@ -152,6 +154,7 @@ function LandingPage() {
               certificates.
             </p>
           </div>
+          <img className="im1 imshaw" src={boy} alt="st" />
         </div>
         <div
           style={{
