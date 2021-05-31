@@ -5,8 +5,7 @@
 .zahir {
   width: 90%;
   height: 80%;
-  /* object-fit: cover; */
-  /* object-position: center center; */
+
   opacity: 1;
   transition: none 0s ease 0s;
   border-radius: 2px;
