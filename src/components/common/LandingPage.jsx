@@ -113,10 +113,10 @@ function LandingPage() {
             nation a vibrant economy. Need to unlock this.
           </p>
           <Link to="/donergrant">
-            <button className="bt0">Edunomics Donors</button>
+            <button className="bt0 ">Edunomics Donors</button>
           </Link>
           <Link to="appligrant">
-            <button className="bt0">Edunomics Applicant</button>
+            <button className="bt0 ">Edunomics Applicant</button>
           </Link>
         </div>
       </div>
@@ -164,10 +164,10 @@ function LandingPage() {
           }}
         >
           <Link to="/donergrant">
-            <button className="bt0">Edunomics Donors</button>
+            <button className="bt0 imshaw">Edunomics Donors</button>
           </Link>
           <Link to="appligrant">
-            <button className="bt0">Edunomics Applicant</button>
+            <button className="bt0 imshaw">Edunomics Applicant</button>
           </Link>
         </div>
       </div>

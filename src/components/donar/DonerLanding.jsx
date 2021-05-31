@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 
 function DonerLanding() {
   return (
-    <div className="doner-landing">
+    <div
+      className="doner-landing"
+      style={{ paddingTop: "4rem", marginBottom: "5rem" }}
+    >
       <div className="don-1 imshaw2">
         <Link
           to="/donergrant"

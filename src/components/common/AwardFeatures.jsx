@@ -17,7 +17,7 @@ function AwardFeatures() {
       >
         <h1 style={{ fontWeight: 800, fontSize: "54px", marginBottom: "2rem" }}>
           Fully customized giving with{" "}
-          <span style={{ color: "blue" }}>Edunomics</span>
+          <span style={{ color: "#005d33" }}>Edunomics</span>
         </h1>
         <p
           style={{
@@ -38,7 +38,9 @@ function AwardFeatures() {
           Free for applicants, free for you
         </h1>
         <Link to="/login">
-          <button className="cr-button">Become a Donar</button>
+          <button className="cr-button" style={{ background: "#005d33" }}>
+            Become a Donar
+          </button>
         </Link>
       </div>
       <Anyque />

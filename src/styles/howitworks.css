@@ -12,7 +12,7 @@
   font-weight: 500;
 }
 .how-it-works :hover {
-  color: #5d57fb;
+  color: #005d33;
 }
 .hero-imgsec {
   background: url("../media//sch.jpg");
@@ -168,7 +168,7 @@
   color: #100826;
 }
 .main-tog {
-  background-color: #1a0359;
+  background-color: #005d33;
   border-radius: 100px;
   display: flex;
   align-items: center;
@@ -186,7 +186,7 @@
   /* padding-left: 2rem; */
 }
 .aw-bt {
-  background-color: #1a0359;
+  background-color: #005d33;
 
   height: 38px;
   width: 50%;
@@ -209,11 +209,11 @@
 }
 
 .activebutton {
-  background-color: #5d57fb !important;
+  background-color: #91b475 !important;
 }
 .aw-bt2 {
   /* background-color: #5d57fb; */
-  background-color: #1a0359;
+  background-color: #005d33;
   outline-width: 0;
 
   height: 38px;
@@ -236,11 +236,11 @@
   cursor: pointer;
 }
 .aw-bt2:hover {
-  background-color: #5d57fb;
+  background-color: #91b475;
   /* background-color: #1a0359; */
 }
 .aw-bt:hover {
-  background-color: #5d57fb;
+  background-color: #005d33;
   /* background-color: #1a0359; */
 }
 .define-block {
@@ -278,3 +278,6 @@
   line-height: 150%;
   color: #100826;
 }
+/* .activeRoute {
+  color: #005d33;
+} */

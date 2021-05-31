@@ -16,7 +16,7 @@ function Faq() {
         <div style={{ marginLeft: "5.3rem" }}>
           <header className="faq-header">
             <h1 className="faq-header">
-              <span style={{ color: "blue" }}>Doner</span> FAQs
+              <span style={{ color: "#005d33" }}>Doner</span> FAQs
             </h1>
             <p>
               Here are the questions most frequently asked by pride.edunomics.in

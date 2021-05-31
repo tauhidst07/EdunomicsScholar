@@ -44,7 +44,7 @@ function AppliGrantPage() {
         {/* <button>Create a Scholarship</button> */}
       </div>
       <div className="create" style={{ marginTop: "2rem" }}>
-        <h1>
+        <h1 style={{ color: "#005D33" }}>
           Change lives with scholarships and grants that go the directly to the
           recipients you choose.
         </h1>

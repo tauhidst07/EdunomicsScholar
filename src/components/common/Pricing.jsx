@@ -16,7 +16,7 @@ function Pricing() {
         style={{ textAlign: "center", marginTop: "4rem", marginBottom: "3rem" }}
       >
         <h1 style={{ fontWeight: 800, fontSize: "54px", marginBottom: "2rem" }}>
-          <span style={{ color: "blue" }}>Maximize</span> your impact
+          <span style={{ color: "#005d33" }}>Maximize</span> your impact
         </h1>
         <p
           style={{
@@ -39,7 +39,7 @@ function Pricing() {
               width="16"
               height="16"
               rx="8"
-              fill="#5D57FB"
+              fill="#005d33"
             ></rect>
             <path
               d="M13 6L7.5 12L5 9.27273"
@@ -59,7 +59,7 @@ function Pricing() {
               width="16"
               height="16"
               rx="8"
-              fill="#5D57FB"
+              fill="#005d33"
             ></rect>
             <path
               d="M13 6L7.5 12L5 9.27273"
@@ -79,7 +79,7 @@ function Pricing() {
               width="16"
               height="16"
               rx="8"
-              fill="#5D57FB"
+              fill="#005d33"
             ></rect>
             <path
               d="M13 6L7.5 12L5 9.27273"
@@ -99,7 +99,7 @@ function Pricing() {
               width="16"
               height="16"
               rx="8"
-              fill="#5D57FB"
+              fill="#005d33"
             ></rect>
             <path
               d="M13 6L7.5 12L5 9.27273"
@@ -119,7 +119,7 @@ function Pricing() {
               width="16"
               height="16"
               rx="8"
-              fill="#5D57FB"
+              fill="#005d33"
             ></rect>
             <path
               d="M13 6L7.5 12L5 9.27273"
@@ -139,7 +139,7 @@ function Pricing() {
               width="16"
               height="16"
               rx="8"
-              fill="#5D57FB"
+              fill="#005d33"
             ></rect>
             <path
               d="M13 6L7.5 12L5 9.27273"
@@ -152,7 +152,9 @@ function Pricing() {
           <p>Easy way to accept any and all 3rd party donations</p>
         </div>
         <Link to="/login">
-          <button className="cr-button">Create a scholarship now</button>
+          <button className="cr-button" style={{ background: "#005d33" }}>
+            Create a scholarship now
+          </button>
         </Link>
       </div>
       <Anyque />

@@ -18,8 +18,8 @@ function DonerCredits() {
 
       <div className="lady-1">
         <div className="b1">
-          <img className="im1" src={boy} alt="st" />
-          <div className="text1">
+          <img className="im1 imshaw" src={boy} alt="st" />
+          <div className="text1" style={{ marginLeft: "3rem" }}>
             <h1 className="un-head">Expand your impaact with Donor Credits.</h1>
             <p className="un-p">
               When someone joins pride.edunomics.in to apply to your awards, we
@@ -28,7 +28,11 @@ function DonerCredits() {
             <Link to="/login">
               <button
                 className="cr-button"
-                style={{ textAlign: "center", marginTop: "2rem" }}
+                style={{
+                  textAlign: "center",
+                  marginTop: "2rem",
+                  background: "#005d33",
+                }}
               >
                 Become a Donor
               </button>
@@ -50,14 +54,18 @@ function DonerCredits() {
             <Link to="/login">
               <button
                 className="cr-button"
-                style={{ textAlign: "center", marginTop: "2rem" }}
+                style={{
+                  textAlign: "center",
+                  marginTop: "2rem",
+                  background: "#005d33",
+                }}
               >
                 Become a Donor
               </button>
             </Link>
           </div>
           <img
-            className="im1"
+            className="im1 imshaw"
             src={girl}
             style={{ marginTop: "3rem" }}
             alt="st"
