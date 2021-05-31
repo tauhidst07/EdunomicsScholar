@@ -145,7 +145,6 @@ export default function Features() {
                 setInterfaced(true);
               }}
             >
-             
               Simple and flexible interface
             </h5>
           </div>
