@@ -26,8 +26,6 @@ function EasyScholar() {
       <SchlorBox />
       <SchlorBox />
       <SchlorBox />
-      <SchlorBox />
-
       <Footer />
     </div>
   );
