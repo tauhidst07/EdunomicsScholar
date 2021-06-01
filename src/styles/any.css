@@ -32,7 +32,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #5d57fb;
+  background-color: #005d33;
 }
 .main-any {
   display: flex;
@@ -44,7 +44,7 @@
   font-weight: 900;
   font-size: 32px;
   line-height: 125%;
-  color: #542dc0;
+  color: #005d33;
 }
 .any-que > p {
   font-weight: 600;

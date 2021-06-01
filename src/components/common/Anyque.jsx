@@ -20,7 +20,7 @@ function Anyque() {
 
         <div className="any-que">
           <h1 style={{ color: "black" }}>Any questions??</h1>
-          <p>Contact our Donor Team</p>
+          <p style={{ color: "#005D33" }}>Contact our Donor Team</p>
         </div>
       </div>
       <div className="any-main">
