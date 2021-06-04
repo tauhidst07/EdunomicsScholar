@@ -134,4 +134,17 @@
   .bottomBorder {
     width: 40%;
   }
+
+
+}
+
+@media screen and (max-width: 383px){
+  .footer-btns{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .f-btn2{
+    margin-left: 0px;
+  }
 }

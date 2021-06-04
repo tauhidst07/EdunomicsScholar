@@ -47,7 +47,7 @@ function DonerGrantPage() {
           recipients you choose.
         </h1>
         <p>
-          On pride.edunomics.in, anybody and any company can create a customized
+          On edunomics.in, anybody and any company can create a customized
           scholarship, fellowship, or grant, in minutes.
         </p>
         {/* <button>Create a Scholarship</button> */}

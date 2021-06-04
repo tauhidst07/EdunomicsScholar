@@ -27,7 +27,7 @@ function AwardFeatures() {
             color: "grey",
           }}
         >
-          Setting up scholarships, grants, and more on pride.edunomics.in is
+          Setting up scholarships, grants, and more on edunomics.in is
           effortless. Create a new award in minutes – we do the heavy lifting
           for you.
         </p>

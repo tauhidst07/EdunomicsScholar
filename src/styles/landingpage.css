@@ -286,3 +286,86 @@ button {
   border-radius: 5px;
   box-shadow: 10px 10px 5px rgb(78, 77, 77);
 }
+
+@media screen and (max-width: 780px){
+  .langingPage{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      overflow-x: hidden;
+  }
+
+  .land-head{
+    width: 100vw;
+    margin-top: 0px;
+  }
+
+  .hero{
+    height: fit-content;
+  }
+
+  .bt2{
+    margin-left: 0;
+  }
+
+  .log-pic {
+    width: 150px !important;
+  }
+
+  .heading{
+    font-size: 50px;
+  }
+
+  .sub-head{
+    font-size: 18px;
+    padding: 0 8px;
+  }
+
+  .edu-p{
+    font-size: 18px;
+    padding: 0 15px;
+  }
+
+  .edu-head{
+    font-weight: 800;
+    font-size: 51px;
+    padding-bottom: 20px;
+  }
+
+  .apllibtn{
+    margin-top: 20px;
+  }
+
+  .bt0{
+    width: 80%;
+    margin-left: 0;
+  }
+  .lady-1{
+    margin: 0 !important;
+  }
+  .b1{
+    align-items: center;
+    flex-direction: column;
+    padding: 0 !important;
+  }
+  .text1{
+    margin-right: 0 !important;
+  }
+  .un-head{
+        text-align: center;
+  }
+
+  .un-p{
+    text-align: center;
+    margin-left: 5px;
+  }
+
+  .imshaw{
+    margin-left: 12px;
+  }
+
+  .bbtn{
+    width: 90% !important;
+  }
+
+}

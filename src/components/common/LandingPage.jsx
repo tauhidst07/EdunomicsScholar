@@ -20,7 +20,7 @@ function LandingPage() {
     setAnchorEl(null);
   };
   return (
-    <div>
+    <div className="langingPage">
       <nav className="land-head">
         <Link to="/" className="logo" style={{ cursor: "pointer" }}>
           <img
@@ -116,7 +116,7 @@ function LandingPage() {
             <button className="bt0 ">Edunomics Donors</button>
           </Link>
           <Link to="appligrant">
-            <button className="bt0 ">Edunomics Applicant</button>
+            <button className="bt0 apllibtn">Edunomics Applicant</button>
           </Link>
         </div>
       </div>
@@ -164,12 +164,12 @@ function LandingPage() {
           }}
         >
           <Link to="/donergrant">
-            <button className="bt0 imshaw" style={{ background: "#005d33" }}>
+            <button className="bt0 imshaw bbtn" style={{ background: "#005d33" }}>
               Edunomics Donors
             </button>
           </Link>
           <Link to="appligrant">
-            <button className="bt0 imshaw" style={{ background: "#005d33" }}>
+            <button className="bt0 imshaw bbtn" style={{ background: "#005d33" }}>
               Edunomics Applicant
             </button>
           </Link>

@@ -19,12 +19,12 @@ function Faq() {
               <span style={{ color: "#005d33" }}>Doner</span> FAQs
             </h1>
             <p>
-              Here are the questions most frequently asked by pride.edunomics.in
+              Here are the questions most frequently asked by edunomics.in
               donors.
               <br /> If you don’t see the answer to your question, let us know
               at
-              <a href="mailto:donors@pride.edunomics.in">
-                donors@pride.edunomics.in
+              <a href="mailto:donors@edunomics.in">
+                donors@edunomics.in
               </a>
               .
             </p>

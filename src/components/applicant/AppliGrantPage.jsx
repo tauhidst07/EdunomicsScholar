@@ -36,7 +36,7 @@ function AppliGrantPage() {
       <div className="create1" style={{ marginTop: "2rem" }}>
         <h1>Featured Grants and Scholarships</h1>
         <p>
-          Exclusive opportunities, fully managed on pride.edunomics.in. Find
+          Exclusive opportunities, fully managed on edunomics.in. Find
           opportunities Exclusive opportunities, fully managed on Edunomics Find
           opportunities for current students and recent graduates at all
           education levels.

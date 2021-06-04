@@ -109,7 +109,7 @@ function Pricing() {
               stroke-linejoin="round"
             ></path>
           </svg>
-          <p>Interviews with finalists, organized by pride.edunomics.in</p>
+          <p>Interviews with finalists, organized by edunomics.in</p>
         </div>
         <div className="po1">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none">

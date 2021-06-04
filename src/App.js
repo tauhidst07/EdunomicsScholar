@@ -54,6 +54,7 @@ import ApliMoreAboutDoner from "./components/ApliMoreAboutDoner";
 import SuperAdminDashboard from "./components/SuperAdminDashboard";
 import Chat from "./components/Chat";
 import Tranning from "./components/common/Training";
+import CommingSoon from "./components/common/CommingSoon";
 
 function App() {
   return (
@@ -214,7 +215,7 @@ function App() {
           <Chat />
         </Route>
         <Route exact path="/tranning">
-          <Tranning />
+          <CommingSoon />
         </Route>
         <Route>
           <NotFound />

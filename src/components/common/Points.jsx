@@ -11,7 +11,7 @@ const Points = () => {
           />
           <div>
             <h3 className="post__heading" style={{ marginBottom: ".9rem" }}>
-              Take the pride.edunomics.in Cash Back Hacks Quiz
+              Take the edunomics.in Cash Back Hacks Quiz
             </h3>
             <h4 className="un-h4">
               Unlock little-known tactics for savings and cash back with

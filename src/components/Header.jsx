@@ -187,7 +187,7 @@ function Header({ isDoner, isApplicant, isActive, isappliactive, appliAc }) {
           </Link>
           {/* <button className="bt22-1">Login</button> */}
           <Link to="/signup" className="bt22-2">
-            Join pride.edunomics.in
+            Join edunomics.in
           </Link>
         </div>
       </nav>

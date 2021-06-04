@@ -14,7 +14,7 @@ function Footer() {
           <h2 className="rights">
             {" "}
             All Rights Reserved{" "}
-            <span style={{ fontWeight: 700 }}>pride.edunomics.in</span>
+            <span style={{ fontWeight: 700 }}>edunomics.in</span>
           </h2>
         </div>
         <div className="footer-btns">

@@ -9,7 +9,7 @@ function TermsOfUse() {
       <div className="pri-main">
         <h1>Terms of Use</h1>
         <p>
-          This website is operated by pride.edunomics.in, Inc (“edunomics”).
+          This website is operated by edunomics.in, Inc (“edunomics”).
           Throughout this website (the “site”), the terms “we”, “us” and “our”
           refer to edunomics. edunomics offers this site, including all
           information, tools and services available from this site to you (the
@@ -132,7 +132,7 @@ function TermsOfUse() {
           edunomics’s platform, edunomics may share your data with those
           educational institutions from time to time. If you do not want
           edunomics to share your data with those educational institutions at
-          all, please let us know by contacting privacy@pride.edunomics.in.{" "}
+          all, please let us know by contacting privacy@edunomics.in.{" "}
           <br />
           <br />
           Finally, we may also share your information to comply with applicable
@@ -170,12 +170,12 @@ function TermsOfUse() {
         <p>
           For more information about our privacy practices, if you have
           questions, or if you would like to make a complaint, please contact us
-          by e-mail at privacy@pride.edunomics.in or by mail using the details
+          by e-mail at privacy@edunomics.in or by mail using the details
           provided below: <br />
           <br />
           Effective Date: January 18, 2021.
           <br />
-          <br /> pride.edunomics.in, Inc., 133 Kearny #400, San Francisco CA
+          <br /> edunomics.in, Inc., 133 Kearny #400, San Francisco CA
           94108 United States
         </p>
       </div>

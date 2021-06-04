@@ -95,3 +95,27 @@
   border-radius: 50%;
   background-color: rgba(93, 87, 251, 0.1);
 }
+
+@media screen and (max-width: 780px){
+  .doner-landing{
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .don-2{
+    margin-left: 0;
+
+  }
+
+  .don-1,
+  .don-2{
+    width: 300px !important;
+  }
+  .don-2 > p{
+    padding: 0 15px;
+    padding-bottom: 15px;
+  }
+
+
+}
