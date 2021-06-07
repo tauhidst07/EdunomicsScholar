@@ -154,7 +154,7 @@ function AllScholarship() {
               ? console.log("not fetched")
               : allSchol?.scholarships.reverse().map((e) => (
                   <div key={e._id} className="main-boxshadow ">
-                    <div className="sc-box ">
+                    <div className="sc-box" style={{ marginBottom: "0rem" }}>
                       <img src={boy} alt="st" />
                       <div className="sc-head">
                         <h3>{e.name}</h3>
