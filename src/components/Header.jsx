@@ -47,7 +47,7 @@ function Header({ isDoner, isApplicant, isActive, isappliactive, appliAc }) {
             Applicants
           </Link>
         </div>
-        <div className="btn">
+        <div className="btn rightHeader-btn">
           <Button
             style={{
               fontSize: "14px",

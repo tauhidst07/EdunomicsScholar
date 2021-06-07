@@ -55,6 +55,7 @@ import SuperAdminDashboard from "./components/SuperAdminDashboard";
 import Chat from "./components/Chat";
 import Tranning from "./components/common/Training";
 import CommingSoon from "./components/common/CommingSoon";
+import Header from "./components/Header";
 
 function App() {
   return (
@@ -185,7 +186,7 @@ function App() {
           <AppliedApplicants />
         </Route>
         <Route exact path="/testing">
-          <Footer />
+          <Header />
         </Route>
         <Route exact path="/doner-leaders">
           <DonerLeaders />

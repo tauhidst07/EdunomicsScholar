@@ -99,3 +99,19 @@
   background: #005d33;
   color: white;
 }
+@media screen and (max-width: 780px) {
+  .naav {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .rightHeader-btn {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bt22-1 {
+    margin-bottom: 20px;
+  }
+  .bt22-2 {
+    margin-bottom: 10px;
+  }
+}
