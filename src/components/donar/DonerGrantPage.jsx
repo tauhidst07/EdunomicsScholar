@@ -23,7 +23,10 @@ function DonerGrantPage() {
           <Link to="/joindoner" className="grant-btn">
             Create a Grant
           </Link>
-          <button className="grant-btn2">How it Works</button>
+          <Link to="/how-it-works" className="grant-btn2">
+            How it Works
+          </Link>
+          {/* <button className="grant-btn2">How it Works</button> */}
           <div
             className="span-d"
             style={{ display: "flex", marginTop: "2rem" }}

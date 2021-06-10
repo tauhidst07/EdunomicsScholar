@@ -99,6 +99,9 @@
   background: #005d33;
   color: white;
 }
+.hamburger {
+  display: none !important;
+}
 @media screen and (max-width: 780px) {
   .naav {
     flex-direction: column;
@@ -113,5 +116,32 @@
   }
   .bt22-2 {
     margin-bottom: 10px;
+  }
+  .nav-barlogo {
+    display: flex;
+    align-items: center;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+  .hamburger {
+    display: flex !important;
+    margin-left: 15rem;
+    cursor: pointer;
+  }
+  .mobileNav {
+    /* display: none !important; */
+    display: block !important;
+    background-color: #e5e5e5;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+  }
+  .mobileNav2 {
+    display: none !important;
+  }
+  .nav-barlogo {
+    display: flex;
+    justify-content: space-between !important;
   }
 }

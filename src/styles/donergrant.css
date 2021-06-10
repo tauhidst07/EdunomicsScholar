@@ -177,7 +177,8 @@
     flex-direction: column;
     gap: 20px;
     /* width: 400px; */
-    /* text-align: center; */
+    text-align: center;
+    /* margin-left: 3rem; */
   }
   .zahir {
     width: 100%;
@@ -188,7 +189,10 @@
     flex-direction: column;
   } */
   .create-button {
-    display: flex;
-    margin-right: 3rem;
+    display: none !important;
+  }
+  .left-sec {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
   }
 }
