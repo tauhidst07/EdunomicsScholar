@@ -12,7 +12,7 @@ function JoinDoner() {
           className="logo-maain"
           style={{ cursor: "pointer", marginRight: "1rem" }}
         >
-          <img className="log-pic" src={edu} alt="logo" />
+          <img className="log-pic respic" src={edu} alt="logo" />
         </Link>
         <div className="tog-1">
           <svg
@@ -38,7 +38,7 @@ function JoinDoner() {
             ></path>
           </svg>
 
-          <Link to="/login" className="already">
+          <Link to="/login" className="already resal">
             Already have an account?
           </Link>
         </div>

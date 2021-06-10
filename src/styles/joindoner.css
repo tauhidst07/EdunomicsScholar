@@ -41,3 +41,15 @@
   display: inline-block;
   cursor: pointer;
 }
+@media screen and (max-width: 780px) {
+  .respic {
+    margin-right: 4rem;
+    position: relative;
+    left: -40px;
+  }
+  .resal {
+    font-size: 15px;
+    display: inline-block;
+    margin-right: 1rem;
+  }
+}

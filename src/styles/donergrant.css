@@ -196,3 +196,8 @@
     margin-right: 0.8rem;
   }
 }
+@media screen and (max-width: 780px) {
+  .per-p1 {
+    margin-left: 10rem;
+  }
+}
