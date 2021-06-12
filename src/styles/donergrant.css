@@ -198,6 +198,9 @@
 }
 @media screen and (max-width: 780px) {
   .per-p1 {
-    margin-left: 10rem;
+    margin-left: 7rem;
+  }
+  .span-d {
+    margin-right: 7rem;
   }
 }
