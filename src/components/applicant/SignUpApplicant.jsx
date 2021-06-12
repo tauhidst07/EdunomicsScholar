@@ -3,9 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
-import axios from "axios";
 import Alert from "../Alert";
-
 import edu from "../../media/edu.png";
 import WarningIcon from "@material-ui/icons/Warning";
 import { signupAppli } from "../redux/actions/authAppliAction";
