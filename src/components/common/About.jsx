@@ -5,7 +5,7 @@ import Footer from "../Footer";
 
 function About() {
   return (
-    <div>
+    <div className="aboutTOP">
       <div className="land-haed2">
         <div className="about" style={{ marginBottom: "1rem" }}>
           <Header />
@@ -31,8 +31,8 @@ function About() {
           <br />
           <p>At Edunomics, we believe that’s a problem worth solving.</p>
           <div className="block1">
-            <h1>Unlocking opportunity</h1>
-            <p>
+            <h1 className="head-desc">Unlocking opportunity</h1>
+            <p className="undesc">
               The world is full of incredible people who are an opportunity away
               from making a huge positive impact. By enabling anyone and any
               company to create targeted scholarships, fellowships, and grants,
@@ -40,7 +40,7 @@ function About() {
             </p>
           </div>
           <div className="block1">
-            <h1>Broadening access</h1>
+            <h1 className="head-desc">Broadening access</h1>
             <p>
               Students around the country are taking on huge amounts of debt to
               get access to the education they want and need. By enabling
@@ -50,7 +50,9 @@ function About() {
             </p>
           </div>
           <div className="block1" style={{ paddingBottom: "3rem" }}>
-            <h1>Solving Difficult problem in education and economy </h1>
+            <h1 className="head-desc">
+              Solving Difficult problem in education and economy{" "}
+            </h1>
             <p>
               Empowering student by building alongside students and donors,
               moving quickly, and taking ownership as part of a wonderful remote

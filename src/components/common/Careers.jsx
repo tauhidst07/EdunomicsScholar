@@ -39,12 +39,12 @@ function Careers() {
               View 8 positions
             </button>
           </div>
-          <img className="im1 newim1" src={girl} alt="st" />
+          <img className="im1 newim1 imshaw" src={girl} alt="st" />
         </div>
       </div>
       <div className="lady-1" style={{ backgroundColor: "grey" }}>
         <div className="b1">
-          <img className="im1" src={boy} alt="st" />
+          <img className="im1 " src={boy} alt="st" />
           <div className="text1" style={{ marginLeft: "2rem" }}>
             <h1 className="un-head">
               Do the best work of your career, from anywhere.

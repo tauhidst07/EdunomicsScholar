@@ -203,7 +203,10 @@ function DonarDashboard() {
 
               <div className="credits">
                 <h2>Your Donor Credits</h2>
-                <div style={{ display: "flex", alignItems: "center" }}>
+                <div
+                  className="creditsRIght"
+                  style={{ display: "flex", alignItems: "center" }}
+                >
                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                     <rect width="28" height="28" rx="14" fill="#1A0359"></rect>
                     <path

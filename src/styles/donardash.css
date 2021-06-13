@@ -135,4 +135,15 @@
   .userInfo {
     flex-direction: column;
   }
+  .credits {
+    width: 60%;
+  }
+  .approved_scholarships {
+    display: flex;
+    flex-direction: column;
+  }
+  .myApplication__main__scholarships_Container {
+    display: flex;
+    flex-direction: column;
+  }
 }
