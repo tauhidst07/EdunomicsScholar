@@ -7,7 +7,7 @@ function Press() {
     <div>
       <Header />
       <div className="pri-main">
-        <h1>Edunomics Newsroom</h1>
+        <h1 className="newstop">Edunomics Newsroom</h1>
         <p>
           Press Contact <br />
           Edunomics.in

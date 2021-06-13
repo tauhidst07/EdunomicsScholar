@@ -47,3 +47,28 @@
 .profile__saveChangesContainer > button {
   margin-left: 12rem;
 }
+@media screen and (max-width: 780px) {
+  .connectus {
+    position: relative;
+    left: -22rem;
+    width: 30%;
+  }
+  .newstop {
+    margin-left: 9rem;
+  }
+  .posnext {
+    margin-left: 14rem;
+  }
+  .newim1 {
+    margin-bottom: 2rem;
+  }
+  .fight {
+    margin-right: 3rem;
+  }
+  .block1 {
+    margin-right: 1rem;
+    font-size: 12px;
+    position: relative;
+    left: -4rem;
+  }
+}

@@ -31,128 +31,134 @@ function Pricing() {
       </div>
       <div className="free-app">
         <h1>Free for applicants, free for you</h1>
-        <div className="po1">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <rect
-              x="1"
-              y="1"
-              width="16"
-              height="16"
-              rx="8"
-              fill="#005d33"
-            ></rect>
-            <path
-              d="M13 6L7.5 12L5 9.27273"
-              stroke="white"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-          <p>Polished scholarship page to share broadly</p>
-        </div>
-        <div className="po1">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <rect
-              x="1"
-              y="1"
-              width="16"
-              height="16"
-              rx="8"
-              fill="#005d33"
-            ></rect>
-            <path
-              d="M13 6L7.5 12L5 9.27273"
-              stroke="white"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-          <p>1-on-1 support from our team at every step</p>
-        </div>
-        <div className="po1">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <rect
-              x="1"
-              y="1"
-              width="16"
-              height="16"
-              rx="8"
-              fill="#005d33"
-            ></rect>
-            <path
-              d="M13 6L7.5 12L5 9.27273"
-              stroke="white"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-          <p>A list of suggested finalists, based on your criteria</p>
-        </div>
-        <div className="po1">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <rect
-              x="1"
-              y="1"
-              width="16"
-              height="16"
-              rx="8"
-              fill="#005d33"
-            ></rect>
-            <path
-              d="M13 6L7.5 12L5 9.27273"
-              stroke="white"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-          <p>Interviews with finalists, organized by edunomics.in</p>
-        </div>
-        <div className="po1">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <rect
-              x="1"
-              y="1"
-              width="16"
-              height="16"
-              rx="8"
-              fill="#005d33"
-            ></rect>
-            <path
-              d="M13 6L7.5 12L5 9.27273"
-              stroke="white"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-          <p>Featured communications to relevant schools</p>
-        </div>
-        <div className="po1">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <rect
-              x="1"
-              y="1"
-              width="16"
-              height="16"
-              rx="8"
-              fill="#005d33"
-            ></rect>
-            <path
-              d="M13 6L7.5 12L5 9.27273"
-              stroke="white"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-          <p>Easy way to accept any and all 3rd party donations</p>
+        <div className="mainsvg">
+          <div className="po1">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <rect
+                x="1"
+                y="1"
+                width="16"
+                height="16"
+                rx="8"
+                fill="#005d33"
+              ></rect>
+              <path
+                d="M13 6L7.5 12L5 9.27273"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <p>Polished scholarship page to share broadly</p>
+          </div>
+          <div className="po1">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <rect
+                x="1"
+                y="1"
+                width="16"
+                height="16"
+                rx="8"
+                fill="#005d33"
+              ></rect>
+              <path
+                d="M13 6L7.5 12L5 9.27273"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <p>1-on-1 support from our team at every step</p>
+          </div>
+
+          <div className="po1">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <rect
+                x="1"
+                y="1"
+                width="16"
+                height="16"
+                rx="8"
+                fill="#005d33"
+              ></rect>
+              <path
+                d="M13 6L7.5 12L5 9.27273"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <p>A list of suggested finalists, based on your criteria</p>
+          </div>
+          <div className="po1">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <rect
+                x="1"
+                y="1"
+                width="16"
+                height="16"
+                rx="8"
+                fill="#005d33"
+              ></rect>
+              <path
+                d="M13 6L7.5 12L5 9.27273"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <p>Interviews with finalists, organized by edunomics.in</p>
+          </div>
+          <div className="po1">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <rect
+                x="1"
+                y="1"
+                width="16"
+                height="16"
+                rx="8"
+                fill="#005d33"
+              ></rect>
+              <path
+                d="M13 6L7.5 12L5 9.27273"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <p>Featured communications to relevant schools</p>
+          </div>
+          <div className="po1">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <rect
+                x="1"
+                y="1"
+                width="16"
+                height="16"
+                rx="8"
+                fill="#005d33"
+              ></rect>
+              <path
+                d="M13 6L7.5 12L5 9.27273"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <p>Easy way to accept any and all 3rd party donations</p>
+          </div>
         </div>
         <Link to="/login">
-          <button className="cr-button" style={{ background: "#005d33" }}>
+          <button
+            className="cr-button pricebt"
+            style={{ background: "#005d33" }}
+          >
             Create a scholarship now
           </button>
         </Link>

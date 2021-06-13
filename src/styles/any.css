@@ -53,3 +53,31 @@
   color: #5d57fb;
   margin-top: 10px;
 }
+@media screen and (max-width: 780px) {
+  .any-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .svg-back {
+    margin-top: 2rem;
+  }
+  .cr-button {
+    margin-left: 12rem;
+  }
+  .c2 {
+    margin-left: 16rem;
+  }
+  .main-any {
+    margin-top: 2rem;
+  }
+  .awcr {
+    margin-right: 12rem;
+  }
+  .pricebt {
+    margin-right: 9rem;
+  }
+  .mainsvg {
+    position: relative;
+    left: -14rem;
+  }
+}

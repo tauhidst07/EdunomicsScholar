@@ -55,7 +55,11 @@ const EnrollForm = () => {
       <div className="en-head">
         <h2>Connecting Colleges to Best-Fit Students</h2>
         <p>Edunomics matches your admissions team to top student prospects.</p>
-        <button style={{ background: "#005d33" }} onClick={openModal}>
+        <button
+          className="connectus"
+          style={{ background: "#005d33" }}
+          onClick={openModal}
+        >
           Connect with us
         </button>
       </div>

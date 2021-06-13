@@ -29,7 +29,7 @@ function Careers() {
               more.
             </p>
             <button
-              className="cr-button"
+              className="cr-button posnext"
               style={{
                 textAlign: "center",
                 marginTop: "2rem",
@@ -39,7 +39,7 @@ function Careers() {
               View 8 positions
             </button>
           </div>
-          <img className="im1" src={girl} alt="st" />
+          <img className="im1 newim1" src={girl} alt="st" />
         </div>
       </div>
       <div className="lady-1" style={{ backgroundColor: "grey" }}>

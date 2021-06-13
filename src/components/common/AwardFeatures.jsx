@@ -38,7 +38,7 @@ function AwardFeatures() {
           Free for applicants, free for you
         </h1>
         <Link to="/login">
-          <button className="cr-button" style={{ background: "#005d33" }}>
+          <button className="cr-button awcr" style={{ background: "#005d33" }}>
             Become a Donar
           </button>
         </Link>

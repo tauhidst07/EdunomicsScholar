@@ -22,8 +22,8 @@ function DonerCredits() {
           <div className="text1" style={{ marginLeft: "3rem" }}>
             <h1 className="un-head">Expand your impaact with Donor Credits.</h1>
             <p className="un-p">
-              When someone joins edunomics.in to apply to your awards, we
-              give you Donor Credits to apply towards current or future awards.
+              When someone joins edunomics.in to apply to your awards, we give
+              you Donor Credits to apply towards current or future awards.
             </p>
             <Link to="/login">
               <button
@@ -48,12 +48,12 @@ function DonerCredits() {
               Fellowships
             </h1>
             <p className="un-p">
-              On edunomics.in, anyone and any company can create targeted
-              funds that enable incredible people to reach their full potential.
+              On edunomics.in, anyone and any company can create targeted funds
+              that enable incredible people to reach their full potential.
             </p>
             <Link to="/login">
               <button
-                className="cr-button"
+                className="cr-button c2"
                 style={{
                   textAlign: "center",
                   marginTop: "2rem",

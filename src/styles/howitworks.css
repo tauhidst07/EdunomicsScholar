@@ -281,3 +281,17 @@
 /* .activeRoute {
   color: #005d33;
 } */
+@media screen and (max-width: 780px) {
+  .top-how-container {
+    margin-right: 2rem;
+  }
+  .how-it-works {
+    font-size: 10px;
+  }
+  .main-tog {
+    width: 170vw;
+  }
+  .mid-tog {
+    width: 80vw;
+  }
+}
