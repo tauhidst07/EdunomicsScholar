@@ -14,7 +14,7 @@ import { useDispatch, useSelector } from "react-redux";
 function AllApliScholarship() {
   const { allSchol, loader } = useSelector((state) => state.authAppli);
   useState(allSchol);
-  // const [loading, setLoading] = useState(true);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
