@@ -47,7 +47,7 @@ function AllApliScholarship() {
             scholarships {allSchol === 0 ? 0 : allSchol?.count}
           </h1>
           {allSchol === 0
-            ? console.log("not fetched")
+            ? console.log("not fetchedData")
             : allSchol?.scholarships?.reverse().map((e) => (
                 <div key={e._id} className="main-boxshadow ">
                   <div className="sc-box ">
