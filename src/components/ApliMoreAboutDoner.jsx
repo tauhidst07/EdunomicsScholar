@@ -11,6 +11,7 @@ import { useParams } from "react-router-dom";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import DashboardHeader from "./DashboardHeader";
 import Footer from "./Footer";
+import API_URL from "../service/url";
 
 function ApliMoreAboutDoner() {
   const [data, setData] = useState(0);
@@ -43,7 +44,7 @@ function ApliMoreAboutDoner() {
   useEffect(() => {
     async function fetchMyApi() {
       let response = await fetch(
-        `https://bckendapi.herokuapp.com/api/donar/donarprofile/${donarId}`
+        `${API_URL}donar/donarprofile/${donarId}`
       );
       response = await response.json();
       setData([response]);

@@ -24,6 +24,7 @@ import MoreAboutDoner from "./donar/MoreAboutDoner";
 import DashboardHeader from "./DashboardHeader";
 import jwt from "jsonwebtoken";
 import axios from "axios";
+import API_URL from "../service/url";
 
 function ApliViewScholarship() {
   let { scholarParams } = useParams();
@@ -88,7 +89,7 @@ function ApliViewScholarship() {
       prevApplicants.push({ applicant: appliId, status: "submitted" });
 
       console.log(prevApplicants);
-      let url = `https://bckendapi.herokuapp.com/api/donar/editScholarship/${data.applicants._id}`;
+      let url = `${API_URL}donar/editScholarship/${data.applicants._id}`;
       const res = await axios.patch(url, { applicants: prevApplicants });
       history.push("/myapplications/:scholarid");
 

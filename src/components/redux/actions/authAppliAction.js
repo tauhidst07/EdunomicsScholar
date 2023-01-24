@@ -1,5 +1,6 @@
 import { signinAppliAPI, signupAppliAPI } from "../../../utils/fetchData";
 import axios from "axios";
+import API_URL from '../../../service/url'
 
 export const TYPES = {
   AUTH_APPLI: "AUTH_APPLI",
@@ -88,7 +89,7 @@ export const appliDash = (id) => {
 
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/user/dashboard/${id}`,
+        url: `${API_URL}user/dashboard/${id}`,
       });
       dispatch(loaderHelper(false));
 
@@ -108,7 +109,7 @@ export const getAllSchlor = () => {
 
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/applicant/allScholarships`,
+        url: `${API_URL}applicant/allScholarships`,
       });
       dispatch(loaderHelper(false));
 
@@ -128,7 +129,7 @@ export const getLeaders = () => {
 
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/user/leaders`,
+        url: `${API_URL}user/leaders`,
       });
       // dispatch(loaderHelper(false));
       // console.log(data);
@@ -148,7 +149,7 @@ export const getAppliProfile = (id) => {
 
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/user/dashboard/${id}`,
+        url: `${API_URL}user/dashboard/${id}`,
       });
       dispatch(loaderHelper(false));
 
@@ -168,7 +169,7 @@ export const getmyAppli = (id) => {
 
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/applicant/myScholarships/${id}`,
+        url: `${API_URL}applicant/myScholarships/${id}`,
       });
       dispatch(loaderHelper(false));
 

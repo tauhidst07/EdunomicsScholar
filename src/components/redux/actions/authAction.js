@@ -1,4 +1,6 @@
 import { signinDonorAPI, signupDonorAPI } from "../../../utils/fetchData";
+import API_URL from '../../../service/url'
+
 import axios from "axios";
 
 export const TYPES = {
@@ -40,6 +42,7 @@ export const signupDonor = (data, history) => async (dispatch) => {
       },
     });
   } catch (err) {
+    console.log(err,"error")
     dispatch({
       type: "NOTIFY",
       payload: {
@@ -98,7 +101,7 @@ export const getData = (id) => {
 
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/donar/donarDashboard/${id}`,
+        url: `${API_URL}/donar/donarDashboard/${id}`,
       });
       dispatch(loaderHelper(false));
 
@@ -117,7 +120,7 @@ export const getmySchlData = (id) => {
     try {
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/donar/myScholarships/${id}`,
+        url: `${API_URL}/donar/myScholarships/${id}`,
       });
 
       dispatch({
@@ -137,7 +140,7 @@ export const postCreateSchol = (dataSchol, history) => {
 
       const { data } = await axios({
         method: "Post",
-        url: `https://bckendapi.herokuapp.com/api/donar/scholarship/`,
+        url: `${API_URL}/donar/scholarship/`,
         data: dataSchol,
       });
       dispatch(loaderHelper(false));
@@ -160,7 +163,7 @@ export const getAllSchlor = () => {
 
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/applicant/allScholarships`,
+        url: `${API_URL}/applicant/allScholarships`,
       });
       dispatch(loaderHelper(false));
 
@@ -181,7 +184,7 @@ export const getDonorProfile = (id) => {
 
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/donar/donarprofile/${id}`,
+        url: `${API_URL}/donar/donarprofile/${id}`,
       });
       dispatch(loaderHelper(false));
 
@@ -202,7 +205,7 @@ export const getLeaders = () => {
 
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/user/leaders`,
+        url: `${API_URL}/user/leaders`,
       });
       // dispatch(loaderHelper(false));
 
@@ -221,7 +224,7 @@ export const getViewSchol = (scholarParams) => {
     try {
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${
+        url: `${API_URL}/donar/oneScholarship/${
           scholarParams.split("&")[0]
         }`,
       });
@@ -240,7 +243,7 @@ export const getFunder = (scholarParams) => {
     try {
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/donar/donarprofile/${
+        url: `${API_URL}/donar/donarprofile/${
           scholarParams.split("&")[1]
         }`,
       });
@@ -259,7 +262,7 @@ export const moreAboutDon = (donarId) => {
     try {
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/donar/donarprofile/${donarId}`,
+        url: `${API_URL}/donar/donarprofile/${donarId}`,
       });
       // console.log(data);
       dispatch({
@@ -278,7 +281,7 @@ export const getOneSCholAppli = (id) => {
     try {
       const { data } = await axios({
         method: "Get",
-        url: `https://bckendapi.herokuapp.com/api/donar/oneScholarshipApli/${id}`,
+        url: `${API_URL}/donar/oneScholarshipApli/${id}`,
       });
 
      

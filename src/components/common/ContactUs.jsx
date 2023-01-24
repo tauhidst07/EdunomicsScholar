@@ -4,12 +4,13 @@ import Header from "../Header";
 import Footer from "../Footer";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import API_URL from "../../service/url";
 
 function ContactUs() {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("https://bckendapi.herokuapp.com/api/contactUs", data)
+      .post( `${API_URL}contactUs`, data)
       .then(function (response) {
         console.log(response);
         alert(response);

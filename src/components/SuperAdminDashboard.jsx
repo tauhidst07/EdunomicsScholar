@@ -7,7 +7,7 @@ import gir from "../media/gir.jpeg";
 
 import logo from "../media/edu.png";
 import { Link } from "react-router-dom";
-
+import API_URL from "../service/url";
 function SuperAdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -15,7 +15,7 @@ function SuperAdminDashboard() {
   console.log(data);
   useEffect(() => {
     axios
-      .get(`https://bckendapi.herokuapp.com/api/admin`)
+      .get(`${API_URL}admin`)
       .then((res) => {
         console.log(res.data);
 

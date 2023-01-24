@@ -4,14 +4,14 @@ import Header from "../Header";
 import Footer from "../Footer";
 import SchlorBox from "./SchlorBox";
 import boy from "../../media/boy.jpeg";
-
+import API_URL from "../../service/url";
 function ScholarshipforWomen() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [data, setData] = useState({});
   useEffect(() => {
     axios
-      .get("https://bckendapi.herokuapp.com/api/applicant/womenScholarships")
+      .get(`${API_URL}applicant/womenScholarships`)
       .then((res) => {
         console.log(res.data);
         setLoading(false);
