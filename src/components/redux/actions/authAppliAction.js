@@ -12,6 +12,7 @@ export const TYPES = {
   GET_MY_APPLI: "GET_MY_APPLI",
 };
 
+
 export const signupAppli = (data, history) => async (dispatch) => {
   try {
     dispatch({ type: "NOTIFY", payload: { loading: true } });
