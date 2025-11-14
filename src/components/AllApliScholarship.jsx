@@ -13,7 +13,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 function AllApliScholarship() {
   const { allSchol, loader } = useSelector((state) => state.authAppli);
-  useState(allSchol);
+  useState(allSchol); 
+  
 
   const dispatch = useDispatch();
 

@@ -55,8 +55,9 @@ function CreateScholarship() {
     }, [displayValue]);
 
     var dbHandle = (e) => {
-      //getValue(Array.isArray(e) ? e.map((x) => x.label) : []);
-      getValue(Array.isArray(e) ? e.map((x) => x.label) : []);
+      //getValue(Array.isArray(e) ? e.map((x) => x.label) : []); 
+     
+      getValue(e.map((x) => x.label));
       //console.log(e, 'E');
       //getValue(e)
       //console.log(displayValue);
@@ -108,35 +109,32 @@ function CreateScholarship() {
   // FORM HANDLING -R
   const { register, handleSubmit } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = (data) => { 
+    console.log("addmore: ",addMore)
     let encodedToken = localStorage.getItem("token");
     let myId = jwt.decode(encodedToken);
     data.donationAllow = false;
     data.essayNeeded = false;
     data.createdBy = myId._id;
     data.eligible = eligibility;
-    let askquiz = data.askedQuiz;
     // console.log('ASKQUIZ');
     // console.log(askquiz);
-    data.askedQuiz = [
-      {
-        quiz: [askquiz],
-      },
-    ];
+    data.askedQuiz =addMore
 
-    console.log("ghghgd", data);
+    console.log("ghghgd", data); 
     dispatch(postCreateSchol(data, history));
-    // axios
-    //   .post("https://bckendapi.herokuapp.com/api/donar/scholarship", data)
-    //   .then(function (response) {
-    //     console.log(response);
-    //     if (response.status === 201) {
-    //       history.push("/all-scholar");
-    //     }
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //   });
+    axios
+      .post("https://edufunding.api.appsdeployer.com/api/donar/scholarship",data)
+      .then(function (response) {
+        console.log(response);
+        if (response.status === 201) {
+          history.push("/all-scholar");
+        }
+      })
+      .catch(function (error) { 
+        console.log("err while posting: ",error.message)
+        console.log(error);
+      });
   };
 
   return (
@@ -299,7 +297,7 @@ function CreateScholarship() {
           </h1>
           <input
             className="u-input"
-            type="text"
+            type="number"
             name="awardAmount"
             ref={register}
             placeholder="Enter amount per winner"
@@ -311,7 +309,8 @@ function CreateScholarship() {
             <TextField
               className="u-input"
               variant="filled"
-              placeholder="question"
+              placeholder="question" 
+              name="first"
               value={inputF.first}
               onChange={(e) => handleiChange(i, e)}
             />

@@ -47,21 +47,25 @@ function ApliViewScholarship() {
     setAnchorEl(null);
   };
 
-  useEffect(() => {
+  useEffect(() => { 
+    console.log("before fetching request");
     axios
       .get(
-        `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${scholarParams}`
+        `https://edufunding.api.appsdeployer.com/api/donar/oneScholarship/${scholarParams}`
       )
       .then((res) => {
         res = res.data;
         setData(res);
-        console.log(res);
+        console.log("data: ",res);
       })
-      .catch((err) => console.log(err));
+      .catch((err)=>{
+        console.log("error in fethcing scholarship info",err.message); 
+        console.log("error: ",err)
+      });
 
     async function fetchMyApi() {
       let response = await fetch(
-        `https://bckendapi.herokuapp.com/api/donar/oneScholarship/${scholarParams}`
+        `http://localhost:4000/api/donar/oneScholarship/${scholarParams}`
       );
       response = await response.json();
       await setData([response]);
@@ -138,7 +142,7 @@ function ApliViewScholarship() {
 
       <div className="single-sch">
         <div className="left-sing">
-          <h2>{data === 0 ? "" : data.applicants.name}</h2>
+          <h2>{data === 0 ? "" : data.applicants.name} </h2>
           <div className="img-sc">
             <img src={gir} alt="" />
             <div className="two-head" style={{ marginLeft: "1rem" }}>
@@ -167,11 +171,11 @@ function ApliViewScholarship() {
         <div className="right-sing">
           <div className="right-doll">
             <h1>
-              {data === 0 ? "" : data.applicants.awardAmount}
+              {data === 0 ? "" :`$${data.applicants.awardAmount}`}
               <span>OPEN</span>
             </h1>
             <p>
-              {/*data === 0 ? "" : data[0].scholarships.winnersLimit*/} winner
+              {data === 0 ? "" : data.applicants.winnersLimit} winner
             </p>
           </div>
           <div onClick={applySchoarship}>
