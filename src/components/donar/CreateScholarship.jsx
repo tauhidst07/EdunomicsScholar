@@ -20,6 +20,37 @@ import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { postCreateSchol } from "../redux/actions/authAction";
 import { TextField } from "@material-ui/core";
+import { useRef } from "react";
+
+function Multidrop({eligibility}) {
+    var eduName = [
+      { value: 1, label: "High School" },
+      { value: 2, label: "Graduate" },
+      { value: 3, label: "Post Graduate" },
+    ];
+
+    var [displayValue, getValue] = useState([]);
+
+    useEffect(() => {
+      eligibility.current = displayValue;
+    }, [displayValue]);
+
+    var dbHandle = (e) => {
+      getValue(e.map((x) => x.label));
+    };
+
+    return (
+      <div style={{ width: "40%", alignItems: "center" }}>
+        <Select
+          isMulti
+          options={eduName}
+          onChange={dbHandle}
+
+          value={eduName.filter(o => displayValue.includes(o.label))}
+        />
+      </div>
+    );
+  }
 
 function CreateScholarship() {
   const history = useHistory();
@@ -40,36 +71,38 @@ function CreateScholarship() {
   };
 
   //select dropdown function
-  let eligibility = [];
+  const eligibility = useRef([]);
 
-  function Multidrop() {
-    var eduName = [
-      { value: 1, label: "High School" },
-      { value: 2, label: "Graduate" },
-      { value: 3, label: "Post Graduate" },
-    ];
-    var [displayValue, getValue] = useState([]);
+  
 
-    useEffect(() => {
-      eligibility = displayValue;
-    }, [displayValue]);
+  // function Multidrop() {
+  //   var eduName = [
+  //     { value: 1, label: "High School" },
+  //     { value: 2, label: "Graduate" },
+  //     { value: 3, label: "Post Graduate" },
+  //   ];
+  //   var [displayValue, getValue] = useState([]);
 
-    var dbHandle = (e) => {
-      //getValue(Array.isArray(e) ? e.map((x) => x.label) : []); 
-     
-      getValue(e.map((x) => x.label));
-      //console.log(e, 'E');
-      //getValue(e)
-      //console.log(displayValue);
-    };
+  //   useEffect(() => {
+  //     eligibility.current = displayValue;
+  //   }, [displayValue]);
 
-    return (
-      <div style={{ width: "40%", alignItems: "center" }}>
-        <Select isMulti options={eduName} onChange={dbHandle}></Select>
-        {/* {displayValue} */}
-      </div>
-    );
-  }
+  //   var dbHandle = (e) => {
+  //     //getValue(Array.isArray(e) ? e.map((x) => x.label) : []); 
+
+  //     getValue(e.map((x) => x.label));
+  //     //console.log(e, 'E');
+  //     //getValue(e)
+  //     //console.log(displayValue);
+  //   };
+
+  //   return (
+  //     <div style={{ width: "40%", alignItems: "center" }}>
+  //       <Select isMulti options={eduName} onChange={dbHandle}></Select>
+  //       {/* {displayValue} */}
+  //     </div>
+  //   );
+  // }
 
   const useStyles = makeStyles((theme) => ({
     button: {
@@ -109,24 +142,22 @@ function CreateScholarship() {
   // FORM HANDLING -R
   const { register, handleSubmit } = useForm();
 
-  const onSubmit = (data) => { 
-    console.log("addmore: ",addMore)
+  const onSubmit = (data) => {
     let encodedToken = localStorage.getItem("token");
     let myId = jwt.decode(encodedToken);
     data.donationAllow = false;
     data.essayNeeded = false;
     data.createdBy = myId._id;
-    data.eligible = eligibility;
+    data.eligible = eligibility.current;
     // console.log('ASKQUIZ');
     // console.log(askquiz);
-    data.askedQuiz =addMore
+    data.askedQuiz = addMore
 
-    console.log("ghghgd", data); 
-    dispatch(postCreateSchol(data, history));
+    console.log("ghghgd", data);
+    // dispatch(postCreateSchol(data, history));
     axios
       .post("https://edufunding.api.appsdeployer.com/api/donar/scholarship",data)
       .then(function (response) {
-        console.log(response);
         if (response.status === 201) {
           history.push("/all-scholar");
         }
@@ -235,7 +266,8 @@ function CreateScholarship() {
         </div>
         <div className="eligible">
           <h1>Who should be eligible for your scholarship?</h1>
-          <ControlledOpenSelect />
+          {/* <ControlledOpenSelect /> */} 
+          <Multidrop eligibility={eligibility} />
         </div>
         <div className="brief-des">
           <div className="des-head">
@@ -309,7 +341,7 @@ function CreateScholarship() {
             <TextField
               className="u-input"
               variant="filled"
-              placeholder="question" 
+              placeholder="question"
               name="first"
               value={inputF.first}
               onChange={(e) => handleiChange(i, e)}
