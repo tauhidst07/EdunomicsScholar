@@ -283,10 +283,6 @@ export const getOneSCholAppli = (id) => {
         method: "Get",
         url: `${API_URL}donar/oneScholarshipApli/${id}`,
       });
-
-     
-      
-
       dispatch({
         type: "ONE_SCHOL_APPLI",
         payload: data,
@@ -303,17 +299,18 @@ export const updateScholarStatus = (scholarshipId,appliedId, status) => {
 
       const { data } = await axios({
         method: "Patch",
-        url: `http://bckendapi.herokuapp.com/api/donar/editApplicantStatus/${scholarshipId}/${appliedId}`,
+        url: `https://edufunding.api.appsdeployer.com/api/donar/editApplicantStatus/${scholarshipId}/${appliedId}`,
         data: {"applicantStatus": status}
-      });
-     
+      }); 
+      console.log("scholarship update response: ",data)
 
       dispatch({
         type: "UPDATE_SCHOL",
-        payload: {data,status},
-      });
+        payload: data.updateResult,
+      }); 
+      
     } catch (err) {
-      console.log("Error in getStage");
+      console.log("Error in getStage",err);
     }
   };
 };

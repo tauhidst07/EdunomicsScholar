@@ -56,7 +56,11 @@ function ApliViewScholarship() {
       .then((res) => {
         res = res.data;
         setData(res);
-        console.log("data: ",res);
+        console.log("data scholarship: ",res); 
+        console.log("user ID:",appliId); 
+        if(res?.applicants?.applicants.some((app)=>app.applicant===appliId)){
+          setApplied(true)
+        }
       })
       .catch((err)=>{
         console.log("error in fethcing scholarship info",err.message); 

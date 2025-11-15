@@ -14,20 +14,35 @@ import {
   getOneSCholAppli,
   updateScholarStatus,
 } from "../redux/actions/authAction";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"; 
 
 function MoreAboutApplicant() {
   const { loader, appliedScholAppli, editSchol } = useSelector(
     (state) => state.auth
-  );
-  console.log(editSchol);
+  ); 
+   const dispatch = useDispatch();
 
-  const [status, setStatus] = useState("submitted");
-  const [anchorEl, setAnchorEl] = useState(null);
+  console.log("appliedSchol",appliedScholAppli); 
 
-  const { appliId, scholarId, appliedId } = useParams();
+  const { appliId, scholarId, appliedId } = useParams();    
+  console.log("appliId: ",appliId);
+  useEffect(() => {
+  dispatch(getOneSCholAppli(scholarId));
+}, [scholarId]);
+  
+  const [status, setStatus] = useState("");
+  const [anchorEl, setAnchorEl] = useState(null); 
+  const [applicant,setApplicant] = useState(null)
+  useEffect(()=>{ 
+    if(appliedScholAppli){ 
+      const item = appliedScholAppli.applicants.applicants.find((item)=>item._id===appliedId); 
+      if(item && status===""){
+        setStatus(item.status);
+      }
+    }
+  },[appliedScholAppli])
 
-  const dispatch = useDispatch();
+
 
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -37,12 +52,18 @@ function MoreAboutApplicant() {
   };
   const history = useHistory();
 
-  //   let myId = jwt.decode(encodedToken);
-  useEffect(() => {
+  //   let myId = jwt.decode(encodedToken); 
+  function handleStatusChange(e){
+    setStatus(e.target.value);  
     dispatch(getOneSCholAppli(scholarId));
+    dispatch(updateScholarStatus(scholarId, appliedId, e.target.value));
+  }
+  // useEffect(() => {
+  //   // dispatch(getOneSCholAppli(scholarId));
 
-    dispatch(updateScholarStatus(scholarId, appliedId, status));
-  }, [status]);
+  //   // dispatch(updateScholarStatus(scholarId, appliedId, status)); 
+  //   console.log("current status: ",status)
+  // }, [status]);
 
   return (
     <div>
@@ -182,24 +203,17 @@ function MoreAboutApplicant() {
           <div className="bot-doner">
             <h1>Essay topic</h1>
             <p>
-              Essay body Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.
+              {
+                appliedScholAppli?.applicants.essayPrompt
+              }
             </p>
           </div>
           <div className="changeStatus">
             <select
               className="f-btn1"
-              onChange={(e) => {
-                setStatus(e.target.value);
-              }}
+              onChange={handleStatusChange}
               value={status}
-            >
+            > 
               <option value="submitted">submitted</option>
               <option value="review">review</option>
               <option value="rejected">rejected</option>
