@@ -85,7 +85,7 @@ All relevant applicant data now displays properly.
 My Applications Page (Applicant Side)
 
 ### **Issue**
-Switching between `Pending`, `Accepted`, and `Rejected` applications did not work.
+Switching between `Review`, `Accepted`, and `Rejected` applications did not work.
 
 ### **Cause**
 Status-based filtering logic was not implemented.

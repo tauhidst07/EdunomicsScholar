@@ -44,7 +44,7 @@ const authReducer = (state = initialState, action) => {
     case TYPES.ONE_SCHOL_APPLI:
       return { ...state, appliedScholAppli: action.payload };
       case TYPES.UPDATE_SCHOL:
-      return { ...state, editSchol: action.payload };
+      return { ...state, editSchol:action.payload };
     default:
       return { auth2: state };
   }
